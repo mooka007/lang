@@ -52,9 +52,11 @@ export const env = {
   dataDir: path.join(serverDir, "data"),
   uploadsDir: path.join(serverDir, "uploads"),
   uploadMaxFileSizeMb: optionalNumber(process.env.UPLOAD_MAX_MB, 100),
+  samplePdfDir: path.join(serverDir, "pdfs"),
   samplePdfPath: path.join(serverDir, "pdfs", "company-x-employee-knowledge-base.pdf"),
   llmProvider,
   embeddingProvider,
+  embeddingBatchSize: optionalNumber(process.env.EMBEDDING_BATCH_SIZE, 32),
   llmTemperature: optionalNumber(process.env.LLM_TEMPERATURE, 0.1),
   llmMaxTokens: optionalNumber(process.env.LLM_MAX_TOKENS, 900),
   openai: {

@@ -1,0 +1,2652 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R 31 0 R 33 0 R 35 0 R 37 0 R 39 0 R 41 0 R 43 0 R 45 0 R 47 0 R 49 0 R 51 0 R 53 0 R 55 0 R 57 0 R 59 0 R 61 0 R 63 0 R 65 0 R 67 0 R 69 0 R 71 0 R 73 0 R 75 0 R 77 0 R 79 0 R 81 0 R 83 0 R 85 0 R] /Count 41 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 2434 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(Company X Indonesia Branch Knowledge Base) Tj T*
+T*
+(Version: 1.0) Tj T*
+(Dataset type: fictional synthetic branch data for Document Q&A testing) Tj T*
+(Branch: Jakarta, Indonesia) Tj T*
+(Employee count: 40) Tj T*
+T*
+(Important privacy note: all employees, salaries, emails, dates of birth, branch details, and) Tj T*
+(projects in this file are fictional and created for chatbot testing.) Tj T*
+T*
+(Branch Overview) Tj T*
+T*
+(The Company X Indonesia branch is based in Jakarta. Its main focus is APAC customer operations,) Tj T*
+(mobile-first workflows, and implementation delivery. The branch works with headquarters and) Tj T*
+(other regions to deliver customer value while keeping local operations accountable.) Tj T*
+T*
+(- Office address: 134 Innovation Avenue, Jakarta, Indonesia) Tj T*
+(- Timezone: Asia/Jakarta) Tj T*
+(- Standard working hours: 09:00-17:30 local time, with shift coverage for support and) Tj T*
+(operations.) Tj T*
+(- Branch director: Zara Wright) Tj T*
+(- Branch operations manager: Daniel Mansouri) Tj T*
+(- Branch engineering manager: Salma Reed) Tj T*
+(- Branch customer success manager: Leo Idrissi) Tj T*
+(- Branch regional sales manager: Ines Mason) Tj T*
+(- Branch data lead: Nabil Skalli) Tj T*
+(- Branch security coordinator: Samir Rami) Tj T*
+(- Primary finance contact: Aya Walsh) Tj T*
+(- Main branch project: PX-Indonesia-Garuda) Tj T*
+T*
+(Branch Specialties) Tj T*
+T*
+(- APAC onboarding) Tj T*
+(- mobile workflows) Tj T*
+(- customer education) Tj T*
+(- local partner support) Tj T*
+T*
+(Branch Department Capacity) Tj T*
+T*
+( |  Department  |  Employees  |  Main responsibility  |) Tj T*
+( |  ---  |  ---:  |  ---  |) Tj T*
+(| Customer Success | 8 | Owns onboarding, support quality, customer health, and escalations. |) Tj T*
+( |  Data and AI  |  4  |  Maintains analytics, reporting quality, and operational insights.  |) Tj T*
+( |  Engineering  |  9  |  Builds, tests, and maintains localized product capabilities.  |) Tj T*
+(| Finance | 3 | Controls payroll support, invoices, expense reviews, and branch budget evidence.) Tj T*
+(|) Tj T*
+(| IT and Security | 2 | Manages access, devices, security evidence, and incident readiness. |) Tj T*
+( |  Marketing  |  2  |  Localizes campaigns, webinars, launch assets, and market content.  |) Tj T*
+(| Operations | 5 | Runs branch coordination, vendors, documentation, staffing, and delivery) Tj T*
+(cadence. |) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 3453 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(| People Operations | 2 | Supports hiring, onboarding, employee records, and performance cycles.) Tj T*
+(|) Tj T*
+(| Sales | 5 | Develops pipeline, regional account plans, demos, and partner opportunities. |) Tj T*
+T*
+(Branch Project) Tj T*
+T*
+(- Project name: PX-Indonesia-Garuda) Tj T*
+(- Project objective: support APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery) Tj T*
+(- Weekly rhythm: branch project updates are posted every Friday before 15:00 local time.) Tj T*
+(- Escalation rule: customer, security, or finance risks must be escalated to the global owner) Tj T*
+(within one business day.) Tj T*
+T*
+(Branch Project Portfolio) Tj T*
+T*
+(| Code | Project | Manager | Deputy | Status | Employees | Budget | Deadline | KPI | Current) Tj T*
+(risk |) Tj T*
+( |  ---  |  ---  |  ---  |  ---  |  ---  |  ---:  |  ---:  |  ---  |  ---  |  ---  |) Tj T*
+(| ID-OPS | Indonesia Operating System | Zara Wright \(Branch Director\) | Daniel Mansouri) Tj T*
+(\(Operations Manager\) | Active | 8 | $2,280,000 | Q4 2027 | Branch SLA above 95 percent |) Tj T*
+(Customer adoption delay |) Tj T*
+(| ID-GROW | Indonesia Market Growth Program | Ines Mason \(Regional Sales Manager\) | Emma Bishop) Tj T*
+(\(Solutions Consultant\) | In build | 8 | $2,317,500 | Q1 2026 | Qualified regional pipeline) Tj T*
+(growth above 12 percent | Hiring capacity gap |) Tj T*
+(| ID-CX | Indonesia Customer Experience Program | Leo Idrissi \(Customer Success Manager\) |) Tj T*
+(Mariam Bishop \(Support Lead\) | Beta | 8 | $2,355,000 | Q2 2027 | Customer onboarding completion) Tj T*
+(within 14 days | Data quality dependency |) Tj T*
+(| ID-SEC | Indonesia Compliance And Security Track | Samir Rami \(Security Coordinator\) | Victor) Tj T*
+(Mansouri \(Security Analyst\) | Active | 8 | $2,392,500 | Q3 2026 | Quarterly security training) Tj T*
+(completion above 98 percent | Security evidence delay |) Tj T*
+(| ID-DATA | Indonesia Branch Analytics Layer | Salma Reed \(Engineering Manager\) | Evan Idrissi) Tj T*
+(\(Data Analyst\) | Discovery | 8 | $2,430,000 | Q4 2027 | Executive dashboard accuracy above 99) Tj T*
+(percent | Vendor delivery risk |) Tj T*
+T*
+(Project Staffing) Tj T*
+T*
+( |  Project code  |  Project manager  |  Deputy  |  Employee count  |  Assigned employees  |) Tj T*
+( |  ---  |  ---  |  ---  |  ---:  |  ---  |) Tj T*
+(| ID-OPS | Zara Wright | Daniel Mansouri | 8 | CX-ID-001 Zara Wright - Branch Director;) Tj T*
+(CX-ID-006 Nabil Skalli - Data Lead; CX-ID-011 Dina Wright - Backend Engineer; CX-ID-016 Bilal) Tj T*
+(Skalli - Support Specialist; CX-ID-021 Yasmine Wright - Payroll Specialist; CX-ID-026 Mehdi) Tj T*
+(Skalli - Frontend Engineer; CX-ID-031 Amina Wright - Frontend Engineer; CX-ID-036 Youssef Skalli) Tj T*
+(- Solutions Consultant |) Tj T*
+(| ID-GROW | Ines Mason | Emma Bishop | 8 | CX-ID-002 Daniel Mansouri - Operations Manager;) Tj T*
+(CX-ID-007 Mariam Bishop - Support Lead; CX-ID-012 Malik Mansouri - Frontend Engineer; CX-ID-017) Tj T*
+(Emma Bishop - Solutions Consultant; CX-ID-022 Victor Mansouri - Security Analyst; CX-ID-027 Nour) Tj T*
+(Bishop - Data Analyst; CX-ID-032 Noah Mansouri - QA Automation Engineer; CX-ID-037 Maya Bishop -) Tj T*
+(Account Executive |) Tj T*
+(| ID-CX | Leo Idrissi | Mariam Bishop | 8 | CX-ID-003 Salma Reed - Engineering Manager;) Tj T*
+(CX-ID-008 Samir Rami - Security Coordinator; CX-ID-013 Rim Reed - QA Automation Engineer;) Tj T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 3720 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(CX-ID-018 Tariq Rami - Account Executive; CX-ID-023 Imane Reed - Recruiting Coordinator;) Tj T*
+(CX-ID-028 Jonas Rami - Implementation Specialist; CX-ID-033 Leila Reed - Data Analyst; CX-ID-038) Tj T*
+(Omar Rami - Marketing Specialist |) Tj T*
+(| ID-SEC | Samir Rami | Victor Mansouri | 8 | CX-ID-004 Leo Idrissi - Customer Success Manager;) Tj T*
+(CX-ID-009 Aya Walsh - Finance Coordinator; CX-ID-014 Evan Idrissi - Data Analyst; CX-ID-019) Tj T*
+(Clara Walsh - Marketing Specialist; CX-ID-024 Oscar Idrissi - Product Operations Analyst;) Tj T*
+(CX-ID-029 Farah Walsh - Support Specialist; CX-ID-034 Adam Idrissi - Implementation Specialist;) Tj T*
+(CX-ID-039 Nora Walsh - Office Coordinator |) Tj T*
+(| ID-DATA | Salma Reed | Evan Idrissi | 8 | CX-ID-005 Ines Mason - Regional Sales Manager;) Tj T*
+(CX-ID-010 Lucas El Amrani - People Operations Partner; CX-ID-015 Nadia Mason - Implementation) Tj T*
+(Specialist; CX-ID-020 Hamza El Amrani - Office Coordinator; CX-ID-025 Lara Mason - Backend) Tj T*
+(Engineer; CX-ID-030 Anas El Amrani - Backend Engineer; CX-ID-035 Sofia Mason - Support) Tj T*
+(Specialist; CX-ID-040 Liam El Amrani - Payroll Specialist |) Tj T*
+T*
+(Branch Operating Notes) Tj T*
+T*
+(- The Indonesia branch has 40 employees.) Tj T*
+(- Branch leadership meets every Monday to review goals, blockers, customer risks, and staffing.) Tj T*
+(- Employees must keep project notes current in the global Company X workspace.) Tj T*
+(- Customer-facing employees should record customer feedback after every major call.) Tj T*
+(- Engineering and data employees should link technical decisions to the relevant branch) Tj T*
+(workstream.) Tj T*
+(- The branch contributes to global Company X projects when local knowledge or timezone coverage) Tj T*
+(is needed.) Tj T*
+T*
+(Employee Directory) Tj T*
+T*
+(| ID | Name | Date of birth | Start date | Email | Department | Post | Salary | Shift | Manager) Tj T*
+(| Project | Project manager |) Tj T*
+(| --- | --- | --- | --- | --- | --- | --- | ---: | --- | --- | --- | --- |) Tj T*
+(| CX-ID-001 | Zara Wright | 1991-09-09 | 2017-01-01 | zara.wright.id1@companyx.example |) Tj T*
+(Operations | Branch Director | $135,100 | Late support shift, 12:00-20:00 local time | Global) Tj T*
+(COO | ID-OPS | Zara Wright |) Tj T*
+(| CX-ID-002 | Daniel Mansouri | 1998-02-20 | 2018-04-08 | daniel.mansouri.id2@companyx.example |) Tj T*
+(Operations | Operations Manager | $99,800 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Zara Wright | ID-GROW | Ines Mason |) Tj T*
+(| CX-ID-003 | Salma Reed | 1980-07-03 | 2019-07-15 | salma.reed.id3@companyx.example |) Tj T*
+(Engineering | Engineering Manager | $122,500 | Night operations shift, 20:00-04:00 local time |) Tj T*
+(Zara Wright | ID-CX | Leo Idrissi |) Tj T*
+(| CX-ID-004 | Leo Idrissi | 1987-12-14 | 2020-10-22 | leo.idrissi.id4@companyx.example |) Tj T*
+(Customer Success | Customer Success Manager | $105,200 | Morning shift, 08:00-16:00 local time |) Tj T*
+(Zara Wright | ID-SEC | Samir Rami |) Tj T*
+(| CX-ID-005 | Ines Mason | 1994-05-25 | 2021-01-01 | ines.mason.id5@companyx.example | Sales |) Tj T*
+(Regional Sales Manager | $127,900 | Standard shift, 09:00-17:30 local time | Zara Wright |) Tj T*
+(ID-DATA | Salma Reed |) Tj T*
+(| CX-ID-006 | Nabil Skalli | 1976-10-08 | 2022-04-08 | nabil.skalli.id6@companyx.example | Data) Tj T*
+(and AI | Data Lead | $130,600 | Late support shift, 12:00-20:00 local time | Zara Wright |) Tj T*
+(ID-OPS | Zara Wright |) Tj T*
+(| CX-ID-007 | Mariam Bishop | 1983-03-19 | 2023-07-15 | mariam.bishop.id7@companyx.example |) Tj T*
+(Customer Success | Support Lead | $97,100 | Split collaboration shift, 10:00-14:00 and) Tj T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 4172 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(16:00-20:00 local time | Zara Wright | ID-GROW | Ines Mason |) Tj T*
+(| CX-ID-008 | Samir Rami | 1990-08-02 | 2024-10-22 | samir.rami.id8@companyx.example | IT and) Tj T*
+(Security | Security Coordinator | $89,800 | Night operations shift, 20:00-04:00 local time |) Tj T*
+(Zara Wright | ID-CX | Leo Idrissi |) Tj T*
+(| CX-ID-009 | Aya Walsh | 1997-01-13 | 2017-01-01 | aya.walsh.id9@companyx.example | Finance |) Tj T*
+(Finance Coordinator | $90,500 | Morning shift, 08:00-16:00 local time | Daniel Mansouri | ID-SEC) Tj T*
+(| Samir Rami |) Tj T*
+(| CX-ID-010 | Lucas El Amrani | 1979-06-24 | 2018-04-08 | lucas.el.amrani.id10@companyx.example) Tj T*
+(| People Operations | People Operations Partner | $91,200 | Standard shift, 09:00-17:30 local) Tj T*
+(time | Daniel Mansouri | ID-DATA | Salma Reed |) Tj T*
+(| CX-ID-011 | Dina Wright | 1986-11-07 | 2019-07-15 | dina.wright.id11@companyx.example |) Tj T*
+(Engineering | Backend Engineer | $113,900 | Late support shift, 12:00-20:00 local time | Salma) Tj T*
+(Reed | ID-OPS | Zara Wright |) Tj T*
+(| CX-ID-012 | Malik Mansouri | 1993-04-18 | 2020-10-22 | malik.mansouri.id12@companyx.example |) Tj T*
+(Engineering | Frontend Engineer | $116,600 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Salma Reed | ID-GROW | Ines Mason |) Tj T*
+(| CX-ID-013 | Rim Reed | 2000-09-01 | 2021-01-01 | rim.reed.id13@companyx.example | Engineering) Tj T*
+(| QA Automation Engineer | $103,100 | Night operations shift, 20:00-04:00 local time | Salma) Tj T*
+(Reed | ID-CX | Leo Idrissi |) Tj T*
+(| CX-ID-014 | Evan Idrissi | 1982-02-12 | 2022-04-08 | evan.idrissi.id14@companyx.example | Data) Tj T*
+(and AI | Data Analyst | $97,800 | Morning shift, 08:00-16:00 local time | Nabil Skalli | ID-SEC) Tj T*
+(| Samir Rami |) Tj T*
+(| CX-ID-015 | Nadia Mason | 1989-07-23 | 2023-07-15 | nadia.mason.id15@companyx.example |) Tj T*
+(Customer Success | Implementation Specialist | $84,500 | Standard shift, 09:00-17:30 local time) Tj T*
+(| Leo Idrissi | ID-DATA | Salma Reed |) Tj T*
+(| CX-ID-016 | Bilal Skalli | 1996-12-06 | 2024-10-22 | bilal.skalli.id16@companyx.example |) Tj T*
+(Customer Success | Support Specialist | $87,200 | Late support shift, 12:00-20:00 local time |) Tj T*
+(Leo Idrissi | ID-OPS | Zara Wright |) Tj T*
+(| CX-ID-017 | Emma Bishop | 1978-05-17 | 2017-01-01 | emma.bishop.id17@companyx.example | Sales) Tj T*
+(| Solutions Consultant | $96,900 | Split collaboration shift, 10:00-14:00 and 16:00-20:00 local) Tj T*
+(time | Ines Mason | ID-GROW | Ines Mason |) Tj T*
+(| CX-ID-018 | Tariq Rami | 1985-10-28 | 2018-04-08 | tariq.rami.id18@companyx.example | Sales |) Tj T*
+(Account Executive | $99,600 | Night operations shift, 20:00-04:00 local time | Ines Mason |) Tj T*
+(ID-CX | Leo Idrissi |) Tj T*
+(| CX-ID-019 | Clara Walsh | 1992-03-11 | 2019-07-15 | clara.walsh.id19@companyx.example |) Tj T*
+(Marketing | Marketing Specialist | $81,100 | Morning shift, 08:00-16:00 local time | Ines Mason) Tj T*
+(| ID-SEC | Samir Rami |) Tj T*
+(| CX-ID-020 | Hamza El Amrani | 1999-08-22 | 2020-10-22 | hamza.el.amrani.id20@companyx.example) Tj T*
+(| Operations | Office Coordinator | $81,800 | Standard shift, 09:00-17:30 local time | Daniel) Tj T*
+(Mansouri | ID-DATA | Salma Reed |) Tj T*
+(| CX-ID-021 | Yasmine Wright | 1981-01-05 | 2021-01-01 | yasmine.wright.id21@companyx.example |) Tj T*
+(Finance | Payroll Specialist | $90,500 | Late support shift, 12:00-20:00 local time | Daniel) Tj T*
+(Mansouri | ID-OPS | Zara Wright |) Tj T*
+(| CX-ID-022 | Victor Mansouri | 1988-06-16 | 2022-04-08 | victor.mansouri.id22@companyx.example) Tj T*
+(| IT and Security | Security Analyst | $95,200 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Samir Rami | ID-GROW | Ines Mason |) Tj T*
+(| CX-ID-023 | Imane Reed | 1995-11-27 | 2023-07-15 | imane.reed.id23@companyx.example | People) Tj T*
+(Operations | Recruiting Coordinator | $93,900 | Night operations shift, 20:00-04:00 local time |) Tj T*
+(Daniel Mansouri | ID-CX | Leo Idrissi |) Tj T*
+(| CX-ID-024 | Oscar Idrissi | 1977-04-10 | 2024-10-22 | oscar.idrissi.id24@companyx.example |) Tj T*
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 4107 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(Operations | Product Operations Analyst | $92,600 | Morning shift, 08:00-16:00 local time |) Tj T*
+(Daniel Mansouri | ID-SEC | Samir Rami |) Tj T*
+(| CX-ID-025 | Lara Mason | 1984-09-21 | 2017-01-01 | lara.mason.id25@companyx.example |) Tj T*
+(Engineering | Backend Engineer | $103,100 | Standard shift, 09:00-17:30 local time | Salma Reed) Tj T*
+(| ID-DATA | Salma Reed |) Tj T*
+(| CX-ID-026 | Mehdi Skalli | 1991-02-04 | 2018-04-08 | mehdi.skalli.id26@companyx.example |) Tj T*
+(Engineering | Frontend Engineer | $105,800 | Late support shift, 12:00-20:00 local time | Salma) Tj T*
+(Reed | ID-OPS | Zara Wright |) Tj T*
+(| CX-ID-027 | Nour Bishop | 1998-07-15 | 2019-07-15 | nour.bishop.id27@companyx.example | Data) Tj T*
+(and AI | Data Analyst | $100,500 | Split collaboration shift, 10:00-14:00 and 16:00-20:00 local) Tj T*
+(time | Nabil Skalli | ID-GROW | Ines Mason |) Tj T*
+(| CX-ID-028 | Jonas Rami | 1980-12-26 | 2020-10-22 | jonas.rami.id28@companyx.example | Customer) Tj T*
+(Success | Implementation Specialist | $87,200 | Night operations shift, 20:00-04:00 local time |) Tj T*
+(Leo Idrissi | ID-CX | Leo Idrissi |) Tj T*
+(| CX-ID-029 | Farah Walsh | 1987-05-09 | 2021-01-01 | farah.walsh.id29@companyx.example |) Tj T*
+(Customer Success | Support Specialist | $89,900 | Morning shift, 08:00-16:00 local time | Leo) Tj T*
+(Idrissi | ID-SEC | Samir Rami |) Tj T*
+(| CX-ID-030 | Anas El Amrani | 1994-10-20 | 2022-04-08 | anas.el.amrani.id30@companyx.example |) Tj T*
+(Engineering | Backend Engineer | $116,600 | Standard shift, 09:00-17:30 local time | Salma Reed) Tj T*
+(| ID-DATA | Salma Reed |) Tj T*
+(| CX-ID-031 | Amina Wright | 1976-03-03 | 2023-07-15 | amina.wright.id31@companyx.example |) Tj T*
+(Engineering | Frontend Engineer | $103,100 | Late support shift, 12:00-20:00 local time | Salma) Tj T*
+(Reed | ID-OPS | Zara Wright |) Tj T*
+(| CX-ID-032 | Noah Mansouri | 1983-08-14 | 2024-10-22 | noah.mansouri.id32@companyx.example |) Tj T*
+(Engineering | QA Automation Engineer | $105,800 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Salma Reed | ID-GROW | Ines Mason |) Tj T*
+(| CX-ID-033 | Leila Reed | 1990-01-25 | 2017-01-01 | leila.reed.id33@companyx.example | Data and) Tj T*
+(AI | Data Analyst | $100,500 | Night operations shift, 20:00-04:00 local time | Nabil Skalli |) Tj T*
+(ID-CX | Leo Idrissi |) Tj T*
+(| CX-ID-034 | Adam Idrissi | 1997-06-08 | 2018-04-08 | adam.idrissi.id34@companyx.example |) Tj T*
+(Customer Success | Implementation Specialist | $87,200 | Morning shift, 08:00-16:00 local time |) Tj T*
+(Leo Idrissi | ID-SEC | Samir Rami |) Tj T*
+(| CX-ID-035 | Sofia Mason | 1979-11-19 | 2019-07-15 | sofia.mason.id35@companyx.example |) Tj T*
+(Customer Success | Support Specialist | $89,900 | Standard shift, 09:00-17:30 local time | Leo) Tj T*
+(Idrissi | ID-DATA | Salma Reed |) Tj T*
+(| CX-ID-036 | Youssef Skalli | 1986-04-02 | 2020-10-22 | youssef.skalli.id36@companyx.example |) Tj T*
+(Sales | Solutions Consultant | $99,600 | Late support shift, 12:00-20:00 local time | Ines Mason) Tj T*
+(| ID-OPS | Zara Wright |) Tj T*
+(| CX-ID-037 | Maya Bishop | 1993-09-13 | 2021-01-01 | maya.bishop.id37@companyx.example | Sales) Tj T*
+(| Account Executive | $86,100 | Split collaboration shift, 10:00-14:00 and 16:00-20:00 local) Tj T*
+(time | Ines Mason | ID-GROW | Ines Mason |) Tj T*
+(| CX-ID-038 | Omar Rami | 2000-02-24 | 2022-04-08 | omar.rami.id38@companyx.example | Marketing) Tj T*
+(| Marketing Specialist | $83,800 | Night operations shift, 20:00-04:00 local time | Ines Mason |) Tj T*
+(ID-CX | Leo Idrissi |) Tj T*
+(| CX-ID-039 | Nora Walsh | 1982-07-07 | 2023-07-15 | nora.walsh.id39@companyx.example |) Tj T*
+(Operations | Office Coordinator | $84,500 | Morning shift, 08:00-16:00 local time | Daniel) Tj T*
+(Mansouri | ID-SEC | Samir Rami |) Tj T*
+(| CX-ID-040 | Liam El Amrani | 1989-12-18 | 2024-10-22 | liam.el.amrani.id40@companyx.example |) Tj T*
+(Finance | Payroll Specialist | $93,200 | Standard shift, 09:00-17:30 local time | Daniel) Tj T*
+(Mansouri | ID-DATA | Salma Reed |) Tj T*
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 2251 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+T*
+(Employee Daily Work Briefs) Tj T*
+T*
+(CX-ID-001 - Zara Wright) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Branch Director) Tj T*
+(- Email: zara.wright.id1@companyx.example) Tj T*
+(- Phone: +1-555-0201) Tj T*
+(- Date of birth: 1991-09-09) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $135,100) Tj T*
+(- Manager: Global COO) Tj T*
+(- Employment type: Contractor) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Owns branch strategy, staffing, budget health, and executive reporting) Tj T*
+(for Indonesia.) Tj T*
+(- Branch project: Indonesia Operating System) Tj T*
+(- Local workstream: ID-OPS) Tj T*
+(- Project manager: Zara Wright) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $2,280,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: vendor operations, office coordination, process design) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack, Executive Dashboards) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Admin and strategic reporting access) Tj T*
+(- PTO balance: 6 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Indonesia leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Lead the Indonesia branch operating rhythm and weekly executive update.) Tj T*
+(  - Approve budget, hiring, and priority changes for the branch.) Tj T*
+(  - Escalate customer, staffing, and compliance risks to global leadership.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-002 - Daniel Mansouri) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 2405 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Department: Operations) Tj T*
+(- Post: Operations Manager) Tj T*
+(- Email: daniel.mansouri.id2@companyx.example) Tj T*
+(- Phone: +1-555-0202) Tj T*
+(- Date of birth: 1998-02-20) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $99,800) Tj T*
+(- Manager: Zara Wright) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Indonesia Operations team.) Tj T*
+(- Branch project: Indonesia Market Growth Program) Tj T*
+(- Local workstream: ID-GROW) Tj T*
+(- Project manager: Ines Mason) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $2,317,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: reporting, procurement, vendor operations) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack, Executive Dashboards) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 7 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Indonesia leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Coordinate staffing, vendor, office, and delivery workflows for Jakarta.) Tj T*
+(  - Keep branch process documentation, service levels, and handoffs current.) Tj T*
+(  - Track branch blockers and follow up with the accountable owner.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-003 - Salma Reed) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Engineering Manager) Tj T*
+(- Email: salma.reed.id3@companyx.example) Tj T*
+(- Phone: +1-555-0203) Tj T*
+(- Date of birth: 1980-07-03) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $122,500) Tj T*
+ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Length 2510 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Manager: Zara Wright) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Indonesia Engineering team.) Tj T*
+(- Branch project: Indonesia Customer Experience Program) Tj T*
+(- Local workstream: ID-CX) Tj T*
+(- Project manager: Leo Idrissi) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $2,355,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: observability, cloud deployment, React) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira, Executive Dashboards) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 8 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Indonesia leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Indonesia branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Jakarta operations.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-004 - Leo Idrissi) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Customer Success Manager) Tj T*
+(- Email: leo.idrissi.id4@companyx.example) Tj T*
+(- Phone: +1-555-0204) Tj T*
+(- Date of birth: 1987-12-14) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $105,200) Tj T*
+(- Manager: Zara Wright) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Indonesia Customer Success team.) Tj T*
+(- Branch project: Indonesia Compliance And Security Track) Tj T*
+(- Local workstream: ID-SEC) Tj T*
+ET
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 18 0 R >>
+endobj
+20 0 obj
+<< /Length 2467 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project manager: Samir Rami) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $2,392,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: onboarding, renewal planning, training) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion, Executive Dashboards) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 9 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Indonesia leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Indonesia customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Indonesia customer feedback with Product and Engineering.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-005 - Ines Mason) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Regional Sales Manager) Tj T*
+(- Email: ines.mason.id5@companyx.example) Tj T*
+(- Phone: +1-555-0205) Tj T*
+(- Date of birth: 1994-05-25) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $127,900) Tj T*
+(- Manager: Zara Wright) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Indonesia Sales team.) Tj T*
+(- Branch project: Indonesia Branch Analytics Layer) Tj T*
+(- Local workstream: ID-DATA) Tj T*
+(- Project manager: Salma Reed) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $2,430,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: CRM hygiene, negotiation, enterprise discovery) Tj T*
+ET
+endstream
+endobj
+21 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 20 0 R >>
+endobj
+22 0 obj
+<< /Length 2422 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign, Executive Dashboards) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 10 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Indonesia leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the Indonesia market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-006 - Nabil Skalli) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Data and AI) Tj T*
+(- Post: Data Lead) Tj T*
+(- Email: nabil.skalli.id6@companyx.example) Tj T*
+(- Phone: +1-555-0206) Tj T*
+(- Date of birth: 1976-10-08) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $130,600) Tj T*
+(- Manager: Zara Wright) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Indonesia Data and AI team.) Tj T*
+(- Branch project: Indonesia Operating System) Tj T*
+(- Local workstream: ID-OPS) Tj T*
+(- Project manager: Zara Wright) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $2,280,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: SQL, dashboarding, data quality) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion, Executive Dashboards) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 11 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Indonesia leadership status note) Tj T*
+ET
+endstream
+endobj
+23 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 22 0 R >>
+endobj
+24 0 obj
+<< /Length 2614 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for Indonesia capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-007 - Mariam Bishop) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Support Lead) Tj T*
+(- Email: mariam.bishop.id7@companyx.example) Tj T*
+(- Phone: +1-555-0207) Tj T*
+(- Date of birth: 1983-03-19) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $97,100) Tj T*
+(- Manager: Zara Wright) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Indonesia Customer Success team.) Tj T*
+(- Branch project: Indonesia Market Growth Program) Tj T*
+(- Local workstream: ID-GROW) Tj T*
+(- Project manager: Ines Mason) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $2,317,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: support triage, onboarding, renewal planning) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion, Executive Dashboards) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 12 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Indonesia leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Indonesia customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Indonesia customer feedback with Product and Engineering.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+ET
+endstream
+endobj
+25 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 24 0 R >>
+endobj
+26 0 obj
+<< /Length 2500 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-008 - Samir Rami) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: IT and Security) Tj T*
+(- Post: Security Coordinator) Tj T*
+(- Email: samir.rami.id8@companyx.example) Tj T*
+(- Phone: +1-555-0208) Tj T*
+(- Date of birth: 1990-08-02) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $89,800) Tj T*
+(- Manager: Zara Wright) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Protects access, devices, security evidence, and incident readiness for) Tj T*
+(Indonesia.) Tj T*
+(- Branch project: Indonesia Customer Experience Program) Tj T*
+(- Local workstream: ID-CX) Tj T*
+(- Project manager: Leo Idrissi) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $2,355,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: SOC 2 evidence, identity access, SOC 2 evidence) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Okta, Jamf, Cloudflare, Vanta) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Security tools and device management access) Tj T*
+(- PTO balance: 13 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Access review notes) Tj T*
+(  - Training completion report) Tj T*
+(  - Security evidence upload) Tj T*
+(- Daily tasks:) Tj T*
+(  - Review access, compliance evidence, and incident readiness for the Indonesia branch.) Tj T*
+(  - Coordinate endpoint security and quarterly training completion.) Tj T*
+(  - Escalate high-risk security events to the Horizon Security Program.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-009 - Aya Walsh) Tj T*
+ET
+endstream
+endobj
+27 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 26 0 R >>
+endobj
+28 0 obj
+<< /Length 2329 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Finance) Tj T*
+(- Post: Finance Coordinator) Tj T*
+(- Email: aya.walsh.id9@companyx.example) Tj T*
+(- Phone: +1-555-0209) Tj T*
+(- Date of birth: 1997-01-13) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $90,500) Tj T*
+(- Manager: Daniel Mansouri) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Manages branch finance controls, payroll support, invoices, and budget) Tj T*
+(evidence.) Tj T*
+(- Branch project: Indonesia Compliance And Security Track) Tj T*
+(- Local workstream: ID-SEC) Tj T*
+(- Project manager: Samir Rami) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $2,392,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: forecasting, payroll, vendor management) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: QuickBooks, Ramp, PayrollHub, Google Sheets) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Finance systems and billing access) Tj T*
+(- PTO balance: 14 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Budget variance note) Tj T*
+(  - Invoice approval queue) Tj T*
+(  - Payroll exception list) Tj T*
+(- Daily tasks:) Tj T*
+(  - Validate payroll, invoices, expense controls, and budget usage for Indonesia.) Tj T*
+(  - Prepare month-end finance notes and resolve missing approvals.) Tj T*
+(  - Flag budget variance or vendor payment risks to the finance owner.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-010 - Lucas El Amrani) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: People Operations) Tj T*
+(- Post: People Operations Partner) Tj T*
+(- Email: lucas.el.amrani.id10@companyx.example) Tj T*
+(- Phone: +1-555-0210) Tj T*
+ET
+endstream
+endobj
+29 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 28 0 R >>
+endobj
+30 0 obj
+<< /Length 2332 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Date of birth: 1979-06-24) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $91,200) Tj T*
+(- Manager: Daniel Mansouri) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Supports hiring, onboarding, employee records, and manager guidance for) Tj T*
+(Indonesia.) Tj T*
+(- Branch project: Indonesia Branch Analytics Layer) Tj T*
+(- Local workstream: ID-DATA) Tj T*
+(- Project manager: Salma Reed) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $2,430,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: recruiting, performance reviews, recruiting) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: BambooHR, Greenhouse, Lattice, Notion) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 15 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Hiring pipeline update) Tj T*
+(  - Onboarding checklist review) Tj T*
+(  - Employee support notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Support hiring, onboarding, employee relations, and policy questions in Indonesia.) Tj T*
+(  - Maintain employee records, onboarding tasks, and performance cycle reminders.) Tj T*
+(  - Coach managers on one-on-ones, feedback, and staffing risks.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-011 - Dina Wright) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Backend Engineer) Tj T*
+(- Email: dina.wright.id11@companyx.example) Tj T*
+(- Phone: +1-555-0211) Tj T*
+(- Date of birth: 1986-11-07) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $113,900) Tj T*
+(- Manager: Salma Reed) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+ET
+endstream
+endobj
+31 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 30 0 R >>
+endobj
+32 0 obj
+<< /Length 2426 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Jakarta) Tj T*
+(customers.) Tj T*
+(- Branch project: Indonesia Operating System) Tj T*
+(- Local workstream: ID-OPS) Tj T*
+(- Project manager: Zara Wright) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $2,280,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: cloud deployment, React, observability) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 16 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Indonesia branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Jakarta operations.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-012 - Malik Mansouri) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Frontend Engineer) Tj T*
+(- Email: malik.mansouri.id12@companyx.example) Tj T*
+(- Phone: +1-555-0212) Tj T*
+(- Date of birth: 1993-04-18) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $116,600) Tj T*
+(- Manager: Salma Reed) Tj T*
+(- Employment type: Contractor) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Jakarta) Tj T*
+(customers.) Tj T*
+(- Branch project: Indonesia Market Growth Program) Tj T*
+(- Local workstream: ID-GROW) Tj T*
+(- Project manager: Ines Mason) Tj T*
+ET
+endstream
+endobj
+33 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 32 0 R >>
+endobj
+34 0 obj
+<< /Length 2401 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project status: In build) Tj T*
+(- Project budget: $2,317,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: Node.js, API design, automated testing) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 17 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Indonesia branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Jakarta operations.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-013 - Rim Reed) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: QA Automation Engineer) Tj T*
+(- Email: rim.reed.id13@companyx.example) Tj T*
+(- Phone: +1-555-0213) Tj T*
+(- Date of birth: 2000-09-01) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $103,100) Tj T*
+(- Manager: Salma Reed) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Jakarta) Tj T*
+(customers.) Tj T*
+(- Branch project: Indonesia Customer Experience Program) Tj T*
+(- Local workstream: ID-CX) Tj T*
+(- Project manager: Leo Idrissi) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $2,355,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: React, observability, cloud deployment) Tj T*
+ET
+endstream
+endobj
+35 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 34 0 R >>
+endobj
+36 0 obj
+<< /Length 2375 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 18 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Indonesia branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Jakarta operations.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-014 - Evan Idrissi) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Data and AI) Tj T*
+(- Post: Data Analyst) Tj T*
+(- Email: evan.idrissi.id14@companyx.example) Tj T*
+(- Phone: +1-555-0214) Tj T*
+(- Date of birth: 1982-02-12) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $97,800) Tj T*
+(- Manager: Nabil Skalli) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Maintains branch analytics, metric quality, and decision dashboards for) Tj T*
+(Indonesia.) Tj T*
+(- Branch project: Indonesia Compliance And Security Track) Tj T*
+(- Local workstream: ID-SEC) Tj T*
+(- Project manager: Samir Rami) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $2,392,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: dashboarding, data quality, SQL) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 19 days) Tj T*
+(- Weekly deliverables:) Tj T*
+ET
+endstream
+endobj
+37 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 36 0 R >>
+endobj
+38 0 obj
+<< /Length 2435 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for Indonesia capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-015 - Nadia Mason) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Implementation Specialist) Tj T*
+(- Email: nadia.mason.id15@companyx.example) Tj T*
+(- Phone: +1-555-0215) Tj T*
+(- Date of birth: 1989-07-23) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $84,500) Tj T*
+(- Manager: Leo Idrissi) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in Indonesia.) Tj T*
+(- Branch project: Indonesia Branch Analytics Layer) Tj T*
+(- Local workstream: ID-DATA) Tj T*
+(- Project manager: Salma Reed) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $2,430,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: health scoring, support triage, onboarding) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 20 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Indonesia customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+ET
+endstream
+endobj
+39 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 38 0 R >>
+endobj
+40 0 obj
+<< /Length 2601 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Share recurring Indonesia customer feedback with Product and Engineering.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-016 - Bilal Skalli) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Support Specialist) Tj T*
+(- Email: bilal.skalli.id16@companyx.example) Tj T*
+(- Phone: +1-555-0216) Tj T*
+(- Date of birth: 1996-12-06) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $87,200) Tj T*
+(- Manager: Leo Idrissi) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in Indonesia.) Tj T*
+(- Branch project: Indonesia Operating System) Tj T*
+(- Local workstream: ID-OPS) Tj T*
+(- Project manager: Zara Wright) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $2,280,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: renewal planning, training, health scoring) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 21 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Indonesia customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Indonesia customer feedback with Product and Engineering.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+ET
+endstream
+endobj
+41 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 40 0 R >>
+endobj
+42 0 obj
+<< /Length 2261 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+T*
+(CX-ID-017 - Emma Bishop) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Solutions Consultant) Tj T*
+(- Email: emma.bishop.id17@companyx.example) Tj T*
+(- Phone: +1-555-0217) Tj T*
+(- Date of birth: 1978-05-17) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $96,900) Tj T*
+(- Manager: Ines Mason) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Builds regional pipeline, demos, and account plans for the Indonesia) Tj T*
+(market.) Tj T*
+(- Branch project: Indonesia Market Growth Program) Tj T*
+(- Local workstream: ID-GROW) Tj T*
+(- Project manager: Ines Mason) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $2,317,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: negotiation, enterprise discovery, demo strategy) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 22 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - CRM pipeline update) Tj T*
+(  - Demo notes) Tj T*
+(  - Next-step account plan) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the Indonesia market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-018 - Tariq Rami) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Account Executive) Tj T*
+ET
+endstream
+endobj
+43 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 42 0 R >>
+endobj
+44 0 obj
+<< /Length 2320 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Email: tariq.rami.id18@companyx.example) Tj T*
+(- Phone: +1-555-0218) Tj T*
+(- Date of birth: 1985-10-28) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $99,600) Tj T*
+(- Manager: Ines Mason) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Builds regional pipeline, demos, and account plans for the Indonesia) Tj T*
+(market.) Tj T*
+(- Branch project: Indonesia Customer Experience Program) Tj T*
+(- Local workstream: ID-CX) Tj T*
+(- Project manager: Leo Idrissi) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $2,355,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: account planning, CRM hygiene, negotiation) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 23 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - CRM pipeline update) Tj T*
+(  - Demo notes) Tj T*
+(  - Next-step account plan) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the Indonesia market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-019 - Clara Walsh) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Marketing) Tj T*
+(- Post: Marketing Specialist) Tj T*
+(- Email: clara.walsh.id19@companyx.example) Tj T*
+(- Phone: +1-555-0219) Tj T*
+(- Date of birth: 1992-03-11) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $81,100) Tj T*
+(- Manager: Ines Mason) Tj T*
+ET
+endstream
+endobj
+45 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 44 0 R >>
+endobj
+46 0 obj
+<< /Length 2453 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Localizes campaigns, launch assets, and market education for the) Tj T*
+(Indonesia audience.) Tj T*
+(- Branch project: Indonesia Compliance And Security Track) Tj T*
+(- Local workstream: ID-SEC) Tj T*
+(- Project manager: Samir Rami) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $2,392,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: campaign strategy, SEO, product messaging) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Webflow, HubSpot, Google Analytics, Canva) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 6 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Localize campaigns, webinars, and customer stories for Indonesia.) Tj T*
+(  - Coordinate launch assets with Sales, Product, and Design.) Tj T*
+(  - Report campaign performance and content gaps to the growth team.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-020 - Hamza El Amrani) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Office Coordinator) Tj T*
+(- Email: hamza.el.amrani.id20@companyx.example) Tj T*
+(- Phone: +1-555-0220) Tj T*
+(- Date of birth: 1999-08-22) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $81,800) Tj T*
+(- Manager: Daniel Mansouri) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Supports daily operations, documentation, vendor coordination, and branch) Tj T*
+(execution in Jakarta.) Tj T*
+(- Branch project: Indonesia Branch Analytics Layer) Tj T*
+ET
+endstream
+endobj
+47 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 46 0 R >>
+endobj
+48 0 obj
+<< /Length 2340 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Local workstream: ID-DATA) Tj T*
+(- Project manager: Salma Reed) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $2,430,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: process design, reporting, procurement) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 7 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Coordinate staffing, vendor, office, and delivery workflows for Jakarta.) Tj T*
+(  - Keep branch process documentation, service levels, and handoffs current.) Tj T*
+(  - Track branch blockers and follow up with the accountable owner.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-021 - Yasmine Wright) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Finance) Tj T*
+(- Post: Payroll Specialist) Tj T*
+(- Email: yasmine.wright.id21@companyx.example) Tj T*
+(- Phone: +1-555-0221) Tj T*
+(- Date of birth: 1981-01-05) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $90,500) Tj T*
+(- Manager: Daniel Mansouri) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Manages branch finance controls, payroll support, invoices, and budget) Tj T*
+(evidence.) Tj T*
+(- Branch project: Indonesia Operating System) Tj T*
+(- Local workstream: ID-OPS) Tj T*
+(- Project manager: Zara Wright) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $2,280,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+ET
+endstream
+endobj
+49 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 48 0 R >>
+endobj
+50 0 obj
+<< /Length 2492 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: payroll, vendor management, billing controls) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: QuickBooks, Ramp, PayrollHub, Google Sheets) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Finance systems and billing access) Tj T*
+(- PTO balance: 8 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Budget variance note) Tj T*
+(  - Invoice approval queue) Tj T*
+(  - Payroll exception list) Tj T*
+(- Daily tasks:) Tj T*
+(  - Validate payroll, invoices, expense controls, and budget usage for Indonesia.) Tj T*
+(  - Prepare month-end finance notes and resolve missing approvals.) Tj T*
+(  - Flag budget variance or vendor payment risks to the finance owner.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-022 - Victor Mansouri) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: IT and Security) Tj T*
+(- Post: Security Analyst) Tj T*
+(- Email: victor.mansouri.id22@companyx.example) Tj T*
+(- Phone: +1-555-0222) Tj T*
+(- Date of birth: 1988-06-16) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $95,200) Tj T*
+(- Manager: Samir Rami) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Protects access, devices, security evidence, and incident readiness for) Tj T*
+(Indonesia.) Tj T*
+(- Branch project: Indonesia Market Growth Program) Tj T*
+(- Local workstream: ID-GROW) Tj T*
+(- Project manager: Ines Mason) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $2,317,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: identity access, SOC 2 evidence, identity access) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Okta, Jamf, Cloudflare, Vanta) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Security tools and device management access) Tj T*
+ET
+endstream
+endobj
+51 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 50 0 R >>
+endobj
+52 0 obj
+<< /Length 2372 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- PTO balance: 9 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Access review notes) Tj T*
+(  - Training completion report) Tj T*
+(  - Security evidence upload) Tj T*
+(- Daily tasks:) Tj T*
+(  - Review access, compliance evidence, and incident readiness for the Indonesia branch.) Tj T*
+(  - Coordinate endpoint security and quarterly training completion.) Tj T*
+(  - Escalate high-risk security events to the Horizon Security Program.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-023 - Imane Reed) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: People Operations) Tj T*
+(- Post: Recruiting Coordinator) Tj T*
+(- Email: imane.reed.id23@companyx.example) Tj T*
+(- Phone: +1-555-0223) Tj T*
+(- Date of birth: 1995-11-27) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $93,900) Tj T*
+(- Manager: Daniel Mansouri) Tj T*
+(- Employment type: Contractor) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Supports hiring, onboarding, employee records, and manager guidance for) Tj T*
+(Indonesia.) Tj T*
+(- Branch project: Indonesia Customer Experience Program) Tj T*
+(- Local workstream: ID-CX) Tj T*
+(- Project manager: Leo Idrissi) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $2,355,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: employee relations, policy operations, employee relations) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: BambooHR, Greenhouse, Lattice, Notion) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 10 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Hiring pipeline update) Tj T*
+(  - Onboarding checklist review) Tj T*
+(  - Employee support notes) Tj T*
+(- Daily tasks:) Tj T*
+ET
+endstream
+endobj
+53 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 52 0 R >>
+endobj
+54 0 obj
+<< /Length 2643 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Support hiring, onboarding, employee relations, and policy questions in Indonesia.) Tj T*
+(  - Maintain employee records, onboarding tasks, and performance cycle reminders.) Tj T*
+(  - Coach managers on one-on-ones, feedback, and staffing risks.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-024 - Oscar Idrissi) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Product Operations Analyst) Tj T*
+(- Email: oscar.idrissi.id24@companyx.example) Tj T*
+(- Phone: +1-555-0224) Tj T*
+(- Date of birth: 1977-04-10) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $92,600) Tj T*
+(- Manager: Daniel Mansouri) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Supports daily operations, documentation, vendor coordination, and branch) Tj T*
+(execution in Jakarta.) Tj T*
+(- Branch project: Indonesia Compliance And Security Track) Tj T*
+(- Local workstream: ID-SEC) Tj T*
+(- Project manager: Samir Rami) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $2,392,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: procurement, vendor operations, office coordination) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 11 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Coordinate staffing, vendor, office, and delivery workflows for Jakarta.) Tj T*
+(  - Keep branch process documentation, service levels, and handoffs current.) Tj T*
+(  - Track branch blockers and follow up with the accountable owner.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+ET
+endstream
+endobj
+55 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 54 0 R >>
+endobj
+56 0 obj
+<< /Length 2366 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-025 - Lara Mason) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Backend Engineer) Tj T*
+(- Email: lara.mason.id25@companyx.example) Tj T*
+(- Phone: +1-555-0225) Tj T*
+(- Date of birth: 1984-09-21) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $103,100) Tj T*
+(- Manager: Salma Reed) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Jakarta) Tj T*
+(customers.) Tj T*
+(- Branch project: Indonesia Branch Analytics Layer) Tj T*
+(- Local workstream: ID-DATA) Tj T*
+(- Project manager: Salma Reed) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $2,430,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: React, observability, cloud deployment) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 12 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Indonesia branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Jakarta operations.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-026 - Mehdi Skalli) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+ET
+endstream
+endobj
+57 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 56 0 R >>
+endobj
+58 0 obj
+<< /Length 2279 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Department: Engineering) Tj T*
+(- Post: Frontend Engineer) Tj T*
+(- Email: mehdi.skalli.id26@companyx.example) Tj T*
+(- Phone: +1-555-0226) Tj T*
+(- Date of birth: 1991-02-04) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $105,800) Tj T*
+(- Manager: Salma Reed) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Jakarta) Tj T*
+(customers.) Tj T*
+(- Branch project: Indonesia Operating System) Tj T*
+(- Local workstream: ID-OPS) Tj T*
+(- Project manager: Zara Wright) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $2,280,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: API design, automated testing, Node.js) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 13 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Indonesia branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Jakarta operations.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-027 - Nour Bishop) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Data and AI) Tj T*
+(- Post: Data Analyst) Tj T*
+(- Email: nour.bishop.id27@companyx.example) Tj T*
+(- Phone: +1-555-0227) Tj T*
+(- Date of birth: 1998-07-15) Tj T*
+(- Start date: 2019-07-15) Tj T*
+ET
+endstream
+endobj
+59 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 58 0 R >>
+endobj
+60 0 obj
+<< /Length 2458 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Salary: $100,500) Tj T*
+(- Manager: Nabil Skalli) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Maintains branch analytics, metric quality, and decision dashboards for) Tj T*
+(Indonesia.) Tj T*
+(- Branch project: Indonesia Market Growth Program) Tj T*
+(- Local workstream: ID-GROW) Tj T*
+(- Project manager: Ines Mason) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $2,317,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: model evaluation, experimentation, Python) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 14 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for Indonesia capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-028 - Jonas Rami) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Implementation Specialist) Tj T*
+(- Email: jonas.rami.id28@companyx.example) Tj T*
+(- Phone: +1-555-0228) Tj T*
+(- Date of birth: 1980-12-26) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $87,200) Tj T*
+(- Manager: Leo Idrissi) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+ET
+endstream
+endobj
+61 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 60 0 R >>
+endobj
+62 0 obj
+<< /Length 2375 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(follow-through in Indonesia.) Tj T*
+(- Branch project: Indonesia Customer Experience Program) Tj T*
+(- Local workstream: ID-CX) Tj T*
+(- Project manager: Leo Idrissi) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $2,355,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: training, health scoring, support triage) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 15 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Indonesia customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Indonesia customer feedback with Product and Engineering.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-029 - Farah Walsh) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Support Specialist) Tj T*
+(- Email: farah.walsh.id29@companyx.example) Tj T*
+(- Phone: +1-555-0229) Tj T*
+(- Date of birth: 1987-05-09) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $89,900) Tj T*
+(- Manager: Leo Idrissi) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in Indonesia.) Tj T*
+(- Branch project: Indonesia Compliance And Security Track) Tj T*
+(- Local workstream: ID-SEC) Tj T*
+(- Project manager: Samir Rami) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $2,392,500) Tj T*
+ET
+endstream
+endobj
+63 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 62 0 R >>
+endobj
+64 0 obj
+<< /Length 2454 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: onboarding, renewal planning, training) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 16 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Indonesia customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Indonesia customer feedback with Product and Engineering.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-030 - Anas El Amrani) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Backend Engineer) Tj T*
+(- Email: anas.el.amrani.id30@companyx.example) Tj T*
+(- Phone: +1-555-0230) Tj T*
+(- Date of birth: 1994-10-20) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $116,600) Tj T*
+(- Manager: Salma Reed) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Jakarta) Tj T*
+(customers.) Tj T*
+(- Branch project: Indonesia Branch Analytics Layer) Tj T*
+(- Local workstream: ID-DATA) Tj T*
+(- Project manager: Salma Reed) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $2,430,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: Node.js, API design, automated testing) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+ET
+endstream
+endobj
+65 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 64 0 R >>
+endobj
+66 0 obj
+<< /Length 2302 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Performance band: Strong performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 17 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Indonesia branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Jakarta operations.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-031 - Amina Wright) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Frontend Engineer) Tj T*
+(- Email: amina.wright.id31@companyx.example) Tj T*
+(- Phone: +1-555-0231) Tj T*
+(- Date of birth: 1976-03-03) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $103,100) Tj T*
+(- Manager: Salma Reed) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Jakarta) Tj T*
+(customers.) Tj T*
+(- Branch project: Indonesia Operating System) Tj T*
+(- Local workstream: ID-OPS) Tj T*
+(- Project manager: Zara Wright) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $2,280,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: React, observability, cloud deployment) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 18 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+ET
+endstream
+endobj
+67 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 66 0 R >>
+endobj
+68 0 obj
+<< /Length 2536 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Indonesia branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Jakarta operations.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-032 - Noah Mansouri) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: QA Automation Engineer) Tj T*
+(- Email: noah.mansouri.id32@companyx.example) Tj T*
+(- Phone: +1-555-0232) Tj T*
+(- Date of birth: 1983-08-14) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $105,800) Tj T*
+(- Manager: Salma Reed) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Jakarta) Tj T*
+(customers.) Tj T*
+(- Branch project: Indonesia Market Growth Program) Tj T*
+(- Local workstream: ID-GROW) Tj T*
+(- Project manager: Ines Mason) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $2,317,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: API design, automated testing, Node.js) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 19 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Indonesia branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Jakarta operations.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+ET
+endstream
+endobj
+69 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 68 0 R >>
+endobj
+70 0 obj
+<< /Length 2478 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-033 - Leila Reed) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Data and AI) Tj T*
+(- Post: Data Analyst) Tj T*
+(- Email: leila.reed.id33@companyx.example) Tj T*
+(- Phone: +1-555-0233) Tj T*
+(- Date of birth: 1990-01-25) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $100,500) Tj T*
+(- Manager: Nabil Skalli) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Maintains branch analytics, metric quality, and decision dashboards for) Tj T*
+(Indonesia.) Tj T*
+(- Branch project: Indonesia Customer Experience Program) Tj T*
+(- Local workstream: ID-CX) Tj T*
+(- Project manager: Leo Idrissi) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $2,355,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: model evaluation, experimentation, Python) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 20 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for Indonesia capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-034 - Adam Idrissi) Tj T*
+ET
+endstream
+endobj
+71 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 70 0 R >>
+endobj
+72 0 obj
+<< /Length 2343 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Implementation Specialist) Tj T*
+(- Email: adam.idrissi.id34@companyx.example) Tj T*
+(- Phone: +1-555-0234) Tj T*
+(- Date of birth: 1997-06-08) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $87,200) Tj T*
+(- Manager: Leo Idrissi) Tj T*
+(- Employment type: Contractor) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in Indonesia.) Tj T*
+(- Branch project: Indonesia Compliance And Security Track) Tj T*
+(- Local workstream: ID-SEC) Tj T*
+(- Project manager: Samir Rami) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $2,392,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: onboarding, renewal planning, training) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 21 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Indonesia customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Indonesia customer feedback with Product and Engineering.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-035 - Sofia Mason) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Support Specialist) Tj T*
+(- Email: sofia.mason.id35@companyx.example) Tj T*
+(- Phone: +1-555-0235) Tj T*
+ET
+endstream
+endobj
+73 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 72 0 R >>
+endobj
+74 0 obj
+<< /Length 2326 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Date of birth: 1979-11-19) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $89,900) Tj T*
+(- Manager: Leo Idrissi) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in Indonesia.) Tj T*
+(- Branch project: Indonesia Branch Analytics Layer) Tj T*
+(- Local workstream: ID-DATA) Tj T*
+(- Project manager: Salma Reed) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $2,430,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: health scoring, support triage, onboarding) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 22 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Indonesia customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Indonesia customer feedback with Product and Engineering.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-036 - Youssef Skalli) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Solutions Consultant) Tj T*
+(- Email: youssef.skalli.id36@companyx.example) Tj T*
+(- Phone: +1-555-0236) Tj T*
+(- Date of birth: 1986-04-02) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $99,600) Tj T*
+(- Manager: Ines Mason) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+ET
+endstream
+endobj
+75 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 74 0 R >>
+endobj
+76 0 obj
+<< /Length 2403 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Builds regional pipeline, demos, and account plans for the Indonesia) Tj T*
+(market.) Tj T*
+(- Branch project: Indonesia Operating System) Tj T*
+(- Local workstream: ID-OPS) Tj T*
+(- Project manager: Zara Wright) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $2,280,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: demo strategy, account planning, CRM hygiene) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 23 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - CRM pipeline update) Tj T*
+(  - Demo notes) Tj T*
+(  - Next-step account plan) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the Indonesia market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-037 - Maya Bishop) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Account Executive) Tj T*
+(- Email: maya.bishop.id37@companyx.example) Tj T*
+(- Phone: +1-555-0237) Tj T*
+(- Date of birth: 1993-09-13) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $86,100) Tj T*
+(- Manager: Ines Mason) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Builds regional pipeline, demos, and account plans for the Indonesia) Tj T*
+(market.) Tj T*
+(- Branch project: Indonesia Market Growth Program) Tj T*
+(- Local workstream: ID-GROW) Tj T*
+(- Project manager: Ines Mason) Tj T*
+ET
+endstream
+endobj
+77 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 76 0 R >>
+endobj
+78 0 obj
+<< /Length 2409 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project status: In build) Tj T*
+(- Project budget: $2,317,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: negotiation, enterprise discovery, demo strategy) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 6 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - CRM pipeline update) Tj T*
+(  - Demo notes) Tj T*
+(  - Next-step account plan) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the Indonesia market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-038 - Omar Rami) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Marketing) Tj T*
+(- Post: Marketing Specialist) Tj T*
+(- Email: omar.rami.id38@companyx.example) Tj T*
+(- Phone: +1-555-0238) Tj T*
+(- Date of birth: 2000-02-24) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $83,800) Tj T*
+(- Manager: Ines Mason) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Localizes campaigns, launch assets, and market education for the) Tj T*
+(Indonesia audience.) Tj T*
+(- Branch project: Indonesia Customer Experience Program) Tj T*
+(- Local workstream: ID-CX) Tj T*
+(- Project manager: Leo Idrissi) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $2,355,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: product messaging, copywriting, webinars) Tj T*
+ET
+endstream
+endobj
+79 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 78 0 R >>
+endobj
+80 0 obj
+<< /Length 2416 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Webflow, HubSpot, Google Analytics, Canva) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 7 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Localize campaigns, webinars, and customer stories for Indonesia.) Tj T*
+(  - Coordinate launch assets with Sales, Product, and Design.) Tj T*
+(  - Report campaign performance and content gaps to the growth team.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-039 - Nora Walsh) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Office Coordinator) Tj T*
+(- Email: nora.walsh.id39@companyx.example) Tj T*
+(- Phone: +1-555-0239) Tj T*
+(- Date of birth: 1982-07-07) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $84,500) Tj T*
+(- Manager: Daniel Mansouri) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Supports daily operations, documentation, vendor coordination, and branch) Tj T*
+(execution in Jakarta.) Tj T*
+(- Branch project: Indonesia Compliance And Security Track) Tj T*
+(- Local workstream: ID-SEC) Tj T*
+(- Project manager: Samir Rami) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $2,392,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: procurement, vendor operations, office coordination) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 8 days) Tj T*
+(- Weekly deliverables:) Tj T*
+ET
+endstream
+endobj
+81 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 80 0 R >>
+endobj
+82 0 obj
+<< /Length 2431 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Coordinate staffing, vendor, office, and delivery workflows for Jakarta.) Tj T*
+(  - Keep branch process documentation, service levels, and handoffs current.) Tj T*
+(  - Track branch blockers and follow up with the accountable owner.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(CX-ID-040 - Liam El Amrani) Tj T*
+T*
+(- Branch: Jakarta, Indonesia) Tj T*
+(- Department: Finance) Tj T*
+(- Post: Payroll Specialist) Tj T*
+(- Email: liam.el.amrani.id40@companyx.example) Tj T*
+(- Phone: +1-555-0240) Tj T*
+(- Date of birth: 1989-12-18) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $93,200) Tj T*
+(- Manager: Daniel Mansouri) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Manages branch finance controls, payroll support, invoices, and budget) Tj T*
+(evidence.) Tj T*
+(- Branch project: Indonesia Branch Analytics Layer) Tj T*
+(- Local workstream: ID-DATA) Tj T*
+(- Project manager: Salma Reed) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $2,430,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: billing controls, revenue recognition, forecasting) Tj T*
+(- Languages: Indonesian, English) Tj T*
+(- Main systems used: QuickBooks, Ramp, PayrollHub, Google Sheets) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Finance systems and billing access) Tj T*
+(- PTO balance: 9 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Budget variance note) Tj T*
+(  - Invoice approval queue) Tj T*
+(  - Payroll exception list) Tj T*
+(- Daily tasks:) Tj T*
+(  - Validate payroll, invoices, expense controls, and budget usage for Indonesia.) Tj T*
+(  - Prepare month-end finance notes and resolve missing approvals.) Tj T*
+ET
+endstream
+endobj
+83 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 82 0 R >>
+endobj
+84 0 obj
+<< /Length 926 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Flag budget variance or vendor payment risks to the finance owner.) Tj T*
+(- Support Indonesia branch goals for APAC customer operations, mobile-first workflows, and) Tj T*
+(implementation delivery.) Tj T*
+(  - Update PX-Indonesia-Garuda progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Indonesia branch workspace.) Tj T*
+T*
+(Useful Branch Questions) Tj T*
+T*
+(- How many employees work in the Indonesia branch?) Tj T*
+(- Who is the Branch Director for Indonesia?) Tj T*
+(- Which Indonesia employees work in Engineering?) Tj T*
+(- What does the Indonesia branch specialize in?) Tj T*
+(- List employees in Jakarta with their salaries and posts.) Tj T*
+(- What are the daily tasks for the Indonesia Customer Success team?) Tj T*
+T*
+ET
+endstream
+endobj
+85 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 84 0 R >>
+endobj
+xref
+0 86
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000394 00000 n 
+0000000464 00000 n 
+0000002950 00000 n 
+0000003076 00000 n 
+0000006581 00000 n 
+0000006707 00000 n 
+0000010479 00000 n 
+0000010605 00000 n 
+0000014830 00000 n 
+0000014958 00000 n 
+0000019118 00000 n 
+0000019246 00000 n 
+0000021550 00000 n 
+0000021678 00000 n 
+0000024136 00000 n 
+0000024264 00000 n 
+0000026827 00000 n 
+0000026955 00000 n 
+0000029475 00000 n 
+0000029603 00000 n 
+0000032078 00000 n 
+0000032206 00000 n 
+0000034873 00000 n 
+0000035001 00000 n 
+0000037554 00000 n 
+0000037682 00000 n 
+0000040064 00000 n 
+0000040192 00000 n 
+0000042577 00000 n 
+0000042705 00000 n 
+0000045184 00000 n 
+0000045312 00000 n 
+0000047766 00000 n 
+0000047894 00000 n 
+0000050322 00000 n 
+0000050450 00000 n 
+0000052938 00000 n 
+0000053066 00000 n 
+0000055720 00000 n 
+0000055848 00000 n 
+0000058162 00000 n 
+0000058290 00000 n 
+0000060663 00000 n 
+0000060791 00000 n 
+0000063297 00000 n 
+0000063425 00000 n 
+0000065818 00000 n 
+0000065946 00000 n 
+0000068491 00000 n 
+0000068619 00000 n 
+0000071044 00000 n 
+0000071172 00000 n 
+0000073868 00000 n 
+0000073996 00000 n 
+0000076415 00000 n 
+0000076543 00000 n 
+0000078875 00000 n 
+0000079003 00000 n 
+0000081514 00000 n 
+0000081642 00000 n 
+0000084070 00000 n 
+0000084198 00000 n 
+0000086705 00000 n 
+0000086833 00000 n 
+0000089188 00000 n 
+0000089316 00000 n 
+0000091905 00000 n 
+0000092033 00000 n 
+0000094564 00000 n 
+0000094692 00000 n 
+0000097088 00000 n 
+0000097216 00000 n 
+0000099595 00000 n 
+0000099723 00000 n 
+0000102179 00000 n 
+0000102307 00000 n 
+0000104769 00000 n 
+0000104897 00000 n 
+0000107366 00000 n 
+0000107494 00000 n 
+0000109978 00000 n 
+0000110106 00000 n 
+0000111084 00000 n 
+trailer
+<< /Size 86 /Root 1 0 R >>
+startxref
+111212
+%%EOF

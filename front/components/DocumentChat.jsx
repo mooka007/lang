@@ -34,6 +34,10 @@ function sourceLabel(source) {
   return `${source.source}, page ${source.page}`;
 }
 
+function formatTokens(value) {
+  return new Intl.NumberFormat().format(value || 0);
+}
+
 function buildHistory(messages) {
   return messages
     .filter((message) => !message.isError)
@@ -61,6 +65,7 @@ export function DocumentChat() {
   const chatEndRef = useRef(null);
 
   const busy = isIndexing || isUploading || isAsking;
+  const totalTokens = status.tokenUsage?.total?.totalTokens || 0;
   const statusText = useMemo(() => {
     if (!status.ready) {
       return "No document indexed";
@@ -169,9 +174,16 @@ export function DocumentChat() {
         {
           role: "assistant",
           content: payload.answer,
+          usage: payload.usage,
           sources: payload.sources || []
         }
       ]);
+      if (payload.tokenUsage) {
+        setStatus((current) => ({
+          ...current,
+          tokenUsage: payload.tokenUsage
+        }));
+      }
     } catch (askError) {
       setError(askError.message);
       setMessages((current) => [
@@ -215,12 +227,16 @@ export function DocumentChat() {
           </div>
           <h2>{status.documentName || "Waiting for a document"}</h2>
           <p>{formatDate(status.indexedAt)}</p>
+          <div className="usage-summary">
+            <span>Total tokens</span>
+            <strong>{formatTokens(totalTokens)}</strong>
+          </div>
         </section>
 
         <div className="control-grid">
           <button type="button" className="primary-button" onClick={indexSample} disabled={busy}>
             {isIndexing ? <LoaderCircle className="spin" size={18} /> : <Database size={18} />}
-            <span>Index sample</span>
+            <span>Load company PDFs</span>
           </button>
 
           <button
@@ -267,7 +283,7 @@ export function DocumentChat() {
           {messages.length === 0 ? (
             <div className="empty-state">
               <Bot size={28} aria-hidden="true" />
-              <p>Ask about employees, salaries, departments, projects, daily tasks, or company policies.</p>
+              <p>Ask about branches, employees, salaries, departments, projects, daily tasks, or company policies.</p>
             </div>
           ) : null}
 
@@ -283,6 +299,13 @@ export function DocumentChat() {
                     {message.sources.map((source) => (
                       <span key={`${source.id}-${source.page}-${source.preview}`}>{sourceLabel(source)}</span>
                     ))}
+                  </div>
+                ) : null}
+                {message.usage ? (
+                  <div className="token-meter" aria-label="Token usage">
+                    <span>Prompt {formatTokens(message.usage.promptTokens)}</span>
+                    <span>Answer {formatTokens(message.usage.completionTokens)}</span>
+                    <span>Total {formatTokens(message.usage.totalTokens)}</span>
                   </div>
                 ) : null}
               </div>

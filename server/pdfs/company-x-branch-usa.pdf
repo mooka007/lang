@@ -1,0 +1,3382 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R 31 0 R 33 0 R 35 0 R 37 0 R 39 0 R 41 0 R 43 0 R 45 0 R 47 0 R 49 0 R 51 0 R 53 0 R 55 0 R 57 0 R 59 0 R 61 0 R 63 0 R 65 0 R 67 0 R 69 0 R 71 0 R 73 0 R 75 0 R 77 0 R 79 0 R 81 0 R 83 0 R 85 0 R 87 0 R 89 0 R 91 0 R 93 0 R 95 0 R 97 0 R 99 0 R 101 0 R 103 0 R 105 0 R 107 0 R] /Count 52 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 2431 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(Company X USA Branch Knowledge Base) Tj T*
+T*
+(Version: 1.0) Tj T*
+(Dataset type: fictional synthetic branch data for Document Q&A testing) Tj T*
+(Branch: New York, USA) Tj T*
+(Employee count: 52) Tj T*
+T*
+(Important privacy note: all employees, salaries, emails, dates of birth, branch details, and) Tj T*
+(projects in this file are fictional and created for chatbot testing.) Tj T*
+T*
+(Branch Overview) Tj T*
+T*
+(The Company X USA branch is based in New York. Its main focus is global headquarters, strategic) Tj T*
+(accounts, platform engineering, and finance operations. The branch works with headquarters and) Tj T*
+(other regions to deliver customer value while keeping local operations accountable.) Tj T*
+T*
+(- Office address: 134 Innovation Avenue, New York, USA) Tj T*
+(- Timezone: America/New_York) Tj T*
+(- Standard working hours: 09:00-17:30 local time, with shift coverage for support and) Tj T*
+(operations.) Tj T*
+(- Branch director: Hana Carter) Tj T*
+(- Branch operations manager: Elias Belkacem) Tj T*
+(- Branch engineering manager: Sara Foster) Tj T*
+(- Branch customer success manager: Karim Kabbaj) Tj T*
+(- Branch regional sales manager: Mila Brooks) Tj T*
+(- Branch data lead: Rayan Berrada) Tj T*
+(- Branch security coordinator: Ilyas Lamrani) Tj T*
+(- Primary finance contact: Jana Knight) Tj T*
+(- Main branch project: PX-USA-Core) Tj T*
+T*
+(Branch Specialties) Tj T*
+T*
+(- executive operations) Tj T*
+(- enterprise sales) Tj T*
+(- platform reliability) Tj T*
+(- billing automation) Tj T*
+T*
+(Branch Department Capacity) Tj T*
+T*
+( |  Department  |  Employees  |  Main responsibility  |) Tj T*
+( |  ---  |  ---:  |  ---  |) Tj T*
+(| Customer Success | 10 | Owns onboarding, support quality, customer health, and escalations. |) Tj T*
+( |  Data and AI  |  6  |  Maintains analytics, reporting quality, and operational insights.  |) Tj T*
+( |  Engineering  |  14  |  Builds, tests, and maintains localized product capabilities.  |) Tj T*
+(| Finance | 3 | Controls payroll support, invoices, expense reviews, and branch budget evidence.) Tj T*
+(|) Tj T*
+(| IT and Security | 3 | Manages access, devices, security evidence, and incident readiness. |) Tj T*
+( |  Marketing  |  2  |  Localizes campaigns, webinars, launch assets, and market content.  |) Tj T*
+(| Operations | 6 | Runs branch coordination, vendors, documentation, staffing, and delivery) Tj T*
+(cadence. |) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 3507 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(| People Operations | 3 | Supports hiring, onboarding, employee records, and performance cycles.) Tj T*
+(|) Tj T*
+(| Sales | 5 | Develops pipeline, regional account plans, demos, and partner opportunities. |) Tj T*
+T*
+(Branch Project) Tj T*
+T*
+(- Project name: PX-USA-Core) Tj T*
+(- Project objective: support global headquarters, strategic accounts, platform engineering, and) Tj T*
+(finance operations) Tj T*
+(- Weekly rhythm: branch project updates are posted every Friday before 15:00 local time.) Tj T*
+(- Escalation rule: customer, security, or finance risks must be escalated to the global owner) Tj T*
+(within one business day.) Tj T*
+T*
+(Branch Project Portfolio) Tj T*
+T*
+(| Code | Project | Manager | Deputy | Status | Employees | Budget | Deadline | KPI | Current) Tj T*
+(risk |) Tj T*
+( |  ---  |  ---  |  ---  |  ---  |  ---  |  ---:  |  ---:  |  ---  |  ---  |  ---  |) Tj T*
+(| US-OPS | USA Operating System | Hana Carter \(Branch Director\) | Elias Belkacem \(Operations) Tj T*
+(Manager\) | Active | 11 | $480,000 | Q2 2027 | Branch SLA above 95 percent | Customer adoption) Tj T*
+(delay |) Tj T*
+(| US-GROW | USA Market Growth Program | Mila Brooks \(Regional Sales Manager\) | Mariam Cole) Tj T*
+(\(Solutions Consultant\) | In build | 11 | $517,500 | Q3 2026 | Qualified regional pipeline growth) Tj T*
+(above 12 percent | Hiring capacity gap |) Tj T*
+(| US-CX | USA Customer Experience Program | Karim Kabbaj \(Customer Success Manager\) | Lina Cole) Tj T*
+(\(Support Lead\) | Beta | 10 | $555,000 | Q4 2027 | Customer onboarding completion within 14 days) Tj T*
+(| Data quality dependency |) Tj T*
+(| US-SEC | USA Compliance And Security Track | Ilyas Lamrani \(Security Coordinator\) | Malik) Tj T*
+(Belkacem \(Security Analyst\) | Active | 10 | $592,500 | Q1 2026 | Quarterly security training) Tj T*
+(completion above 98 percent | Security evidence delay |) Tj T*
+(| US-DATA | USA Branch Analytics Layer | Sara Foster \(Engineering Manager\) | Leo Kabbaj \(Data) Tj T*
+(Analyst\) | Discovery | 10 | $630,000 | Q2 2027 | Executive dashboard accuracy above 99 percent |) Tj T*
+(Vendor delivery risk |) Tj T*
+T*
+(Project Staffing) Tj T*
+T*
+( |  Project code  |  Project manager  |  Deputy  |  Employee count  |  Assigned employees  |) Tj T*
+( |  ---  |  ---  |  ---  |  ---:  |  ---  |) Tj T*
+(| US-OPS | Hana Carter | Elias Belkacem | 11 | CX-US-001 Hana Carter - Branch Director;) Tj T*
+(CX-US-006 Rayan Berrada - Data Lead; CX-US-011 Zara Carter - Backend Engineer; CX-US-016 Nabil) Tj T*
+(Berrada - Support Specialist; CX-US-021 Dina Carter - Payroll Specialist; CX-US-026 Bilal) Tj T*
+(Berrada - Frontend Engineer; CX-US-031 Yasmine Carter - Frontend Engineer; CX-US-036 Mehdi) Tj T*
+(Berrada - Solutions Consultant; CX-US-041 Amina Carter - Security Analyst; CX-US-046 Youssef) Tj T*
+(Berrada - Data Analyst; CX-US-051 Hana Carter - QA Automation Engineer |) Tj T*
+(| US-GROW | Mila Brooks | Mariam Cole | 11 | CX-US-002 Elias Belkacem - Operations Manager;) Tj T*
+(CX-US-007 Lina Cole - Support Lead; CX-US-012 Daniel Belkacem - Frontend Engineer; CX-US-017) Tj T*
+(Mariam Cole - Solutions Consultant; CX-US-022 Malik Belkacem - Security Analyst; CX-US-027 Emma) Tj T*
+(Cole - Data Analyst; CX-US-032 Victor Belkacem - QA Automation Engineer; CX-US-037 Nour Cole -) Tj T*
+(Account Executive; CX-US-042 Noah Belkacem - Recruiting Coordinator; CX-US-047 Maya Cole -) Tj T*
+(Implementation Specialist; CX-US-052 Elias Belkacem - Data Analyst |) Tj T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 3803 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(| US-CX | Karim Kabbaj | Lina Cole | 10 | CX-US-003 Sara Foster - Engineering Manager; CX-US-008) Tj T*
+(Ilyas Lamrani - Security Coordinator; CX-US-013 Salma Foster - QA Automation Engineer; CX-US-018) Tj T*
+(Samir Lamrani - Account Executive; CX-US-023 Rim Foster - Recruiting Coordinator; CX-US-028) Tj T*
+(Tariq Lamrani - Implementation Specialist; CX-US-033 Imane Foster - Data Analyst; CX-US-038) Tj T*
+(Jonas Lamrani - Marketing Specialist; CX-US-043 Leila Foster - Product Operations Analyst;) Tj T*
+(CX-US-048 Omar Lamrani - Support Specialist |) Tj T*
+(| US-SEC | Ilyas Lamrani | Malik Belkacem | 10 | CX-US-004 Karim Kabbaj - Customer Success) Tj T*
+(Manager; CX-US-009 Jana Knight - Finance Coordinator; CX-US-014 Leo Kabbaj - Data Analyst;) Tj T*
+(CX-US-019 Aya Knight - Marketing Specialist; CX-US-024 Evan Kabbaj - Product Operations Analyst;) Tj T*
+(CX-US-029 Clara Knight - Support Specialist; CX-US-034 Oscar Kabbaj - Implementation Specialist;) Tj T*
+(CX-US-039 Farah Knight - Office Coordinator; CX-US-044 Adam Kabbaj - Backend Engineer; CX-US-049) Tj T*
+(Nora Knight - Backend Engineer |) Tj T*
+(| US-DATA | Sara Foster | Leo Kabbaj | 10 | CX-US-005 Mila Brooks - Regional Sales Manager;) Tj T*
+(CX-US-010 Amir Sefrioui - People Operations Partner; CX-US-015 Ines Brooks - Implementation) Tj T*
+(Specialist; CX-US-020 Lucas Sefrioui - Office Coordinator; CX-US-025 Nadia Brooks - Backend) Tj T*
+(Engineer; CX-US-030 Hamza Sefrioui - Backend Engineer; CX-US-035 Lara Brooks - Support) Tj T*
+(Specialist; CX-US-040 Anas Sefrioui - Payroll Specialist; CX-US-045 Sofia Brooks - Frontend) Tj T*
+(Engineer; CX-US-050 Liam Sefrioui - Frontend Engineer |) Tj T*
+T*
+(Branch Operating Notes) Tj T*
+T*
+(- The USA branch has 52 employees.) Tj T*
+(- Branch leadership meets every Monday to review goals, blockers, customer risks, and staffing.) Tj T*
+(- Employees must keep project notes current in the global Company X workspace.) Tj T*
+(- Customer-facing employees should record customer feedback after every major call.) Tj T*
+(- Engineering and data employees should link technical decisions to the relevant branch) Tj T*
+(workstream.) Tj T*
+(- The branch contributes to global Company X projects when local knowledge or timezone coverage) Tj T*
+(is needed.) Tj T*
+T*
+(Employee Directory) Tj T*
+T*
+(| ID | Name | Date of birth | Start date | Email | Department | Post | Salary | Shift | Manager) Tj T*
+(| Project | Project manager |) Tj T*
+(| --- | --- | --- | --- | --- | --- | --- | ---: | --- | --- | --- | --- |) Tj T*
+(| CX-US-001 | Hana Carter | 1996-09-25 | 2017-01-01 | hana.carter.us1@companyx.example |) Tj T*
+(Operations | Branch Director | $127,300 | Standard shift, 09:00-17:30 local time | Global COO |) Tj T*
+(US-OPS | Hana Carter |) Tj T*
+(| CX-US-002 | Elias Belkacem | 1978-02-08 | 2018-04-08 | elias.belkacem.us2@companyx.example |) Tj T*
+(Operations | Operations Manager | $92,000 | Late support shift, 12:00-20:00 local time | Hana) Tj T*
+(Carter | US-GROW | Mila Brooks |) Tj T*
+(| CX-US-003 | Sara Foster | 1985-07-19 | 2019-07-15 | sara.foster.us3@companyx.example |) Tj T*
+(Engineering | Engineering Manager | $114,700 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Hana Carter | US-CX | Karim Kabbaj |) Tj T*
+(| CX-US-004 | Karim Kabbaj | 1992-12-02 | 2020-10-22 | karim.kabbaj.us4@companyx.example |) Tj T*
+(Customer Success | Customer Success Manager | $97,400 | Night operations shift, 20:00-04:00) Tj T*
+(local time | Hana Carter | US-SEC | Ilyas Lamrani |) Tj T*
+(| CX-US-005 | Mila Brooks | 1999-05-13 | 2021-01-01 | mila.brooks.us5@companyx.example | Sales |) Tj T*
+(Regional Sales Manager | $120,100 | Morning shift, 08:00-16:00 local time | Hana Carter |) Tj T*
+(US-DATA | Sara Foster |) Tj T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 4197 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(| CX-US-006 | Rayan Berrada | 1981-10-24 | 2022-04-08 | rayan.berrada.us6@companyx.example |) Tj T*
+(Data and AI | Data Lead | $122,800 | Standard shift, 09:00-17:30 local time | Hana Carter |) Tj T*
+(US-OPS | Hana Carter |) Tj T*
+(| CX-US-007 | Lina Cole | 1988-03-07 | 2023-07-15 | lina.cole.us7@companyx.example | Customer) Tj T*
+(Success | Support Lead | $89,300 | Late support shift, 12:00-20:00 local time | Hana Carter |) Tj T*
+(US-GROW | Mila Brooks |) Tj T*
+(| CX-US-008 | Ilyas Lamrani | 1995-08-18 | 2024-10-22 | ilyas.lamrani.us8@companyx.example | IT) Tj T*
+(and Security | Security Coordinator | $82,000 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Hana Carter | US-CX | Karim Kabbaj |) Tj T*
+(| CX-US-009 | Jana Knight | 1977-01-01 | 2017-01-01 | jana.knight.us9@companyx.example | Finance) Tj T*
+(| Finance Coordinator | $82,700 | Night operations shift, 20:00-04:00 local time | Elias) Tj T*
+(Belkacem | US-SEC | Ilyas Lamrani |) Tj T*
+(| CX-US-010 | Amir Sefrioui | 1984-06-12 | 2018-04-08 | amir.sefrioui.us10@companyx.example |) Tj T*
+(People Operations | People Operations Partner | $83,400 | Morning shift, 08:00-16:00 local time) Tj T*
+(| Elias Belkacem | US-DATA | Sara Foster |) Tj T*
+(| CX-US-011 | Zara Carter | 1991-11-23 | 2019-07-15 | zara.carter.us11@companyx.example |) Tj T*
+(Engineering | Backend Engineer | $106,100 | Standard shift, 09:00-17:30 local time | Sara Foster) Tj T*
+(| US-OPS | Hana Carter |) Tj T*
+(| CX-US-012 | Daniel Belkacem | 1998-04-06 | 2020-10-22 | daniel.belkacem.us12@companyx.example) Tj T*
+(| Engineering | Frontend Engineer | $108,800 | Late support shift, 12:00-20:00 local time | Sara) Tj T*
+(Foster | US-GROW | Mila Brooks |) Tj T*
+(| CX-US-013 | Salma Foster | 1980-09-17 | 2021-01-01 | salma.foster.us13@companyx.example |) Tj T*
+(Engineering | QA Automation Engineer | $95,300 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Sara Foster | US-CX | Karim Kabbaj |) Tj T*
+(| CX-US-014 | Leo Kabbaj | 1987-02-28 | 2022-04-08 | leo.kabbaj.us14@companyx.example | Data and) Tj T*
+(AI | Data Analyst | $90,000 | Night operations shift, 20:00-04:00 local time | Rayan Berrada |) Tj T*
+(US-SEC | Ilyas Lamrani |) Tj T*
+(| CX-US-015 | Ines Brooks | 1994-07-11 | 2023-07-15 | ines.brooks.us15@companyx.example |) Tj T*
+(Customer Success | Implementation Specialist | $76,700 | Morning shift, 08:00-16:00 local time |) Tj T*
+(Karim Kabbaj | US-DATA | Sara Foster |) Tj T*
+(| CX-US-016 | Nabil Berrada | 1976-12-22 | 2024-10-22 | nabil.berrada.us16@companyx.example |) Tj T*
+(Customer Success | Support Specialist | $79,400 | Standard shift, 09:00-17:30 local time | Karim) Tj T*
+(Kabbaj | US-OPS | Hana Carter |) Tj T*
+(| CX-US-017 | Mariam Cole | 1983-05-05 | 2017-01-01 | mariam.cole.us17@companyx.example | Sales) Tj T*
+(| Solutions Consultant | $89,100 | Late support shift, 12:00-20:00 local time | Mila Brooks |) Tj T*
+(US-GROW | Mila Brooks |) Tj T*
+(| CX-US-018 | Samir Lamrani | 1990-10-16 | 2018-04-08 | samir.lamrani.us18@companyx.example |) Tj T*
+(Sales | Account Executive | $91,800 | Split collaboration shift, 10:00-14:00 and 16:00-20:00) Tj T*
+(local time | Mila Brooks | US-CX | Karim Kabbaj |) Tj T*
+(| CX-US-019 | Aya Knight | 1997-03-27 | 2019-07-15 | aya.knight.us19@companyx.example |) Tj T*
+(Marketing | Marketing Specialist | $73,300 | Night operations shift, 20:00-04:00 local time |) Tj T*
+(Mila Brooks | US-SEC | Ilyas Lamrani |) Tj T*
+(| CX-US-020 | Lucas Sefrioui | 1979-08-10 | 2020-10-22 | lucas.sefrioui.us20@companyx.example |) Tj T*
+(Operations | Office Coordinator | $74,000 | Morning shift, 08:00-16:00 local time | Elias) Tj T*
+(Belkacem | US-DATA | Sara Foster |) Tj T*
+(| CX-US-021 | Dina Carter | 1986-01-21 | 2021-01-01 | dina.carter.us21@companyx.example |) Tj T*
+(Finance | Payroll Specialist | $82,700 | Standard shift, 09:00-17:30 local time | Elias Belkacem) Tj T*
+(| US-OPS | Hana Carter |) Tj T*
+(| CX-US-022 | Malik Belkacem | 1993-06-04 | 2022-04-08 | malik.belkacem.us22@companyx.example |) Tj T*
+(IT and Security | Security Analyst | $87,400 | Late support shift, 12:00-20:00 local time |) Tj T*
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 4198 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(Ilyas Lamrani | US-GROW | Mila Brooks |) Tj T*
+(| CX-US-023 | Rim Foster | 2000-11-15 | 2023-07-15 | rim.foster.us23@companyx.example | People) Tj T*
+(Operations | Recruiting Coordinator | $86,100 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Elias Belkacem | US-CX | Karim Kabbaj |) Tj T*
+(| CX-US-024 | Evan Kabbaj | 1982-04-26 | 2024-10-22 | evan.kabbaj.us24@companyx.example |) Tj T*
+(Operations | Product Operations Analyst | $84,800 | Night operations shift, 20:00-04:00 local) Tj T*
+(time | Elias Belkacem | US-SEC | Ilyas Lamrani |) Tj T*
+(| CX-US-025 | Nadia Brooks | 1989-09-09 | 2017-01-01 | nadia.brooks.us25@companyx.example |) Tj T*
+(Engineering | Backend Engineer | $95,300 | Morning shift, 08:00-16:00 local time | Sara Foster |) Tj T*
+(US-DATA | Sara Foster |) Tj T*
+(| CX-US-026 | Bilal Berrada | 1996-02-20 | 2018-04-08 | bilal.berrada.us26@companyx.example |) Tj T*
+(Engineering | Frontend Engineer | $98,000 | Standard shift, 09:00-17:30 local time | Sara Foster) Tj T*
+(| US-OPS | Hana Carter |) Tj T*
+(| CX-US-027 | Emma Cole | 1978-07-03 | 2019-07-15 | emma.cole.us27@companyx.example | Data and) Tj T*
+(AI | Data Analyst | $92,700 | Late support shift, 12:00-20:00 local time | Rayan Berrada |) Tj T*
+(US-GROW | Mila Brooks |) Tj T*
+(| CX-US-028 | Tariq Lamrani | 1985-12-14 | 2020-10-22 | tariq.lamrani.us28@companyx.example |) Tj T*
+(Customer Success | Implementation Specialist | $79,400 | Split collaboration shift, 10:00-14:00) Tj T*
+(and 16:00-20:00 local time | Karim Kabbaj | US-CX | Karim Kabbaj |) Tj T*
+(| CX-US-029 | Clara Knight | 1992-05-25 | 2021-01-01 | clara.knight.us29@companyx.example |) Tj T*
+(Customer Success | Support Specialist | $82,100 | Night operations shift, 20:00-04:00 local time) Tj T*
+(| Karim Kabbaj | US-SEC | Ilyas Lamrani |) Tj T*
+(| CX-US-030 | Hamza Sefrioui | 1999-10-08 | 2022-04-08 | hamza.sefrioui.us30@companyx.example |) Tj T*
+(Engineering | Backend Engineer | $108,800 | Morning shift, 08:00-16:00 local time | Sara Foster) Tj T*
+(| US-DATA | Sara Foster |) Tj T*
+(| CX-US-031 | Yasmine Carter | 1981-03-19 | 2023-07-15 | yasmine.carter.us31@companyx.example |) Tj T*
+(Engineering | Frontend Engineer | $95,300 | Standard shift, 09:00-17:30 local time | Sara Foster) Tj T*
+(| US-OPS | Hana Carter |) Tj T*
+(| CX-US-032 | Victor Belkacem | 1988-08-02 | 2024-10-22 | victor.belkacem.us32@companyx.example) Tj T*
+(| Engineering | QA Automation Engineer | $98,000 | Late support shift, 12:00-20:00 local time |) Tj T*
+(Sara Foster | US-GROW | Mila Brooks |) Tj T*
+(| CX-US-033 | Imane Foster | 1995-01-13 | 2017-01-01 | imane.foster.us33@companyx.example | Data) Tj T*
+(and AI | Data Analyst | $92,700 | Split collaboration shift, 10:00-14:00 and 16:00-20:00 local) Tj T*
+(time | Rayan Berrada | US-CX | Karim Kabbaj |) Tj T*
+(| CX-US-034 | Oscar Kabbaj | 1977-06-24 | 2018-04-08 | oscar.kabbaj.us34@companyx.example |) Tj T*
+(Customer Success | Implementation Specialist | $79,400 | Night operations shift, 20:00-04:00) Tj T*
+(local time | Karim Kabbaj | US-SEC | Ilyas Lamrani |) Tj T*
+(| CX-US-035 | Lara Brooks | 1984-11-07 | 2019-07-15 | lara.brooks.us35@companyx.example |) Tj T*
+(Customer Success | Support Specialist | $82,100 | Morning shift, 08:00-16:00 local time | Karim) Tj T*
+(Kabbaj | US-DATA | Sara Foster |) Tj T*
+(| CX-US-036 | Mehdi Berrada | 1991-04-18 | 2020-10-22 | mehdi.berrada.us36@companyx.example |) Tj T*
+(Sales | Solutions Consultant | $91,800 | Standard shift, 09:00-17:30 local time | Mila Brooks |) Tj T*
+(US-OPS | Hana Carter |) Tj T*
+(| CX-US-037 | Nour Cole | 1998-09-01 | 2021-01-01 | nour.cole.us37@companyx.example | Sales |) Tj T*
+(Account Executive | $78,300 | Late support shift, 12:00-20:00 local time | Mila Brooks | US-GROW) Tj T*
+(| Mila Brooks |) Tj T*
+(| CX-US-038 | Jonas Lamrani | 1980-02-12 | 2022-04-08 | jonas.lamrani.us38@companyx.example |) Tj T*
+(Marketing | Marketing Specialist | $76,000 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Mila Brooks | US-CX | Karim Kabbaj |) Tj T*
+(| CX-US-039 | Farah Knight | 1987-07-23 | 2023-07-15 | farah.knight.us39@companyx.example |) Tj T*
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 3641 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(Operations | Office Coordinator | $76,700 | Night operations shift, 20:00-04:00 local time |) Tj T*
+(Elias Belkacem | US-SEC | Ilyas Lamrani |) Tj T*
+(| CX-US-040 | Anas Sefrioui | 1994-12-06 | 2024-10-22 | anas.sefrioui.us40@companyx.example |) Tj T*
+(Finance | Payroll Specialist | $85,400 | Morning shift, 08:00-16:00 local time | Elias Belkacem) Tj T*
+(| US-DATA | Sara Foster |) Tj T*
+(| CX-US-041 | Amina Carter | 1976-05-17 | 2017-01-01 | amina.carter.us41@companyx.example | IT) Tj T*
+(and Security | Security Analyst | $90,100 | Standard shift, 09:00-17:30 local time | Ilyas) Tj T*
+(Lamrani | US-OPS | Hana Carter |) Tj T*
+(| CX-US-042 | Noah Belkacem | 1983-10-28 | 2018-04-08 | noah.belkacem.us42@companyx.example |) Tj T*
+(People Operations | Recruiting Coordinator | $88,800 | Late support shift, 12:00-20:00 local) Tj T*
+(time | Elias Belkacem | US-GROW | Mila Brooks |) Tj T*
+(| CX-US-043 | Leila Foster | 1990-03-11 | 2019-07-15 | leila.foster.us43@companyx.example |) Tj T*
+(Operations | Product Operations Analyst | $71,300 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Elias Belkacem | US-CX | Karim Kabbaj |) Tj T*
+(| CX-US-044 | Adam Kabbaj | 1997-08-22 | 2020-10-22 | adam.kabbaj.us44@companyx.example |) Tj T*
+(Engineering | Backend Engineer | $98,000 | Night operations shift, 20:00-04:00 local time | Sara) Tj T*
+(Foster | US-SEC | Ilyas Lamrani |) Tj T*
+(| CX-US-045 | Sofia Brooks | 1979-01-05 | 2021-01-01 | sofia.brooks.us45@companyx.example |) Tj T*
+(Engineering | Frontend Engineer | $100,700 | Morning shift, 08:00-16:00 local time | Sara Foster) Tj T*
+(| US-DATA | Sara Foster |) Tj T*
+(| CX-US-046 | Youssef Berrada | 1986-06-16 | 2022-04-08 | youssef.berrada.us46@companyx.example) Tj T*
+(| Data and AI | Data Analyst | $95,400 | Standard shift, 09:00-17:30 local time | Rayan Berrada) Tj T*
+(| US-OPS | Hana Carter |) Tj T*
+(| CX-US-047 | Maya Cole | 1993-11-27 | 2023-07-15 | maya.cole.us47@companyx.example | Customer) Tj T*
+(Success | Implementation Specialist | $82,100 | Late support shift, 12:00-20:00 local time |) Tj T*
+(Karim Kabbaj | US-GROW | Mila Brooks |) Tj T*
+(| CX-US-048 | Omar Lamrani | 2000-04-10 | 2024-10-22 | omar.lamrani.us48@companyx.example |) Tj T*
+(Customer Success | Support Specialist | $84,800 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Karim Kabbaj | US-CX | Karim Kabbaj |) Tj T*
+(| CX-US-049 | Nora Knight | 1982-09-21 | 2017-01-01 | nora.knight.us49@companyx.example |) Tj T*
+(Engineering | Backend Engineer | $95,300 | Night operations shift, 20:00-04:00 local time | Sara) Tj T*
+(Foster | US-SEC | Ilyas Lamrani |) Tj T*
+(| CX-US-050 | Liam Sefrioui | 1989-02-04 | 2018-04-08 | liam.sefrioui.us50@companyx.example |) Tj T*
+(Engineering | Frontend Engineer | $98,000 | Morning shift, 08:00-16:00 local time | Sara Foster) Tj T*
+(| US-DATA | Sara Foster |) Tj T*
+(| CX-US-051 | Hana Carter | 1996-07-15 | 2019-07-15 | hana.carter.us51@companyx.example |) Tj T*
+(Engineering | QA Automation Engineer | $100,700 | Standard shift, 09:00-17:30 local time | Sara) Tj T*
+(Foster | US-OPS | Hana Carter |) Tj T*
+(| CX-US-052 | Elias Belkacem | 1978-12-26 | 2020-10-22 | elias.belkacem.us52@companyx.example |) Tj T*
+(Data and AI | Data Analyst | $95,400 | Late support shift, 12:00-20:00 local time | Rayan) Tj T*
+(Berrada | US-GROW | Mila Brooks |) Tj T*
+T*
+(Employee Daily Work Briefs) Tj T*
+T*
+(CX-US-001 - Hana Carter) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Branch Director) Tj T*
+(- Email: hana.carter.us1@companyx.example) Tj T*
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 2284 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Phone: +1-555-0201) Tj T*
+(- Date of birth: 1996-09-25) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $127,300) Tj T*
+(- Manager: Global COO) Tj T*
+(- Employment type: Contractor) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Owns branch strategy, staffing, budget health, and executive reporting) Tj T*
+(for USA.) Tj T*
+(- Branch project: USA Operating System) Tj T*
+(- Local workstream: US-OPS) Tj T*
+(- Project manager: Hana Carter) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $480,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: process design, reporting, procurement) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack, Executive Dashboards) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Admin and strategic reporting access) Tj T*
+(- PTO balance: 6 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - USA leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Lead the USA branch operating rhythm and weekly executive update.) Tj T*
+(  - Approve budget, hiring, and priority changes for the branch.) Tj T*
+(  - Escalate customer, staffing, and compliance risks to global leadership.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-002 - Elias Belkacem) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Operations Manager) Tj T*
+(- Email: elias.belkacem.us2@companyx.example) Tj T*
+(- Phone: +1-555-0202) Tj T*
+(- Date of birth: 1978-02-08) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $92,000) Tj T*
+(- Manager: Hana Carter) Tj T*
+(- Employment type: Full-time) Tj T*
+ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Length 2480 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the USA Operations team.) Tj T*
+(- Branch project: USA Market Growth Program) Tj T*
+(- Local workstream: US-GROW) Tj T*
+(- Project manager: Mila Brooks) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $517,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: vendor operations, office coordination, process design) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack, Executive Dashboards) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 7 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - USA leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Coordinate staffing, vendor, office, and delivery workflows for New York.) Tj T*
+(  - Keep branch process documentation, service levels, and handoffs current.) Tj T*
+(  - Track branch blockers and follow up with the accountable owner.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-003 - Sara Foster) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Engineering Manager) Tj T*
+(- Email: sara.foster.us3@companyx.example) Tj T*
+(- Phone: +1-555-0203) Tj T*
+(- Date of birth: 1985-07-19) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $114,700) Tj T*
+(- Manager: Hana Carter) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the USA Engineering team.) Tj T*
+(- Branch project: USA Customer Experience Program) Tj T*
+(- Local workstream: US-CX) Tj T*
+(- Project manager: Karim Kabbaj) Tj T*
+(- Project status: Beta) Tj T*
+ET
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 18 0 R >>
+endobj
+20 0 obj
+<< /Length 2506 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project budget: $555,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: observability, cloud deployment, React) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira, Executive Dashboards) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 8 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - USA leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the USA branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for New York operations.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-004 - Karim Kabbaj) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Customer Success Manager) Tj T*
+(- Email: karim.kabbaj.us4@companyx.example) Tj T*
+(- Phone: +1-555-0204) Tj T*
+(- Date of birth: 1992-12-02) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $97,400) Tj T*
+(- Manager: Hana Carter) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the USA Customer Success team.) Tj T*
+(- Branch project: USA Compliance And Security Track) Tj T*
+(- Local workstream: US-SEC) Tj T*
+(- Project manager: Ilyas Lamrani) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $592,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: training, health scoring, support triage) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion, Executive Dashboards) Tj T*
+ET
+endstream
+endobj
+21 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 20 0 R >>
+endobj
+22 0 obj
+<< /Length 2366 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 9 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - USA leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for USA customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring USA customer feedback with Product and Engineering.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-005 - Mila Brooks) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Regional Sales Manager) Tj T*
+(- Email: mila.brooks.us5@companyx.example) Tj T*
+(- Phone: +1-555-0205) Tj T*
+(- Date of birth: 1999-05-13) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $120,100) Tj T*
+(- Manager: Hana Carter) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the USA Sales team.) Tj T*
+(- Branch project: USA Branch Analytics Layer) Tj T*
+(- Local workstream: US-DATA) Tj T*
+(- Project manager: Sara Foster) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $630,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: enterprise discovery, demo strategy, account planning) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign, Executive Dashboards) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 10 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - USA leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+ET
+endstream
+endobj
+23 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 22 0 R >>
+endobj
+24 0 obj
+<< /Length 2519 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the USA market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-006 - Rayan Berrada) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Data and AI) Tj T*
+(- Post: Data Lead) Tj T*
+(- Email: rayan.berrada.us6@companyx.example) Tj T*
+(- Phone: +1-555-0206) Tj T*
+(- Date of birth: 1981-10-24) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $122,800) Tj T*
+(- Manager: Hana Carter) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the USA Data and AI team.) Tj T*
+(- Branch project: USA Operating System) Tj T*
+(- Local workstream: US-OPS) Tj T*
+(- Project manager: Hana Carter) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $480,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: SQL, dashboarding, data quality) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion, Executive Dashboards) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 11 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - USA leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for USA capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+ET
+endstream
+endobj
+25 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 24 0 R >>
+endobj
+26 0 obj
+<< /Length 2370 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-007 - Lina Cole) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Support Lead) Tj T*
+(- Email: lina.cole.us7@companyx.example) Tj T*
+(- Phone: +1-555-0207) Tj T*
+(- Date of birth: 1988-03-07) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $89,300) Tj T*
+(- Manager: Hana Carter) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the USA Customer Success team.) Tj T*
+(- Branch project: USA Market Growth Program) Tj T*
+(- Local workstream: US-GROW) Tj T*
+(- Project manager: Mila Brooks) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $517,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: renewal planning, training, health scoring) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion, Executive Dashboards) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 12 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - USA leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for USA customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring USA customer feedback with Product and Engineering.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-008 - Ilyas Lamrani) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: IT and Security) Tj T*
+ET
+endstream
+endobj
+27 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 26 0 R >>
+endobj
+28 0 obj
+<< /Length 2331 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Post: Security Coordinator) Tj T*
+(- Email: ilyas.lamrani.us8@companyx.example) Tj T*
+(- Phone: +1-555-0208) Tj T*
+(- Date of birth: 1995-08-18) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $82,000) Tj T*
+(- Manager: Hana Carter) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Protects access, devices, security evidence, and incident readiness for) Tj T*
+(USA.) Tj T*
+(- Branch project: USA Customer Experience Program) Tj T*
+(- Local workstream: US-CX) Tj T*
+(- Project manager: Karim Kabbaj) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $555,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: identity access, SOC 2 evidence, identity access) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Okta, Jamf, Cloudflare, Vanta) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Security tools and device management access) Tj T*
+(- PTO balance: 13 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Access review notes) Tj T*
+(  - Training completion report) Tj T*
+(  - Security evidence upload) Tj T*
+(- Daily tasks:) Tj T*
+(  - Review access, compliance evidence, and incident readiness for the USA branch.) Tj T*
+(  - Coordinate endpoint security and quarterly training completion.) Tj T*
+(  - Escalate high-risk security events to the Horizon Security Program.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-009 - Jana Knight) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Finance) Tj T*
+(- Post: Finance Coordinator) Tj T*
+(- Email: jana.knight.us9@companyx.example) Tj T*
+(- Phone: +1-555-0209) Tj T*
+(- Date of birth: 1977-01-01) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $82,700) Tj T*
+ET
+endstream
+endobj
+29 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 28 0 R >>
+endobj
+30 0 obj
+<< /Length 2425 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Manager: Elias Belkacem) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Manages branch finance controls, payroll support, invoices, and budget) Tj T*
+(evidence.) Tj T*
+(- Branch project: USA Compliance And Security Track) Tj T*
+(- Local workstream: US-SEC) Tj T*
+(- Project manager: Ilyas Lamrani) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $592,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: vendor management, billing controls, revenue recognition) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: QuickBooks, Ramp, PayrollHub, Google Sheets) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Finance systems and billing access) Tj T*
+(- PTO balance: 14 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Budget variance note) Tj T*
+(  - Invoice approval queue) Tj T*
+(  - Payroll exception list) Tj T*
+(- Daily tasks:) Tj T*
+(  - Validate payroll, invoices, expense controls, and budget usage for USA.) Tj T*
+(  - Prepare month-end finance notes and resolve missing approvals.) Tj T*
+(  - Flag budget variance or vendor payment risks to the finance owner.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-010 - Amir Sefrioui) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: People Operations) Tj T*
+(- Post: People Operations Partner) Tj T*
+(- Email: amir.sefrioui.us10@companyx.example) Tj T*
+(- Phone: +1-555-0210) Tj T*
+(- Date of birth: 1984-06-12) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $83,400) Tj T*
+(- Manager: Elias Belkacem) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Supports hiring, onboarding, employee records, and manager guidance for) Tj T*
+(USA.) Tj T*
+ET
+endstream
+endobj
+31 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 30 0 R >>
+endobj
+32 0 obj
+<< /Length 2345 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Branch project: USA Branch Analytics Layer) Tj T*
+(- Local workstream: US-DATA) Tj T*
+(- Project manager: Sara Foster) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $630,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: performance reviews, recruiting, performance reviews) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: BambooHR, Greenhouse, Lattice, Notion) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 15 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Hiring pipeline update) Tj T*
+(  - Onboarding checklist review) Tj T*
+(  - Employee support notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Support hiring, onboarding, employee relations, and policy questions in USA.) Tj T*
+(  - Maintain employee records, onboarding tasks, and performance cycle reminders.) Tj T*
+(  - Coach managers on one-on-ones, feedback, and staffing risks.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-011 - Zara Carter) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Backend Engineer) Tj T*
+(- Email: zara.carter.us11@companyx.example) Tj T*
+(- Phone: +1-555-0211) Tj T*
+(- Date of birth: 1991-11-23) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $106,100) Tj T*
+(- Manager: Sara Foster) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for New York) Tj T*
+(customers.) Tj T*
+(- Branch project: USA Operating System) Tj T*
+(- Local workstream: US-OPS) Tj T*
+(- Project manager: Hana Carter) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $480,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+ET
+endstream
+endobj
+33 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 32 0 R >>
+endobj
+34 0 obj
+<< /Length 2377 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: cloud deployment, React, observability) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 16 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the USA branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for New York operations.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-012 - Daniel Belkacem) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Frontend Engineer) Tj T*
+(- Email: daniel.belkacem.us12@companyx.example) Tj T*
+(- Phone: +1-555-0212) Tj T*
+(- Date of birth: 1998-04-06) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $108,800) Tj T*
+(- Manager: Sara Foster) Tj T*
+(- Employment type: Contractor) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for New York) Tj T*
+(customers.) Tj T*
+(- Branch project: USA Market Growth Program) Tj T*
+(- Local workstream: US-GROW) Tj T*
+(- Project manager: Mila Brooks) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $517,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: Node.js, API design, automated testing) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Solid performer) Tj T*
+ET
+endstream
+endobj
+35 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 34 0 R >>
+endobj
+36 0 obj
+<< /Length 2322 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 17 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the USA branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for New York operations.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-013 - Salma Foster) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: QA Automation Engineer) Tj T*
+(- Email: salma.foster.us13@companyx.example) Tj T*
+(- Phone: +1-555-0213) Tj T*
+(- Date of birth: 1980-09-17) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $95,300) Tj T*
+(- Manager: Sara Foster) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for New York) Tj T*
+(customers.) Tj T*
+(- Branch project: USA Customer Experience Program) Tj T*
+(- Local workstream: US-CX) Tj T*
+(- Project manager: Karim Kabbaj) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $555,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: React, observability, cloud deployment) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 18 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+ET
+endstream
+endobj
+37 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 36 0 R >>
+endobj
+38 0 obj
+<< /Length 2498 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the USA branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for New York operations.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-014 - Leo Kabbaj) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Data and AI) Tj T*
+(- Post: Data Analyst) Tj T*
+(- Email: leo.kabbaj.us14@companyx.example) Tj T*
+(- Phone: +1-555-0214) Tj T*
+(- Date of birth: 1987-02-28) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $90,000) Tj T*
+(- Manager: Rayan Berrada) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Maintains branch analytics, metric quality, and decision dashboards for) Tj T*
+(USA.) Tj T*
+(- Branch project: USA Compliance And Security Track) Tj T*
+(- Local workstream: US-SEC) Tj T*
+(- Project manager: Ilyas Lamrani) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $592,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: dashboarding, data quality, SQL) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 19 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for USA capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+ET
+endstream
+endobj
+39 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 38 0 R >>
+endobj
+40 0 obj
+<< /Length 2390 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-015 - Ines Brooks) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Implementation Specialist) Tj T*
+(- Email: ines.brooks.us15@companyx.example) Tj T*
+(- Phone: +1-555-0215) Tj T*
+(- Date of birth: 1994-07-11) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $76,700) Tj T*
+(- Manager: Karim Kabbaj) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in USA.) Tj T*
+(- Branch project: USA Branch Analytics Layer) Tj T*
+(- Local workstream: US-DATA) Tj T*
+(- Project manager: Sara Foster) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $630,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: onboarding, renewal planning, training) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 20 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for USA customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring USA customer feedback with Product and Engineering.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-016 - Nabil Berrada) Tj T*
+T*
+ET
+endstream
+endobj
+41 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 40 0 R >>
+endobj
+42 0 obj
+<< /Length 2285 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Branch: New York, USA) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Support Specialist) Tj T*
+(- Email: nabil.berrada.us16@companyx.example) Tj T*
+(- Phone: +1-555-0216) Tj T*
+(- Date of birth: 1976-12-22) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $79,400) Tj T*
+(- Manager: Karim Kabbaj) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in USA.) Tj T*
+(- Branch project: USA Operating System) Tj T*
+(- Local workstream: US-OPS) Tj T*
+(- Project manager: Hana Carter) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $480,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: health scoring, support triage, onboarding) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 21 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for USA customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring USA customer feedback with Product and Engineering.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-017 - Mariam Cole) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Solutions Consultant) Tj T*
+(- Email: mariam.cole.us17@companyx.example) Tj T*
+(- Phone: +1-555-0217) Tj T*
+(- Date of birth: 1983-05-05) Tj T*
+ET
+endstream
+endobj
+43 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 42 0 R >>
+endobj
+44 0 obj
+<< /Length 2397 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $89,100) Tj T*
+(- Manager: Mila Brooks) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Builds regional pipeline, demos, and account plans for the USA market.) Tj T*
+(- Branch project: USA Market Growth Program) Tj T*
+(- Local workstream: US-GROW) Tj T*
+(- Project manager: Mila Brooks) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $517,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: demo strategy, account planning, CRM hygiene) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 22 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - CRM pipeline update) Tj T*
+(  - Demo notes) Tj T*
+(  - Next-step account plan) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the USA market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-018 - Samir Lamrani) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Account Executive) Tj T*
+(- Email: samir.lamrani.us18@companyx.example) Tj T*
+(- Phone: +1-555-0218) Tj T*
+(- Date of birth: 1990-10-16) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $91,800) Tj T*
+(- Manager: Mila Brooks) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Builds regional pipeline, demos, and account plans for the USA market.) Tj T*
+ET
+endstream
+endobj
+45 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 44 0 R >>
+endobj
+46 0 obj
+<< /Length 2320 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Branch project: USA Customer Experience Program) Tj T*
+(- Local workstream: US-CX) Tj T*
+(- Project manager: Karim Kabbaj) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $555,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: negotiation, enterprise discovery, demo strategy) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 23 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - CRM pipeline update) Tj T*
+(  - Demo notes) Tj T*
+(  - Next-step account plan) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the USA market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-019 - Aya Knight) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Marketing) Tj T*
+(- Post: Marketing Specialist) Tj T*
+(- Email: aya.knight.us19@companyx.example) Tj T*
+(- Phone: +1-555-0219) Tj T*
+(- Date of birth: 1997-03-27) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $73,300) Tj T*
+(- Manager: Mila Brooks) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Localizes campaigns, launch assets, and market education for the USA) Tj T*
+(audience.) Tj T*
+(- Branch project: USA Compliance And Security Track) Tj T*
+(- Local workstream: US-SEC) Tj T*
+(- Project manager: Ilyas Lamrani) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $592,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+ET
+endstream
+endobj
+47 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 46 0 R >>
+endobj
+48 0 obj
+<< /Length 2444 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: product messaging, copywriting, webinars) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Webflow, HubSpot, Google Analytics, Canva) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 6 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Localize campaigns, webinars, and customer stories for USA.) Tj T*
+(  - Coordinate launch assets with Sales, Product, and Design.) Tj T*
+(  - Report campaign performance and content gaps to the growth team.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-020 - Lucas Sefrioui) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Office Coordinator) Tj T*
+(- Email: lucas.sefrioui.us20@companyx.example) Tj T*
+(- Phone: +1-555-0220) Tj T*
+(- Date of birth: 1979-08-10) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $74,000) Tj T*
+(- Manager: Elias Belkacem) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Supports daily operations, documentation, vendor coordination, and branch) Tj T*
+(execution in New York.) Tj T*
+(- Branch project: USA Branch Analytics Layer) Tj T*
+(- Local workstream: US-DATA) Tj T*
+(- Project manager: Sara Foster) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $630,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: procurement, vendor operations, office coordination) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+ET
+endstream
+endobj
+49 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 48 0 R >>
+endobj
+50 0 obj
+<< /Length 2307 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 7 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Coordinate staffing, vendor, office, and delivery workflows for New York.) Tj T*
+(  - Keep branch process documentation, service levels, and handoffs current.) Tj T*
+(  - Track branch blockers and follow up with the accountable owner.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-021 - Dina Carter) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Finance) Tj T*
+(- Post: Payroll Specialist) Tj T*
+(- Email: dina.carter.us21@companyx.example) Tj T*
+(- Phone: +1-555-0221) Tj T*
+(- Date of birth: 1986-01-21) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $82,700) Tj T*
+(- Manager: Elias Belkacem) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Manages branch finance controls, payroll support, invoices, and budget) Tj T*
+(evidence.) Tj T*
+(- Branch project: USA Operating System) Tj T*
+(- Local workstream: US-OPS) Tj T*
+(- Project manager: Hana Carter) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $480,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: billing controls, revenue recognition, forecasting) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: QuickBooks, Ramp, PayrollHub, Google Sheets) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Finance systems and billing access) Tj T*
+(- PTO balance: 8 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Budget variance note) Tj T*
+(  - Invoice approval queue) Tj T*
+(  - Payroll exception list) Tj T*
+ET
+endstream
+endobj
+51 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 50 0 R >>
+endobj
+52 0 obj
+<< /Length 2492 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Daily tasks:) Tj T*
+(  - Validate payroll, invoices, expense controls, and budget usage for USA.) Tj T*
+(  - Prepare month-end finance notes and resolve missing approvals.) Tj T*
+(  - Flag budget variance or vendor payment risks to the finance owner.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-022 - Malik Belkacem) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: IT and Security) Tj T*
+(- Post: Security Analyst) Tj T*
+(- Email: malik.belkacem.us22@companyx.example) Tj T*
+(- Phone: +1-555-0222) Tj T*
+(- Date of birth: 1993-06-04) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $87,400) Tj T*
+(- Manager: Ilyas Lamrani) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Protects access, devices, security evidence, and incident readiness for) Tj T*
+(USA.) Tj T*
+(- Branch project: USA Market Growth Program) Tj T*
+(- Local workstream: US-GROW) Tj T*
+(- Project manager: Mila Brooks) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $517,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: SOC 2 evidence, identity access, SOC 2 evidence) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Okta, Jamf, Cloudflare, Vanta) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Security tools and device management access) Tj T*
+(- PTO balance: 9 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Access review notes) Tj T*
+(  - Training completion report) Tj T*
+(  - Security evidence upload) Tj T*
+(- Daily tasks:) Tj T*
+(  - Review access, compliance evidence, and incident readiness for the USA branch.) Tj T*
+(  - Coordinate endpoint security and quarterly training completion.) Tj T*
+(  - Escalate high-risk security events to the Horizon Security Program.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+ET
+endstream
+endobj
+53 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 52 0 R >>
+endobj
+54 0 obj
+<< /Length 2451 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-023 - Rim Foster) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: People Operations) Tj T*
+(- Post: Recruiting Coordinator) Tj T*
+(- Email: rim.foster.us23@companyx.example) Tj T*
+(- Phone: +1-555-0223) Tj T*
+(- Date of birth: 2000-11-15) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $86,100) Tj T*
+(- Manager: Elias Belkacem) Tj T*
+(- Employment type: Contractor) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Supports hiring, onboarding, employee records, and manager guidance for) Tj T*
+(USA.) Tj T*
+(- Branch project: USA Customer Experience Program) Tj T*
+(- Local workstream: US-CX) Tj T*
+(- Project manager: Karim Kabbaj) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $555,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: policy operations, employee relations, policy operations) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: BambooHR, Greenhouse, Lattice, Notion) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 10 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Hiring pipeline update) Tj T*
+(  - Onboarding checklist review) Tj T*
+(  - Employee support notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Support hiring, onboarding, employee relations, and policy questions in USA.) Tj T*
+(  - Maintain employee records, onboarding tasks, and performance cycle reminders.) Tj T*
+(  - Coach managers on one-on-ones, feedback, and staffing risks.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-024 - Evan Kabbaj) Tj T*
+T*
+ET
+endstream
+endobj
+55 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 54 0 R >>
+endobj
+56 0 obj
+<< /Length 2380 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Branch: New York, USA) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Product Operations Analyst) Tj T*
+(- Email: evan.kabbaj.us24@companyx.example) Tj T*
+(- Phone: +1-555-0224) Tj T*
+(- Date of birth: 1982-04-26) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $84,800) Tj T*
+(- Manager: Elias Belkacem) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Supports daily operations, documentation, vendor coordination, and branch) Tj T*
+(execution in New York.) Tj T*
+(- Branch project: USA Compliance And Security Track) Tj T*
+(- Local workstream: US-SEC) Tj T*
+(- Project manager: Ilyas Lamrani) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $592,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: office coordination, process design, reporting) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 11 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Coordinate staffing, vendor, office, and delivery workflows for New York.) Tj T*
+(  - Keep branch process documentation, service levels, and handoffs current.) Tj T*
+(  - Track branch blockers and follow up with the accountable owner.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-025 - Nadia Brooks) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Backend Engineer) Tj T*
+(- Email: nadia.brooks.us25@companyx.example) Tj T*
+(- Phone: +1-555-0225) Tj T*
+(- Date of birth: 1989-09-09) Tj T*
+ET
+endstream
+endobj
+57 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 56 0 R >>
+endobj
+58 0 obj
+<< /Length 2288 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $95,300) Tj T*
+(- Manager: Sara Foster) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for New York) Tj T*
+(customers.) Tj T*
+(- Branch project: USA Branch Analytics Layer) Tj T*
+(- Local workstream: US-DATA) Tj T*
+(- Project manager: Sara Foster) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $630,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: React, observability, cloud deployment) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 12 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the USA branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for New York operations.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-026 - Bilal Berrada) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Frontend Engineer) Tj T*
+(- Email: bilal.berrada.us26@companyx.example) Tj T*
+(- Phone: +1-555-0226) Tj T*
+(- Date of birth: 1996-02-20) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $98,000) Tj T*
+(- Manager: Sara Foster) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+ET
+endstream
+endobj
+59 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 58 0 R >>
+endobj
+60 0 obj
+<< /Length 2306 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Responsibility area: Delivers product quality and localized platform improvements for New York) Tj T*
+(customers.) Tj T*
+(- Branch project: USA Operating System) Tj T*
+(- Local workstream: US-OPS) Tj T*
+(- Project manager: Hana Carter) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $480,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: API design, automated testing, Node.js) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 13 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the USA branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for New York operations.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-027 - Emma Cole) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Data and AI) Tj T*
+(- Post: Data Analyst) Tj T*
+(- Email: emma.cole.us27@companyx.example) Tj T*
+(- Phone: +1-555-0227) Tj T*
+(- Date of birth: 1978-07-03) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $92,700) Tj T*
+(- Manager: Rayan Berrada) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Maintains branch analytics, metric quality, and decision dashboards for) Tj T*
+(USA.) Tj T*
+(- Branch project: USA Market Growth Program) Tj T*
+(- Local workstream: US-GROW) Tj T*
+(- Project manager: Mila Brooks) Tj T*
+(- Project status: In build) Tj T*
+ET
+endstream
+endobj
+61 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 60 0 R >>
+endobj
+62 0 obj
+<< /Length 2437 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project budget: $517,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: model evaluation, experimentation, Python) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 14 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for USA capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-028 - Tariq Lamrani) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Implementation Specialist) Tj T*
+(- Email: tariq.lamrani.us28@companyx.example) Tj T*
+(- Phone: +1-555-0228) Tj T*
+(- Date of birth: 1985-12-14) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $79,400) Tj T*
+(- Manager: Karim Kabbaj) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in USA.) Tj T*
+(- Branch project: USA Customer Experience Program) Tj T*
+(- Local workstream: US-CX) Tj T*
+(- Project manager: Karim Kabbaj) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $555,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: support triage, onboarding, renewal planning) Tj T*
+(- Languages: English, Spanish) Tj T*
+ET
+endstream
+endobj
+63 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 62 0 R >>
+endobj
+64 0 obj
+<< /Length 2394 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 15 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for USA customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring USA customer feedback with Product and Engineering.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-029 - Clara Knight) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Support Specialist) Tj T*
+(- Email: clara.knight.us29@companyx.example) Tj T*
+(- Phone: +1-555-0229) Tj T*
+(- Date of birth: 1992-05-25) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $82,100) Tj T*
+(- Manager: Karim Kabbaj) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in USA.) Tj T*
+(- Branch project: USA Compliance And Security Track) Tj T*
+(- Local workstream: US-SEC) Tj T*
+(- Project manager: Ilyas Lamrani) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $592,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: training, health scoring, support triage) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 16 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+ET
+endstream
+endobj
+65 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 64 0 R >>
+endobj
+66 0 obj
+<< /Length 2394 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for USA customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring USA customer feedback with Product and Engineering.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-030 - Hamza Sefrioui) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Backend Engineer) Tj T*
+(- Email: hamza.sefrioui.us30@companyx.example) Tj T*
+(- Phone: +1-555-0230) Tj T*
+(- Date of birth: 1999-10-08) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $108,800) Tj T*
+(- Manager: Sara Foster) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for New York) Tj T*
+(customers.) Tj T*
+(- Branch project: USA Branch Analytics Layer) Tj T*
+(- Local workstream: US-DATA) Tj T*
+(- Project manager: Sara Foster) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $630,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: Node.js, API design, automated testing) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 17 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the USA branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for New York operations.) Tj T*
+ET
+endstream
+endobj
+67 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 66 0 R >>
+endobj
+68 0 obj
+<< /Length 2451 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-031 - Yasmine Carter) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Frontend Engineer) Tj T*
+(- Email: yasmine.carter.us31@companyx.example) Tj T*
+(- Phone: +1-555-0231) Tj T*
+(- Date of birth: 1981-03-19) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $95,300) Tj T*
+(- Manager: Sara Foster) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for New York) Tj T*
+(customers.) Tj T*
+(- Branch project: USA Operating System) Tj T*
+(- Local workstream: US-OPS) Tj T*
+(- Project manager: Hana Carter) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $480,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: React, observability, cloud deployment) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 18 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the USA branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for New York operations.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+ET
+endstream
+endobj
+69 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 68 0 R >>
+endobj
+70 0 obj
+<< /Length 2258 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(CX-US-032 - Victor Belkacem) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: QA Automation Engineer) Tj T*
+(- Email: victor.belkacem.us32@companyx.example) Tj T*
+(- Phone: +1-555-0232) Tj T*
+(- Date of birth: 1988-08-02) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $98,000) Tj T*
+(- Manager: Sara Foster) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for New York) Tj T*
+(customers.) Tj T*
+(- Branch project: USA Market Growth Program) Tj T*
+(- Local workstream: US-GROW) Tj T*
+(- Project manager: Mila Brooks) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $517,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: API design, automated testing, Node.js) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 19 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the USA branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for New York operations.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-033 - Imane Foster) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Data and AI) Tj T*
+(- Post: Data Analyst) Tj T*
+(- Email: imane.foster.us33@companyx.example) Tj T*
+ET
+endstream
+endobj
+71 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 70 0 R >>
+endobj
+72 0 obj
+<< /Length 2315 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Phone: +1-555-0233) Tj T*
+(- Date of birth: 1995-01-13) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $92,700) Tj T*
+(- Manager: Rayan Berrada) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Maintains branch analytics, metric quality, and decision dashboards for) Tj T*
+(USA.) Tj T*
+(- Branch project: USA Customer Experience Program) Tj T*
+(- Local workstream: US-CX) Tj T*
+(- Project manager: Karim Kabbaj) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $555,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: model evaluation, experimentation, Python) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 20 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for USA capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-034 - Oscar Kabbaj) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Implementation Specialist) Tj T*
+(- Email: oscar.kabbaj.us34@companyx.example) Tj T*
+(- Phone: +1-555-0234) Tj T*
+(- Date of birth: 1977-06-24) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $79,400) Tj T*
+(- Manager: Karim Kabbaj) Tj T*
+(- Employment type: Contractor) Tj T*
+ET
+endstream
+endobj
+73 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 72 0 R >>
+endobj
+74 0 obj
+<< /Length 2428 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in USA.) Tj T*
+(- Branch project: USA Compliance And Security Track) Tj T*
+(- Local workstream: US-SEC) Tj T*
+(- Project manager: Ilyas Lamrani) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $592,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: training, health scoring, support triage) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 21 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for USA customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring USA customer feedback with Product and Engineering.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-035 - Lara Brooks) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Support Specialist) Tj T*
+(- Email: lara.brooks.us35@companyx.example) Tj T*
+(- Phone: +1-555-0235) Tj T*
+(- Date of birth: 1984-11-07) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $82,100) Tj T*
+(- Manager: Karim Kabbaj) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in USA.) Tj T*
+(- Branch project: USA Branch Analytics Layer) Tj T*
+(- Local workstream: US-DATA) Tj T*
+ET
+endstream
+endobj
+75 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 74 0 R >>
+endobj
+76 0 obj
+<< /Length 2371 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project manager: Sara Foster) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $630,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: onboarding, renewal planning, training) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 22 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for USA customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring USA customer feedback with Product and Engineering.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-036 - Mehdi Berrada) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Solutions Consultant) Tj T*
+(- Email: mehdi.berrada.us36@companyx.example) Tj T*
+(- Phone: +1-555-0236) Tj T*
+(- Date of birth: 1991-04-18) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $91,800) Tj T*
+(- Manager: Mila Brooks) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Builds regional pipeline, demos, and account plans for the USA market.) Tj T*
+(- Branch project: USA Operating System) Tj T*
+(- Local workstream: US-OPS) Tj T*
+(- Project manager: Hana Carter) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $480,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: CRM hygiene, negotiation, enterprise discovery) Tj T*
+ET
+endstream
+endobj
+77 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 76 0 R >>
+endobj
+78 0 obj
+<< /Length 2336 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 23 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - CRM pipeline update) Tj T*
+(  - Demo notes) Tj T*
+(  - Next-step account plan) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the USA market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-037 - Nour Cole) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Account Executive) Tj T*
+(- Email: nour.cole.us37@companyx.example) Tj T*
+(- Phone: +1-555-0237) Tj T*
+(- Date of birth: 1998-09-01) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $78,300) Tj T*
+(- Manager: Mila Brooks) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Builds regional pipeline, demos, and account plans for the USA market.) Tj T*
+(- Branch project: USA Market Growth Program) Tj T*
+(- Local workstream: US-GROW) Tj T*
+(- Project manager: Mila Brooks) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $517,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: demo strategy, account planning, CRM hygiene) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 6 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - CRM pipeline update) Tj T*
+ET
+endstream
+endobj
+79 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 78 0 R >>
+endobj
+80 0 obj
+<< /Length 2410 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Demo notes) Tj T*
+(  - Next-step account plan) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the USA market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-038 - Jonas Lamrani) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Marketing) Tj T*
+(- Post: Marketing Specialist) Tj T*
+(- Email: jonas.lamrani.us38@companyx.example) Tj T*
+(- Phone: +1-555-0238) Tj T*
+(- Date of birth: 1980-02-12) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $76,000) Tj T*
+(- Manager: Mila Brooks) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Localizes campaigns, launch assets, and market education for the USA) Tj T*
+(audience.) Tj T*
+(- Branch project: USA Customer Experience Program) Tj T*
+(- Local workstream: US-CX) Tj T*
+(- Project manager: Karim Kabbaj) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $555,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: webinars, campaign strategy, SEO) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Webflow, HubSpot, Google Analytics, Canva) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 7 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Localize campaigns, webinars, and customer stories for USA.) Tj T*
+(  - Coordinate launch assets with Sales, Product, and Design.) Tj T*
+(  - Report campaign performance and content gaps to the growth team.) Tj T*
+ET
+endstream
+endobj
+81 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 80 0 R >>
+endobj
+82 0 obj
+<< /Length 2556 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-039 - Farah Knight) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Office Coordinator) Tj T*
+(- Email: farah.knight.us39@companyx.example) Tj T*
+(- Phone: +1-555-0239) Tj T*
+(- Date of birth: 1987-07-23) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $76,700) Tj T*
+(- Manager: Elias Belkacem) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Supports daily operations, documentation, vendor coordination, and branch) Tj T*
+(execution in New York.) Tj T*
+(- Branch project: USA Compliance And Security Track) Tj T*
+(- Local workstream: US-SEC) Tj T*
+(- Project manager: Ilyas Lamrani) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $592,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: office coordination, process design, reporting) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 8 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Coordinate staffing, vendor, office, and delivery workflows for New York.) Tj T*
+(  - Keep branch process documentation, service levels, and handoffs current.) Tj T*
+(  - Track branch blockers and follow up with the accountable owner.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+ET
+endstream
+endobj
+83 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 82 0 R >>
+endobj
+84 0 obj
+<< /Length 2265 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(CX-US-040 - Anas Sefrioui) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Finance) Tj T*
+(- Post: Payroll Specialist) Tj T*
+(- Email: anas.sefrioui.us40@companyx.example) Tj T*
+(- Phone: +1-555-0240) Tj T*
+(- Date of birth: 1994-12-06) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $85,400) Tj T*
+(- Manager: Elias Belkacem) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Manages branch finance controls, payroll support, invoices, and budget) Tj T*
+(evidence.) Tj T*
+(- Branch project: USA Branch Analytics Layer) Tj T*
+(- Local workstream: US-DATA) Tj T*
+(- Project manager: Sara Foster) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $630,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: forecasting, payroll, vendor management) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: QuickBooks, Ramp, PayrollHub, Google Sheets) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Finance systems and billing access) Tj T*
+(- PTO balance: 9 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Budget variance note) Tj T*
+(  - Invoice approval queue) Tj T*
+(  - Payroll exception list) Tj T*
+(- Daily tasks:) Tj T*
+(  - Validate payroll, invoices, expense controls, and budget usage for USA.) Tj T*
+(  - Prepare month-end finance notes and resolve missing approvals.) Tj T*
+(  - Flag budget variance or vendor payment risks to the finance owner.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-041 - Amina Carter) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: IT and Security) Tj T*
+(- Post: Security Analyst) Tj T*
+(- Email: amina.carter.us41@companyx.example) Tj T*
+ET
+endstream
+endobj
+85 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 84 0 R >>
+endobj
+86 0 obj
+<< /Length 2290 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Phone: +1-555-0241) Tj T*
+(- Date of birth: 1976-05-17) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $90,100) Tj T*
+(- Manager: Ilyas Lamrani) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Protects access, devices, security evidence, and incident readiness for) Tj T*
+(USA.) Tj T*
+(- Branch project: USA Operating System) Tj T*
+(- Local workstream: US-OPS) Tj T*
+(- Project manager: Hana Carter) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $480,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: endpoint security, incident response, endpoint security) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Okta, Jamf, Cloudflare, Vanta) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Security tools and device management access) Tj T*
+(- PTO balance: 10 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Access review notes) Tj T*
+(  - Training completion report) Tj T*
+(  - Security evidence upload) Tj T*
+(- Daily tasks:) Tj T*
+(  - Review access, compliance evidence, and incident readiness for the USA branch.) Tj T*
+(  - Coordinate endpoint security and quarterly training completion.) Tj T*
+(  - Escalate high-risk security events to the Horizon Security Program.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-042 - Noah Belkacem) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: People Operations) Tj T*
+(- Post: Recruiting Coordinator) Tj T*
+(- Email: noah.belkacem.us42@companyx.example) Tj T*
+(- Phone: +1-555-0242) Tj T*
+(- Date of birth: 1983-10-28) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $88,800) Tj T*
+(- Manager: Elias Belkacem) Tj T*
+(- Employment type: Full-time) Tj T*
+ET
+endstream
+endobj
+87 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 86 0 R >>
+endobj
+88 0 obj
+<< /Length 2467 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Supports hiring, onboarding, employee records, and manager guidance for) Tj T*
+(USA.) Tj T*
+(- Branch project: USA Market Growth Program) Tj T*
+(- Local workstream: US-GROW) Tj T*
+(- Project manager: Mila Brooks) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $517,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: performance reviews, recruiting, performance reviews) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: BambooHR, Greenhouse, Lattice, Notion) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 11 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Hiring pipeline update) Tj T*
+(  - Onboarding checklist review) Tj T*
+(  - Employee support notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Support hiring, onboarding, employee relations, and policy questions in USA.) Tj T*
+(  - Maintain employee records, onboarding tasks, and performance cycle reminders.) Tj T*
+(  - Coach managers on one-on-ones, feedback, and staffing risks.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-043 - Leila Foster) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Product Operations Analyst) Tj T*
+(- Email: leila.foster.us43@companyx.example) Tj T*
+(- Phone: +1-555-0243) Tj T*
+(- Date of birth: 1990-03-11) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $71,300) Tj T*
+(- Manager: Elias Belkacem) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Supports daily operations, documentation, vendor coordination, and branch) Tj T*
+(execution in New York.) Tj T*
+(- Branch project: USA Customer Experience Program) Tj T*
+(- Local workstream: US-CX) Tj T*
+ET
+endstream
+endobj
+89 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 88 0 R >>
+endobj
+90 0 obj
+<< /Length 2391 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project manager: Karim Kabbaj) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $555,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: reporting, procurement, vendor operations) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 12 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Coordinate staffing, vendor, office, and delivery workflows for New York.) Tj T*
+(  - Keep branch process documentation, service levels, and handoffs current.) Tj T*
+(  - Track branch blockers and follow up with the accountable owner.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-044 - Adam Kabbaj) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Backend Engineer) Tj T*
+(- Email: adam.kabbaj.us44@companyx.example) Tj T*
+(- Phone: +1-555-0244) Tj T*
+(- Date of birth: 1997-08-22) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $98,000) Tj T*
+(- Manager: Sara Foster) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for New York) Tj T*
+(customers.) Tj T*
+(- Branch project: USA Compliance And Security Track) Tj T*
+(- Local workstream: US-SEC) Tj T*
+(- Project manager: Ilyas Lamrani) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $592,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+ET
+endstream
+endobj
+91 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 90 0 R >>
+endobj
+92 0 obj
+<< /Length 2363 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Skills: API design, automated testing, Node.js) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 13 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the USA branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for New York operations.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-045 - Sofia Brooks) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Frontend Engineer) Tj T*
+(- Email: sofia.brooks.us45@companyx.example) Tj T*
+(- Phone: +1-555-0245) Tj T*
+(- Date of birth: 1979-01-05) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $100,700) Tj T*
+(- Manager: Sara Foster) Tj T*
+(- Employment type: Contractor) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for New York) Tj T*
+(customers.) Tj T*
+(- Branch project: USA Branch Analytics Layer) Tj T*
+(- Local workstream: US-DATA) Tj T*
+(- Project manager: Sara Foster) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $630,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: observability, cloud deployment, React) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 14 days) Tj T*
+ET
+endstream
+endobj
+93 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 92 0 R >>
+endobj
+94 0 obj
+<< /Length 2287 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the USA branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for New York operations.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-046 - Youssef Berrada) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Data and AI) Tj T*
+(- Post: Data Analyst) Tj T*
+(- Email: youssef.berrada.us46@companyx.example) Tj T*
+(- Phone: +1-555-0246) Tj T*
+(- Date of birth: 1986-06-16) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $95,400) Tj T*
+(- Manager: Rayan Berrada) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Maintains branch analytics, metric quality, and decision dashboards for) Tj T*
+(USA.) Tj T*
+(- Branch project: USA Operating System) Tj T*
+(- Local workstream: US-OPS) Tj T*
+(- Project manager: Hana Carter) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $480,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: data quality, SQL, dashboarding) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 15 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for USA capacity, project delivery, and customer risk.) Tj T*
+ET
+endstream
+endobj
+95 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 94 0 R >>
+endobj
+96 0 obj
+<< /Length 2549 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-047 - Maya Cole) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Implementation Specialist) Tj T*
+(- Email: maya.cole.us47@companyx.example) Tj T*
+(- Phone: +1-555-0247) Tj T*
+(- Date of birth: 1993-11-27) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $82,100) Tj T*
+(- Manager: Karim Kabbaj) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in USA.) Tj T*
+(- Branch project: USA Market Growth Program) Tj T*
+(- Local workstream: US-GROW) Tj T*
+(- Project manager: Mila Brooks) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $517,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: renewal planning, training, health scoring) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 16 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for USA customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring USA customer feedback with Product and Engineering.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+ET
+endstream
+endobj
+97 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 96 0 R >>
+endobj
+98 0 obj
+<< /Length 2316 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-048 - Omar Lamrani) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Support Specialist) Tj T*
+(- Email: omar.lamrani.us48@companyx.example) Tj T*
+(- Phone: +1-555-0248) Tj T*
+(- Date of birth: 2000-04-10) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $84,800) Tj T*
+(- Manager: Karim Kabbaj) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in USA.) Tj T*
+(- Branch project: USA Customer Experience Program) Tj T*
+(- Local workstream: US-CX) Tj T*
+(- Project manager: Karim Kabbaj) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $555,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: support triage, onboarding, renewal planning) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 17 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for USA customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring USA customer feedback with Product and Engineering.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-049 - Nora Knight) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Engineering) Tj T*
+ET
+endstream
+endobj
+99 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 98 0 R >>
+endobj
+100 0 obj
+<< /Length 2317 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Post: Backend Engineer) Tj T*
+(- Email: nora.knight.us49@companyx.example) Tj T*
+(- Phone: +1-555-0249) Tj T*
+(- Date of birth: 1982-09-21) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $95,300) Tj T*
+(- Manager: Sara Foster) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for New York) Tj T*
+(customers.) Tj T*
+(- Branch project: USA Compliance And Security Track) Tj T*
+(- Local workstream: US-SEC) Tj T*
+(- Project manager: Ilyas Lamrani) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $592,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: React, observability, cloud deployment) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 18 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the USA branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for New York operations.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-050 - Liam Sefrioui) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Frontend Engineer) Tj T*
+(- Email: liam.sefrioui.us50@companyx.example) Tj T*
+(- Phone: +1-555-0250) Tj T*
+(- Date of birth: 1989-02-04) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $98,000) Tj T*
+ET
+endstream
+endobj
+101 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 100 0 R >>
+endobj
+102 0 obj
+<< /Length 2355 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Manager: Sara Foster) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for New York) Tj T*
+(customers.) Tj T*
+(- Branch project: USA Branch Analytics Layer) Tj T*
+(- Local workstream: US-DATA) Tj T*
+(- Project manager: Sara Foster) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $630,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: API design, automated testing, Node.js) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 19 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the USA branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for New York operations.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-051 - Hana Carter) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: QA Automation Engineer) Tj T*
+(- Email: hana.carter.us51@companyx.example) Tj T*
+(- Phone: +1-555-0251) Tj T*
+(- Date of birth: 1996-07-15) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $100,700) Tj T*
+(- Manager: Sara Foster) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for New York) Tj T*
+(customers.) Tj T*
+ET
+endstream
+endobj
+103 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 102 0 R >>
+endobj
+104 0 obj
+<< /Length 2263 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Branch project: USA Operating System) Tj T*
+(- Local workstream: US-OPS) Tj T*
+(- Project manager: Hana Carter) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $480,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: observability, cloud deployment, React) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 20 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the USA branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for New York operations.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(CX-US-052 - Elias Belkacem) Tj T*
+T*
+(- Branch: New York, USA) Tj T*
+(- Department: Data and AI) Tj T*
+(- Post: Data Analyst) Tj T*
+(- Email: elias.belkacem.us52@companyx.example) Tj T*
+(- Phone: +1-555-0252) Tj T*
+(- Date of birth: 1978-12-26) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $95,400) Tj T*
+(- Manager: Rayan Berrada) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Maintains branch analytics, metric quality, and decision dashboards for) Tj T*
+(USA.) Tj T*
+(- Branch project: USA Market Growth Program) Tj T*
+(- Local workstream: US-GROW) Tj T*
+(- Project manager: Mila Brooks) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $517,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+ET
+endstream
+endobj
+105 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 104 0 R >>
+endobj
+106 0 obj
+<< /Length 1622 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: data quality, SQL, dashboarding) Tj T*
+(- Languages: English, Spanish) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 21 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for USA capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support USA branch goals for global headquarters, strategic accounts, platform engineering,) Tj T*
+(and finance operations.) Tj T*
+(  - Update PX-USA-Core progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the USA branch workspace.) Tj T*
+T*
+(Useful Branch Questions) Tj T*
+T*
+(- How many employees work in the USA branch?) Tj T*
+(- Who is the Branch Director for USA?) Tj T*
+(- Which USA employees work in Engineering?) Tj T*
+(- What does the USA branch specialize in?) Tj T*
+(- List employees in New York with their salaries and posts.) Tj T*
+(- What are the daily tasks for the USA Customer Success team?) Tj T*
+T*
+ET
+endstream
+endobj
+107 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 106 0 R >>
+endobj
+xref
+0 108
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000475 00000 n 
+0000000545 00000 n 
+0000003028 00000 n 
+0000003154 00000 n 
+0000006713 00000 n 
+0000006839 00000 n 
+0000010694 00000 n 
+0000010820 00000 n 
+0000015070 00000 n 
+0000015198 00000 n 
+0000019449 00000 n 
+0000019577 00000 n 
+0000023271 00000 n 
+0000023399 00000 n 
+0000025736 00000 n 
+0000025864 00000 n 
+0000028397 00000 n 
+0000028525 00000 n 
+0000031084 00000 n 
+0000031212 00000 n 
+0000033631 00000 n 
+0000033759 00000 n 
+0000036331 00000 n 
+0000036459 00000 n 
+0000038882 00000 n 
+0000039010 00000 n 
+0000041394 00000 n 
+0000041522 00000 n 
+0000044000 00000 n 
+0000044128 00000 n 
+0000046526 00000 n 
+0000046654 00000 n 
+0000049084 00000 n 
+0000049212 00000 n 
+0000051587 00000 n 
+0000051715 00000 n 
+0000054266 00000 n 
+0000054394 00000 n 
+0000056837 00000 n 
+0000056965 00000 n 
+0000059303 00000 n 
+0000059431 00000 n 
+0000061881 00000 n 
+0000062009 00000 n 
+0000064382 00000 n 
+0000064510 00000 n 
+0000067007 00000 n 
+0000067135 00000 n 
+0000069495 00000 n 
+0000069623 00000 n 
+0000072168 00000 n 
+0000072296 00000 n 
+0000074800 00000 n 
+0000074928 00000 n 
+0000077361 00000 n 
+0000077489 00000 n 
+0000079830 00000 n 
+0000079958 00000 n 
+0000082317 00000 n 
+0000082445 00000 n 
+0000084935 00000 n 
+0000085063 00000 n 
+0000087510 00000 n 
+0000087638 00000 n 
+0000090085 00000 n 
+0000090213 00000 n 
+0000092717 00000 n 
+0000092845 00000 n 
+0000095156 00000 n 
+0000095284 00000 n 
+0000097652 00000 n 
+0000097780 00000 n 
+0000100261 00000 n 
+0000100389 00000 n 
+0000102813 00000 n 
+0000102941 00000 n 
+0000105330 00000 n 
+0000105458 00000 n 
+0000107921 00000 n 
+0000108049 00000 n 
+0000110658 00000 n 
+0000110786 00000 n 
+0000113104 00000 n 
+0000113232 00000 n 
+0000115575 00000 n 
+0000115703 00000 n 
+0000118223 00000 n 
+0000118351 00000 n 
+0000120795 00000 n 
+0000120923 00000 n 
+0000123339 00000 n 
+0000123467 00000 n 
+0000125807 00000 n 
+0000125935 00000 n 
+0000128537 00000 n 
+0000128665 00000 n 
+0000131034 00000 n 
+0000131162 00000 n 
+0000133533 00000 n 
+0000133663 00000 n 
+0000136072 00000 n 
+0000136202 00000 n 
+0000138519 00000 n 
+0000138649 00000 n 
+0000140325 00000 n 
+trailer
+<< /Size 108 /Root 1 0 R >>
+startxref
+140455
+%%EOF

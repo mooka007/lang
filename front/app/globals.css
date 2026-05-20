@@ -127,6 +127,23 @@ h2 {
   font-size: 0.92rem;
 }
 
+.usage-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.usage-summary strong {
+  color: var(--text);
+  font-size: 1rem;
+}
+
 .status-row {
   display: flex;
   align-items: center;
@@ -333,6 +350,22 @@ h2 {
   color: var(--green-dark);
   font-size: 0.78rem;
   font-weight: 800;
+}
+
+.token-meter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.token-meter span {
+  padding: 5px 7px;
+  border-radius: 999px;
+  background: #f2f5f4;
 }
 
 .composer {

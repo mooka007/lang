@@ -11,3 +11,4 @@ server/uploads/*
 server/pdfs/*.pdf
 !server/pdfs/javascript-basics-for-rag.pdf
 !server/pdfs/company-x-employee-knowledge-base.pdf
+!server/pdfs/company-x-branch-*.pdf

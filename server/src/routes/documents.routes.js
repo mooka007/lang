@@ -1,8 +1,9 @@
 import express from "express";
+import fs from "node:fs/promises";
 import multer from "multer";
 import path from "node:path";
 import { env } from "../config/env.js";
-import { askQuestion, getIndexStatus, indexFile } from "../services/rag.service.js";
+import { askQuestion, getIndexStatus, indexFile, indexFiles } from "../services/rag.service.js";
 
 const supportedExtensions = new Set([".pdf", ".txt", ".md"]);
 
@@ -46,14 +47,34 @@ function sanitizeHistory(history) {
 
 export const documentsRouter = express.Router();
 
+async function getCompanySampleFiles() {
+  const files = await fs.readdir(env.samplePdfDir);
+  return files
+    .filter((file) => file.startsWith("company-x-") && file.endsWith(".pdf"))
+    .sort((left, right) => {
+      if (left === "company-x-employee-knowledge-base.pdf") {
+        return -1;
+      }
+      if (right === "company-x-employee-knowledge-base.pdf") {
+        return 1;
+      }
+      return left.localeCompare(right);
+    })
+    .map((file) => ({
+      filePath: path.join(env.samplePdfDir, file),
+      displayName: file.replace(/\.pdf$/i, "").replace(/-/g, " ")
+    }));
+}
+
 documentsRouter.get("/status", (_request, response) => {
   response.json(getIndexStatus());
 });
 
 documentsRouter.post("/index-sample", async (_request, response, next) => {
   try {
-    const status = await indexFile(env.samplePdfPath, {
-      displayName: "Company X Employee Knowledge Base"
+    const sampleFiles = await getCompanySampleFiles();
+    const status = await indexFiles(sampleFiles, {
+      displayName: `Company X Knowledge Base (${sampleFiles.length} PDFs)`
     });
 
     response.json(status);

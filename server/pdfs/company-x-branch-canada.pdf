@@ -1,0 +1,2273 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R 31 0 R 33 0 R 35 0 R 37 0 R 39 0 R 41 0 R 43 0 R 45 0 R 47 0 R 49 0 R 51 0 R 53 0 R 55 0 R 57 0 R 59 0 R 61 0 R 63 0 R 65 0 R 67 0 R 69 0 R 71 0 R 73 0 R] /Count 35 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 2439 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(Company X Canada Branch Knowledge Base) Tj T*
+T*
+(Version: 1.0) Tj T*
+(Dataset type: fictional synthetic branch data for Document Q&A testing) Tj T*
+(Branch: Toronto, Canada) Tj T*
+(Employee count: 34) Tj T*
+T*
+(Important privacy note: all employees, salaries, emails, dates of birth, branch details, and) Tj T*
+(projects in this file are fictional and created for chatbot testing.) Tj T*
+T*
+(Branch Overview) Tj T*
+T*
+(The Company X Canada branch is based in Toronto. Its main focus is customer success, analytics) Tj T*
+(delivery, and North American implementation support. The branch works with headquarters and) Tj T*
+(other regions to deliver customer value while keeping local operations accountable.) Tj T*
+T*
+(- Office address: 134 Innovation Avenue, Toronto, Canada) Tj T*
+(- Timezone: America/Toronto) Tj T*
+(- Standard working hours: 09:00-17:30 local time, with shift coverage for support and) Tj T*
+(operations.) Tj T*
+(- Branch director: Zara El Amrani) Tj T*
+(- Branch operations manager: Daniel Wright) Tj T*
+(- Branch engineering manager: Salma Mansouri) Tj T*
+(- Branch customer success manager: Leo Reed) Tj T*
+(- Branch regional sales manager: Ines Idrissi) Tj T*
+(- Branch data lead: Nabil Mason) Tj T*
+(- Branch security coordinator: Samir Bishop) Tj T*
+(- Primary finance contact: Aya Rami) Tj T*
+(- Main branch project: PX-Canada-Northstar) Tj T*
+T*
+(Branch Specialties) Tj T*
+T*
+(- customer onboarding) Tj T*
+(- analytics dashboards) Tj T*
+(- renewal support) Tj T*
+(- implementation playbooks) Tj T*
+T*
+(Branch Department Capacity) Tj T*
+T*
+( |  Department  |  Employees  |  Main responsibility  |) Tj T*
+( |  ---  |  ---:  |  ---  |) Tj T*
+(| Customer Success | 7 | Owns onboarding, support quality, customer health, and escalations. |) Tj T*
+( |  Data and AI  |  4  |  Maintains analytics, reporting quality, and operational insights.  |) Tj T*
+( |  Engineering  |  9  |  Builds, tests, and maintains localized product capabilities.  |) Tj T*
+(| Finance | 2 | Controls payroll support, invoices, expense reviews, and branch budget evidence.) Tj T*
+(|) Tj T*
+(| IT and Security | 2 | Manages access, devices, security evidence, and incident readiness. |) Tj T*
+( |  Marketing  |  1  |  Localizes campaigns, webinars, launch assets, and market content.  |) Tj T*
+(| Operations | 4 | Runs branch coordination, vendors, documentation, staffing, and delivery) Tj T*
+(cadence. |) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 3539 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(| People Operations | 2 | Supports hiring, onboarding, employee records, and performance cycles.) Tj T*
+(|) Tj T*
+(| Sales | 3 | Develops pipeline, regional account plans, demos, and partner opportunities. |) Tj T*
+T*
+(Branch Project) Tj T*
+T*
+(- Project name: PX-Canada-Northstar) Tj T*
+(- Project objective: support customer success, analytics delivery, and North American) Tj T*
+(implementation support) Tj T*
+(- Weekly rhythm: branch project updates are posted every Friday before 15:00 local time.) Tj T*
+(- Escalation rule: customer, security, or finance risks must be escalated to the global owner) Tj T*
+(within one business day.) Tj T*
+T*
+(Branch Project Portfolio) Tj T*
+T*
+(| Code | Project | Manager | Deputy | Status | Employees | Budget | Deadline | KPI | Current) Tj T*
+(risk |) Tj T*
+( |  ---  |  ---  |  ---  |  ---  |  ---  |  ---:  |  ---:  |  ---  |  ---  |  ---  |) Tj T*
+(| CA-OPS | Canada Operating System | Zara El Amrani \(Branch Director\) | Daniel Wright) Tj T*
+(\(Operations Manager\) | Active | 7 | $780,000 | Q3 2026 | Branch SLA above 95 percent | Customer) Tj T*
+(adoption delay |) Tj T*
+(| CA-GROW | Canada Market Growth Program | Ines Idrissi \(Regional Sales Manager\) | Emma Skalli) Tj T*
+(\(Solutions Consultant\) | In build | 7 | $817,500 | Q4 2027 | Qualified regional pipeline growth) Tj T*
+(above 12 percent | Hiring capacity gap |) Tj T*
+(| CA-CX | Canada Customer Experience Program | Leo Reed \(Customer Success Manager\) | Mariam) Tj T*
+(Skalli \(Support Lead\) | Beta | 7 | $855,000 | Q1 2026 | Customer onboarding completion within 14) Tj T*
+(days | Data quality dependency |) Tj T*
+(| CA-SEC | Canada Compliance And Security Track | Samir Bishop \(Security Coordinator\) | Victor) Tj T*
+(Wright \(Security Analyst\) | Active | 7 | $892,500 | Q2 2027 | Quarterly security training) Tj T*
+(completion above 98 percent | Security evidence delay |) Tj T*
+(| CA-DATA | Canada Branch Analytics Layer | Salma Mansouri \(Engineering Manager\) | Evan Reed) Tj T*
+(\(Data Analyst\) | Discovery | 6 | $930,000 | Q3 2026 | Executive dashboard accuracy above 99) Tj T*
+(percent | Vendor delivery risk |) Tj T*
+T*
+(Project Staffing) Tj T*
+T*
+( |  Project code  |  Project manager  |  Deputy  |  Employee count  |  Assigned employees  |) Tj T*
+( |  ---  |  ---  |  ---  |  ---:  |  ---  |) Tj T*
+(| CA-OPS | Zara El Amrani | Daniel Wright | 7 | CX-CA-001 Zara El Amrani - Branch Director;) Tj T*
+(CX-CA-006 Nabil Mason - Data Lead; CX-CA-011 Dina El Amrani - Backend Engineer; CX-CA-016 Bilal) Tj T*
+(Mason - Support Specialist; CX-CA-021 Yasmine El Amrani - Payroll Specialist; CX-CA-026 Mehdi) Tj T*
+(Mason - Frontend Engineer; CX-CA-031 Amina El Amrani - Frontend Engineer |) Tj T*
+(| CA-GROW | Ines Idrissi | Emma Skalli | 7 | CX-CA-002 Daniel Wright - Operations Manager;) Tj T*
+(CX-CA-007 Mariam Skalli - Support Lead; CX-CA-012 Malik Wright - Frontend Engineer; CX-CA-017) Tj T*
+(Emma Skalli - Solutions Consultant; CX-CA-022 Victor Wright - Security Analyst; CX-CA-027 Nour) Tj T*
+(Skalli - Data Analyst; CX-CA-032 Noah Wright - QA Automation Engineer |) Tj T*
+(| CA-CX | Leo Reed | Mariam Skalli | 7 | CX-CA-003 Salma Mansouri - Engineering Manager;) Tj T*
+(CX-CA-008 Samir Bishop - Security Coordinator; CX-CA-013 Rim Mansouri - QA Automation Engineer;) Tj T*
+(CX-CA-018 Tariq Bishop - Account Executive; CX-CA-023 Imane Mansouri - Recruiting Coordinator;) Tj T*
+(CX-CA-028 Jonas Bishop - Implementation Specialist; CX-CA-033 Leila Mansouri - Data Analyst |) Tj T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 3760 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(| CA-SEC | Samir Bishop | Victor Wright | 7 | CX-CA-004 Leo Reed - Customer Success Manager;) Tj T*
+(CX-CA-009 Aya Rami - Finance Coordinator; CX-CA-014 Evan Reed - Data Analyst; CX-CA-019 Clara) Tj T*
+(Rami - Marketing Specialist; CX-CA-024 Oscar Reed - Product Operations Analyst; CX-CA-029 Farah) Tj T*
+(Rami - Support Specialist; CX-CA-034 Adam Reed - Implementation Specialist |) Tj T*
+(| CA-DATA | Salma Mansouri | Evan Reed | 6 | CX-CA-005 Ines Idrissi - Regional Sales Manager;) Tj T*
+(CX-CA-010 Lucas Walsh - People Operations Partner; CX-CA-015 Nadia Idrissi - Implementation) Tj T*
+(Specialist; CX-CA-020 Hamza Walsh - Office Coordinator; CX-CA-025 Lara Idrissi - Backend) Tj T*
+(Engineer; CX-CA-030 Anas Walsh - Backend Engineer |) Tj T*
+T*
+(Branch Operating Notes) Tj T*
+T*
+(- The Canada branch has 34 employees.) Tj T*
+(- Branch leadership meets every Monday to review goals, blockers, customer risks, and staffing.) Tj T*
+(- Employees must keep project notes current in the global Company X workspace.) Tj T*
+(- Customer-facing employees should record customer feedback after every major call.) Tj T*
+(- Engineering and data employees should link technical decisions to the relevant branch) Tj T*
+(workstream.) Tj T*
+(- The branch contributes to global Company X projects when local knowledge or timezone coverage) Tj T*
+(is needed.) Tj T*
+T*
+(Employee Directory) Tj T*
+T*
+(| ID | Name | Date of birth | Start date | Email | Department | Post | Salary | Shift | Manager) Tj T*
+(| Project | Project manager |) Tj T*
+(| --- | --- | --- | --- | --- | --- | --- | ---: | --- | --- | --- | --- |) Tj T*
+(| CX-CA-001 | Zara El Amrani | 1991-09-13 | 2021-01-01 | zara.el.amrani.ca1@companyx.example |) Tj T*
+(Operations | Branch Director | $128,600 | Late support shift, 12:00-20:00 local time | Global) Tj T*
+(COO | CA-OPS | Zara El Amrani |) Tj T*
+(| CX-CA-002 | Daniel Wright | 1998-02-24 | 2022-04-08 | daniel.wright.ca2@companyx.example |) Tj T*
+(Operations | Operations Manager | $93,300 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Zara El Amrani | CA-GROW | Ines Idrissi |) Tj T*
+(| CX-CA-003 | Salma Mansouri | 1980-07-07 | 2023-07-15 | salma.mansouri.ca3@companyx.example |) Tj T*
+(Engineering | Engineering Manager | $116,000 | Night operations shift, 20:00-04:00 local time |) Tj T*
+(Zara El Amrani | CA-CX | Leo Reed |) Tj T*
+(| CX-CA-004 | Leo Reed | 1987-12-18 | 2024-10-22 | leo.reed.ca4@companyx.example | Customer) Tj T*
+(Success | Customer Success Manager | $98,700 | Morning shift, 08:00-16:00 local time | Zara El) Tj T*
+(Amrani | CA-SEC | Samir Bishop |) Tj T*
+(| CX-CA-005 | Ines Idrissi | 1994-05-01 | 2017-01-01 | ines.idrissi.ca5@companyx.example | Sales) Tj T*
+(| Regional Sales Manager | $121,400 | Standard shift, 09:00-17:30 local time | Zara El Amrani |) Tj T*
+(CA-DATA | Salma Mansouri |) Tj T*
+(| CX-CA-006 | Nabil Mason | 1976-10-12 | 2018-04-08 | nabil.mason.ca6@companyx.example | Data) Tj T*
+(and AI | Data Lead | $124,100 | Late support shift, 12:00-20:00 local time | Zara El Amrani |) Tj T*
+(CA-OPS | Zara El Amrani |) Tj T*
+(| CX-CA-007 | Mariam Skalli | 1983-03-23 | 2019-07-15 | mariam.skalli.ca7@companyx.example |) Tj T*
+(Customer Success | Support Lead | $90,600 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Zara El Amrani | CA-GROW | Ines Idrissi |) Tj T*
+(| CX-CA-008 | Samir Bishop | 1990-08-06 | 2020-10-22 | samir.bishop.ca8@companyx.example | IT) Tj T*
+(and Security | Security Coordinator | $83,300 | Night operations shift, 20:00-04:00 local time |) Tj T*
+(Zara El Amrani | CA-CX | Leo Reed |) Tj T*
+(| CX-CA-009 | Aya Rami | 1997-01-17 | 2021-01-01 | aya.rami.ca9@companyx.example | Finance |) Tj T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 4166 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(Finance Coordinator | $84,000 | Morning shift, 08:00-16:00 local time | Daniel Wright | CA-SEC |) Tj T*
+(Samir Bishop |) Tj T*
+(| CX-CA-010 | Lucas Walsh | 1979-06-28 | 2022-04-08 | lucas.walsh.ca10@companyx.example | People) Tj T*
+(Operations | People Operations Partner | $84,700 | Standard shift, 09:00-17:30 local time |) Tj T*
+(Daniel Wright | CA-DATA | Salma Mansouri |) Tj T*
+(| CX-CA-011 | Dina El Amrani | 1986-11-11 | 2023-07-15 | dina.el.amrani.ca11@companyx.example |) Tj T*
+(Engineering | Backend Engineer | $107,400 | Late support shift, 12:00-20:00 local time | Salma) Tj T*
+(Mansouri | CA-OPS | Zara El Amrani |) Tj T*
+(| CX-CA-012 | Malik Wright | 1993-04-22 | 2024-10-22 | malik.wright.ca12@companyx.example |) Tj T*
+(Engineering | Frontend Engineer | $110,100 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Salma Mansouri | CA-GROW | Ines Idrissi |) Tj T*
+(| CX-CA-013 | Rim Mansouri | 2000-09-05 | 2017-01-01 | rim.mansouri.ca13@companyx.example |) Tj T*
+(Engineering | QA Automation Engineer | $96,600 | Night operations shift, 20:00-04:00 local time) Tj T*
+(| Salma Mansouri | CA-CX | Leo Reed |) Tj T*
+(| CX-CA-014 | Evan Reed | 1982-02-16 | 2018-04-08 | evan.reed.ca14@companyx.example | Data and) Tj T*
+(AI | Data Analyst | $91,300 | Morning shift, 08:00-16:00 local time | Nabil Mason | CA-SEC |) Tj T*
+(Samir Bishop |) Tj T*
+(| CX-CA-015 | Nadia Idrissi | 1989-07-27 | 2019-07-15 | nadia.idrissi.ca15@companyx.example |) Tj T*
+(Customer Success | Implementation Specialist | $78,000 | Standard shift, 09:00-17:30 local time) Tj T*
+(| Leo Reed | CA-DATA | Salma Mansouri |) Tj T*
+(| CX-CA-016 | Bilal Mason | 1996-12-10 | 2020-10-22 | bilal.mason.ca16@companyx.example |) Tj T*
+(Customer Success | Support Specialist | $80,700 | Late support shift, 12:00-20:00 local time |) Tj T*
+(Leo Reed | CA-OPS | Zara El Amrani |) Tj T*
+(| CX-CA-017 | Emma Skalli | 1978-05-21 | 2021-01-01 | emma.skalli.ca17@companyx.example | Sales) Tj T*
+(| Solutions Consultant | $90,400 | Split collaboration shift, 10:00-14:00 and 16:00-20:00 local) Tj T*
+(time | Ines Idrissi | CA-GROW | Ines Idrissi |) Tj T*
+(| CX-CA-018 | Tariq Bishop | 1985-10-04 | 2022-04-08 | tariq.bishop.ca18@companyx.example |) Tj T*
+(Sales | Account Executive | $93,100 | Night operations shift, 20:00-04:00 local time | Ines) Tj T*
+(Idrissi | CA-CX | Leo Reed |) Tj T*
+(| CX-CA-019 | Clara Rami | 1992-03-15 | 2023-07-15 | clara.rami.ca19@companyx.example |) Tj T*
+(Marketing | Marketing Specialist | $74,600 | Morning shift, 08:00-16:00 local time | Ines) Tj T*
+(Idrissi | CA-SEC | Samir Bishop |) Tj T*
+(| CX-CA-020 | Hamza Walsh | 1999-08-26 | 2024-10-22 | hamza.walsh.ca20@companyx.example |) Tj T*
+(Operations | Office Coordinator | $75,300 | Standard shift, 09:00-17:30 local time | Daniel) Tj T*
+(Wright | CA-DATA | Salma Mansouri |) Tj T*
+(| CX-CA-021 | Yasmine El Amrani | 1981-01-09 | 2017-01-01 |) Tj T*
+(yasmine.el.amrani.ca21@companyx.example | Finance | Payroll Specialist | $84,000 | Late support) Tj T*
+(shift, 12:00-20:00 local time | Daniel Wright | CA-OPS | Zara El Amrani |) Tj T*
+(| CX-CA-022 | Victor Wright | 1988-06-20 | 2018-04-08 | victor.wright.ca22@companyx.example | IT) Tj T*
+(and Security | Security Analyst | $88,700 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Samir Bishop | CA-GROW | Ines Idrissi |) Tj T*
+(| CX-CA-023 | Imane Mansouri | 1995-11-03 | 2019-07-15 | imane.mansouri.ca23@companyx.example |) Tj T*
+(People Operations | Recruiting Coordinator | $87,400 | Night operations shift, 20:00-04:00 local) Tj T*
+(time | Daniel Wright | CA-CX | Leo Reed |) Tj T*
+(| CX-CA-024 | Oscar Reed | 1977-04-14 | 2020-10-22 | oscar.reed.ca24@companyx.example |) Tj T*
+(Operations | Product Operations Analyst | $86,100 | Morning shift, 08:00-16:00 local time |) Tj T*
+(Daniel Wright | CA-SEC | Samir Bishop |) Tj T*
+(| CX-CA-025 | Lara Idrissi | 1984-09-25 | 2021-01-01 | lara.idrissi.ca25@companyx.example |) Tj T*
+(Engineering | Backend Engineer | $96,600 | Standard shift, 09:00-17:30 local time | Salma) Tj T*
+(Mansouri | CA-DATA | Salma Mansouri |) Tj T*
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 3070 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(| CX-CA-026 | Mehdi Mason | 1991-02-08 | 2022-04-08 | mehdi.mason.ca26@companyx.example |) Tj T*
+(Engineering | Frontend Engineer | $99,300 | Late support shift, 12:00-20:00 local time | Salma) Tj T*
+(Mansouri | CA-OPS | Zara El Amrani |) Tj T*
+(| CX-CA-027 | Nour Skalli | 1998-07-19 | 2023-07-15 | nour.skalli.ca27@companyx.example | Data) Tj T*
+(and AI | Data Analyst | $94,000 | Split collaboration shift, 10:00-14:00 and 16:00-20:00 local) Tj T*
+(time | Nabil Mason | CA-GROW | Ines Idrissi |) Tj T*
+(| CX-CA-028 | Jonas Bishop | 1980-12-02 | 2024-10-22 | jonas.bishop.ca28@companyx.example |) Tj T*
+(Customer Success | Implementation Specialist | $80,700 | Night operations shift, 20:00-04:00) Tj T*
+(local time | Leo Reed | CA-CX | Leo Reed |) Tj T*
+(| CX-CA-029 | Farah Rami | 1987-05-13 | 2017-01-01 | farah.rami.ca29@companyx.example | Customer) Tj T*
+(Success | Support Specialist | $83,400 | Morning shift, 08:00-16:00 local time | Leo Reed |) Tj T*
+(CA-SEC | Samir Bishop |) Tj T*
+(| CX-CA-030 | Anas Walsh | 1994-10-24 | 2018-04-08 | anas.walsh.ca30@companyx.example |) Tj T*
+(Engineering | Backend Engineer | $110,100 | Standard shift, 09:00-17:30 local time | Salma) Tj T*
+(Mansouri | CA-DATA | Salma Mansouri |) Tj T*
+(| CX-CA-031 | Amina El Amrani | 1976-03-07 | 2019-07-15 | amina.el.amrani.ca31@companyx.example) Tj T*
+(| Engineering | Frontend Engineer | $96,600 | Late support shift, 12:00-20:00 local time | Salma) Tj T*
+(Mansouri | CA-OPS | Zara El Amrani |) Tj T*
+(| CX-CA-032 | Noah Wright | 1983-08-18 | 2020-10-22 | noah.wright.ca32@companyx.example |) Tj T*
+(Engineering | QA Automation Engineer | $99,300 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Salma Mansouri | CA-GROW | Ines Idrissi |) Tj T*
+(| CX-CA-033 | Leila Mansouri | 1990-01-01 | 2021-01-01 | leila.mansouri.ca33@companyx.example |) Tj T*
+(Data and AI | Data Analyst | $94,000 | Night operations shift, 20:00-04:00 local time | Nabil) Tj T*
+(Mason | CA-CX | Leo Reed |) Tj T*
+(| CX-CA-034 | Adam Reed | 1997-06-12 | 2022-04-08 | adam.reed.ca34@companyx.example | Customer) Tj T*
+(Success | Implementation Specialist | $80,700 | Morning shift, 08:00-16:00 local time | Leo Reed) Tj T*
+(| CA-SEC | Samir Bishop |) Tj T*
+T*
+(Employee Daily Work Briefs) Tj T*
+T*
+(CX-CA-001 - Zara El Amrani) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Branch Director) Tj T*
+(- Email: zara.el.amrani.ca1@companyx.example) Tj T*
+(- Phone: +1-555-0201) Tj T*
+(- Date of birth: 1991-09-13) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $128,600) Tj T*
+(- Manager: Global COO) Tj T*
+(- Employment type: Contractor) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Owns branch strategy, staffing, budget health, and executive reporting) Tj T*
+(for Canada.) Tj T*
+(- Branch project: Canada Operating System) Tj T*
+(- Local workstream: CA-OPS) Tj T*
+(- Project manager: Zara El Amrani) Tj T*
+(- Project status: Active) Tj T*
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 2519 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project budget: $780,000) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: vendor operations, office coordination, process design) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack, Executive Dashboards) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Admin and strategic reporting access) Tj T*
+(- PTO balance: 6 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Canada leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Lead the Canada branch operating rhythm and weekly executive update.) Tj T*
+(  - Approve budget, hiring, and priority changes for the branch.) Tj T*
+(  - Escalate customer, staffing, and compliance risks to global leadership.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-002 - Daniel Wright) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Operations Manager) Tj T*
+(- Email: daniel.wright.ca2@companyx.example) Tj T*
+(- Phone: +1-555-0202) Tj T*
+(- Date of birth: 1998-02-24) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $93,300) Tj T*
+(- Manager: Zara El Amrani) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Canada Operations team.) Tj T*
+(- Branch project: Canada Market Growth Program) Tj T*
+(- Local workstream: CA-GROW) Tj T*
+(- Project manager: Ines Idrissi) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $817,500) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: reporting, procurement, vendor operations) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack, Executive Dashboards) Tj T*
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 2415 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Performance band: New in role) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 7 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Canada leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Coordinate staffing, vendor, office, and delivery workflows for Toronto.) Tj T*
+(  - Keep branch process documentation, service levels, and handoffs current.) Tj T*
+(  - Track branch blockers and follow up with the accountable owner.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-003 - Salma Mansouri) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Engineering Manager) Tj T*
+(- Email: salma.mansouri.ca3@companyx.example) Tj T*
+(- Phone: +1-555-0203) Tj T*
+(- Date of birth: 1980-07-07) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $116,000) Tj T*
+(- Manager: Zara El Amrani) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Canada Engineering team.) Tj T*
+(- Branch project: Canada Customer Experience Program) Tj T*
+(- Local workstream: CA-CX) Tj T*
+(- Project manager: Leo Reed) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $855,000) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: automated testing, Node.js, API design) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira, Executive Dashboards) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 8 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Canada leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Length 2603 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Canada branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Toronto operations.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-004 - Leo Reed) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Customer Success Manager) Tj T*
+(- Email: leo.reed.ca4@companyx.example) Tj T*
+(- Phone: +1-555-0204) Tj T*
+(- Date of birth: 1987-12-18) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $98,700) Tj T*
+(- Manager: Zara El Amrani) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Canada Customer Success team.) Tj T*
+(- Branch project: Canada Compliance And Security Track) Tj T*
+(- Local workstream: CA-SEC) Tj T*
+(- Project manager: Samir Bishop) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $892,500) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: onboarding, renewal planning, training) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion, Executive Dashboards) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 9 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Canada leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Canada customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Canada customer feedback with Product and Engineering.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+ET
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 18 0 R >>
+endobj
+20 0 obj
+<< /Length 2409 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-005 - Ines Idrissi) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Regional Sales Manager) Tj T*
+(- Email: ines.idrissi.ca5@companyx.example) Tj T*
+(- Phone: +1-555-0205) Tj T*
+(- Date of birth: 1994-05-01) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $121,400) Tj T*
+(- Manager: Zara El Amrani) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Canada Sales team.) Tj T*
+(- Branch project: Canada Branch Analytics Layer) Tj T*
+(- Local workstream: CA-DATA) Tj T*
+(- Project manager: Salma Mansouri) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $930,000) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: CRM hygiene, negotiation, enterprise discovery) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign, Executive Dashboards) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 10 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Canada leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the Canada market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-006 - Nabil Mason) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Data and AI) Tj T*
+ET
+endstream
+endobj
+21 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 20 0 R >>
+endobj
+22 0 obj
+<< /Length 2313 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Post: Data Lead) Tj T*
+(- Email: nabil.mason.ca6@companyx.example) Tj T*
+(- Phone: +1-555-0206) Tj T*
+(- Date of birth: 1976-10-12) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $124,100) Tj T*
+(- Manager: Zara El Amrani) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Canada Data and AI team.) Tj T*
+(- Branch project: Canada Operating System) Tj T*
+(- Local workstream: CA-OPS) Tj T*
+(- Project manager: Zara El Amrani) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $780,000) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: Python, model evaluation, experimentation) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion, Executive Dashboards) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 11 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Canada leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for Canada capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-007 - Mariam Skalli) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Support Lead) Tj T*
+(- Email: mariam.skalli.ca7@companyx.example) Tj T*
+(- Phone: +1-555-0207) Tj T*
+(- Date of birth: 1983-03-23) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $90,600) Tj T*
+(- Manager: Zara El Amrani) Tj T*
+ET
+endstream
+endobj
+23 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 22 0 R >>
+endobj
+24 0 obj
+<< /Length 2512 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Canada Customer Success team.) Tj T*
+(- Branch project: Canada Market Growth Program) Tj T*
+(- Local workstream: CA-GROW) Tj T*
+(- Project manager: Ines Idrissi) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $817,500) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: support triage, onboarding, renewal planning) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion, Executive Dashboards) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 12 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Canada leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Canada customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Canada customer feedback with Product and Engineering.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-008 - Samir Bishop) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: IT and Security) Tj T*
+(- Post: Security Coordinator) Tj T*
+(- Email: samir.bishop.ca8@companyx.example) Tj T*
+(- Phone: +1-555-0208) Tj T*
+(- Date of birth: 1990-08-06) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $83,300) Tj T*
+(- Manager: Zara El Amrani) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Protects access, devices, security evidence, and incident readiness for) Tj T*
+(Canada.) Tj T*
+(- Branch project: Canada Customer Experience Program) Tj T*
+(- Local workstream: CA-CX) Tj T*
+ET
+endstream
+endobj
+25 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 24 0 R >>
+endobj
+26 0 obj
+<< /Length 2385 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project manager: Leo Reed) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $855,000) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: endpoint security, incident response, endpoint security) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: Okta, Jamf, Cloudflare, Vanta) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Security tools and device management access) Tj T*
+(- PTO balance: 13 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Access review notes) Tj T*
+(  - Training completion report) Tj T*
+(  - Security evidence upload) Tj T*
+(- Daily tasks:) Tj T*
+(  - Review access, compliance evidence, and incident readiness for the Canada branch.) Tj T*
+(  - Coordinate endpoint security and quarterly training completion.) Tj T*
+(  - Escalate high-risk security events to the Horizon Security Program.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-009 - Aya Rami) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Finance) Tj T*
+(- Post: Finance Coordinator) Tj T*
+(- Email: aya.rami.ca9@companyx.example) Tj T*
+(- Phone: +1-555-0209) Tj T*
+(- Date of birth: 1997-01-17) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $84,000) Tj T*
+(- Manager: Daniel Wright) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Manages branch finance controls, payroll support, invoices, and budget) Tj T*
+(evidence.) Tj T*
+(- Branch project: Canada Compliance And Security Track) Tj T*
+(- Local workstream: CA-SEC) Tj T*
+(- Project manager: Samir Bishop) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $892,500) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+ET
+endstream
+endobj
+27 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 26 0 R >>
+endobj
+28 0 obj
+<< /Length 2435 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Skills: forecasting, payroll, vendor management) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: QuickBooks, Ramp, PayrollHub, Google Sheets) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Finance systems and billing access) Tj T*
+(- PTO balance: 14 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Budget variance note) Tj T*
+(  - Invoice approval queue) Tj T*
+(  - Payroll exception list) Tj T*
+(- Daily tasks:) Tj T*
+(  - Validate payroll, invoices, expense controls, and budget usage for Canada.) Tj T*
+(  - Prepare month-end finance notes and resolve missing approvals.) Tj T*
+(  - Flag budget variance or vendor payment risks to the finance owner.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-010 - Lucas Walsh) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: People Operations) Tj T*
+(- Post: People Operations Partner) Tj T*
+(- Email: lucas.walsh.ca10@companyx.example) Tj T*
+(- Phone: +1-555-0210) Tj T*
+(- Date of birth: 1979-06-28) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $84,700) Tj T*
+(- Manager: Daniel Wright) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Supports hiring, onboarding, employee records, and manager guidance for) Tj T*
+(Canada.) Tj T*
+(- Branch project: Canada Branch Analytics Layer) Tj T*
+(- Local workstream: CA-DATA) Tj T*
+(- Project manager: Salma Mansouri) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $930,000) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: policy operations, employee relations, policy operations) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: BambooHR, Greenhouse, Lattice, Notion) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 15 days) Tj T*
+ET
+endstream
+endobj
+29 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 28 0 R >>
+endobj
+30 0 obj
+<< /Length 2309 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Weekly deliverables:) Tj T*
+(  - Hiring pipeline update) Tj T*
+(  - Onboarding checklist review) Tj T*
+(  - Employee support notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Support hiring, onboarding, employee relations, and policy questions in Canada.) Tj T*
+(  - Maintain employee records, onboarding tasks, and performance cycle reminders.) Tj T*
+(  - Coach managers on one-on-ones, feedback, and staffing risks.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-011 - Dina El Amrani) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Backend Engineer) Tj T*
+(- Email: dina.el.amrani.ca11@companyx.example) Tj T*
+(- Phone: +1-555-0211) Tj T*
+(- Date of birth: 1986-11-11) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $107,400) Tj T*
+(- Manager: Salma Mansouri) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Toronto) Tj T*
+(customers.) Tj T*
+(- Branch project: Canada Operating System) Tj T*
+(- Local workstream: CA-OPS) Tj T*
+(- Project manager: Zara El Amrani) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $780,000) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: Node.js, API design, automated testing) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 16 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Canada branch.) Tj T*
+ET
+endstream
+endobj
+31 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 30 0 R >>
+endobj
+32 0 obj
+<< /Length 2600 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Toronto operations.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-012 - Malik Wright) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Frontend Engineer) Tj T*
+(- Email: malik.wright.ca12@companyx.example) Tj T*
+(- Phone: +1-555-0212) Tj T*
+(- Date of birth: 1993-04-22) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $110,100) Tj T*
+(- Manager: Salma Mansouri) Tj T*
+(- Employment type: Contractor) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Toronto) Tj T*
+(customers.) Tj T*
+(- Branch project: Canada Market Growth Program) Tj T*
+(- Local workstream: CA-GROW) Tj T*
+(- Project manager: Ines Idrissi) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $817,500) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: React, observability, cloud deployment) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 17 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Canada branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Toronto operations.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+ET
+endstream
+endobj
+33 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 32 0 R >>
+endobj
+34 0 obj
+<< /Length 2303 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-013 - Rim Mansouri) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: QA Automation Engineer) Tj T*
+(- Email: rim.mansouri.ca13@companyx.example) Tj T*
+(- Phone: +1-555-0213) Tj T*
+(- Date of birth: 2000-09-05) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $96,600) Tj T*
+(- Manager: Salma Mansouri) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Toronto) Tj T*
+(customers.) Tj T*
+(- Branch project: Canada Customer Experience Program) Tj T*
+(- Local workstream: CA-CX) Tj T*
+(- Project manager: Leo Reed) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $855,000) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: API design, automated testing, Node.js) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 18 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Canada branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Toronto operations.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-014 - Evan Reed) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Data and AI) Tj T*
+ET
+endstream
+endobj
+35 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 34 0 R >>
+endobj
+36 0 obj
+<< /Length 2322 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Post: Data Analyst) Tj T*
+(- Email: evan.reed.ca14@companyx.example) Tj T*
+(- Phone: +1-555-0214) Tj T*
+(- Date of birth: 1982-02-16) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $91,300) Tj T*
+(- Manager: Nabil Mason) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Maintains branch analytics, metric quality, and decision dashboards for) Tj T*
+(Canada.) Tj T*
+(- Branch project: Canada Compliance And Security Track) Tj T*
+(- Local workstream: CA-SEC) Tj T*
+(- Project manager: Samir Bishop) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $892,500) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: model evaluation, experimentation, Python) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 19 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for Canada capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-015 - Nadia Idrissi) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Implementation Specialist) Tj T*
+(- Email: nadia.idrissi.ca15@companyx.example) Tj T*
+(- Phone: +1-555-0215) Tj T*
+(- Date of birth: 1989-07-27) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $78,000) Tj T*
+ET
+endstream
+endobj
+37 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 36 0 R >>
+endobj
+38 0 obj
+<< /Length 2399 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Manager: Leo Reed) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in Canada.) Tj T*
+(- Branch project: Canada Branch Analytics Layer) Tj T*
+(- Local workstream: CA-DATA) Tj T*
+(- Project manager: Salma Mansouri) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $930,000) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: health scoring, support triage, onboarding) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 20 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Canada customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Canada customer feedback with Product and Engineering.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-016 - Bilal Mason) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Support Specialist) Tj T*
+(- Email: bilal.mason.ca16@companyx.example) Tj T*
+(- Phone: +1-555-0216) Tj T*
+(- Date of birth: 1996-12-10) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $80,700) Tj T*
+(- Manager: Leo Reed) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in Canada.) Tj T*
+ET
+endstream
+endobj
+39 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 38 0 R >>
+endobj
+40 0 obj
+<< /Length 2398 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Branch project: Canada Operating System) Tj T*
+(- Local workstream: CA-OPS) Tj T*
+(- Project manager: Zara El Amrani) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $780,000) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: renewal planning, training, health scoring) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 21 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Canada customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Canada customer feedback with Product and Engineering.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-017 - Emma Skalli) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Solutions Consultant) Tj T*
+(- Email: emma.skalli.ca17@companyx.example) Tj T*
+(- Phone: +1-555-0217) Tj T*
+(- Date of birth: 1978-05-21) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $90,400) Tj T*
+(- Manager: Ines Idrissi) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Builds regional pipeline, demos, and account plans for the Canada market.) Tj T*
+(- Branch project: Canada Market Growth Program) Tj T*
+(- Local workstream: CA-GROW) Tj T*
+(- Project manager: Ines Idrissi) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $817,500) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+ET
+endstream
+endobj
+41 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 40 0 R >>
+endobj
+42 0 obj
+<< /Length 2433 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: negotiation, enterprise discovery, demo strategy) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 22 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - CRM pipeline update) Tj T*
+(  - Demo notes) Tj T*
+(  - Next-step account plan) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the Canada market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-018 - Tariq Bishop) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Account Executive) Tj T*
+(- Email: tariq.bishop.ca18@companyx.example) Tj T*
+(- Phone: +1-555-0218) Tj T*
+(- Date of birth: 1985-10-04) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $93,100) Tj T*
+(- Manager: Ines Idrissi) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Builds regional pipeline, demos, and account plans for the Canada market.) Tj T*
+(- Branch project: Canada Customer Experience Program) Tj T*
+(- Local workstream: CA-CX) Tj T*
+(- Project manager: Leo Reed) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $855,000) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: account planning, CRM hygiene, negotiation) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 23 days) Tj T*
+ET
+endstream
+endobj
+43 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 42 0 R >>
+endobj
+44 0 obj
+<< /Length 2332 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Weekly deliverables:) Tj T*
+(  - CRM pipeline update) Tj T*
+(  - Demo notes) Tj T*
+(  - Next-step account plan) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the Canada market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-019 - Clara Rami) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Marketing) Tj T*
+(- Post: Marketing Specialist) Tj T*
+(- Email: clara.rami.ca19@companyx.example) Tj T*
+(- Phone: +1-555-0219) Tj T*
+(- Date of birth: 1992-03-15) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $74,600) Tj T*
+(- Manager: Ines Idrissi) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Localizes campaigns, launch assets, and market education for the Canada) Tj T*
+(audience.) Tj T*
+(- Branch project: Canada Compliance And Security Track) Tj T*
+(- Local workstream: CA-SEC) Tj T*
+(- Project manager: Samir Bishop) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $892,500) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: campaign strategy, SEO, product messaging) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: Webflow, HubSpot, Google Analytics, Canva) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 6 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Localize campaigns, webinars, and customer stories for Canada.) Tj T*
+ET
+endstream
+endobj
+45 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 44 0 R >>
+endobj
+46 0 obj
+<< /Length 2584 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Coordinate launch assets with Sales, Product, and Design.) Tj T*
+(  - Report campaign performance and content gaps to the growth team.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-020 - Hamza Walsh) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Office Coordinator) Tj T*
+(- Email: hamza.walsh.ca20@companyx.example) Tj T*
+(- Phone: +1-555-0220) Tj T*
+(- Date of birth: 1999-08-26) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $75,300) Tj T*
+(- Manager: Daniel Wright) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Supports daily operations, documentation, vendor coordination, and branch) Tj T*
+(execution in Toronto.) Tj T*
+(- Branch project: Canada Branch Analytics Layer) Tj T*
+(- Local workstream: CA-DATA) Tj T*
+(- Project manager: Salma Mansouri) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $930,000) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: process design, reporting, procurement) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 7 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Coordinate staffing, vendor, office, and delivery workflows for Toronto.) Tj T*
+(  - Keep branch process documentation, service levels, and handoffs current.) Tj T*
+(  - Track branch blockers and follow up with the accountable owner.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+ET
+endstream
+endobj
+47 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 46 0 R >>
+endobj
+48 0 obj
+<< /Length 2282 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-021 - Yasmine El Amrani) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Finance) Tj T*
+(- Post: Payroll Specialist) Tj T*
+(- Email: yasmine.el.amrani.ca21@companyx.example) Tj T*
+(- Phone: +1-555-0221) Tj T*
+(- Date of birth: 1981-01-09) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $84,000) Tj T*
+(- Manager: Daniel Wright) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Manages branch finance controls, payroll support, invoices, and budget) Tj T*
+(evidence.) Tj T*
+(- Branch project: Canada Operating System) Tj T*
+(- Local workstream: CA-OPS) Tj T*
+(- Project manager: Zara El Amrani) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $780,000) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: payroll, vendor management, billing controls) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: QuickBooks, Ramp, PayrollHub, Google Sheets) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Finance systems and billing access) Tj T*
+(- PTO balance: 8 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Budget variance note) Tj T*
+(  - Invoice approval queue) Tj T*
+(  - Payroll exception list) Tj T*
+(- Daily tasks:) Tj T*
+(  - Validate payroll, invoices, expense controls, and budget usage for Canada.) Tj T*
+(  - Prepare month-end finance notes and resolve missing approvals.) Tj T*
+(  - Flag budget variance or vendor payment risks to the finance owner.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-022 - Victor Wright) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: IT and Security) Tj T*
+ET
+endstream
+endobj
+49 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 48 0 R >>
+endobj
+50 0 obj
+<< /Length 2375 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Post: Security Analyst) Tj T*
+(- Email: victor.wright.ca22@companyx.example) Tj T*
+(- Phone: +1-555-0222) Tj T*
+(- Date of birth: 1988-06-20) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $88,700) Tj T*
+(- Manager: Samir Bishop) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Protects access, devices, security evidence, and incident readiness for) Tj T*
+(Canada.) Tj T*
+(- Branch project: Canada Market Growth Program) Tj T*
+(- Local workstream: CA-GROW) Tj T*
+(- Project manager: Ines Idrissi) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $817,500) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: incident response, endpoint security, incident response) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: Okta, Jamf, Cloudflare, Vanta) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Security tools and device management access) Tj T*
+(- PTO balance: 9 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Access review notes) Tj T*
+(  - Training completion report) Tj T*
+(  - Security evidence upload) Tj T*
+(- Daily tasks:) Tj T*
+(  - Review access, compliance evidence, and incident readiness for the Canada branch.) Tj T*
+(  - Coordinate endpoint security and quarterly training completion.) Tj T*
+(  - Escalate high-risk security events to the Horizon Security Program.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-023 - Imane Mansouri) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: People Operations) Tj T*
+(- Post: Recruiting Coordinator) Tj T*
+(- Email: imane.mansouri.ca23@companyx.example) Tj T*
+(- Phone: +1-555-0223) Tj T*
+(- Date of birth: 1995-11-03) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $87,400) Tj T*
+ET
+endstream
+endobj
+51 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 50 0 R >>
+endobj
+52 0 obj
+<< /Length 2429 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Manager: Daniel Wright) Tj T*
+(- Employment type: Contractor) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Supports hiring, onboarding, employee records, and manager guidance for) Tj T*
+(Canada.) Tj T*
+(- Branch project: Canada Customer Experience Program) Tj T*
+(- Local workstream: CA-CX) Tj T*
+(- Project manager: Leo Reed) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $855,000) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: recruiting, performance reviews, recruiting) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: BambooHR, Greenhouse, Lattice, Notion) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 10 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Hiring pipeline update) Tj T*
+(  - Onboarding checklist review) Tj T*
+(  - Employee support notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Support hiring, onboarding, employee relations, and policy questions in Canada.) Tj T*
+(  - Maintain employee records, onboarding tasks, and performance cycle reminders.) Tj T*
+(  - Coach managers on one-on-ones, feedback, and staffing risks.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-024 - Oscar Reed) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Product Operations Analyst) Tj T*
+(- Email: oscar.reed.ca24@companyx.example) Tj T*
+(- Phone: +1-555-0224) Tj T*
+(- Date of birth: 1977-04-14) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $86,100) Tj T*
+(- Manager: Daniel Wright) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Supports daily operations, documentation, vendor coordination, and branch) Tj T*
+(execution in Toronto.) Tj T*
+ET
+endstream
+endobj
+53 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 52 0 R >>
+endobj
+54 0 obj
+<< /Length 2386 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Branch project: Canada Compliance And Security Track) Tj T*
+(- Local workstream: CA-SEC) Tj T*
+(- Project manager: Samir Bishop) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $892,500) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: procurement, vendor operations, office coordination) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 11 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Coordinate staffing, vendor, office, and delivery workflows for Toronto.) Tj T*
+(  - Keep branch process documentation, service levels, and handoffs current.) Tj T*
+(  - Track branch blockers and follow up with the accountable owner.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-025 - Lara Idrissi) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Backend Engineer) Tj T*
+(- Email: lara.idrissi.ca25@companyx.example) Tj T*
+(- Phone: +1-555-0225) Tj T*
+(- Date of birth: 1984-09-25) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $96,600) Tj T*
+(- Manager: Salma Mansouri) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Toronto) Tj T*
+(customers.) Tj T*
+(- Branch project: Canada Branch Analytics Layer) Tj T*
+(- Local workstream: CA-DATA) Tj T*
+(- Project manager: Salma Mansouri) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $930,000) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+ET
+endstream
+endobj
+55 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 54 0 R >>
+endobj
+56 0 obj
+<< /Length 2372 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: API design, automated testing, Node.js) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 12 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Canada branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Toronto operations.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-026 - Mehdi Mason) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Frontend Engineer) Tj T*
+(- Email: mehdi.mason.ca26@companyx.example) Tj T*
+(- Phone: +1-555-0226) Tj T*
+(- Date of birth: 1991-02-08) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $99,300) Tj T*
+(- Manager: Salma Mansouri) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Toronto) Tj T*
+(customers.) Tj T*
+(- Branch project: Canada Operating System) Tj T*
+(- Local workstream: CA-OPS) Tj T*
+(- Project manager: Zara El Amrani) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $780,000) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: observability, cloud deployment, React) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Solid performer) Tj T*
+ET
+endstream
+endobj
+57 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 56 0 R >>
+endobj
+58 0 obj
+<< /Length 2333 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 13 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Canada branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Toronto operations.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-027 - Nour Skalli) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Data and AI) Tj T*
+(- Post: Data Analyst) Tj T*
+(- Email: nour.skalli.ca27@companyx.example) Tj T*
+(- Phone: +1-555-0227) Tj T*
+(- Date of birth: 1998-07-19) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $94,000) Tj T*
+(- Manager: Nabil Mason) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Maintains branch analytics, metric quality, and decision dashboards for) Tj T*
+(Canada.) Tj T*
+(- Branch project: Canada Market Growth Program) Tj T*
+(- Local workstream: CA-GROW) Tj T*
+(- Project manager: Ines Idrissi) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $817,500) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: data quality, SQL, dashboarding) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 14 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+ET
+endstream
+endobj
+59 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 58 0 R >>
+endobj
+60 0 obj
+<< /Length 2528 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for Canada capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-028 - Jonas Bishop) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Implementation Specialist) Tj T*
+(- Email: jonas.bishop.ca28@companyx.example) Tj T*
+(- Phone: +1-555-0228) Tj T*
+(- Date of birth: 1980-12-02) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $80,700) Tj T*
+(- Manager: Leo Reed) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in Canada.) Tj T*
+(- Branch project: Canada Customer Experience Program) Tj T*
+(- Local workstream: CA-CX) Tj T*
+(- Project manager: Leo Reed) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $855,000) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: training, health scoring, support triage) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 15 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Canada customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Canada customer feedback with Product and Engineering.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+ET
+endstream
+endobj
+61 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 60 0 R >>
+endobj
+62 0 obj
+<< /Length 2423 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-029 - Farah Rami) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Support Specialist) Tj T*
+(- Email: farah.rami.ca29@companyx.example) Tj T*
+(- Phone: +1-555-0229) Tj T*
+(- Date of birth: 1987-05-13) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $83,400) Tj T*
+(- Manager: Leo Reed) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in Canada.) Tj T*
+(- Branch project: Canada Compliance And Security Track) Tj T*
+(- Local workstream: CA-SEC) Tj T*
+(- Project manager: Samir Bishop) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $892,500) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: onboarding, renewal planning, training) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 16 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Canada customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Canada customer feedback with Product and Engineering.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-030 - Anas Walsh) Tj T*
+T*
+ET
+endstream
+endobj
+63 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 62 0 R >>
+endobj
+64 0 obj
+<< /Length 2314 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Backend Engineer) Tj T*
+(- Email: anas.walsh.ca30@companyx.example) Tj T*
+(- Phone: +1-555-0230) Tj T*
+(- Date of birth: 1994-10-24) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $110,100) Tj T*
+(- Manager: Salma Mansouri) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Toronto) Tj T*
+(customers.) Tj T*
+(- Branch project: Canada Branch Analytics Layer) Tj T*
+(- Local workstream: CA-DATA) Tj T*
+(- Project manager: Salma Mansouri) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $930,000) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: React, observability, cloud deployment) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 17 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Canada branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Toronto operations.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-031 - Amina El Amrani) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Frontend Engineer) Tj T*
+(- Email: amina.el.amrani.ca31@companyx.example) Tj T*
+(- Phone: +1-555-0231) Tj T*
+(- Date of birth: 1976-03-07) Tj T*
+ET
+endstream
+endobj
+65 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 64 0 R >>
+endobj
+66 0 obj
+<< /Length 2314 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $96,600) Tj T*
+(- Manager: Salma Mansouri) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Toronto) Tj T*
+(customers.) Tj T*
+(- Branch project: Canada Operating System) Tj T*
+(- Local workstream: CA-OPS) Tj T*
+(- Project manager: Zara El Amrani) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $780,000) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: API design, automated testing, Node.js) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 18 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Canada branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Toronto operations.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-032 - Noah Wright) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: QA Automation Engineer) Tj T*
+(- Email: noah.wright.ca32@companyx.example) Tj T*
+(- Phone: +1-555-0232) Tj T*
+(- Date of birth: 1983-08-18) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $99,300) Tj T*
+(- Manager: Salma Mansouri) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+ET
+endstream
+endobj
+67 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 66 0 R >>
+endobj
+68 0 obj
+<< /Length 2376 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Responsibility area: Delivers product quality and localized platform improvements for Toronto) Tj T*
+(customers.) Tj T*
+(- Branch project: Canada Market Growth Program) Tj T*
+(- Local workstream: CA-GROW) Tj T*
+(- Project manager: Ines Idrissi) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $817,500) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: observability, cloud deployment, React) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 19 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Canada branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Toronto operations.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-033 - Leila Mansouri) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Data and AI) Tj T*
+(- Post: Data Analyst) Tj T*
+(- Email: leila.mansouri.ca33@companyx.example) Tj T*
+(- Phone: +1-555-0233) Tj T*
+(- Date of birth: 1990-01-01) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $94,000) Tj T*
+(- Manager: Nabil Mason) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Maintains branch analytics, metric quality, and decision dashboards for) Tj T*
+(Canada.) Tj T*
+(- Branch project: Canada Customer Experience Program) Tj T*
+(- Local workstream: CA-CX) Tj T*
+(- Project manager: Leo Reed) Tj T*
+(- Project status: Beta) Tj T*
+ET
+endstream
+endobj
+69 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 68 0 R >>
+endobj
+70 0 obj
+<< /Length 2403 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project budget: $855,000) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: data quality, SQL, dashboarding) Tj T*
+(- Languages: English, French) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 20 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for Canada capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(CX-CA-034 - Adam Reed) Tj T*
+T*
+(- Branch: Toronto, Canada) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Implementation Specialist) Tj T*
+(- Email: adam.reed.ca34@companyx.example) Tj T*
+(- Phone: +1-555-0234) Tj T*
+(- Date of birth: 1997-06-12) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $80,700) Tj T*
+(- Manager: Leo Reed) Tj T*
+(- Employment type: Contractor) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in Canada.) Tj T*
+(- Branch project: Canada Compliance And Security Track) Tj T*
+(- Local workstream: CA-SEC) Tj T*
+(- Project manager: Samir Bishop) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $892,500) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: onboarding, renewal planning, training) Tj T*
+(- Languages: English, French) Tj T*
+ET
+endstream
+endobj
+71 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 70 0 R >>
+endobj
+72 0 obj
+<< /Length 1436 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 21 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Canada customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Canada customer feedback with Product and Engineering.) Tj T*
+(- Support Canada branch goals for customer success, analytics delivery, and North American) Tj T*
+(implementation support.) Tj T*
+(  - Update PX-Canada-Northstar progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Canada branch workspace.) Tj T*
+T*
+(Useful Branch Questions) Tj T*
+T*
+(- How many employees work in the Canada branch?) Tj T*
+(- Who is the Branch Director for Canada?) Tj T*
+(- Which Canada employees work in Engineering?) Tj T*
+(- What does the Canada branch specialize in?) Tj T*
+(- List employees in Toronto with their salaries and posts.) Tj T*
+(- What are the daily tasks for the Canada Customer Success team?) Tj T*
+T*
+ET
+endstream
+endobj
+73 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 72 0 R >>
+endobj
+xref
+0 74
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000352 00000 n 
+0000000422 00000 n 
+0000002913 00000 n 
+0000003039 00000 n 
+0000006630 00000 n 
+0000006756 00000 n 
+0000010568 00000 n 
+0000010694 00000 n 
+0000014913 00000 n 
+0000015041 00000 n 
+0000018164 00000 n 
+0000018292 00000 n 
+0000020864 00000 n 
+0000020992 00000 n 
+0000023460 00000 n 
+0000023588 00000 n 
+0000026244 00000 n 
+0000026372 00000 n 
+0000028834 00000 n 
+0000028962 00000 n 
+0000031328 00000 n 
+0000031456 00000 n 
+0000034021 00000 n 
+0000034149 00000 n 
+0000036587 00000 n 
+0000036715 00000 n 
+0000039203 00000 n 
+0000039331 00000 n 
+0000041693 00000 n 
+0000041821 00000 n 
+0000044474 00000 n 
+0000044602 00000 n 
+0000046958 00000 n 
+0000047086 00000 n 
+0000049461 00000 n 
+0000049589 00000 n 
+0000052041 00000 n 
+0000052169 00000 n 
+0000054620 00000 n 
+0000054748 00000 n 
+0000057234 00000 n 
+0000057362 00000 n 
+0000059747 00000 n 
+0000059875 00000 n 
+0000062512 00000 n 
+0000062640 00000 n 
+0000064975 00000 n 
+0000065103 00000 n 
+0000067531 00000 n 
+0000067659 00000 n 
+0000070141 00000 n 
+0000070269 00000 n 
+0000072708 00000 n 
+0000072836 00000 n 
+0000075261 00000 n 
+0000075389 00000 n 
+0000077775 00000 n 
+0000077903 00000 n 
+0000080484 00000 n 
+0000080612 00000 n 
+0000083088 00000 n 
+0000083216 00000 n 
+0000085583 00000 n 
+0000085711 00000 n 
+0000088078 00000 n 
+0000088206 00000 n 
+0000090635 00000 n 
+0000090763 00000 n 
+0000093219 00000 n 
+0000093347 00000 n 
+0000094836 00000 n 
+trailer
+<< /Size 74 /Root 1 0 R >>
+startxref
+94964
+%%EOF

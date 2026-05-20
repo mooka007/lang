@@ -7,7 +7,9 @@ Chat with PDF, text, or Markdown documents using a Node.js API, LangChain.js ret
 - Express API for document indexing, upload, status checks, and Q&A.
 - LangChain.js RAG pipeline using PDF loading, text splitting, embeddings, and an in-memory vector store.
 - Next.js frontend with document controls and a chat interface.
-- Sample Company X employee knowledge base in Markdown and generated PDF form.
+- Token usage tracking for indexing embeddings and chat answers.
+- Multi-PDF Company X knowledge base with headquarters and branch documents.
+- Rich fictional employee records with salary, shift, manager, role, project manager, tasks, skills, languages, and access level.
 
 ## Project Structure
 
@@ -23,6 +25,7 @@ Chat with PDF, text, or Markdown documents using a Node.js API, LangChain.js ret
     ├── pdfs/                   # Sample/source documents
     │   ├── company-x-employee-knowledge-base.md
     │   └── company-x-employee-knowledge-base.pdf
+    │   └── company-x-branch-*.pdf
     ├── uploads/                # Uploaded documents
     └── src/
 ```
@@ -45,16 +48,24 @@ Then set one model provider.
 
 ```text
 LLM_PROVIDER=github
-EMBEDDING_PROVIDER=github
+EMBEDDING_PROVIDER=local
 GITHUB_TOKEN=your_github_token_with_models_read_access
 ```
 
-The project also supports OpenAI directly by setting `LLM_PROVIDER=openai`, `EMBEDDING_PROVIDER=openai`, and `OPENAI_API_KEY`.
+The local embedding provider is best for development because the large fictional company PDFs can be indexed quickly without using embedding API tokens. The project also supports OpenAI directly by setting `LLM_PROVIDER=openai`, `EMBEDDING_PROVIDER=openai`, and `OPENAI_API_KEY`.
 
 The default upload limit is 100 MB. Change it with:
 
 ```text
 UPLOAD_MAX_MB=100
+```
+
+For production-style embeddings, switch `EMBEDDING_PROVIDER` to `github` or `openai`.
+
+Large API-based documents are embedded in batches. Change the batch size with:
+
+```text
+EMBEDDING_BATCH_SIZE=32
 ```
 
 On Windows PowerShell, use:
@@ -86,9 +97,11 @@ Default URLs:
 ## First Test Flow
 
 1. Open `http://localhost:3000`.
-2. Click `Index sample`.
-3. Ask: `Who works on PX-Atlas and what are their roles?`
-4. Ask: `Which employees are in Engineering and what are their daily tasks?`
+2. Click `Load company PDFs`.
+3. Ask: `Which branches does Company X have?`
+4. Ask: `Compare the Morocco and Canada branches.`
+5. Ask: `Who works in the France branch and what do they do?`
+6. Ask: `What shift, salary, tasks, and project manager does CX-MA-001 have?`
 
 ## API Endpoints
 
@@ -114,7 +127,7 @@ The source content lives at:
 server/pdfs/company-x-employee-knowledge-base.md
 ```
 
-Regenerate the PDF with:
+Regenerate all Company X PDFs with:
 
 ```bash
 npm run sample:pdf

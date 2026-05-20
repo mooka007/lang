@@ -1,0 +1,2401 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R 31 0 R 33 0 R 35 0 R 37 0 R 39 0 R 41 0 R 43 0 R 45 0 R 47 0 R 49 0 R 51 0 R 53 0 R 55 0 R 57 0 R 59 0 R 61 0 R 63 0 R 65 0 R 67 0 R 69 0 R 71 0 R 73 0 R 75 0 R 77 0 R] /Count 37 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 2412 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(Company X Nigeria Branch Knowledge Base) Tj T*
+T*
+(Version: 1.0) Tj T*
+(Dataset type: fictional synthetic branch data for Document Q&A testing) Tj T*
+(Branch: Lagos, Nigeria) Tj T*
+(Employee count: 36) Tj T*
+T*
+(Important privacy note: all employees, salaries, emails, dates of birth, branch details, and) Tj T*
+(projects in this file are fictional and created for chatbot testing.) Tj T*
+T*
+(Branch Overview) Tj T*
+T*
+(The Company X Nigeria branch is based in Lagos. Its main focus is African market growth, mobile) Tj T*
+(workflows, and regional partner enablement. The branch works with headquarters and other regions) Tj T*
+(to deliver customer value while keeping local operations accountable.) Tj T*
+T*
+(- Office address: 134 Innovation Avenue, Lagos, Nigeria) Tj T*
+(- Timezone: Africa/Lagos) Tj T*
+(- Standard working hours: 09:00-17:30 local time, with shift coverage for support and) Tj T*
+(operations.) Tj T*
+(- Branch director: Dina Stone) Tj T*
+(- Branch operations manager: Malik Rahmani) Tj T*
+(- Branch engineering manager: Rim Bennett) Tj T*
+(- Branch customer success manager: Evan Saidi) Tj T*
+(- Branch regional sales manager: Nadia Fleming) Tj T*
+(- Branch data lead: Bilal Lahlou) Tj T*
+(- Branch security coordinator: Tariq Guessous) Tj T*
+(- Primary finance contact: Clara Sharp) Tj T*
+(- Main branch project: PX-Nigeria-Rise) Tj T*
+T*
+(Branch Specialties) Tj T*
+T*
+(- partner enablement) Tj T*
+(- mobile adoption) Tj T*
+(- field operations) Tj T*
+(- regional support) Tj T*
+T*
+(Branch Department Capacity) Tj T*
+T*
+( |  Department  |  Employees  |  Main responsibility  |) Tj T*
+( |  ---  |  ---:  |  ---  |) Tj T*
+(| Customer Success | 8 | Owns onboarding, support quality, customer health, and escalations. |) Tj T*
+( |  Data and AI  |  4  |  Maintains analytics, reporting quality, and operational insights.  |) Tj T*
+( |  Engineering  |  9  |  Builds, tests, and maintains localized product capabilities.  |) Tj T*
+(| Finance | 2 | Controls payroll support, invoices, expense reviews, and branch budget evidence.) Tj T*
+(|) Tj T*
+(| IT and Security | 2 | Manages access, devices, security evidence, and incident readiness. |) Tj T*
+( |  Marketing  |  1  |  Localizes campaigns, webinars, launch assets, and market content.  |) Tj T*
+(| Operations | 4 | Runs branch coordination, vendors, documentation, staffing, and delivery) Tj T*
+(cadence. |) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 3467 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(| People Operations | 2 | Supports hiring, onboarding, employee records, and performance cycles.) Tj T*
+(|) Tj T*
+(| Sales | 4 | Develops pipeline, regional account plans, demos, and partner opportunities. |) Tj T*
+T*
+(Branch Project) Tj T*
+T*
+(- Project name: PX-Nigeria-Rise) Tj T*
+(- Project objective: support African market growth, mobile workflows, and regional partner) Tj T*
+(enablement) Tj T*
+(- Weekly rhythm: branch project updates are posted every Friday before 15:00 local time.) Tj T*
+(- Escalation rule: customer, security, or finance risks must be escalated to the global owner) Tj T*
+(within one business day.) Tj T*
+T*
+(Branch Project Portfolio) Tj T*
+T*
+(| Code | Project | Manager | Deputy | Status | Employees | Budget | Deadline | KPI | Current) Tj T*
+(risk |) Tj T*
+( |  ---  |  ---  |  ---  |  ---  |  ---  |  ---:  |  ---:  |  ---  |  ---  |  ---  |) Tj T*
+(| NG-OPS | Nigeria Operating System | Dina Stone \(Branch Director\) | Malik Rahmani \(Operations) Tj T*
+(Manager\) | Active | 8 | $1,080,000 | Q4 2027 | Branch SLA above 95 percent | Customer adoption) Tj T*
+(delay |) Tj T*
+(| NG-GROW | Nigeria Market Growth Program | Nadia Fleming \(Regional Sales Manager\) | Nour Ward) Tj T*
+(\(Solutions Consultant\) | In build | 7 | $1,117,500 | Q1 2026 | Qualified regional pipeline) Tj T*
+(growth above 12 percent | Hiring capacity gap |) Tj T*
+(| NG-CX | Nigeria Customer Experience Program | Evan Saidi \(Customer Success Manager\) | Emma) Tj T*
+(Ward \(Support Lead\) | Beta | 7 | $1,155,000 | Q2 2027 | Customer onboarding completion within 14) Tj T*
+(days | Data quality dependency |) Tj T*
+(| NG-SEC | Nigeria Compliance And Security Track | Tariq Guessous \(Security Coordinator\) | Noah) Tj T*
+(Rahmani \(Security Analyst\) | Active | 7 | $1,192,500 | Q3 2026 | Quarterly security training) Tj T*
+(completion above 98 percent | Security evidence delay |) Tj T*
+(| NG-DATA | Nigeria Branch Analytics Layer | Rim Bennett \(Engineering Manager\) | Oscar Saidi) Tj T*
+(\(Data Analyst\) | Discovery | 7 | $1,230,000 | Q4 2027 | Executive dashboard accuracy above 99) Tj T*
+(percent | Vendor delivery risk |) Tj T*
+T*
+(Project Staffing) Tj T*
+T*
+( |  Project code  |  Project manager  |  Deputy  |  Employee count  |  Assigned employees  |) Tj T*
+( |  ---  |  ---  |  ---  |  ---:  |  ---  |) Tj T*
+(| NG-OPS | Dina Stone | Malik Rahmani | 8 | CX-NG-001 Dina Stone - Branch Director; CX-NG-006) Tj T*
+(Bilal Lahlou - Data Lead; CX-NG-011 Yasmine Stone - Backend Engineer; CX-NG-016 Mehdi Lahlou -) Tj T*
+(Support Specialist; CX-NG-021 Amina Stone - Payroll Specialist; CX-NG-026 Youssef Lahlou -) Tj T*
+(Frontend Engineer; CX-NG-031 Hana Stone - Frontend Engineer; CX-NG-036 Rayan Lahlou - Solutions) Tj T*
+(Consultant |) Tj T*
+(| NG-GROW | Nadia Fleming | Nour Ward | 7 | CX-NG-002 Malik Rahmani - Operations Manager;) Tj T*
+(CX-NG-007 Emma Ward - Support Lead; CX-NG-012 Victor Rahmani - Frontend Engineer; CX-NG-017 Nour) Tj T*
+(Ward - Solutions Consultant; CX-NG-022 Noah Rahmani - Security Analyst; CX-NG-027 Maya Ward -) Tj T*
+(Data Analyst; CX-NG-032 Elias Rahmani - QA Automation Engineer |) Tj T*
+(| NG-CX | Evan Saidi | Emma Ward | 7 | CX-NG-003 Rim Bennett - Engineering Manager; CX-NG-008) Tj T*
+(Tariq Guessous - Security Coordinator; CX-NG-013 Imane Bennett - QA Automation Engineer;) Tj T*
+(CX-NG-018 Jonas Guessous - Account Executive; CX-NG-023 Leila Bennett - Recruiting Coordinator;) Tj T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 3745 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(CX-NG-028 Omar Guessous - Implementation Specialist; CX-NG-033 Sara Bennett - Data Analyst |) Tj T*
+(| NG-SEC | Tariq Guessous | Noah Rahmani | 7 | CX-NG-004 Evan Saidi - Customer Success Manager;) Tj T*
+(CX-NG-009 Clara Sharp - Finance Coordinator; CX-NG-014 Oscar Saidi - Data Analyst; CX-NG-019) Tj T*
+(Farah Sharp - Marketing Specialist; CX-NG-024 Adam Saidi - Product Operations Analyst; CX-NG-029) Tj T*
+(Nora Sharp - Support Specialist; CX-NG-034 Karim Saidi - Implementation Specialist |) Tj T*
+(| NG-DATA | Rim Bennett | Oscar Saidi | 7 | CX-NG-005 Nadia Fleming - Regional Sales Manager;) Tj T*
+(CX-NG-010 Hamza Amrani - People Operations Partner; CX-NG-015 Lara Fleming - Implementation) Tj T*
+(Specialist; CX-NG-020 Anas Amrani - Office Coordinator; CX-NG-025 Sofia Fleming - Backend) Tj T*
+(Engineer; CX-NG-030 Liam Amrani - Backend Engineer; CX-NG-035 Mila Fleming - Support Specialist) Tj T*
+(|) Tj T*
+T*
+(Branch Operating Notes) Tj T*
+T*
+(- The Nigeria branch has 36 employees.) Tj T*
+(- Branch leadership meets every Monday to review goals, blockers, customer risks, and staffing.) Tj T*
+(- Employees must keep project notes current in the global Company X workspace.) Tj T*
+(- Customer-facing employees should record customer feedback after every major call.) Tj T*
+(- Engineering and data employees should link technical decisions to the relevant branch) Tj T*
+(workstream.) Tj T*
+(- The branch contributes to global Company X projects when local knowledge or timezone coverage) Tj T*
+(is needed.) Tj T*
+T*
+(Employee Directory) Tj T*
+T*
+(| ID | Name | Date of birth | Start date | Email | Department | Post | Salary | Shift | Manager) Tj T*
+(| Project | Project manager |) Tj T*
+(| --- | --- | --- | --- | --- | --- | --- | ---: | --- | --- | --- | --- |) Tj T*
+(| CX-NG-001 | Dina Stone | 1986-09-01 | 2017-01-01 | dina.stone.ng1@companyx.example |) Tj T*
+(Operations | Branch Director | $129,900 | Split collaboration shift, 10:00-14:00 and 16:00-20:00) Tj T*
+(local time | Global COO | NG-OPS | Dina Stone |) Tj T*
+(| CX-NG-002 | Malik Rahmani | 1993-02-12 | 2018-04-08 | malik.rahmani.ng2@companyx.example |) Tj T*
+(Operations | Operations Manager | $94,600 | Night operations shift, 20:00-04:00 local time |) Tj T*
+(Dina Stone | NG-GROW | Nadia Fleming |) Tj T*
+(| CX-NG-003 | Rim Bennett | 2000-07-23 | 2019-07-15 | rim.bennett.ng3@companyx.example |) Tj T*
+(Engineering | Engineering Manager | $117,300 | Morning shift, 08:00-16:00 local time | Dina) Tj T*
+(Stone | NG-CX | Evan Saidi |) Tj T*
+(| CX-NG-004 | Evan Saidi | 1982-12-06 | 2020-10-22 | evan.saidi.ng4@companyx.example | Customer) Tj T*
+(Success | Customer Success Manager | $100,000 | Standard shift, 09:00-17:30 local time | Dina) Tj T*
+(Stone | NG-SEC | Tariq Guessous |) Tj T*
+(| CX-NG-005 | Nadia Fleming | 1989-05-17 | 2021-01-01 | nadia.fleming.ng5@companyx.example |) Tj T*
+(Sales | Regional Sales Manager | $122,700 | Late support shift, 12:00-20:00 local time | Dina) Tj T*
+(Stone | NG-DATA | Rim Bennett |) Tj T*
+(| CX-NG-006 | Bilal Lahlou | 1996-10-28 | 2022-04-08 | bilal.lahlou.ng6@companyx.example | Data) Tj T*
+(and AI | Data Lead | $125,400 | Split collaboration shift, 10:00-14:00 and 16:00-20:00 local) Tj T*
+(time | Dina Stone | NG-OPS | Dina Stone |) Tj T*
+(| CX-NG-007 | Emma Ward | 1978-03-11 | 2023-07-15 | emma.ward.ng7@companyx.example | Customer) Tj T*
+(Success | Support Lead | $91,900 | Night operations shift, 20:00-04:00 local time | Dina Stone |) Tj T*
+(NG-GROW | Nadia Fleming |) Tj T*
+(| CX-NG-008 | Tariq Guessous | 1985-08-22 | 2024-10-22 | tariq.guessous.ng8@companyx.example |) Tj T*
+(IT and Security | Security Coordinator | $84,600 | Morning shift, 08:00-16:00 local time | Dina) Tj T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 4162 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(Stone | NG-CX | Evan Saidi |) Tj T*
+(| CX-NG-009 | Clara Sharp | 1992-01-05 | 2017-01-01 | clara.sharp.ng9@companyx.example | Finance) Tj T*
+(| Finance Coordinator | $85,300 | Standard shift, 09:00-17:30 local time | Malik Rahmani |) Tj T*
+(NG-SEC | Tariq Guessous |) Tj T*
+(| CX-NG-010 | Hamza Amrani | 1999-06-16 | 2018-04-08 | hamza.amrani.ng10@companyx.example |) Tj T*
+(People Operations | People Operations Partner | $86,000 | Late support shift, 12:00-20:00 local) Tj T*
+(time | Malik Rahmani | NG-DATA | Rim Bennett |) Tj T*
+(| CX-NG-011 | Yasmine Stone | 1981-11-27 | 2019-07-15 | yasmine.stone.ng11@companyx.example |) Tj T*
+(Engineering | Backend Engineer | $108,700 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Rim Bennett | NG-OPS | Dina Stone |) Tj T*
+(| CX-NG-012 | Victor Rahmani | 1988-04-10 | 2020-10-22 | victor.rahmani.ng12@companyx.example |) Tj T*
+(Engineering | Frontend Engineer | $111,400 | Night operations shift, 20:00-04:00 local time |) Tj T*
+(Rim Bennett | NG-GROW | Nadia Fleming |) Tj T*
+(| CX-NG-013 | Imane Bennett | 1995-09-21 | 2021-01-01 | imane.bennett.ng13@companyx.example |) Tj T*
+(Engineering | QA Automation Engineer | $97,900 | Morning shift, 08:00-16:00 local time | Rim) Tj T*
+(Bennett | NG-CX | Evan Saidi |) Tj T*
+(| CX-NG-014 | Oscar Saidi | 1977-02-04 | 2022-04-08 | oscar.saidi.ng14@companyx.example | Data) Tj T*
+(and AI | Data Analyst | $92,600 | Standard shift, 09:00-17:30 local time | Bilal Lahlou | NG-SEC) Tj T*
+(| Tariq Guessous |) Tj T*
+(| CX-NG-015 | Lara Fleming | 1984-07-15 | 2023-07-15 | lara.fleming.ng15@companyx.example |) Tj T*
+(Customer Success | Implementation Specialist | $79,300 | Late support shift, 12:00-20:00 local) Tj T*
+(time | Evan Saidi | NG-DATA | Rim Bennett |) Tj T*
+(| CX-NG-016 | Mehdi Lahlou | 1991-12-26 | 2024-10-22 | mehdi.lahlou.ng16@companyx.example |) Tj T*
+(Customer Success | Support Specialist | $82,000 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Evan Saidi | NG-OPS | Dina Stone |) Tj T*
+(| CX-NG-017 | Nour Ward | 1998-05-09 | 2017-01-01 | nour.ward.ng17@companyx.example | Sales |) Tj T*
+(Solutions Consultant | $91,700 | Night operations shift, 20:00-04:00 local time | Nadia Fleming) Tj T*
+(| NG-GROW | Nadia Fleming |) Tj T*
+(| CX-NG-018 | Jonas Guessous | 1980-10-20 | 2018-04-08 | jonas.guessous.ng18@companyx.example |) Tj T*
+(Sales | Account Executive | $94,400 | Morning shift, 08:00-16:00 local time | Nadia Fleming |) Tj T*
+(NG-CX | Evan Saidi |) Tj T*
+(| CX-NG-019 | Farah Sharp | 1987-03-03 | 2019-07-15 | farah.sharp.ng19@companyx.example |) Tj T*
+(Marketing | Marketing Specialist | $75,900 | Standard shift, 09:00-17:30 local time | Nadia) Tj T*
+(Fleming | NG-SEC | Tariq Guessous |) Tj T*
+(| CX-NG-020 | Anas Amrani | 1994-08-14 | 2020-10-22 | anas.amrani.ng20@companyx.example |) Tj T*
+(Operations | Office Coordinator | $76,600 | Late support shift, 12:00-20:00 local time | Malik) Tj T*
+(Rahmani | NG-DATA | Rim Bennett |) Tj T*
+(| CX-NG-021 | Amina Stone | 1976-01-25 | 2021-01-01 | amina.stone.ng21@companyx.example |) Tj T*
+(Finance | Payroll Specialist | $85,300 | Split collaboration shift, 10:00-14:00 and 16:00-20:00) Tj T*
+(local time | Malik Rahmani | NG-OPS | Dina Stone |) Tj T*
+(| CX-NG-022 | Noah Rahmani | 1983-06-08 | 2022-04-08 | noah.rahmani.ng22@companyx.example | IT) Tj T*
+(and Security | Security Analyst | $90,000 | Night operations shift, 20:00-04:00 local time |) Tj T*
+(Tariq Guessous | NG-GROW | Nadia Fleming |) Tj T*
+(| CX-NG-023 | Leila Bennett | 1990-11-19 | 2023-07-15 | leila.bennett.ng23@companyx.example |) Tj T*
+(People Operations | Recruiting Coordinator | $88,700 | Morning shift, 08:00-16:00 local time |) Tj T*
+(Malik Rahmani | NG-CX | Evan Saidi |) Tj T*
+(| CX-NG-024 | Adam Saidi | 1997-04-02 | 2024-10-22 | adam.saidi.ng24@companyx.example |) Tj T*
+(Operations | Product Operations Analyst | $87,400 | Standard shift, 09:00-17:30 local time |) Tj T*
+(Malik Rahmani | NG-SEC | Tariq Guessous |) Tj T*
+(| CX-NG-025 | Sofia Fleming | 1979-09-13 | 2017-01-01 | sofia.fleming.ng25@companyx.example |) Tj T*
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 3337 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(Engineering | Backend Engineer | $97,900 | Late support shift, 12:00-20:00 local time | Rim) Tj T*
+(Bennett | NG-DATA | Rim Bennett |) Tj T*
+(| CX-NG-026 | Youssef Lahlou | 1986-02-24 | 2018-04-08 | youssef.lahlou.ng26@companyx.example |) Tj T*
+(Engineering | Frontend Engineer | $100,600 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Rim Bennett | NG-OPS | Dina Stone |) Tj T*
+(| CX-NG-027 | Maya Ward | 1993-07-07 | 2019-07-15 | maya.ward.ng27@companyx.example | Data and) Tj T*
+(AI | Data Analyst | $95,300 | Night operations shift, 20:00-04:00 local time | Bilal Lahlou |) Tj T*
+(NG-GROW | Nadia Fleming |) Tj T*
+(| CX-NG-028 | Omar Guessous | 2000-12-18 | 2020-10-22 | omar.guessous.ng28@companyx.example |) Tj T*
+(Customer Success | Implementation Specialist | $82,000 | Morning shift, 08:00-16:00 local time |) Tj T*
+(Evan Saidi | NG-CX | Evan Saidi |) Tj T*
+(| CX-NG-029 | Nora Sharp | 1982-05-01 | 2021-01-01 | nora.sharp.ng29@companyx.example | Customer) Tj T*
+(Success | Support Specialist | $84,700 | Standard shift, 09:00-17:30 local time | Evan Saidi |) Tj T*
+(NG-SEC | Tariq Guessous |) Tj T*
+(| CX-NG-030 | Liam Amrani | 1989-10-12 | 2022-04-08 | liam.amrani.ng30@companyx.example |) Tj T*
+(Engineering | Backend Engineer | $111,400 | Late support shift, 12:00-20:00 local time | Rim) Tj T*
+(Bennett | NG-DATA | Rim Bennett |) Tj T*
+(| CX-NG-031 | Hana Stone | 1996-03-23 | 2023-07-15 | hana.stone.ng31@companyx.example |) Tj T*
+(Engineering | Frontend Engineer | $97,900 | Split collaboration shift, 10:00-14:00 and) Tj T*
+(16:00-20:00 local time | Rim Bennett | NG-OPS | Dina Stone |) Tj T*
+(| CX-NG-032 | Elias Rahmani | 1978-08-06 | 2024-10-22 | elias.rahmani.ng32@companyx.example |) Tj T*
+(Engineering | QA Automation Engineer | $100,600 | Night operations shift, 20:00-04:00 local time) Tj T*
+(| Rim Bennett | NG-GROW | Nadia Fleming |) Tj T*
+(| CX-NG-033 | Sara Bennett | 1985-01-17 | 2017-01-01 | sara.bennett.ng33@companyx.example | Data) Tj T*
+(and AI | Data Analyst | $95,300 | Morning shift, 08:00-16:00 local time | Bilal Lahlou | NG-CX |) Tj T*
+(Evan Saidi |) Tj T*
+(| CX-NG-034 | Karim Saidi | 1992-06-28 | 2018-04-08 | karim.saidi.ng34@companyx.example |) Tj T*
+(Customer Success | Implementation Specialist | $82,000 | Standard shift, 09:00-17:30 local time) Tj T*
+(| Evan Saidi | NG-SEC | Tariq Guessous |) Tj T*
+(| CX-NG-035 | Mila Fleming | 1999-11-11 | 2019-07-15 | mila.fleming.ng35@companyx.example |) Tj T*
+(Customer Success | Support Specialist | $84,700 | Late support shift, 12:00-20:00 local time |) Tj T*
+(Evan Saidi | NG-DATA | Rim Bennett |) Tj T*
+(| CX-NG-036 | Rayan Lahlou | 1981-04-22 | 2020-10-22 | rayan.lahlou.ng36@companyx.example |) Tj T*
+(Sales | Solutions Consultant | $94,400 | Split collaboration shift, 10:00-14:00 and 16:00-20:00) Tj T*
+(local time | Nadia Fleming | NG-OPS | Dina Stone |) Tj T*
+T*
+(Employee Daily Work Briefs) Tj T*
+T*
+(CX-NG-001 - Dina Stone) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Branch Director) Tj T*
+(- Email: dina.stone.ng1@companyx.example) Tj T*
+(- Phone: +1-555-0201) Tj T*
+(- Date of birth: 1986-09-01) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $129,900) Tj T*
+(- Manager: Global COO) Tj T*
+(- Employment type: Contractor) Tj T*
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 2465 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Owns branch strategy, staffing, budget health, and executive reporting) Tj T*
+(for Nigeria.) Tj T*
+(- Branch project: Nigeria Operating System) Tj T*
+(- Local workstream: NG-OPS) Tj T*
+(- Project manager: Dina Stone) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $1,080,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: reporting, procurement, vendor operations) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack, Executive Dashboards) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Admin and strategic reporting access) Tj T*
+(- PTO balance: 6 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Nigeria leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Lead the Nigeria branch operating rhythm and weekly executive update.) Tj T*
+(  - Approve budget, hiring, and priority changes for the branch.) Tj T*
+(  - Escalate customer, staffing, and compliance risks to global leadership.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-002 - Malik Rahmani) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Operations Manager) Tj T*
+(- Email: malik.rahmani.ng2@companyx.example) Tj T*
+(- Phone: +1-555-0202) Tj T*
+(- Date of birth: 1993-02-12) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $94,600) Tj T*
+(- Manager: Dina Stone) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Nigeria Operations team.) Tj T*
+(- Branch project: Nigeria Market Growth Program) Tj T*
+(- Local workstream: NG-GROW) Tj T*
+(- Project manager: Nadia Fleming) Tj T*
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 2431 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project status: In build) Tj T*
+(- Project budget: $1,117,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: office coordination, process design, reporting) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack, Executive Dashboards) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 7 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Nigeria leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Coordinate staffing, vendor, office, and delivery workflows for Lagos.) Tj T*
+(  - Keep branch process documentation, service levels, and handoffs current.) Tj T*
+(  - Track branch blockers and follow up with the accountable owner.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-003 - Rim Bennett) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Engineering Manager) Tj T*
+(- Email: rim.bennett.ng3@companyx.example) Tj T*
+(- Phone: +1-555-0203) Tj T*
+(- Date of birth: 2000-07-23) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $117,300) Tj T*
+(- Manager: Dina Stone) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Nigeria Engineering team.) Tj T*
+(- Branch project: Nigeria Customer Experience Program) Tj T*
+(- Local workstream: NG-CX) Tj T*
+(- Project manager: Evan Saidi) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $1,155,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: cloud deployment, React, observability) Tj T*
+(- Languages: English, Yoruba) Tj T*
+ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Length 2472 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Main systems used: GitHub, Vercel, Sentry, Jira, Executive Dashboards) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 8 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Nigeria leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Nigeria branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Lagos operations.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-004 - Evan Saidi) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Customer Success Manager) Tj T*
+(- Email: evan.saidi.ng4@companyx.example) Tj T*
+(- Phone: +1-555-0204) Tj T*
+(- Date of birth: 1982-12-06) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $100,000) Tj T*
+(- Manager: Dina Stone) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Nigeria Customer Success team.) Tj T*
+(- Branch project: Nigeria Compliance And Security Track) Tj T*
+(- Local workstream: NG-SEC) Tj T*
+(- Project manager: Tariq Guessous) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $1,192,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: health scoring, support triage, onboarding) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion, Executive Dashboards) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 9 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Nigeria leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+ET
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 18 0 R >>
+endobj
+20 0 obj
+<< /Length 2525 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Nigeria customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Nigeria customer feedback with Product and Engineering.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-005 - Nadia Fleming) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Regional Sales Manager) Tj T*
+(- Email: nadia.fleming.ng5@companyx.example) Tj T*
+(- Phone: +1-555-0205) Tj T*
+(- Date of birth: 1989-05-17) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $122,700) Tj T*
+(- Manager: Dina Stone) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Nigeria Sales team.) Tj T*
+(- Branch project: Nigeria Branch Analytics Layer) Tj T*
+(- Local workstream: NG-DATA) Tj T*
+(- Project manager: Rim Bennett) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $1,230,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: demo strategy, account planning, CRM hygiene) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign, Executive Dashboards) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 10 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Nigeria leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the Nigeria market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+ET
+endstream
+endobj
+21 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 20 0 R >>
+endobj
+22 0 obj
+<< /Length 2421 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-006 - Bilal Lahlou) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Data and AI) Tj T*
+(- Post: Data Lead) Tj T*
+(- Email: bilal.lahlou.ng6@companyx.example) Tj T*
+(- Phone: +1-555-0206) Tj T*
+(- Date of birth: 1996-10-28) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $125,400) Tj T*
+(- Manager: Dina Stone) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Nigeria Data and AI team.) Tj T*
+(- Branch project: Nigeria Operating System) Tj T*
+(- Local workstream: NG-OPS) Tj T*
+(- Project manager: Dina Stone) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $1,080,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: dashboarding, data quality, SQL) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion, Executive Dashboards) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 11 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Nigeria leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for Nigeria capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-007 - Emma Ward) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+ET
+endstream
+endobj
+23 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 22 0 R >>
+endobj
+24 0 obj
+<< /Length 2379 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Department: Customer Success) Tj T*
+(- Post: Support Lead) Tj T*
+(- Email: emma.ward.ng7@companyx.example) Tj T*
+(- Phone: +1-555-0207) Tj T*
+(- Date of birth: 1978-03-11) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $91,900) Tj T*
+(- Manager: Dina Stone) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Leads planning and delivery for the Nigeria Customer Success team.) Tj T*
+(- Branch project: Nigeria Market Growth Program) Tj T*
+(- Local workstream: NG-GROW) Tj T*
+(- Project manager: Nadia Fleming) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $1,117,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: training, health scoring, support triage) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion, Executive Dashboards) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 12 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Nigeria leadership status note) Tj T*
+(  - Risk and staffing review) Tj T*
+(  - Project milestone decision log) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Nigeria customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Nigeria customer feedback with Product and Engineering.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-008 - Tariq Guessous) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: IT and Security) Tj T*
+(- Post: Security Coordinator) Tj T*
+(- Email: tariq.guessous.ng8@companyx.example) Tj T*
+(- Phone: +1-555-0208) Tj T*
+(- Date of birth: 1985-08-22) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $84,600) Tj T*
+ET
+endstream
+endobj
+25 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 24 0 R >>
+endobj
+26 0 obj
+<< /Length 2381 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Manager: Dina Stone) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Protects access, devices, security evidence, and incident readiness for) Tj T*
+(Nigeria.) Tj T*
+(- Branch project: Nigeria Customer Experience Program) Tj T*
+(- Local workstream: NG-CX) Tj T*
+(- Project manager: Evan Saidi) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $1,155,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: SOC 2 evidence, identity access, SOC 2 evidence) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: Okta, Jamf, Cloudflare, Vanta) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Security tools and device management access) Tj T*
+(- PTO balance: 13 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Access review notes) Tj T*
+(  - Training completion report) Tj T*
+(  - Security evidence upload) Tj T*
+(- Daily tasks:) Tj T*
+(  - Review access, compliance evidence, and incident readiness for the Nigeria branch.) Tj T*
+(  - Coordinate endpoint security and quarterly training completion.) Tj T*
+(  - Escalate high-risk security events to the Horizon Security Program.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-009 - Clara Sharp) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Finance) Tj T*
+(- Post: Finance Coordinator) Tj T*
+(- Email: clara.sharp.ng9@companyx.example) Tj T*
+(- Phone: +1-555-0209) Tj T*
+(- Date of birth: 1992-01-05) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $85,300) Tj T*
+(- Manager: Malik Rahmani) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Manages branch finance controls, payroll support, invoices, and budget) Tj T*
+(evidence.) Tj T*
+ET
+endstream
+endobj
+27 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 26 0 R >>
+endobj
+28 0 obj
+<< /Length 2370 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Branch project: Nigeria Compliance And Security Track) Tj T*
+(- Local workstream: NG-SEC) Tj T*
+(- Project manager: Tariq Guessous) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $1,192,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: billing controls, revenue recognition, forecasting) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: QuickBooks, Ramp, PayrollHub, Google Sheets) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Finance systems and billing access) Tj T*
+(- PTO balance: 14 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Budget variance note) Tj T*
+(  - Invoice approval queue) Tj T*
+(  - Payroll exception list) Tj T*
+(- Daily tasks:) Tj T*
+(  - Validate payroll, invoices, expense controls, and budget usage for Nigeria.) Tj T*
+(  - Prepare month-end finance notes and resolve missing approvals.) Tj T*
+(  - Flag budget variance or vendor payment risks to the finance owner.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-010 - Hamza Amrani) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: People Operations) Tj T*
+(- Post: People Operations Partner) Tj T*
+(- Email: hamza.amrani.ng10@companyx.example) Tj T*
+(- Phone: +1-555-0210) Tj T*
+(- Date of birth: 1999-06-16) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $86,000) Tj T*
+(- Manager: Malik Rahmani) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Supports hiring, onboarding, employee records, and manager guidance for) Tj T*
+(Nigeria.) Tj T*
+(- Branch project: Nigeria Branch Analytics Layer) Tj T*
+(- Local workstream: NG-DATA) Tj T*
+(- Project manager: Rim Bennett) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $1,230,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+ET
+endstream
+endobj
+29 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 28 0 R >>
+endobj
+30 0 obj
+<< /Length 2432 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: recruiting, performance reviews, recruiting) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: BambooHR, Greenhouse, Lattice, Notion) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 15 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Hiring pipeline update) Tj T*
+(  - Onboarding checklist review) Tj T*
+(  - Employee support notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Support hiring, onboarding, employee relations, and policy questions in Nigeria.) Tj T*
+(  - Maintain employee records, onboarding tasks, and performance cycle reminders.) Tj T*
+(  - Coach managers on one-on-ones, feedback, and staffing risks.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-011 - Yasmine Stone) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Backend Engineer) Tj T*
+(- Email: yasmine.stone.ng11@companyx.example) Tj T*
+(- Phone: +1-555-0211) Tj T*
+(- Date of birth: 1981-11-27) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $108,700) Tj T*
+(- Manager: Rim Bennett) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Lagos) Tj T*
+(customers.) Tj T*
+(- Branch project: Nigeria Operating System) Tj T*
+(- Local workstream: NG-OPS) Tj T*
+(- Project manager: Dina Stone) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $1,080,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: React, observability, cloud deployment) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: New in role) Tj T*
+ET
+endstream
+endobj
+31 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 30 0 R >>
+endobj
+32 0 obj
+<< /Length 2323 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 16 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Nigeria branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Lagos operations.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-012 - Victor Rahmani) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Frontend Engineer) Tj T*
+(- Email: victor.rahmani.ng12@companyx.example) Tj T*
+(- Phone: +1-555-0212) Tj T*
+(- Date of birth: 1988-04-10) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $111,400) Tj T*
+(- Manager: Rim Bennett) Tj T*
+(- Employment type: Contractor) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Lagos) Tj T*
+(customers.) Tj T*
+(- Branch project: Nigeria Market Growth Program) Tj T*
+(- Local workstream: NG-GROW) Tj T*
+(- Project manager: Nadia Fleming) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $1,117,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: API design, automated testing, Node.js) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 17 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+ET
+endstream
+endobj
+33 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 32 0 R >>
+endobj
+34 0 obj
+<< /Length 2462 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Nigeria branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Lagos operations.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-013 - Imane Bennett) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: QA Automation Engineer) Tj T*
+(- Email: imane.bennett.ng13@companyx.example) Tj T*
+(- Phone: +1-555-0213) Tj T*
+(- Date of birth: 1995-09-21) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $97,900) Tj T*
+(- Manager: Rim Bennett) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Lagos) Tj T*
+(customers.) Tj T*
+(- Branch project: Nigeria Customer Experience Program) Tj T*
+(- Local workstream: NG-CX) Tj T*
+(- Project manager: Evan Saidi) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $1,155,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: observability, cloud deployment, React) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 18 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Nigeria branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Lagos operations.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+ET
+endstream
+endobj
+35 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 34 0 R >>
+endobj
+36 0 obj
+<< /Length 2407 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-014 - Oscar Saidi) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Data and AI) Tj T*
+(- Post: Data Analyst) Tj T*
+(- Email: oscar.saidi.ng14@companyx.example) Tj T*
+(- Phone: +1-555-0214) Tj T*
+(- Date of birth: 1977-02-04) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $92,600) Tj T*
+(- Manager: Bilal Lahlou) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Maintains branch analytics, metric quality, and decision dashboards for) Tj T*
+(Nigeria.) Tj T*
+(- Branch project: Nigeria Compliance And Security Track) Tj T*
+(- Local workstream: NG-SEC) Tj T*
+(- Project manager: Tariq Guessous) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $1,192,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: data quality, SQL, dashboarding) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 19 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for Nigeria capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-015 - Lara Fleming) Tj T*
+T*
+ET
+endstream
+endobj
+37 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 36 0 R >>
+endobj
+38 0 obj
+<< /Length 2332 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Implementation Specialist) Tj T*
+(- Email: lara.fleming.ng15@companyx.example) Tj T*
+(- Phone: +1-555-0215) Tj T*
+(- Date of birth: 1984-07-15) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $79,300) Tj T*
+(- Manager: Evan Saidi) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in Nigeria.) Tj T*
+(- Branch project: Nigeria Branch Analytics Layer) Tj T*
+(- Local workstream: NG-DATA) Tj T*
+(- Project manager: Rim Bennett) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $1,230,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: renewal planning, training, health scoring) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 20 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Nigeria customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Nigeria customer feedback with Product and Engineering.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-016 - Mehdi Lahlou) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Support Specialist) Tj T*
+(- Email: mehdi.lahlou.ng16@companyx.example) Tj T*
+(- Phone: +1-555-0216) Tj T*
+(- Date of birth: 1991-12-26) Tj T*
+ET
+endstream
+endobj
+39 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 38 0 R >>
+endobj
+40 0 obj
+<< /Length 2335 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $82,000) Tj T*
+(- Manager: Evan Saidi) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in Nigeria.) Tj T*
+(- Branch project: Nigeria Operating System) Tj T*
+(- Local workstream: NG-OPS) Tj T*
+(- Project manager: Dina Stone) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $1,080,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: support triage, onboarding, renewal planning) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 21 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Nigeria customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Nigeria customer feedback with Product and Engineering.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-017 - Nour Ward) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Solutions Consultant) Tj T*
+(- Email: nour.ward.ng17@companyx.example) Tj T*
+(- Phone: +1-555-0217) Tj T*
+(- Date of birth: 1998-05-09) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $91,700) Tj T*
+(- Manager: Nadia Fleming) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+ET
+endstream
+endobj
+41 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 40 0 R >>
+endobj
+42 0 obj
+<< /Length 2347 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Responsibility area: Builds regional pipeline, demos, and account plans for the Nigeria) Tj T*
+(market.) Tj T*
+(- Branch project: Nigeria Market Growth Program) Tj T*
+(- Local workstream: NG-GROW) Tj T*
+(- Project manager: Nadia Fleming) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $1,117,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: account planning, CRM hygiene, negotiation) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 22 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - CRM pipeline update) Tj T*
+(  - Demo notes) Tj T*
+(  - Next-step account plan) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the Nigeria market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-018 - Jonas Guessous) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Account Executive) Tj T*
+(- Email: jonas.guessous.ng18@companyx.example) Tj T*
+(- Phone: +1-555-0218) Tj T*
+(- Date of birth: 1980-10-20) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $94,400) Tj T*
+(- Manager: Nadia Fleming) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Builds regional pipeline, demos, and account plans for the Nigeria) Tj T*
+(market.) Tj T*
+(- Branch project: Nigeria Customer Experience Program) Tj T*
+(- Local workstream: NG-CX) Tj T*
+(- Project manager: Evan Saidi) Tj T*
+(- Project status: Beta) Tj T*
+ET
+endstream
+endobj
+43 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 42 0 R >>
+endobj
+44 0 obj
+<< /Length 2410 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project budget: $1,155,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: enterprise discovery, demo strategy, account planning) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 23 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - CRM pipeline update) Tj T*
+(  - Demo notes) Tj T*
+(  - Next-step account plan) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the Nigeria market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-019 - Farah Sharp) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Marketing) Tj T*
+(- Post: Marketing Specialist) Tj T*
+(- Email: farah.sharp.ng19@companyx.example) Tj T*
+(- Phone: +1-555-0219) Tj T*
+(- Date of birth: 1987-03-03) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $75,900) Tj T*
+(- Manager: Nadia Fleming) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Localizes campaigns, launch assets, and market education for the Nigeria) Tj T*
+(audience.) Tj T*
+(- Branch project: Nigeria Compliance And Security Track) Tj T*
+(- Local workstream: NG-SEC) Tj T*
+(- Project manager: Tariq Guessous) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $1,192,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: copywriting, webinars, campaign strategy) Tj T*
+(- Languages: English, Yoruba) Tj T*
+ET
+endstream
+endobj
+45 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 44 0 R >>
+endobj
+46 0 obj
+<< /Length 2369 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Main systems used: Webflow, HubSpot, Google Analytics, Canva) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 6 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Localize campaigns, webinars, and customer stories for Nigeria.) Tj T*
+(  - Coordinate launch assets with Sales, Product, and Design.) Tj T*
+(  - Report campaign performance and content gaps to the growth team.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-020 - Anas Amrani) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Office Coordinator) Tj T*
+(- Email: anas.amrani.ng20@companyx.example) Tj T*
+(- Phone: +1-555-0220) Tj T*
+(- Date of birth: 1994-08-14) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $76,600) Tj T*
+(- Manager: Malik Rahmani) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Supports daily operations, documentation, vendor coordination, and branch) Tj T*
+(execution in Lagos.) Tj T*
+(- Branch project: Nigeria Branch Analytics Layer) Tj T*
+(- Local workstream: NG-DATA) Tj T*
+(- Project manager: Rim Bennett) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $1,230,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: vendor operations, office coordination, process design) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 7 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+ET
+endstream
+endobj
+47 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 46 0 R >>
+endobj
+48 0 obj
+<< /Length 2426 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Coordinate staffing, vendor, office, and delivery workflows for Lagos.) Tj T*
+(  - Keep branch process documentation, service levels, and handoffs current.) Tj T*
+(  - Track branch blockers and follow up with the accountable owner.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-021 - Amina Stone) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Finance) Tj T*
+(- Post: Payroll Specialist) Tj T*
+(- Email: amina.stone.ng21@companyx.example) Tj T*
+(- Phone: +1-555-0221) Tj T*
+(- Date of birth: 1976-01-25) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $85,300) Tj T*
+(- Manager: Malik Rahmani) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Manages branch finance controls, payroll support, invoices, and budget) Tj T*
+(evidence.) Tj T*
+(- Branch project: Nigeria Operating System) Tj T*
+(- Local workstream: NG-OPS) Tj T*
+(- Project manager: Dina Stone) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $1,080,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: revenue recognition, forecasting, payroll) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: QuickBooks, Ramp, PayrollHub, Google Sheets) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Finance systems and billing access) Tj T*
+(- PTO balance: 8 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Budget variance note) Tj T*
+(  - Invoice approval queue) Tj T*
+(  - Payroll exception list) Tj T*
+(- Daily tasks:) Tj T*
+(  - Validate payroll, invoices, expense controls, and budget usage for Nigeria.) Tj T*
+(  - Prepare month-end finance notes and resolve missing approvals.) Tj T*
+(  - Flag budget variance or vendor payment risks to the finance owner.) Tj T*
+ET
+endstream
+endobj
+49 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 48 0 R >>
+endobj
+50 0 obj
+<< /Length 2537 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-022 - Noah Rahmani) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: IT and Security) Tj T*
+(- Post: Security Analyst) Tj T*
+(- Email: noah.rahmani.ng22@companyx.example) Tj T*
+(- Phone: +1-555-0222) Tj T*
+(- Date of birth: 1983-06-08) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $90,000) Tj T*
+(- Manager: Tariq Guessous) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Protects access, devices, security evidence, and incident readiness for) Tj T*
+(Nigeria.) Tj T*
+(- Branch project: Nigeria Market Growth Program) Tj T*
+(- Local workstream: NG-GROW) Tj T*
+(- Project manager: Nadia Fleming) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $1,117,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: identity access, SOC 2 evidence, identity access) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: Okta, Jamf, Cloudflare, Vanta) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Security tools and device management access) Tj T*
+(- PTO balance: 9 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Access review notes) Tj T*
+(  - Training completion report) Tj T*
+(  - Security evidence upload) Tj T*
+(- Daily tasks:) Tj T*
+(  - Review access, compliance evidence, and incident readiness for the Nigeria branch.) Tj T*
+(  - Coordinate endpoint security and quarterly training completion.) Tj T*
+(  - Escalate high-risk security events to the Horizon Security Program.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+ET
+endstream
+endobj
+51 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 50 0 R >>
+endobj
+52 0 obj
+<< /Length 2326 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(CX-NG-023 - Leila Bennett) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: People Operations) Tj T*
+(- Post: Recruiting Coordinator) Tj T*
+(- Email: leila.bennett.ng23@companyx.example) Tj T*
+(- Phone: +1-555-0223) Tj T*
+(- Date of birth: 1990-11-19) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $88,700) Tj T*
+(- Manager: Malik Rahmani) Tj T*
+(- Employment type: Contractor) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Supports hiring, onboarding, employee records, and manager guidance for) Tj T*
+(Nigeria.) Tj T*
+(- Branch project: Nigeria Customer Experience Program) Tj T*
+(- Local workstream: NG-CX) Tj T*
+(- Project manager: Evan Saidi) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $1,155,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: employee relations, policy operations, employee relations) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: BambooHR, Greenhouse, Lattice, Notion) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 10 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Hiring pipeline update) Tj T*
+(  - Onboarding checklist review) Tj T*
+(  - Employee support notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Support hiring, onboarding, employee relations, and policy questions in Nigeria.) Tj T*
+(  - Maintain employee records, onboarding tasks, and performance cycle reminders.) Tj T*
+(  - Coach managers on one-on-ones, feedback, and staffing risks.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-024 - Adam Saidi) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Operations) Tj T*
+(- Post: Product Operations Analyst) Tj T*
+(- Email: adam.saidi.ng24@companyx.example) Tj T*
+ET
+endstream
+endobj
+53 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 52 0 R >>
+endobj
+54 0 obj
+<< /Length 2324 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Phone: +1-555-0224) Tj T*
+(- Date of birth: 1997-04-02) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $87,400) Tj T*
+(- Manager: Malik Rahmani) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Supports daily operations, documentation, vendor coordination, and branch) Tj T*
+(execution in Lagos.) Tj T*
+(- Branch project: Nigeria Compliance And Security Track) Tj T*
+(- Local workstream: NG-SEC) Tj T*
+(- Project manager: Tariq Guessous) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $1,192,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: process design, reporting, procurement) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: Notion, Asana, Google Workspace, Slack) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 11 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Coordinate staffing, vendor, office, and delivery workflows for Lagos.) Tj T*
+(  - Keep branch process documentation, service levels, and handoffs current.) Tj T*
+(  - Track branch blockers and follow up with the accountable owner.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-025 - Sofia Fleming) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Backend Engineer) Tj T*
+(- Email: sofia.fleming.ng25@companyx.example) Tj T*
+(- Phone: +1-555-0225) Tj T*
+(- Date of birth: 1979-09-13) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $97,900) Tj T*
+(- Manager: Rim Bennett) Tj T*
+(- Employment type: Full-time) Tj T*
+ET
+endstream
+endobj
+55 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 54 0 R >>
+endobj
+56 0 obj
+<< /Length 2402 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Lagos) Tj T*
+(customers.) Tj T*
+(- Branch project: Nigeria Branch Analytics Layer) Tj T*
+(- Local workstream: NG-DATA) Tj T*
+(- Project manager: Rim Bennett) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $1,230,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: observability, cloud deployment, React) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 12 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Nigeria branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Lagos operations.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-026 - Youssef Lahlou) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Frontend Engineer) Tj T*
+(- Email: youssef.lahlou.ng26@companyx.example) Tj T*
+(- Phone: +1-555-0226) Tj T*
+(- Date of birth: 1986-02-24) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $100,600) Tj T*
+(- Manager: Rim Bennett) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Lagos) Tj T*
+(customers.) Tj T*
+(- Branch project: Nigeria Operating System) Tj T*
+(- Local workstream: NG-OPS) Tj T*
+ET
+endstream
+endobj
+57 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 56 0 R >>
+endobj
+58 0 obj
+<< /Length 2327 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project manager: Dina Stone) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $1,080,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: automated testing, Node.js, API design) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 13 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Nigeria branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Lagos operations.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-027 - Maya Ward) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Data and AI) Tj T*
+(- Post: Data Analyst) Tj T*
+(- Email: maya.ward.ng27@companyx.example) Tj T*
+(- Phone: +1-555-0227) Tj T*
+(- Date of birth: 1993-07-07) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $95,300) Tj T*
+(- Manager: Bilal Lahlou) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Maintains branch analytics, metric quality, and decision dashboards for) Tj T*
+(Nigeria.) Tj T*
+(- Branch project: Nigeria Market Growth Program) Tj T*
+(- Local workstream: NG-GROW) Tj T*
+(- Project manager: Nadia Fleming) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $1,117,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+ET
+endstream
+endobj
+59 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 58 0 R >>
+endobj
+60 0 obj
+<< /Length 2410 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Skills: experimentation, Python, model evaluation) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 14 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for Nigeria capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-028 - Omar Guessous) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Implementation Specialist) Tj T*
+(- Email: omar.guessous.ng28@companyx.example) Tj T*
+(- Phone: +1-555-0228) Tj T*
+(- Date of birth: 2000-12-18) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $82,000) Tj T*
+(- Manager: Evan Saidi) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in Nigeria.) Tj T*
+(- Branch project: Nigeria Customer Experience Program) Tj T*
+(- Local workstream: NG-CX) Tj T*
+(- Project manager: Evan Saidi) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $1,155,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: onboarding, renewal planning, training) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 15 days) Tj T*
+ET
+endstream
+endobj
+61 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 60 0 R >>
+endobj
+62 0 obj
+<< /Length 2372 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Nigeria customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Nigeria customer feedback with Product and Engineering.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-029 - Nora Sharp) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Support Specialist) Tj T*
+(- Email: nora.sharp.ng29@companyx.example) Tj T*
+(- Phone: +1-555-0229) Tj T*
+(- Date of birth: 1982-05-01) Tj T*
+(- Start date: 2021-01-01) Tj T*
+(- Salary: $84,700) Tj T*
+(- Manager: Evan Saidi) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in Nigeria.) Tj T*
+(- Branch project: Nigeria Compliance And Security Track) Tj T*
+(- Local workstream: NG-SEC) Tj T*
+(- Project manager: Tariq Guessous) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $1,192,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: health scoring, support triage, onboarding) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 16 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Nigeria customers.) Tj T*
+ET
+endstream
+endobj
+63 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 62 0 R >>
+endobj
+64 0 obj
+<< /Length 2525 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Nigeria customer feedback with Product and Engineering.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-030 - Liam Amrani) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Backend Engineer) Tj T*
+(- Email: liam.amrani.ng30@companyx.example) Tj T*
+(- Phone: +1-555-0230) Tj T*
+(- Date of birth: 1989-10-12) Tj T*
+(- Start date: 2022-04-08) Tj T*
+(- Salary: $111,400) Tj T*
+(- Manager: Rim Bennett) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Lagos) Tj T*
+(customers.) Tj T*
+(- Branch project: Nigeria Branch Analytics Layer) Tj T*
+(- Local workstream: NG-DATA) Tj T*
+(- Project manager: Rim Bennett) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $1,230,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: API design, automated testing, Node.js) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 17 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Nigeria branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Lagos operations.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+ET
+endstream
+endobj
+65 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 64 0 R >>
+endobj
+66 0 obj
+<< /Length 2267 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-031 - Hana Stone) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Engineering) Tj T*
+(- Post: Frontend Engineer) Tj T*
+(- Email: hana.stone.ng31@companyx.example) Tj T*
+(- Phone: +1-555-0231) Tj T*
+(- Date of birth: 1996-03-23) Tj T*
+(- Start date: 2023-07-15) Tj T*
+(- Salary: $97,900) Tj T*
+(- Manager: Rim Bennett) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Lagos) Tj T*
+(customers.) Tj T*
+(- Branch project: Nigeria Operating System) Tj T*
+(- Local workstream: NG-OPS) Tj T*
+(- Project manager: Dina Stone) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $1,080,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: observability, cloud deployment, React) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: New in role) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 18 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Nigeria branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Lagos operations.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-032 - Elias Rahmani) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Engineering) Tj T*
+ET
+endstream
+endobj
+67 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 66 0 R >>
+endobj
+68 0 obj
+<< /Length 2309 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Post: QA Automation Engineer) Tj T*
+(- Email: elias.rahmani.ng32@companyx.example) Tj T*
+(- Phone: +1-555-0232) Tj T*
+(- Date of birth: 1978-08-06) Tj T*
+(- Start date: 2024-10-22) Tj T*
+(- Salary: $100,600) Tj T*
+(- Manager: Rim Bennett) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Rotating branch coverage) Tj T*
+(- Shift: Night operations shift, 20:00-04:00 local time) Tj T*
+(- Responsibility area: Delivers product quality and localized platform improvements for Lagos) Tj T*
+(customers.) Tj T*
+(- Branch project: Nigeria Market Growth Program) Tj T*
+(- Local workstream: NG-GROW) Tj T*
+(- Project manager: Nadia Fleming) Tj T*
+(- Project status: In build) Tj T*
+(- Project budget: $1,117,500) Tj T*
+(- Project deadline: Q1 2026) Tj T*
+(- Project KPI: Qualified regional pipeline growth above 12 percent) Tj T*
+(- Current project risk: Hiring capacity gap) Tj T*
+(- Skills: automated testing, Node.js, API design) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: GitHub, Vercel, Sentry, Jira) Tj T*
+(- Performance band: Needs focused support) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 19 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Merged product changes) Tj T*
+(  - Test evidence) Tj T*
+(  - Sprint status note) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build and maintain product features used by the Nigeria branch.) Tj T*
+(  - Review pull requests, write tests, and fix production defects.) Tj T*
+(  - Improve performance, reliability, and localized workflows for Lagos operations.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-033 - Sara Bennett) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Data and AI) Tj T*
+(- Post: Data Analyst) Tj T*
+(- Email: sara.bennett.ng33@companyx.example) Tj T*
+(- Phone: +1-555-0233) Tj T*
+(- Date of birth: 1985-01-17) Tj T*
+(- Start date: 2017-01-01) Tj T*
+(- Salary: $95,300) Tj T*
+ET
+endstream
+endobj
+69 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 68 0 R >>
+endobj
+70 0 obj
+<< /Length 2393 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Manager: Bilal Lahlou) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Office) Tj T*
+(- Shift: Morning shift, 08:00-16:00 local time) Tj T*
+(- Responsibility area: Maintains branch analytics, metric quality, and decision dashboards for) Tj T*
+(Nigeria.) Tj T*
+(- Branch project: Nigeria Customer Experience Program) Tj T*
+(- Local workstream: NG-CX) Tj T*
+(- Project manager: Evan Saidi) Tj T*
+(- Project status: Beta) Tj T*
+(- Project budget: $1,155,000) Tj T*
+(- Project deadline: Q2 2027) Tj T*
+(- Project KPI: Customer onboarding completion within 14 days) Tj T*
+(- Current project risk: Data quality dependency) Tj T*
+(- Skills: experimentation, Python, model evaluation) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: Snowflake, Looker, dbt, Notion) Tj T*
+(- Performance band: Exceeds expectations) Tj T*
+(- Access level: Product, repository, and analytics access) Tj T*
+(- PTO balance: 20 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Operations tracker update) Tj T*
+(  - Branch documentation note) Tj T*
+(  - Open blocker summary) Tj T*
+(- Daily tasks:) Tj T*
+(  - Maintain dashboards for Nigeria capacity, project delivery, and customer risk.) Tj T*
+(  - Check source data quality and document metric definitions.) Tj T*
+(  - Prepare insights for weekly branch planning and leadership review.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-034 - Karim Saidi) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Implementation Specialist) Tj T*
+(- Email: karim.saidi.ng34@companyx.example) Tj T*
+(- Phone: +1-555-0234) Tj T*
+(- Date of birth: 1992-06-28) Tj T*
+(- Start date: 2018-04-08) Tj T*
+(- Salary: $82,000) Tj T*
+(- Manager: Evan Saidi) Tj T*
+(- Employment type: Contractor) Tj T*
+(- Work mode: Hybrid 3 days office) Tj T*
+(- Shift: Standard shift, 09:00-17:30 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in Nigeria.) Tj T*
+ET
+endstream
+endobj
+71 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 70 0 R >>
+endobj
+72 0 obj
+<< /Length 2362 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Branch project: Nigeria Compliance And Security Track) Tj T*
+(- Local workstream: NG-SEC) Tj T*
+(- Project manager: Tariq Guessous) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $1,192,500) Tj T*
+(- Project deadline: Q3 2026) Tj T*
+(- Project KPI: Quarterly security training completion above 98 percent) Tj T*
+(- Current project risk: Security evidence delay) Tj T*
+(- Skills: health scoring, support triage, onboarding) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Strong performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 21 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Nigeria customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Nigeria customer feedback with Product and Engineering.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-035 - Mila Fleming) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Customer Success) Tj T*
+(- Post: Support Specialist) Tj T*
+(- Email: mila.fleming.ng35@companyx.example) Tj T*
+(- Phone: +1-555-0235) Tj T*
+(- Date of birth: 1999-11-11) Tj T*
+(- Start date: 2019-07-15) Tj T*
+(- Salary: $84,700) Tj T*
+(- Manager: Evan Saidi) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Remote) Tj T*
+(- Shift: Late support shift, 12:00-20:00 local time) Tj T*
+(- Responsibility area: Owns customer adoption, training, support quality, and escalation) Tj T*
+(follow-through in Nigeria.) Tj T*
+(- Branch project: Nigeria Branch Analytics Layer) Tj T*
+(- Local workstream: NG-DATA) Tj T*
+(- Project manager: Rim Bennett) Tj T*
+(- Project status: Discovery) Tj T*
+(- Project budget: $1,230,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+ET
+endstream
+endobj
+73 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 72 0 R >>
+endobj
+74 0 obj
+<< /Length 2420 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Project KPI: Executive dashboard accuracy above 99 percent) Tj T*
+(- Current project risk: Vendor delivery risk) Tj T*
+(- Skills: renewal planning, training, health scoring) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: HubSpot, Zendesk, Gainsight, Notion) Tj T*
+(- Performance band: Solid performer) Tj T*
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 22 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - Customer health updates) Tj T*
+(  - Escalation summary) Tj T*
+(  - Training or onboarding notes) Tj T*
+(- Daily tasks:) Tj T*
+(  - Run onboarding, training, and adoption sessions for Nigeria customers.) Tj T*
+(  - Track customer health, support escalations, and renewal risks.) Tj T*
+(  - Share recurring Nigeria customer feedback with Product and Engineering.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(CX-NG-036 - Rayan Lahlou) Tj T*
+T*
+(- Branch: Lagos, Nigeria) Tj T*
+(- Department: Sales) Tj T*
+(- Post: Solutions Consultant) Tj T*
+(- Email: rayan.lahlou.ng36@companyx.example) Tj T*
+(- Phone: +1-555-0236) Tj T*
+(- Date of birth: 1981-04-22) Tj T*
+(- Start date: 2020-10-22) Tj T*
+(- Salary: $94,400) Tj T*
+(- Manager: Nadia Fleming) Tj T*
+(- Employment type: Full-time) Tj T*
+(- Work mode: Field customer visits) Tj T*
+(- Shift: Split collaboration shift, 10:00-14:00 and 16:00-20:00 local time) Tj T*
+(- Responsibility area: Builds regional pipeline, demos, and account plans for the Nigeria) Tj T*
+(market.) Tj T*
+(- Branch project: Nigeria Operating System) Tj T*
+(- Local workstream: NG-OPS) Tj T*
+(- Project manager: Dina Stone) Tj T*
+(- Project status: Active) Tj T*
+(- Project budget: $1,080,000) Tj T*
+(- Project deadline: Q4 2027) Tj T*
+(- Project KPI: Branch SLA above 95 percent) Tj T*
+(- Current project risk: Customer adoption delay) Tj T*
+(- Skills: negotiation, enterprise discovery, demo strategy) Tj T*
+(- Languages: English, Yoruba) Tj T*
+(- Main systems used: Salesforce, Gong, HubSpot, DocuSign) Tj T*
+(- Performance band: New in role) Tj T*
+ET
+endstream
+endobj
+75 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 74 0 R >>
+endobj
+76 0 obj
+<< /Length 1302 >>
+stream
+BT
+/F1 8 Tf
+38 770 Td
+12 TL
+(- Access level: Standard business application access) Tj T*
+(- PTO balance: 23 days) Tj T*
+(- Weekly deliverables:) Tj T*
+(  - CRM pipeline update) Tj T*
+(  - Demo notes) Tj T*
+(  - Next-step account plan) Tj T*
+(- Daily tasks:) Tj T*
+(  - Build pipeline, demos, and partner conversations for the Nigeria market.) Tj T*
+(  - Keep CRM opportunities, next steps, and decision makers current.) Tj T*
+(  - Share buyer objections and pricing feedback with Product and Finance.) Tj T*
+(- Support Nigeria branch goals for African market growth, mobile workflows, and regional partner) Tj T*
+(enablement.) Tj T*
+(  - Update PX-Nigeria-Rise progress notes and risks before Friday close.) Tj T*
+(  - Coordinate with the global team when branch work affects shared customers or systems.) Tj T*
+(  - Document decisions, blockers, and next actions in the Nigeria branch workspace.) Tj T*
+T*
+(Useful Branch Questions) Tj T*
+T*
+(- How many employees work in the Nigeria branch?) Tj T*
+(- Who is the Branch Director for Nigeria?) Tj T*
+(- Which Nigeria employees work in Engineering?) Tj T*
+(- What does the Nigeria branch specialize in?) Tj T*
+(- List employees in Lagos with their salaries and posts.) Tj T*
+(- What are the daily tasks for the Nigeria Customer Success team?) Tj T*
+T*
+ET
+endstream
+endobj
+77 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 76 0 R >>
+endobj
+xref
+0 78
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000366 00000 n 
+0000000436 00000 n 
+0000002900 00000 n 
+0000003026 00000 n 
+0000006545 00000 n 
+0000006671 00000 n 
+0000010468 00000 n 
+0000010594 00000 n 
+0000014809 00000 n 
+0000014937 00000 n 
+0000018327 00000 n 
+0000018455 00000 n 
+0000020973 00000 n 
+0000021101 00000 n 
+0000023585 00000 n 
+0000023713 00000 n 
+0000026238 00000 n 
+0000026366 00000 n 
+0000028944 00000 n 
+0000029072 00000 n 
+0000031546 00000 n 
+0000031674 00000 n 
+0000034106 00000 n 
+0000034234 00000 n 
+0000036668 00000 n 
+0000036796 00000 n 
+0000039219 00000 n 
+0000039347 00000 n 
+0000041832 00000 n 
+0000041960 00000 n 
+0000044336 00000 n 
+0000044464 00000 n 
+0000046979 00000 n 
+0000047107 00000 n 
+0000049567 00000 n 
+0000049695 00000 n 
+0000052080 00000 n 
+0000052208 00000 n 
+0000054596 00000 n 
+0000054724 00000 n 
+0000057124 00000 n 
+0000057252 00000 n 
+0000059715 00000 n 
+0000059843 00000 n 
+0000062265 00000 n 
+0000062393 00000 n 
+0000064872 00000 n 
+0000065000 00000 n 
+0000067590 00000 n 
+0000067718 00000 n 
+0000070097 00000 n 
+0000070225 00000 n 
+0000072602 00000 n 
+0000072730 00000 n 
+0000075185 00000 n 
+0000075313 00000 n 
+0000077693 00000 n 
+0000077821 00000 n 
+0000080284 00000 n 
+0000080412 00000 n 
+0000082837 00000 n 
+0000082965 00000 n 
+0000085543 00000 n 
+0000085671 00000 n 
+0000087991 00000 n 
+0000088119 00000 n 
+0000090481 00000 n 
+0000090609 00000 n 
+0000093055 00000 n 
+0000093183 00000 n 
+0000095598 00000 n 
+0000095726 00000 n 
+0000098199 00000 n 
+0000098327 00000 n 
+0000099682 00000 n 
+trailer
+<< /Size 78 /Root 1 0 R >>
+startxref
+99810
+%%EOF

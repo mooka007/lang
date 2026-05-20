@@ -1,0 +1,320 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 1920 >>
+stream
+BT
+/F1 10 Tf
+50 770 Td
+14 TL
+(JavaScript Basics for Document Q&A) Tj T*
+T*
+(Version: 1.0) Tj T*
+(Audience: new developers building browser or Node.js apps) Tj T*
+(Purpose: provide a compact, searchable document for testing a RAG chatbot.) Tj T*
+T*
+(1. What JavaScript Is) Tj T*
+T*
+(JavaScript is a programming language used to make web pages interactive and to build) Tj T*
+(server applications with Node.js. In the browser, JavaScript can respond to clicks,) Tj T*
+(update page content, validate forms, and call APIs. In Node.js, JavaScript can read) Tj T*
+(files, run web servers, access databases, and automate tasks.) Tj T*
+T*
+(JavaScript is single-threaded at the language level, but it can handle many waiting) Tj T*
+(tasks with an event loop. The event loop lets JavaScript continue running while timers,) Tj T*
+(network requests, and file operations are waiting for results.) Tj T*
+T*
+(2. Variables and Values) Tj T*
+T*
+(Use const by default when a variable should not be reassigned. Use let when the value) Tj T*
+(needs to change later. Avoid var in modern code because it has function scope and can) Tj T*
+(create confusing behavior.) Tj T*
+T*
+(Example:) Tj T*
+T*
+(```js) Tj T*
+(const userName = "Mina";) Tj T*
+(let loginCount = 1;) Tj T*
+(loginCount = loginCount + 1;) Tj T*
+(```) Tj T*
+T*
+(Common JavaScript value types include strings, numbers, booleans, null, undefined,) Tj T*
+(arrays, objects, and functions. A string stores text. A number stores numeric values. A) Tj T*
+(boolean is either true or false. Null means an intentional empty value. Undefined) Tj T*
+(usually means a value has not been assigned yet.) Tj T*
+T*
+(3. Functions) Tj T*
+T*
+(A function groups reusable logic. Functions can receive input through parameters and) Tj T*
+(return output with the return keyword.) Tj T*
+T*
+(Example:) Tj T*
+T*
+(```js) Tj T*
+(function greet\(name\) {) Tj T*
+(  return Hello, ${name};) Tj T*
+(}) Tj T*
+T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 1430 >>
+stream
+BT
+/F1 10 Tf
+50 770 Td
+14 TL
+(const message = greet\("Samir"\);) Tj T*
+(```) Tj T*
+T*
+(Arrow functions are a shorter function syntax often used for callbacks:) Tj T*
+T*
+(```js) Tj T*
+(const double = \(number\) => number * 2;) Tj T*
+(```) Tj T*
+T*
+(When a function does not explicitly return a value, JavaScript returns undefined.) Tj T*
+T*
+(4. Arrays and Objects) Tj T*
+T*
+(An array stores an ordered list of values. Use array methods like map, filter, find, and) Tj T*
+(reduce to transform or search lists.) Tj T*
+T*
+(Example:) Tj T*
+T*
+(```js) Tj T*
+(const scores = [8, 12, 15];) Tj T*
+(const passed = scores.filter\(\(score\) => score >= 10\);) Tj T*
+(```) Tj T*
+T*
+(An object stores named properties. Objects are useful for representing things like) Tj T*
+(users, products, messages, or settings.) Tj T*
+T*
+(Example:) Tj T*
+T*
+(```js) Tj T*
+(const user = {) Tj T*
+(  id: 42,) Tj T*
+(  name: "Leila",) Tj T*
+(  role: "admin") Tj T*
+(};) Tj T*
+(```) Tj T*
+T*
+(Use dot notation when the property name is known, such as user.name. Use bracket) Tj T*
+(notation when the property name is stored in a variable, such as user[fieldName].) Tj T*
+T*
+(5. Control Flow) Tj T*
+T*
+(Use if, else if, and else when code should run only under certain conditions. Use switch) Tj T*
+(when comparing one value against several known cases. Use loops when code must repeat.) Tj T*
+T*
+(Example:) Tj T*
+T*
+(```js) Tj T*
+(if \(score >= 10\) {) Tj T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1425 >>
+stream
+BT
+/F1 10 Tf
+50 770 Td
+14 TL
+(  status = "passed";) Tj T*
+(} else {) Tj T*
+(  status = "needs review";) Tj T*
+(}) Tj T*
+(```) Tj T*
+T*
+(Prefer readable conditions. If a condition becomes too long, store part of it in a) Tj T*
+(well-named variable.) Tj T*
+T*
+(6. Async JavaScript) Tj T*
+T*
+(Asynchronous code handles work that finishes later, such as calling an API or reading a) Tj T*
+(file. A Promise represents a future result. Use async and await to write Promise-based) Tj T*
+(code in a readable style.) Tj T*
+T*
+(Example:) Tj T*
+T*
+(```js) Tj T*
+(async function loadUser\(userId\) {) Tj T*
+(  const response = await fetch\(/api/users/${userId}\);) Tj T*
+(  const user = await response.json\(\);) Tj T*
+(  return user;) Tj T*
+(}) Tj T*
+(```) Tj T*
+T*
+(Use try and catch to handle errors in async functions:) Tj T*
+T*
+(```js) Tj T*
+(try {) Tj T*
+(  const user = await loadUser\(42\);) Tj T*
+(  console.log\(user.name\);) Tj T*
+(} catch \(error\) {) Tj T*
+(  console.error\("Could not load user", error\);) Tj T*
+(}) Tj T*
+(```) Tj T*
+T*
+(7. DOM Events) Tj T*
+T*
+(The Document Object Model, or DOM, represents the page as objects that JavaScript can) Tj T*
+(read and change. Use event listeners to respond to user actions.) Tj T*
+T*
+(Example:) Tj T*
+T*
+(```js) Tj T*
+(const button = document.querySelector\("#save-button"\);) Tj T*
+T*
+(button.addEventListener\("click", \(\) => {) Tj T*
+(  console.log\("Saved"\);) Tj T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 2283 >>
+stream
+BT
+/F1 10 Tf
+50 770 Td
+14 TL
+(}\);) Tj T*
+(```) Tj T*
+T*
+(Common DOM events include click, submit, input, change, keydown, and load. For forms,) Tj T*
+(listen to the submit event and call event.preventDefault\(\) when JavaScript should handle) Tj T*
+(the submission without a full page reload.) Tj T*
+T*
+(8. Node.js and npm) Tj T*
+T*
+(Node.js lets JavaScript run outside the browser. Express.js is a popular Node.js) Tj T*
+(framework for building APIs. npm is the package manager used to install libraries and) Tj T*
+(run scripts.) Tj T*
+T*
+(Common npm commands:) Tj T*
+T*
+(- npm install installs project dependencies.) Tj T*
+(- npm run dev runs the development script defined in package.json.) Tj T*
+(- npm run build creates a production build when the project supports it.) Tj T*
+T*
+(In Node.js projects, environment variables are often stored in a .env file during) Tj T*
+(development. API keys should not be committed to git.) Tj T*
+T*
+(9. Debugging Checklist) Tj T*
+T*
+(When JavaScript code fails, check the error message first. Then confirm the line number,) Tj T*
+(inspect variable values, and simplify the failing code path. In browser apps, use the) Tj T*
+(developer console and the network tab. In Node.js apps, use console logs, stack traces,) Tj T*
+(and request logs.) Tj T*
+T*
+(Useful questions:) Tj T*
+T*
+(- Is the variable defined before it is used?) Tj T*
+(- Is the function receiving the input shape it expects?) Tj T*
+(- Did an async function need await?) Tj T*
+(- Did the API return an error response?) Tj T*
+(- Is the environment variable loaded?) Tj T*
+T*
+(10. Mini Project: Document Q&A Chatbot) Tj T*
+T*
+(The chatbot project has two main parts: ingestion and question answering. Ingestion) Tj T*
+(loads a PDF, extracts text, splits text into chunks, embeds those chunks, and stores) Tj T*
+(them in a vector store. Question answering embeds the user question, retrieves relevant) Tj T*
+(chunks, sends those chunks to an LLM, and returns an answer with sources.) Tj T*
+T*
+(For a first version, use one sample PDF and an in-memory vector store. This makes the) Tj T*
+(app easier to understand before adding persistent storage. Later, replace the in-memory) Tj T*
+(store with Chroma, Pinecone, Postgres pgvector, or another persistent vector database.) Tj T*
+T*
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 1334 >>
+stream
+BT
+/F1 10 Tf
+50 770 Td
+14 TL
+(The backend should expose endpoints for health checks, indexing the sample document,) Tj T*
+(uploading a document, checking index status, and asking a question. The frontend should) Tj T*
+(provide a document control area, an upload control, and a chat interface.) Tj T*
+T*
+(11. Glossary) Tj T*
+T*
+(Chunk: a smaller section of a document used for retrieval.) Tj T*
+T*
+(Embedding: a numeric representation of text meaning.) Tj T*
+T*
+(Vector store: a database or in-memory structure that searches embeddings by similarity.) Tj T*
+T*
+(Retriever: a component that finds relevant chunks for a query.) Tj T*
+T*
+(RAG: retrieval-augmented generation, a pattern where an LLM answers using retrieved) Tj T*
+(context.) Tj T*
+T*
+(Prompt: the instruction and context sent to an LLM.) Tj T*
+T*
+(Hallucination: an answer that sounds confident but is not supported by the provided) Tj T*
+(source material.) Tj T*
+T*
+(12. Recommended First Questions) Tj T*
+T*
+(Ask these questions to test the chatbot:) Tj T*
+T*
+(- What is the difference between const, let, and var?) Tj T*
+(- How does async and await help with API calls?) Tj T*
+(- What are the main steps in a Document Q&A chatbot?) Tj T*
+(- Why should a first version use an in-memory vector store?) Tj T*
+(- What should I check when JavaScript code fails?) Tj T*
+T*
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 12 0 R >>
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000141 00000 n 
+0000000211 00000 n 
+0000002183 00000 n 
+0000002309 00000 n 
+0000003791 00000 n 
+0000003917 00000 n 
+0000005394 00000 n 
+0000005520 00000 n 
+0000007856 00000 n 
+0000007984 00000 n 
+0000009371 00000 n 
+trailer
+<< /Size 14 /Root 1 0 R >>
+startxref
+9499
+%%EOF

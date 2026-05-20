@@ -1,0 +1,13 @@
+node_modules/
+.next/
+dist/
+build/
+.env
+.env.local
+npm-debug.log*
+server/data/
+server/uploads/*
+!server/uploads/.gitkeep
+server/pdfs/*.pdf
+!server/pdfs/javascript-basics-for-rag.pdf
+!server/pdfs/company-x-employee-knowledge-base.pdf

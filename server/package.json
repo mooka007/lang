@@ -1,0 +1,27 @@
+{
+  "name": "document-qa-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "check": "node --check src/index.js && node --check src/config/env.js && node --check src/routes/documents.routes.js && node --check src/services/model.service.js && node --check src/services/rag.service.js && node --check src/utils/storage.js"
+  },
+  "dependencies": {
+    "@langchain/classic": "latest",
+    "@langchain/community": "latest",
+    "@langchain/core": "latest",
+    "@langchain/openai": "latest",
+    "@langchain/textsplitters": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "langchain": "latest",
+    "multer": "latest",
+    "pdf-parse": "latest"
+  },
+  "devDependencies": {
+    "nodemon": "latest"
+  }
+}

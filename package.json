@@ -1,0 +1,22 @@
+{
+  "name": "document-qa-chatbot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "server",
+    "front"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace server\" \"npm run dev --workspace front\"",
+    "dev:server": "npm run dev --workspace server",
+    "dev:front": "npm run dev --workspace front",
+    "build": "npm run build --workspace front",
+    "check": "npm run check --workspace server && npm run check --workspace front",
+    "sample:pdf": "node scripts/make-company-pdf.js",
+    "sample:js-pdf": "node scripts/make-sample-pdf.js"
+  },
+  "devDependencies": {
+    "concurrently": "latest"
+  }
+}

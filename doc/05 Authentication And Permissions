@@ -1,0 +1,105 @@
+# Authentication And Permissions
+
+Authentication means knowing who the user is.
+
+Permissions mean knowing what the user is allowed to access.
+
+They are different.
+
+## Authentication
+
+Authentication answers:
+
+```text
+Who are you?
+```
+
+Examples:
+
+```text
+Login with email and password
+Login with Google
+Login with GitHub
+JWT token
+Session cookie
+```
+
+Simple login result:
+
+```js
+{
+  userId: "user_001",
+  email: "admin@example.com",
+  role: "admin"
+}
+```
+
+## Permissions
+
+Permissions answer:
+
+```text
+What can you access?
+```
+
+Example:
+
+```text
+Admin can see all company PDFs.
+HR can see employee policy PDFs.
+Employee can see public handbook PDFs.
+Manager can see documents for their branch.
+```
+
+## Why This Matters For RAG
+
+RAG must only retrieve documents the user is allowed to see.
+
+Bad example:
+
+```text
+Employee asks: What is the CEO salary?
+Retriever searches private finance documents.
+```
+
+Good example:
+
+```text
+Employee asks: What is the CEO salary?
+Retriever only searches documents the employee can access.
+If the answer is not allowed, the chatbot does not reveal it.
+```
+
+## Simple Permission Model
+
+Document record:
+
+```js
+{
+  id: "doc_001",
+  fileName: "morocco-salaries.pdf",
+  accessLevel: "hr_only"
+}
+```
+
+User record:
+
+```js
+{
+  id: "user_001",
+  role: "employee"
+}
+```
+
+Rule:
+
+```text
+employee cannot access hr_only documents
+```
+
+## Simple Presentation Version
+
+```text
+Authentication identifies the user. Permissions decide which documents that user can search. In production RAG, retrieval must respect permissions.
+```
+

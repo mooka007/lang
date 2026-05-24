@@ -1,0 +1,123 @@
+# Security
+
+Security means protecting the app, users, files, and API keys.
+
+A RAG app can contain sensitive company documents, so security matters a lot.
+
+## Main Security Areas
+
+```text
+file upload safety
+authentication
+permissions
+rate limits
+secret management
+CORS
+input validation
+logging without leaking private data
+```
+
+## File Upload Safety
+
+The backend should check:
+
+```text
+Allowed file type
+Maximum file size
+Safe file name
+No executable files
+No unexpected MIME types
+```
+
+Example:
+
+```text
+Allow: PDF, TXT, Markdown
+Block: EXE, ZIP, unknown binary files
+```
+
+## API Keys And Secrets
+
+Never put real secrets in code.
+
+Use `.env` locally and hosting environment variables in production.
+
+Examples:
+
+```env
+GITHUB_TOKEN=secret
+OPENAI_API_KEY=secret
+DATABASE_URL=secret
+```
+
+Do not commit `.env` to GitHub.
+
+## Permissions
+
+The retriever should only search documents the user is allowed to access.
+
+Example:
+
+```text
+Employee should not retrieve HR salary documents.
+Manager should only retrieve branch documents they can access.
+Admin can retrieve all documents.
+```
+
+## Rate Limits
+
+Rate limits prevent abuse and high token costs.
+
+Example:
+
+```text
+100 requests per 15 minutes per user
+10 uploads per hour per user
+```
+
+## Input Validation
+
+Validate user input.
+
+Example:
+
+```text
+Question must not be empty.
+Question length should have a limit.
+Uploaded file must be allowed.
+```
+
+## CORS
+
+CORS controls which frontend domains can call the backend.
+
+Example:
+
+```env
+CORS_ORIGINS=https://your-frontend.com
+```
+
+Do not allow every domain in production unless there is a good reason.
+
+## Logging Safety
+
+Logs should help debugging, but they should not leak secrets.
+
+Bad log:
+
+```text
+Authorization: Bearer real_api_token
+```
+
+Good log:
+
+```text
+chat request failed for user_001
+```
+
+## Simple Presentation Version
+
+```text
+Security protects documents, users, API keys, and model access. A production RAG app needs safe uploads, authentication, permissions, rate limits, secret management, validation, and careful logging.
+```
+

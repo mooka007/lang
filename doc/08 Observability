@@ -1,0 +1,97 @@
+# Observability
+
+Observability means understanding what is happening inside the app.
+
+In a RAG app, many things can go wrong:
+
+```text
+PDF loading fails
+Embedding fails
+Retriever finds wrong chunks
+LLM gives weak answer
+Token cost becomes high
+Response is slow
+```
+
+Observability helps us see and fix those problems.
+
+## What To Track
+
+Track requests:
+
+```text
+Which endpoint was called?
+How long did it take?
+Did it fail?
+```
+
+Track indexing:
+
+```text
+Which file was indexed?
+How many chunks were created?
+How long did indexing take?
+Did embedding fail?
+```
+
+Track retrieval:
+
+```text
+Which chunks were returned?
+Which sources were used?
+What was the top score?
+```
+
+Track LLM usage:
+
+```text
+prompt tokens
+completion tokens
+total tokens
+model name
+latency
+errors
+```
+
+Track user experience:
+
+```text
+slow answers
+failed uploads
+empty answers
+common questions
+```
+
+## Simple Log Example
+
+```js
+{
+  event: "chat_completed",
+  question: "What is the salary of CX-MA-001?",
+  sources: ["company x branch morocco, page 6"],
+  promptTokens: 3201,
+  completionTokens: 262,
+  durationMs: 4500
+}
+```
+
+## Why It Matters
+
+Without observability, we guess.
+
+With observability, we can answer:
+
+```text
+Why was the answer wrong?
+Was retrieval bad?
+Was the LLM slow?
+Did token usage increase?
+Which document caused an error?
+```
+
+## Simple Presentation Version
+
+```text
+Observability means tracking logs, errors, token usage, latency, retrieval sources, and indexing status so we can understand and improve the RAG app.
+```
+

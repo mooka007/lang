@@ -1,0 +1,113 @@
+# Real Vector Database
+
+A real vector database stores embeddings permanently and searches them efficiently.
+
+Our current project uses:
+
+```text
+MemoryVectorStore
+```
+
+This is good for learning.
+
+But it is not enough for production because the index disappears when the server restarts.
+
+## What A Vector Database Stores
+
+It stores:
+
+```text
+embedding vector
+chunk text
+document ID
+metadata
+page number
+user or organization ID
+```
+
+Example:
+
+```js
+{
+  id: "chunk_001",
+  vector: [0.12, -0.04, 0.88],
+  text: "CX-MA-001 - Amina Morrison...",
+  metadata: {
+    documentId: "doc_001",
+    page: 6,
+    branch: "Morocco"
+  }
+}
+```
+
+## Popular Options
+
+```text
+Chroma
+Qdrant
+Pinecone
+Weaviate
+MongoDB Atlas Vector Search
+Postgres pgvector
+```
+
+## Simple Flow
+
+Indexing:
+
+```text
+PDF
+  -> chunks
+  -> embeddings
+  -> save vectors in vector database
+```
+
+Question:
+
+```text
+user question
+  -> question embedding
+  -> vector database search
+  -> relevant chunks
+  -> LLM answer
+```
+
+## Metadata Filtering
+
+A real vector database can filter by metadata.
+
+Example:
+
+```text
+Search only Morocco branch documents.
+Search only documents owned by user_001.
+Search only HR policies.
+```
+
+Example filter:
+
+```js
+{
+  branch: "Morocco",
+  accessLevel: "employee"
+}
+```
+
+## Why It Matters
+
+A real vector database gives us:
+
+```text
+Persistent embeddings
+Faster search for large datasets
+Document filters
+Multi-user support
+Better production scaling
+```
+
+## Simple Presentation Version
+
+```text
+A real vector database stores embeddings permanently and lets the app search large document collections with filters and better performance.
+```
+

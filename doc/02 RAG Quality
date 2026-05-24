@@ -1,0 +1,744 @@
+# RAG Quality
+
+This file explains how to improve a RAG chatbot after the basic pipeline is working.
+
+The first learning path taught us how RAG works:
+
+```text
+Document Loader
+Text Splitter
+Embeddings
+Vector Store
+Retriever
+Prompt + LLM
+Sources
+Memory
+```
+
+Now this second learning path teaches us how to make the chatbot better, more accurate, and more professional.
+
+Topics:
+
+```text
+1. Chunking Strategy
+2. Retrieval Quality
+3. Prompt Engineering For RAG
+4. Evaluation
+5. Persistent Vector Stores
+6. Document Management
+7. Production Architecture
+```
+
+## 1. Chunking Strategy
+
+Chunking means cutting the document into smaller pieces before embedding it.
+
+In our project, the current code uses:
+
+```js
+const splitter = new RecursiveCharacterTextSplitter({
+  chunkSize: 1000,
+  chunkOverlap: 180
+});
+```
+
+`chunkSize` controls how big each chunk is.
+
+`chunkOverlap` controls how much text is repeated between chunks.
+
+### Why Chunking Matters
+
+If chunks are too small, the chatbot may miss context.
+
+Example:
+
+```text
+Chunk 1:
+CX-MA-001 - Amina Morrison
+
+Chunk 2:
+Salary: $132,500
+
+Chunk 3:
+Daily tasks:
+- Lead the Morocco branch
+```
+
+If the retriever only finds Chunk 1, the answer may miss salary and tasks.
+
+If chunks are too large, the chatbot may retrieve too much unrelated information.
+
+Example:
+
+```text
+One chunk contains 20 employees.
+The user asks about CX-MA-001.
+The LLM sees many employees and may mix details.
+```
+
+Good chunking tries to keep related information together.
+
+### Simple Example
+
+Bad chunk:
+
+```text
+CX-MA-001 - Amina Morrison
+```
+
+Better chunk:
+
+```text
+CX-MA-001 - Amina Morrison
+Role: Branch Director
+Salary: $132,500
+Shift: Morning shift
+Project: MA-OPS
+Daily tasks:
+- Lead branch operating rhythm
+- Approve budget changes
+```
+
+### Practical Rule
+
+For company employee data, one chunk should ideally contain one full employee profile or one full project section.
+
+### What To Try
+
+Try different values:
+
+```js
+chunkSize: 700,
+chunkOverlap: 120
+```
+
+```js
+chunkSize: 1200,
+chunkOverlap: 200
+```
+
+Then ask the same question:
+
+```text
+For CX-MA-001, tell me salary, shift, tasks, and project manager.
+```
+
+Compare the answers.
+
+### Presentation Version
+
+```text
+Chunking controls how documents are divided before search. Good chunks keep related information together, which improves retrieval and answer quality.
+```
+
+## 2. Retrieval Quality
+
+Retrieval is the process of finding the best chunks for a user question.
+
+Basic retrieval uses vector similarity.
+
+Example:
+
+```text
+Question:
+Who manages the Morocco branch?
+
+Retriever searches for chunks close in meaning to:
+Morocco, branch, manager
+```
+
+### Why Retrieval Can Fail
+
+The chatbot may answer badly if retrieval finds the wrong chunks.
+
+Example:
+
+```text
+Question:
+What projects are managed in Morocco?
+
+Bad retrieval:
+Returns France branch chunks.
+
+Good retrieval:
+Returns Morocco project portfolio and project staffing chunks.
+```
+
+### Top K
+
+`topK` means how many chunks the retriever returns.
+
+In our project:
+
+```js
+activeIndex.vectorStore.asRetriever(8)
+```
+
+This means:
+
+```text
+Return the top 8 most relevant chunks.
+```
+
+If `topK` is too low, we may miss important details.
+
+If `topK` is too high, the model may see too much noise.
+
+### Exact Matching
+
+Some questions should not depend only on semantic meaning.
+
+Examples:
+
+```text
+CX-MA-001
+MA-OPS
+PX-Atlas
+amina.morrison.ma1@companyx.example
+```
+
+These are exact values.
+
+So our project uses exact matching to find chunks that contain those values.
+
+### Hybrid Retrieval
+
+Hybrid retrieval means combining different search methods.
+
+Our project uses:
+
+```text
+Vector search
+Exact matching
+Neighbor chunks
+Branch-aware retrieval
+```
+
+This is stronger than vector search alone.
+
+### Neighbor Chunks
+
+If a matching chunk is found, we also fetch nearby chunks.
+
+Why?
+
+Because employee data may continue in the next chunk.
+
+Example:
+
+```text
+Chunk 20:
+CX-MA-001 - Amina Morrison
+Salary: $132,500
+
+Chunk 21:
+Daily tasks:
+- Lead the Morocco branch
+- Approve budget changes
+```
+
+Neighbor chunks help the chatbot answer the full question.
+
+### Simple Debugging Question
+
+When the chatbot gives a weak answer, ask:
+
+```text
+Did the retriever find the right chunks?
+```
+
+If sources are wrong, retrieval is the problem.
+
+If sources are right but the answer is bad, prompt or model behavior may be the problem.
+
+### Presentation Version
+
+```text
+Retrieval quality decides what information the LLM sees. If retrieval finds the wrong chunks, the model cannot answer correctly. Good RAG depends on good retrieval.
+```
+
+## 3. Prompt Engineering For RAG
+
+Prompt engineering for RAG means writing instructions that make the model answer correctly using retrieved context.
+
+The model should not invent information.
+
+It should answer only from the document context.
+
+### Current Prompt Idea
+
+Our backend tells the model:
+
+```text
+Use only the provided document context.
+If the answer is not in the document context, say you do not know.
+Keep answers concise and practical.
+```
+
+This is good because it reduces hallucination.
+
+### Bad Prompt
+
+```text
+Answer the user's question.
+```
+
+Problem:
+
+The model may use general knowledge or guess.
+
+### Better Prompt
+
+```text
+Answer using only the provided document context.
+If the answer is missing, say:
+"The document does not contain that information."
+Include names, dates, salaries, and project codes exactly as written.
+```
+
+### Structured Answer Prompt
+
+For employee questions, we can ask the model to answer like this:
+
+```text
+When the user asks about an employee, use this format:
+
+Name:
+Role:
+Department:
+Salary:
+Shift:
+Manager:
+Project:
+Daily tasks:
+Sources:
+```
+
+This makes answers cleaner.
+
+### Simple Example
+
+Question:
+
+```text
+Tell me about CX-MA-001.
+```
+
+Good answer format:
+
+```text
+CX-MA-001 is Amina Morrison.
+
+Role: Branch Director
+Department: Operations
+Salary: $132,500
+Shift: Morning shift, 08:00-16:00 local time
+Manager: Global COO
+Project: Morocco Operating System
+Daily tasks:
+- Lead the Morocco branch operating rhythm
+- Approve budget and hiring changes
+```
+
+### Presentation Version
+
+```text
+Prompt engineering controls how the LLM uses retrieved chunks. A good RAG prompt tells the model to answer only from context, avoid guessing, and use a clear output format.
+```
+
+## 4. Evaluation
+
+Evaluation means testing if the chatbot is working correctly.
+
+A RAG app should not be judged only by looking at one answer.
+
+We need test questions.
+
+### Simple Evaluation Table
+
+Create a table like this:
+
+```text
+Question | Expected answer | Did it pass?
+```
+
+Example:
+
+```text
+Question:
+What is the salary of CX-MA-001?
+
+Expected answer:
+$132,500
+
+Pass:
+Yes
+```
+
+### Types Of Tests
+
+Test exact employee facts:
+
+```text
+What is the salary of CX-MA-001?
+Who manages CX-MA-001?
+What shift does CX-MA-001 work?
+```
+
+Test branch facts:
+
+```text
+How many employees are in the Morocco branch?
+Who is the Morocco branch director?
+What is the timezone of the Australia branch?
+```
+
+Test project facts:
+
+```text
+Who manages MA-OPS?
+How many employees are assigned to MA-DATA?
+What is the risk for MA-SEC?
+```
+
+Test missing information:
+
+```text
+What is Amina Morrison's favorite food?
+```
+
+Expected answer:
+
+```text
+The document does not contain that information.
+```
+
+### What To Check
+
+For every answer, check:
+
+```text
+Is the answer correct?
+Are the sources correct?
+Did the model hallucinate?
+Was the answer complete?
+Was the answer easy to read?
+```
+
+### Evaluation Example
+
+```text
+Question:
+What projects are managed in the Morocco branch?
+
+Expected:
+MA-OPS, MA-GROW, MA-CX, MA-SEC, MA-DATA
+
+Also expected:
+Each project should include manager and employee count.
+```
+
+### Presentation Version
+
+```text
+Evaluation means testing the chatbot with known questions and expected answers. It helps us measure accuracy, retrieval quality, hallucination, and source quality.
+```
+
+## 5. Persistent Vector Stores
+
+Our project currently uses:
+
+```text
+MemoryVectorStore
+```
+
+This is good for learning.
+
+But memory storage has a limitation:
+
+```text
+When the server restarts, the index disappears.
+```
+
+That is why we need to click:
+
+```text
+Load company PDFs
+```
+
+again after restart.
+
+### Persistent Vector Store
+
+A persistent vector store saves embeddings permanently.
+
+That means:
+
+```text
+Index once.
+Restart server.
+Data is still there.
+```
+
+Examples:
+
+```text
+Chroma
+Qdrant
+Pinecone
+Weaviate
+MongoDB Atlas Vector Search
+Postgres pgvector
+```
+
+### Simple Difference
+
+MemoryVectorStore:
+
+```text
+Fast
+Simple
+Good for learning
+Data disappears after restart
+```
+
+Persistent vector store:
+
+```text
+More setup
+Better for production
+Data survives restart
+Supports many users and documents
+```
+
+### Example Production Flow
+
+```text
+User uploads PDF
+PDF is chunked
+Chunks are embedded
+Vectors are saved in database
+Later user asks a question
+Retriever searches the saved vectors
+```
+
+### Presentation Version
+
+```text
+A persistent vector store saves embeddings in a real database, so the app does not need to re-index documents every time the server restarts.
+```
+
+## 6. Document Management
+
+Document management means controlling the files and indexes in the system.
+
+Right now our app can:
+
+```text
+Load company PDFs
+Upload one document
+Ask questions
+```
+
+A more complete app should also manage documents.
+
+### Useful Features
+
+Show indexed documents:
+
+```text
+company-x-branch-morocco.pdf
+company-x-branch-france.pdf
+company-x-employee-knowledge-base.pdf
+```
+
+Delete a document:
+
+```text
+Remove Morocco branch PDF from the index.
+```
+
+Re-index a document:
+
+```text
+Upload a new Morocco PDF and replace the old chunks.
+```
+
+Search within a specific document:
+
+```text
+Only answer from Morocco branch PDF.
+```
+
+Show document status:
+
+```text
+Indexed
+Failed
+Processing
+Needs re-indexing
+```
+
+### Why It Matters
+
+Without document management, a user does not know:
+
+```text
+Which files are indexed
+Which file produced an answer
+Whether an old document is still being used
+Whether an upload failed
+```
+
+### Simple Database Example
+
+A document record could look like:
+
+```js
+{
+  id: "doc_123",
+  fileName: "company-x-branch-morocco.pdf",
+  status: "indexed",
+  chunkCount: 135,
+  uploadedAt: "2026-05-24"
+}
+```
+
+Each chunk could store:
+
+```js
+{
+  documentId: "doc_123",
+  page: 6,
+  chunkIndex: 40,
+  text: "CX-MA-001 - Amina Morrison..."
+}
+```
+
+### Presentation Version
+
+```text
+Document management lets users see, upload, delete, replace, and organize the documents used by the chatbot.
+```
+
+## 7. Production Architecture
+
+Production architecture means preparing the app for real users.
+
+Our current app is good for learning and demos.
+
+Production needs more structure.
+
+### Important Production Areas
+
+Authentication:
+
+```text
+Who is allowed to use the chatbot?
+```
+
+Authorization:
+
+```text
+Which documents can this user access?
+```
+
+Database:
+
+```text
+Where do we store users, documents, chunks, chat history, and settings?
+```
+
+Persistent vector store:
+
+```text
+Where do we store embeddings permanently?
+```
+
+Rate limiting:
+
+```text
+How do we prevent too many requests?
+```
+
+File security:
+
+```text
+Do we validate file size and file type?
+Do we prevent dangerous uploads?
+```
+
+Secrets management:
+
+```text
+API keys should be stored in environment variables, not in code.
+```
+
+Logging:
+
+```text
+Track errors, uploads, indexing, and model failures.
+```
+
+Monitoring:
+
+```text
+Watch server health, latency, token usage, and failed requests.
+```
+
+Deployment:
+
+```text
+Frontend on Vercel
+Backend on Railway, Render, Fly.io, or a VPS
+Database hosted separately
+Vector database hosted separately
+```
+
+### Simple Production Flow
+
+```text
+User logs in
+User uploads PDF
+Backend validates file
+Backend stores file metadata
+LangChain chunks and embeds document
+Vectors are stored in persistent vector DB
+User asks question
+Backend checks user permission
+Retriever searches only allowed documents
+LLM answers using retrieved context
+Answer, sources, and token usage are returned
+```
+
+### Presentation Version
+
+```text
+Production architecture adds authentication, permissions, persistent storage, rate limits, logging, monitoring, and deployment so the RAG app can be used safely by real users.
+```
+
+## Complete RAG Quality Checklist
+
+Use this checklist when improving the chatbot:
+
+```text
+Are chunks the right size?
+Does overlap preserve important context?
+Does retrieval return the correct sources?
+Does exact matching work for IDs and emails?
+Does the prompt prevent hallucination?
+Do answers use a clear structure?
+Do we have test questions and expected answers?
+Can vectors survive server restart?
+Can users manage documents?
+Is the system ready for real users?
+```
+
+## Simple Final Explanation
+
+Use this when presenting:
+
+```text
+After building the basic RAG pipeline, the next step is improving RAG quality. This means tuning chunking, improving retrieval, writing better prompts, testing answers, using persistent vector stores, managing documents, and preparing the system for production.
+```
+

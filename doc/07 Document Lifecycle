@@ -1,0 +1,129 @@
+# Document Lifecycle
+
+Document lifecycle means everything that can happen to a document inside the app.
+
+A real RAG app should not only upload and ask questions.
+
+It should manage documents from beginning to end.
+
+## Main Lifecycle Steps
+
+```text
+1. Upload
+2. Validate
+3. Store
+4. Index
+5. Use in chat
+6. Re-index
+7. Delete
+8. Version
+```
+
+## 1. Upload
+
+The user uploads a file.
+
+Example:
+
+```text
+company-x-branch-morocco.pdf
+```
+
+## 2. Validate
+
+The backend checks:
+
+```text
+Is it a PDF, TXT, or Markdown file?
+Is the file size allowed?
+Is the file safe?
+```
+
+## 3. Store
+
+The backend stores the original file and creates a database record.
+
+Example:
+
+```js
+{
+  id: "doc_001",
+  fileName: "company-x-branch-morocco.pdf",
+  status: "uploaded"
+}
+```
+
+## 4. Index
+
+The document is:
+
+```text
+loaded
+split into chunks
+embedded
+stored in vector database
+```
+
+Then status becomes:
+
+```text
+indexed
+```
+
+## 5. Use In Chat
+
+The document can now be searched by the chatbot.
+
+Example:
+
+```text
+Who manages MA-OPS?
+```
+
+## 6. Re-index
+
+If the file changes, the old chunks should be replaced.
+
+Example:
+
+```text
+Morocco branch PDF version 1 is replaced by version 2.
+Old chunks are deleted.
+New chunks are created.
+```
+
+## 7. Delete
+
+When a document is deleted, we should delete:
+
+```text
+file record
+stored file
+chunks
+embeddings
+related index data
+```
+
+## 8. Version
+
+Versioning means keeping history.
+
+Example:
+
+```text
+morocco-policy-v1.pdf
+morocco-policy-v2.pdf
+```
+
+This helps answer:
+
+```text
+Which document version was used?
+```
+
+## Simple Presentation Version
+
+```text
+Document lifecycle manages files from upload to indexing, re-indexing, deletion, and versioning. This makes the RAG app easier to control and trust.
+```
+

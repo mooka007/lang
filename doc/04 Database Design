@@ -1,0 +1,125 @@
+# Database Design
+
+Database design means deciding how the app data should be organized.
+
+For a production RAG app, we need more than PDF files.
+
+We need structured records for users, documents, chunks, and chats.
+
+## Main Tables Or Collections
+
+Simple database structure:
+
+```text
+users
+documents
+chunks
+conversations
+messages
+usage_logs
+```
+
+## Users
+
+Stores who can use the app.
+
+Example:
+
+```js
+{
+  id: "user_001",
+  name: "Admin User",
+  email: "admin@example.com",
+  role: "admin",
+  createdAt: "2026-05-24"
+}
+```
+
+## Documents
+
+Stores uploaded or indexed files.
+
+Example:
+
+```js
+{
+  id: "doc_001",
+  ownerId: "user_001",
+  fileName: "company-x-branch-morocco.pdf",
+  mimeType: "application/pdf",
+  status: "indexed",
+  chunkCount: 135
+}
+```
+
+## Chunks
+
+Stores document pieces.
+
+Example:
+
+```js
+{
+  id: "chunk_001",
+  documentId: "doc_001",
+  page: 6,
+  chunkIndex: 40,
+  text: "CX-MA-001 - Amina Morrison...",
+  metadata: {
+    source: "company x branch morocco"
+  }
+}
+```
+
+## Conversations
+
+Stores chat sessions.
+
+Example:
+
+```js
+{
+  id: "conv_001",
+  userId: "user_001",
+  title: "Morocco branch questions",
+  createdAt: "2026-05-24"
+}
+```
+
+## Messages
+
+Stores user and assistant messages.
+
+Example:
+
+```js
+{
+  id: "msg_001",
+  conversationId: "conv_001",
+  role: "user",
+  content: "What is the salary of CX-MA-001?"
+}
+```
+
+## Usage Logs
+
+Stores token usage and cost tracking.
+
+Example:
+
+```js
+{
+  id: "usage_001",
+  conversationId: "conv_001",
+  promptTokens: 3201,
+  completionTokens: 262,
+  totalTokens: 3463
+}
+```
+
+## Simple Presentation Version
+
+```text
+Database design organizes the app into users, documents, chunks, conversations, messages, and usage logs. This makes the app easier to manage and scale.
+```
+

@@ -1,0 +1,85 @@
+# Deployment
+
+Deployment means putting the app online so other users can access it.
+
+Our project has two main parts:
+
+```text
+front
+server
+```
+
+The frontend is Next.js.
+
+The backend is Express.js.
+
+## Simple Deployment Structure
+
+```text
+Frontend -> Vercel
+Backend -> Railway, Render, Fly.io, or VPS
+Database -> MongoDB Atlas, Postgres, or another hosted database
+Vector DB -> Pinecone, Qdrant, Chroma, MongoDB Atlas Vector Search, or pgvector
+```
+
+## Environment Variables
+
+Production needs environment variables.
+
+Examples:
+
+```env
+NODE_ENV=production
+PORT=5000
+CLIENT_URL=https://your-frontend.com
+CORS_ORIGINS=https://your-frontend.com
+LLM_PROVIDER=github
+GITHUB_TOKEN=your_secret_token
+```
+
+Secrets should not be written in code.
+
+They should live in the hosting platform environment settings.
+
+## Frontend Deployment
+
+The frontend needs to know the backend URL.
+
+Example:
+
+```env
+NEXT_PUBLIC_API_URL=https://your-backend.com/api
+```
+
+## Backend Deployment
+
+The backend needs:
+
+```text
+model API keys
+database URL
+vector database URL
+CORS origins
+upload limits
+```
+
+## Deployment Checklist
+
+```text
+Frontend builds successfully
+Backend starts successfully
+Environment variables are set
+CORS allows the frontend domain
+Uploads work
+Indexing works
+Chat works
+Logs are visible
+Secrets are not exposed
+```
+
+## Simple Presentation Version
+
+```text
+Deployment puts the frontend, backend, database, and vector database online. It also requires correct environment variables, CORS settings, and secret management.
+```
+

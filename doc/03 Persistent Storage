@@ -1,0 +1,89 @@
+# Persistent Storage
+
+Persistent storage means saving important data so it does not disappear when the server restarts.
+
+Right now our project uses `MemoryVectorStore`.
+
+That is good for learning, but it lives only in memory.
+
+If the backend restarts:
+
+```text
+Indexed chunks disappear.
+Vector store disappears.
+Chat history disappears.
+The user must index the PDFs again.
+```
+
+Persistent storage fixes this.
+
+## What We Should Store
+
+A real RAG app should store:
+
+```text
+users
+uploaded files
+document records
+chunks
+embeddings
+conversations
+messages
+token usage
+indexing status
+```
+
+## Simple Example
+
+When a user uploads:
+
+```text
+company-x-branch-morocco.pdf
+```
+
+We should save a document record:
+
+```js
+{
+  id: "doc_001",
+  fileName: "company-x-branch-morocco.pdf",
+  status: "indexed",
+  chunkCount: 135,
+  uploadedAt: "2026-05-24"
+}
+```
+
+Then we save chunks:
+
+```js
+{
+  id: "chunk_001",
+  documentId: "doc_001",
+  page: 6,
+  chunkIndex: 40,
+  text: "CX-MA-001 - Amina Morrison..."
+}
+```
+
+Then we save embeddings in a vector database or vector-enabled database.
+
+## Why It Matters
+
+Persistent storage allows:
+
+```text
+Server restart without losing data
+Document history
+Chat history
+User accounts
+Document deletion
+Document re-indexing
+Production deployment
+```
+
+## Simple Presentation Version
+
+```text
+Persistent storage saves documents, chunks, embeddings, and conversations permanently, so the app does not lose everything when the server restarts.
+```
+

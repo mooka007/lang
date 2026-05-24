@@ -1,0 +1,691 @@
+# LangChain RAG Documentation
+
+This file explains the LangChain process used in this project. It follows the same order we studied step by step.
+
+Project type:
+
+```text
+Document Q&A chatbot
+```
+
+Main goal:
+
+```text
+Upload or load company PDFs, index them, ask questions, and get answers from the document content.
+```
+
+Our current RAG flow:
+
+```text
+PDF
+  -> Document Loader
+  -> Text Splitter
+  -> Chunks
+  -> Embeddings
+  -> Vector Store
+  -> Retriever
+  -> Prompt + LLM
+  -> Answer + sources
+
+Memory supports follow-up questions by sending recent chat history.
+```
+
+## 1. Document Loaders
+
+A Document Loader is the first step in LangChain.
+
+Its job is to read a file and convert it into LangChain `Document` objects.
+
+In this project, we support:
+
+```text
+PDF
+Markdown
+Text
+```
+
+For PDF files, we use:
+
+```js
+import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
+```
+
+The important code is in:
+
+```text
+server/src/services/rag.service.js
+```
+
+The loader code:
+
+```js
+const loader = new PDFLoader(filePath, {
+  splitPages: true
+});
+
+return loader.load();
+```
+
+Because we use `splitPages: true`, LangChain keeps the PDF separated by pages.
+
+Each page becomes a LangChain `Document`.
+
+A document looks like this:
+
+```js
+{
+  pageContent: "The text from the PDF page...",
+  metadata: {
+    source: "company x branch morocco",
+    page: 1
+  }
+}
+```
+
+`pageContent` is the actual text.
+
+`metadata` tells us where the text came from.
+
+This metadata is important because later we can show sources like:
+
+```text
+company x branch morocco, page 6
+```
+
+Presentation version:
+
+```text
+The Document Loader reads PDF files and converts them into LangChain documents. Each document contains text and metadata such as the file name and page number.
+```
+
+## 2. Text Splitters
+
+After loading the PDF, we have large document text.
+
+We do not send the entire PDF directly to the AI model.
+
+Instead, we split the text into smaller chunks.
+
+In this project, we use:
+
+```js
+import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
+```
+
+The splitter code:
+
+```js
+const splitter = new RecursiveCharacterTextSplitter({
+  chunkSize: 1000,
+  chunkOverlap: 180
+});
+
+const chunks = await splitter.splitDocuments(loadedDocuments);
+```
+
+`chunkSize: 1000` means each chunk is about 1000 characters.
+
+`chunkOverlap: 180` means chunks share about 180 characters with the next chunk.
+
+Overlap matters because important information can be split between chunks.
+
+Example:
+
+```text
+Chunk 1:
+CX-MA-001 - Amina Morrison
+Salary: $132,500
+
+Chunk 2:
+Daily tasks:
+- Lead the Morocco branch operating rhythm
+```
+
+With overlap, the retriever has a better chance of keeping related information connected.
+
+We also add a `chunkIndex`:
+
+```js
+chunks.forEach((chunk, index) => {
+  chunk.metadata.chunkIndex = index;
+});
+```
+
+This helps us retrieve neighbor chunks.
+
+If one chunk contains the employee ID and the next chunk contains the daily tasks, we can pull both.
+
+Presentation version:
+
+```text
+The Text Splitter cuts large documents into smaller chunks. This makes the content easier to search and easier to send to the model. We use overlap so information is not lost between chunks.
+```
+
+## 3. Embeddings
+
+Embeddings convert text into numbers.
+
+Those numbers represent the meaning of the text.
+
+Example text:
+
+```text
+CX-MA-001 works as Branch Director in Morocco.
+```
+
+Example vector:
+
+```js
+[0.12, -0.04, 0.88, 0.31, ...]
+```
+
+That vector is called an embedding.
+
+Texts with similar meaning should have similar vectors.
+
+This lets the chatbot search by meaning, not only by exact words.
+
+In this project, embeddings are created with:
+
+```js
+const embeddings = createEmbeddings();
+```
+
+The project supports:
+
+```text
+local embeddings
+GitHub Models embeddings
+OpenAI embeddings
+```
+
+The provider is controlled by `.env`:
+
+```env
+EMBEDDING_PROVIDER=local
+```
+
+For development, we use local embeddings because the company dataset is large and we want fast indexing without using API embedding tokens.
+
+For production-style quality, we can use:
+
+```env
+EMBEDDING_PROVIDER=github
+```
+
+or:
+
+```env
+EMBEDDING_PROVIDER=openai
+```
+
+Important embedding methods:
+
+```js
+embedDocuments(texts)
+```
+
+Used when indexing many document chunks.
+
+```js
+embedQuery(text)
+```
+
+Used when the user asks a question.
+
+Indexing flow:
+
+```text
+chunks
+  -> embedDocuments()
+  -> chunk vectors
+```
+
+Question flow:
+
+```text
+user question
+  -> embedQuery()
+  -> question vector
+```
+
+Presentation version:
+
+```text
+Embeddings turn text into vectors, which are lists of numbers. This allows the system to compare the meaning of a user question with the meaning of document chunks.
+```
+
+## 4. Vector Store
+
+A vector store is where embeddings are saved and searched.
+
+It stores:
+
+```text
+chunk text
+chunk vector
+metadata
+```
+
+In this project, we use:
+
+```js
+import { MemoryVectorStore } from "@langchain/classic/vectorstores/memory";
+```
+
+The vector store is created here:
+
+```js
+const vectorStore = await MemoryVectorStore.fromDocuments(chunks, embeddings);
+```
+
+This line:
+
+```text
+1. Takes all chunks
+2. Creates embeddings for them
+3. Stores them in memory
+```
+
+We save the active index like this:
+
+```js
+activeIndex = {
+  vectorStore,
+  chunks,
+  documentName: options.displayName,
+  chunkCount: chunks.length,
+  indexedAt: new Date().toISOString()
+};
+```
+
+Because we use `MemoryVectorStore`, the data is stored in server memory.
+
+That means:
+
+```text
+Good for learning and demos
+Fast and simple
+No database setup needed
+Index is lost when the server restarts
+```
+
+For production, we could use a persistent vector database:
+
+```text
+Pinecone
+Chroma
+Qdrant
+Weaviate
+MongoDB Atlas Vector Search
+Postgres pgvector
+```
+
+Presentation version:
+
+```text
+The vector store keeps all chunk embeddings. When a user asks a question, LangChain compares the question embedding with the stored chunk embeddings and returns the closest matches.
+```
+
+## 5. Retriever
+
+The retriever searches the vector store.
+
+It takes the user question and returns the most relevant chunks.
+
+In this project, the vector search uses:
+
+```js
+await activeIndex.vectorStore.asRetriever(8).invoke(retrievalQuery)
+```
+
+This means:
+
+```text
+Use the vector store as a retriever.
+Return the top 8 most relevant chunks.
+```
+
+Our retriever is hybrid.
+
+It uses:
+
+```text
+vector search
+exact matching
+neighbor chunks
+```
+
+Vector search is good for meaning-based questions.
+
+Example:
+
+```text
+Who manages the Morocco branch?
+```
+
+Exact matching is good for IDs, emails, projects, and branches.
+
+Examples:
+
+```text
+CX-MA-001
+MA-OPS
+PX-Atlas
+amina.morrison.ma1@companyx.example
+Morocco
+France
+USA
+```
+
+Neighbor chunks matter because one employee profile can be split across several chunks.
+
+Example:
+
+```text
+Chunk 1:
+CX-MA-001 - Amina Morrison
+Salary: $132,500
+
+Chunk 2:
+Daily tasks:
+- Lead the Morocco branch operating rhythm
+```
+
+If the retriever finds Chunk 1, we also pull nearby chunks so the answer can include tasks, systems, and deliverables.
+
+Presentation version:
+
+```text
+The retriever finds the most relevant chunks for the question. Our project uses vector search for meaning and exact matching for company-specific data like employee IDs, project codes, emails, and branch names.
+```
+
+## 6. Prompt And LLM
+
+After retrieval, we send the selected chunks to the language model.
+
+The LLM does not read the full PDF directly.
+
+It only sees:
+
+```text
+system instruction
+recent conversation history
+user question
+retrieved document context
+```
+
+The backend builds context like this:
+
+```js
+const context = sourceDocuments
+  .map((document, index) => {
+    const page = pageFromMetadata(document.metadata);
+    const label = page ? `${document.metadata.source}, page ${page}` : document.metadata.source;
+    return `Source ${index + 1}: ${label}\n${document.pageContent}`;
+  })
+  .join("\n\n");
+```
+
+Example prompt context:
+
+```text
+Source 1: company x branch morocco, page 6
+CX-MA-001 - Amina Morrison
+Salary: $132,500
+Shift: Morning shift
+Daily tasks:
+...
+```
+
+The system instruction says:
+
+```text
+Use only the provided document context.
+If the answer is not in the document context, say you do not know.
+Keep answers concise and practical.
+```
+
+Then we call:
+
+```js
+answerFromContext({
+  system,
+  question,
+  context,
+  history
+});
+```
+
+The project supports:
+
+```text
+GitHub Models
+OpenAI
+```
+
+The main RAG idea is:
+
+```text
+Retrieve first.
+Generate second.
+```
+
+Presentation version:
+
+```text
+After retrieving the best chunks, we build a prompt that includes the question, document context, recent history, and instructions. The LLM then generates an answer using only that context.
+```
+
+## 7. Sources
+
+Sources tell the user where the answer came from.
+
+This makes the chatbot more trustworthy.
+
+Sources come from document metadata.
+
+Each chunk has:
+
+```js
+metadata: {
+  source: "company x branch morocco",
+  page: 6,
+  chunkIndex: 120
+}
+```
+
+When the backend returns an answer, it also returns:
+
+```js
+sources: sourceDocuments.map((document, index) => ({
+  id: index + 1,
+  source: document.metadata.source,
+  page: pageFromMetadata(document.metadata),
+  preview: document.pageContent.slice(0, 240)
+}))
+```
+
+The frontend displays sources under the answer.
+
+Example:
+
+```text
+company x branch morocco, page 6
+company x branch morocco, page 7
+```
+
+Sources help with:
+
+```text
+trust
+debugging
+verification
+presentations
+answer quality checks
+```
+
+If the chatbot gives a weak answer, we can inspect the sources and ask:
+
+```text
+Did retrieval find the right chunks?
+Was the information missing from the document?
+Did the model ignore part of the context?
+```
+
+Presentation version:
+
+```text
+Sources come from metadata. Each retrieved chunk keeps its original file name and page number, and the frontend shows those sources below the answer.
+```
+
+## 8. Memory
+
+Memory lets the chatbot understand recent conversation history.
+
+Without memory, every question is isolated.
+
+Example:
+
+```text
+User: Tell me about CX-MA-001.
+Assistant: CX-MA-001 is Amina Morrison.
+
+User: What is her salary?
+```
+
+With memory, the chatbot can understand:
+
+```text
+her = Amina Morrison / CX-MA-001
+```
+
+In the frontend, we store messages in React state:
+
+```js
+const [messages, setMessages] = useState([]);
+```
+
+Before sending a new question, we build recent history:
+
+```js
+function buildHistory(messages) {
+  return messages
+    .filter((message) => !message.isError)
+    .slice(-10)
+    .map((message) => ({
+      role: message.role,
+      content: message.content
+    }));
+}
+```
+
+Then the frontend sends:
+
+```js
+body: JSON.stringify({
+  question: nextQuestion,
+  history: buildHistory(messages)
+})
+```
+
+The backend sanitizes the history:
+
+```js
+function sanitizeHistory(history) {
+  return history
+    .filter((message) => message && ["user", "assistant"].includes(message.role))
+    .slice(-10)
+    .map((message) => ({
+      role: message.role,
+      content: String(message.content || "").slice(0, 1200)
+    }));
+}
+```
+
+The retriever also uses recent user questions:
+
+```js
+function buildRetrievalQuery(question, history) {
+  const recentUserQuestions = history
+    .filter((message) => message.role === "user")
+    .slice(-3)
+    .map((message) => message.content);
+
+  return [...recentUserQuestions, question].join("\n");
+}
+```
+
+This improves follow-up retrieval.
+
+Example:
+
+```text
+Previous question:
+Tell me about CX-MA-001.
+
+Current question:
+What is her shift?
+
+Retrieval query:
+Tell me about CX-MA-001.
+What is her shift?
+```
+
+This project uses short-term memory.
+
+That means:
+
+```text
+Memory exists while the chat page is open.
+Memory is not stored permanently.
+Refreshing the page clears the conversation.
+```
+
+For production, memory could be stored in:
+
+```text
+MongoDB
+Postgres
+Redis
+browser local storage
+user sessions
+```
+
+Presentation version:
+
+```text
+Memory in this project means we send recent chat history with each question. The backend uses that history to improve retrieval and gives it to the LLM so it can understand follow-up questions.
+```
+
+## Full Project Flow
+
+This is the complete flow of our LangChain RAG project:
+
+```text
+1. User loads company PDFs or uploads a document.
+2. LangChain PDFLoader reads the PDF text.
+3. The text is converted into LangChain Document objects.
+4. The text splitter cuts the documents into chunks.
+5. Each chunk is converted into an embedding vector.
+6. The vectors are stored in MemoryVectorStore.
+7. User asks a question.
+8. The question is converted into an embedding.
+9. Retriever finds the most relevant chunks.
+10. Exact matching improves employee, branch, email, and project searches.
+11. Neighbor chunks are added when needed.
+12. Retrieved chunks are formatted as document context.
+13. Context, question, and history are sent to the LLM.
+14. The LLM generates an answer using only the provided context.
+15. Backend returns answer, sources, and token usage.
+16. Frontend displays the answer, source pages, and token usage.
+```
+
+## Simple Final Explanation
+
+Use this when presenting the project:
+
+```text
+This project is a Document Q&A chatbot built with LangChain.js. The app reads PDF files, splits them into smaller chunks, converts those chunks into embeddings, stores them in a vector store, and retrieves the most relevant chunks when the user asks a question. The selected chunks are sent to an LLM as context, and the model answers using only that document context. The app also shows sources and token usage, and it supports short-term conversation memory for follow-up questions.
+```
+

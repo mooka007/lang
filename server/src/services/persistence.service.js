@@ -71,9 +71,9 @@ export async function saveIndexSnapshot(snapshot) {
   });
 }
 
-export async function searchVectorChunks(queryEmbedding, limit = 8) {
+export async function searchVectorChunks(queryEmbedding, limit = 8, user = null) {
   if (shouldUsePostgres()) {
-    return (await getPostgresPersistence()).searchVectorChunks(queryEmbedding, limit);
+    return (await getPostgresPersistence()).searchVectorChunks(queryEmbedding, limit, user);
   }
 
   return null;
@@ -93,13 +93,14 @@ async function saveConversationStore(store) {
   });
 }
 
-export async function listConversations() {
+export async function listConversations(ownerId = null) {
   if (shouldUsePostgres()) {
-    return (await getPostgresPersistence()).listConversations();
+    return (await getPostgresPersistence()).listConversations(ownerId);
   }
 
   const store = await loadConversationStore();
   return [...store.conversations]
+    .filter((conversation) => !ownerId || conversation.ownerId === ownerId)
     .sort((left, right) => String(right.updatedAt).localeCompare(String(left.updatedAt)))
     .map((conversation) => ({
       id: conversation.id,
@@ -110,19 +111,20 @@ export async function listConversations() {
     }));
 }
 
-export async function getConversation(conversationId) {
+export async function getConversation(conversationId, ownerId = null) {
   if (shouldUsePostgres()) {
-    return (await getPostgresPersistence()).getConversation(conversationId);
+    return (await getPostgresPersistence()).getConversation(conversationId, ownerId);
   }
 
   const store = await loadConversationStore();
-  return store.conversations.find((conversation) => conversation.id === conversationId) || null;
+  return store.conversations.find((conversation) => conversation.id === conversationId && (!ownerId || conversation.ownerId === ownerId)) || null;
 }
 
-export async function appendConversationTurn({ conversationId, question, answer, sources, usage }) {
+export async function appendConversationTurn({ conversationId, ownerId, question, answer, sources, usage }) {
   if (shouldUsePostgres()) {
     return (await getPostgresPersistence()).appendConversationTurn({
       conversationId,
+      ownerId,
       question,
       answer,
       sources,
@@ -139,6 +141,7 @@ export async function appendConversationTurn({ conversationId, question, answer,
   if (!conversation) {
     conversation = {
       id: createId("conv"),
+      ownerId,
       title: question.slice(0, 80),
       createdAt: now,
       updatedAt: now,
@@ -165,14 +168,16 @@ export async function appendConversationTurn({ conversationId, question, answer,
   return conversation;
 }
 
-export async function deleteConversation(conversationId) {
+export async function deleteConversation(conversationId, ownerId = null) {
   if (shouldUsePostgres()) {
-    return (await getPostgresPersistence()).deleteConversation(conversationId);
+    return (await getPostgresPersistence()).deleteConversation(conversationId, ownerId);
   }
 
   const store = await loadConversationStore();
   const beforeCount = store.conversations.length;
-  store.conversations = store.conversations.filter((conversation) => conversation.id !== conversationId);
+  store.conversations = store.conversations.filter(
+    (conversation) => conversation.id !== conversationId || (ownerId && conversation.ownerId !== ownerId)
+  );
   await saveConversationStore(store);
   return beforeCount !== store.conversations.length;
 }

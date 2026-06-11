@@ -106,6 +106,30 @@ function summarizeDocumentName(documents) {
   return `${documents.length} indexed documents`;
 }
 
+function canAccessDocument(document, user) {
+  if (!user) {
+    return false;
+  }
+
+  return user.role === "admin" || document.ownerId === user.id || document.accessLevel === "public";
+}
+
+function canManageDocument(document, user) {
+  return Boolean(user) && (user.role === "admin" || document.ownerId === user.id);
+}
+
+function accessibleDocuments(user) {
+  return activeIndex.documents.filter((document) => canAccessDocument(document, user));
+}
+
+function accessibleDocumentIds(user) {
+  return new Set(accessibleDocuments(user).map((document) => document.id));
+}
+
+function documentNameForUser(user) {
+  return summarizeDocumentName(accessibleDocuments(user));
+}
+
 async function persistActiveIndex() {
   await saveIndexSnapshot(createSnapshot());
 }
@@ -141,7 +165,7 @@ async function loadFile(filePath, displayName) {
   throw error;
 }
 
-function normalizeDocuments(documents, displayName, documentId) {
+function normalizeDocuments(documents, displayName, documentId, ownerId, accessLevel) {
   return documents.map((document, index) => {
     const page = pageFromMetadata(document.metadata);
 
@@ -150,6 +174,8 @@ function normalizeDocuments(documents, displayName, documentId) {
       metadata: {
         ...document.metadata,
         documentId,
+        ownerId,
+        accessLevel,
         source: displayName,
         page: page || index + 1
       }
@@ -175,12 +201,13 @@ function extractExactTerms(question) {
   return [...new Set(terms.map((term) => term.toLowerCase()))];
 }
 
-function findExactMatches(question, limit = 12) {
+function findExactMatches(question, user, limit = 12) {
   const terms = extractExactTerms(question);
   if (terms.length === 0) {
     return [];
   }
 
+  const allowedDocumentIds = accessibleDocumentIds(user);
   const seen = new Set();
   const matches = [];
   const perTermLimit = terms.length > 4 ? 1 : Math.max(2, Math.ceil(limit / terms.length));
@@ -244,7 +271,7 @@ function findExactMatches(question, limit = 12) {
       }
 
       for (const neighbor of neighbors) {
-        if (neighbor?.metadata?.source === document.metadata.source) {
+        if (neighbor?.metadata?.source === document.metadata.source && allowedDocumentIds.has(neighbor.metadata.documentId)) {
           candidates.push(neighbor);
         }
       }
@@ -273,7 +300,7 @@ function findExactMatches(question, limit = 12) {
     let termMatches = 0;
     const isEmployeeId = /^cx-(?:[a-z]{2}-)?\d{3}$/.test(term);
     const matchingDocuments = activeIndex.chunks
-      .filter((document) => document.pageContent.toLowerCase().includes(term))
+      .filter((document) => allowedDocumentIds.has(document.metadata.documentId) && document.pageContent.toLowerCase().includes(term))
       .sort((left, right) => exactMatchScore(right, term) - exactMatchScore(left, term));
 
     for (const document of matchingDocuments) {
@@ -328,15 +355,16 @@ function isBranchOverviewQuestion(question) {
     || /\bbranch\s+locations\b/i.test(question);
 }
 
-function findBranchOverviewMatches() {
+function findBranchOverviewMatches(user) {
   const seenSources = new Set();
   const matches = [];
+  const allowedDocumentIds = accessibleDocumentIds(user);
 
   for (const document of activeIndex.chunks) {
     const source = String(document.metadata.source || "").toLowerCase();
     const page = pageFromMetadata(document.metadata);
 
-    if (!source.includes("branch") || page !== 1 || seenSources.has(source)) {
+    if (!allowedDocumentIds.has(document.metadata.documentId) || !source.includes("branch") || page !== 1 || seenSources.has(source)) {
       continue;
     }
 
@@ -371,12 +399,12 @@ export async function loadPersistedRagIndex() {
   return getIndexStatus();
 }
 
-export function listIndexedDocuments() {
-  return activeIndex.documents;
+export function listIndexedDocuments(user) {
+  return accessibleDocuments(user);
 }
 
-export async function deleteIndexedDocument(documentId) {
-  const documentExists = activeIndex.documents.some((document) => document.id === documentId);
+export async function deleteIndexedDocument(documentId, user) {
+  const documentExists = activeIndex.documents.some((document) => document.id === documentId && canManageDocument(document, user));
 
   if (!documentExists) {
     return false;
@@ -414,13 +442,17 @@ export async function deleteIndexedDocument(documentId) {
   return true;
 }
 
-export function getIndexStatus() {
+export function getIndexStatus(user) {
+  const documents = accessibleDocuments(user);
+  const documentIds = new Set(documents.map((document) => document.id));
+  const chunkCount = activeIndex.vectorRecords.filter((record) => documentIds.has(record.documentId)).length;
+
   return {
-    ready: activeIndex.vectorRecords.length > 0,
-    documentName: activeIndex.documentName,
-    chunkCount: activeIndex.chunkCount,
+    ready: chunkCount > 0,
+    documentName: documentNameForUser(user),
+    chunkCount,
     indexedAt: activeIndex.indexedAt,
-    documents: activeIndex.documents,
+    documents,
     tokenUsage: getTokenUsage()
   };
 }
@@ -451,6 +483,8 @@ export async function indexFiles(files, options = {}) {
   const loadedDocuments = [];
   const documentRecords = [];
   const mode = options.mode || "replace";
+  const ownerId = options.ownerId || null;
+  const accessLevel = ["private", "public", "team"].includes(options.accessLevel) ? options.accessLevel : "private";
 
   for (const file of files) {
     const filePath = typeof file === "string" ? file : file.filePath;
@@ -461,13 +495,15 @@ export async function indexFiles(files, options = {}) {
       fileName: path.basename(filePath),
       displayName,
       sourceType: typeof file === "string" ? options.sourceType || "sample" : file.sourceType || options.sourceType || "sample",
+      ownerId,
+      accessLevel,
       status: "indexed",
       chunkCount: 0,
       indexedAt: new Date().toISOString()
     };
     const documents = await loadFile(filePath, displayName);
     documentRecords.push(documentRecord);
-    loadedDocuments.push(...normalizeDocuments(documents, displayName, documentId));
+    loadedDocuments.push(...normalizeDocuments(documents, displayName, documentId, ownerId, accessLevel));
   }
 
   const splitter = new RecursiveCharacterTextSplitter({
@@ -494,8 +530,34 @@ export async function indexFiles(files, options = {}) {
     documentRecord.chunkCount = chunkRecords.filter((chunk) => chunk.documentId === documentRecord.id).length;
   }
 
-  const nextDocuments = mode === "append" ? [...activeIndex.documents, ...documentRecords] : documentRecords;
-  const nextRecords = mode === "append" ? [...activeIndex.vectorRecords, ...chunkRecords] : chunkRecords;
+  const replaceForOwner = mode === "replace" && ownerId;
+  const baseDocuments = replaceForOwner
+    ? activeIndex.documents.filter((document) => document.ownerId !== ownerId)
+    : mode === "append"
+      ? activeIndex.documents
+      : [];
+  const baseDocumentIds = new Set(baseDocuments.map((document) => document.id));
+  const baseRecords = replaceForOwner
+    ? activeIndex.vectorRecords.filter((record) => baseDocumentIds.has(record.documentId))
+    : mode === "append"
+      ? activeIndex.vectorRecords
+      : [];
+  const nextDocuments = [...baseDocuments, ...documentRecords];
+  const nextRecords = [...baseRecords, ...chunkRecords].map((record, index) => {
+    const metadata = {
+      ...record.metadata,
+      chunkIndex: index
+    };
+
+    return {
+      ...record,
+      metadata,
+      document: new Document({
+        pageContent: record.text,
+        metadata
+      })
+    };
+  });
 
   activeIndex = {
     documents: nextDocuments,
@@ -510,22 +572,24 @@ export async function indexFiles(files, options = {}) {
   return getIndexStatus();
 }
 
-async function retrieveVectorMatches(query, limit = 8) {
+async function retrieveVectorMatches(query, limit = 8, user) {
   if (!activeIndex.vectorRecords.length) {
     return [];
   }
 
   const embeddings = createEmbeddings();
   const queryVector = await embeddings.embedQuery(query);
+  const allowedDocumentIds = accessibleDocumentIds(user);
 
   if (env.storageProvider === "postgres") {
-    const rows = await searchVectorChunks(queryVector, limit);
+    const rows = await searchVectorChunks(queryVector, limit, user);
     if (rows) {
       return rows.map((row) => documentFromRecord(row));
     }
   }
 
   return activeIndex.vectorRecords
+    .filter((record) => allowedDocumentIds.has(record.documentId))
     .map((record) => ({
       score: cosineSimilarity(queryVector, record.embedding),
       document: record.document
@@ -535,23 +599,23 @@ async function retrieveVectorMatches(query, limit = 8) {
     .map((item) => item.document);
 }
 
-export async function askQuestion(question, history = []) {
+export async function askQuestion(question, history = [], user) {
   requireModelConfig();
 
-  if (!activeIndex.vectorRecords.length) {
+  if (!accessibleDocuments(user).length) {
     const error = new Error("No document is indexed yet. Index the sample PDF or upload a document first.");
     error.status = 400;
     throw error;
   }
 
   const retrievalQuery = buildRetrievalQuery(question, history);
-  const branchOverviewDocuments = isBranchOverviewQuestion(question) ? findBranchOverviewMatches() : [];
+  const branchOverviewDocuments = isBranchOverviewQuestion(question) ? findBranchOverviewMatches(user) : [];
   const sourceLimit = branchOverviewDocuments.length ? 18 : 12;
   const sourceDocuments = isConversationHistoryQuestion(question)
     ? []
     : mergeDocuments(
-        [...branchOverviewDocuments, ...findExactMatches(retrievalQuery)],
-        await retrieveVectorMatches(retrievalQuery, 8),
+        [...branchOverviewDocuments, ...findExactMatches(retrievalQuery, user)],
+        await retrieveVectorMatches(retrievalQuery, 8, user),
         sourceLimit
       );
   const context = sourceDocuments

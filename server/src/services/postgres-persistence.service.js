@@ -46,9 +46,11 @@ function parseVector(value) {
 function mapDocument(document) {
   return {
     id: document.id,
+    ownerId: document.ownerId,
     fileName: document.fileName,
     displayName: document.displayName,
     sourceType: document.sourceType,
+    accessLevel: document.accessLevel,
     status: document.status,
     chunkCount: document.chunkCount,
     indexedAt: toIso(document.indexedAt)
@@ -112,9 +114,11 @@ export async function saveIndexSnapshot(snapshot) {
       await tx.ragDocument.create({
         data: {
           id: document.id,
+          ownerId: document.ownerId || null,
           fileName: document.fileName || document.displayName,
           displayName: document.displayName,
           sourceType: document.sourceType || "upload",
+          accessLevel: document.accessLevel || "private",
           status: document.status || "indexed",
           chunkCount: document.chunkCount || 0,
           indexedAt: document.indexedAt ? new Date(document.indexedAt) : new Date()
@@ -155,17 +159,22 @@ export async function saveIndexSnapshot(snapshot) {
   });
 }
 
-export async function searchVectorChunks(queryEmbedding, limit = 8) {
+export async function searchVectorChunks(queryEmbedding, limit = 8, user = null) {
   const vector = vectorToSqlValue(queryEmbedding || []);
+  const ownerId = user?.id || "";
+  const isAdmin = user?.role === "admin";
   const rows = await prisma.$queryRaw`
     SELECT
-      id,
-      document_id AS "documentId",
-      text,
-      metadata,
-      1 - (embedding <=> ${vector}::vector) AS score
+      c.id,
+      c.document_id AS "documentId",
+      c.text,
+      c.metadata,
+      1 - (c.embedding <=> ${vector}::vector) AS score
     FROM rag_chunks
-    ORDER BY embedding <=> ${vector}::vector
+    c
+    INNER JOIN rag_documents d ON d.id = c.document_id
+    WHERE (${isAdmin}::boolean OR d.owner_id = ${ownerId} OR d.access_level = 'public')
+    ORDER BY c.embedding <=> ${vector}::vector
     LIMIT ${limit}
   `;
 
@@ -178,8 +187,13 @@ export async function searchVectorChunks(queryEmbedding, limit = 8) {
   }));
 }
 
-export async function listConversations() {
+export async function listConversations(ownerId = null) {
   const conversations = await prisma.conversation.findMany({
+    where: ownerId
+      ? {
+          ownerId
+        }
+      : undefined,
     orderBy: {
       updatedAt: "desc"
     },
@@ -201,7 +215,7 @@ export async function listConversations() {
   }));
 }
 
-export async function getConversation(conversationId) {
+export async function getConversation(conversationId, ownerId = null) {
   const conversation = await prisma.conversation.findUnique({
     where: {
       id: conversationId
@@ -219,8 +233,13 @@ export async function getConversation(conversationId) {
     return null;
   }
 
+  if (ownerId && conversation.ownerId !== ownerId) {
+    return null;
+  }
+
   return {
     id: conversation.id,
+    ownerId: conversation.ownerId,
     title: conversation.title,
     createdAt: toIso(conversation.createdAt),
     updatedAt: toIso(conversation.updatedAt),
@@ -228,7 +247,7 @@ export async function getConversation(conversationId) {
   };
 }
 
-export async function appendConversationTurn({ conversationId, question, answer, sources, usage }) {
+export async function appendConversationTurn({ conversationId, ownerId, question, answer, sources, usage }) {
   const now = new Date();
   let conversation = conversationId
     ? await prisma.conversation.findUnique({
@@ -238,10 +257,17 @@ export async function appendConversationTurn({ conversationId, question, answer,
       })
     : null;
 
+  if (conversation && ownerId && conversation.ownerId !== ownerId) {
+    const error = new Error("Conversation not found.");
+    error.status = 404;
+    throw error;
+  }
+
   if (!conversation) {
     conversation = await prisma.conversation.create({
       data: {
         id: createId("conv"),
+        ownerId,
         title: question.slice(0, 80)
       }
     });
@@ -281,14 +307,19 @@ export async function appendConversationTurn({ conversationId, question, answer,
   return getConversation(conversation.id);
 }
 
-export async function deleteConversation(conversationId) {
+export async function deleteConversation(conversationId, ownerId = null) {
   try {
-    await prisma.conversation.delete({
+    const result = await prisma.conversation.deleteMany({
       where: {
-        id: conversationId
+        id: conversationId,
+        ...(ownerId
+          ? {
+              ownerId
+            }
+          : {})
       }
     });
-    return true;
+    return result.count > 0;
   } catch (error) {
     if (error.code === "P2025") {
       return false;

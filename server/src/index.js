@@ -1,6 +1,7 @@
 import cors from "cors";
 import express from "express";
 import { env } from "./config/env.js";
+import { authRouter } from "./routes/auth.routes.js";
 import { documentsRouter } from "./routes/documents.routes.js";
 import { loadPersistedRagIndex } from "./services/rag.service.js";
 import { ensureStorageFolders } from "./utils/storage.js";
@@ -30,6 +31,7 @@ app.get("/health", (_request, response) => {
   });
 });
 
+app.use("/api/auth", authRouter);
 app.use("/api", documentsRouter);
 
 app.use((error, _request, response, _next) => {

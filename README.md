@@ -12,6 +12,8 @@ Chat with PDF, text, or Markdown documents using a Node.js API, LangChain.js ret
 - Rich fictional employee records with salary, shift, manager, role, project manager, tasks, skills, languages, and access level.
 - Local persistent index saved in `server/data/rag-index.json`.
 - PostgreSQL + Prisma storage mode with `pgvector` for production-style persistence.
+- Email/password authentication with JWT-protected document and chat APIs.
+- Per-user document and conversation ownership.
 - Document library API for listing and deleting indexed documents.
 - Saved chat conversations in `server/data/conversations.json`.
 
@@ -125,6 +127,9 @@ Default URLs:
 ## API Endpoints
 
 - `GET /health`
+- `POST /api/auth/register`
+- `POST /api/auth/login`
+- `GET /api/auth/me`
 - `GET /api/status`
 - `POST /api/index-sample`
 - `POST /api/upload`
@@ -139,6 +144,7 @@ Example chat request:
 
 ```bash
 curl -X POST http://localhost:5000/api/chat \
+  -H "Authorization: Bearer YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d "{\"question\":\"How does async and await help with API calls?\"}"
 ```
@@ -157,8 +163,18 @@ Regenerate all Company X PDFs with:
 npm run sample:pdf
 ```
 
+## Auth And Permissions
+
+The app now requires login before indexing, uploading, chatting, or reading saved conversations.
+
+- Documents are owned by the logged-in user.
+- Conversations are owned by the logged-in user.
+- Retrieval only searches documents the user can access.
+- Admin users can access all documents.
+- Public document access is supported in the storage layer for future sharing.
+
 ## Next Steps
 
-- Add authentication and document permissions on top of the PostgreSQL document tables.
 - Stream answers from the backend to the frontend.
 - Add richer document versioning and re-index controls.
+- Add teams and shared document collections.

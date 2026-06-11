@@ -3,6 +3,7 @@ import fs from "node:fs/promises";
 import multer from "multer";
 import path from "node:path";
 import { env } from "../config/env.js";
+import { requireAuth } from "../middleware/auth.middleware.js";
 import {
   askQuestion,
   deleteIndexedDocument,
@@ -59,6 +60,7 @@ function sanitizeHistory(history) {
 }
 
 export const documentsRouter = express.Router();
+documentsRouter.use(requireAuth);
 
 async function getCompanySampleFiles() {
   const files = await fs.readdir(env.samplePdfDir);
@@ -79,35 +81,35 @@ async function getCompanySampleFiles() {
     }));
 }
 
-documentsRouter.get("/status", (_request, response) => {
-  response.json(getIndexStatus());
+documentsRouter.get("/status", (request, response) => {
+  response.json(getIndexStatus(request.user));
 });
 
-documentsRouter.get("/documents", (_request, response) => {
+documentsRouter.get("/documents", (request, response) => {
   response.json({
-    documents: listIndexedDocuments()
+    documents: listIndexedDocuments(request.user)
   });
 });
 
 documentsRouter.delete("/documents/:documentId", async (request, response, next) => {
   try {
-    const deleted = await deleteIndexedDocument(request.params.documentId);
+    const deleted = await deleteIndexedDocument(request.params.documentId, request.user);
     if (!deleted) {
       const error = new Error("Document not found.");
       error.status = 404;
       throw error;
     }
 
-    response.json(getIndexStatus());
+    response.json(getIndexStatus(request.user));
   } catch (error) {
     next(error);
   }
 });
 
-documentsRouter.get("/conversations", async (_request, response, next) => {
+documentsRouter.get("/conversations", async (request, response, next) => {
   try {
     response.json({
-      conversations: await listConversations()
+      conversations: await listConversations(request.user.id)
     });
   } catch (error) {
     next(error);
@@ -116,7 +118,7 @@ documentsRouter.get("/conversations", async (_request, response, next) => {
 
 documentsRouter.get("/conversations/:conversationId", async (request, response, next) => {
   try {
-    const conversation = await getConversation(request.params.conversationId);
+    const conversation = await getConversation(request.params.conversationId, request.user.id);
     if (!conversation) {
       const error = new Error("Conversation not found.");
       error.status = 404;
@@ -133,7 +135,7 @@ documentsRouter.get("/conversations/:conversationId", async (request, response, 
 
 documentsRouter.delete("/conversations/:conversationId", async (request, response, next) => {
   try {
-    const deleted = await deleteConversation(request.params.conversationId);
+    const deleted = await deleteConversation(request.params.conversationId, request.user.id);
     if (!deleted) {
       const error = new Error("Conversation not found.");
       error.status = 404;
@@ -141,23 +143,25 @@ documentsRouter.delete("/conversations/:conversationId", async (request, respons
     }
 
     response.json({
-      conversations: await listConversations()
+      conversations: await listConversations(request.user.id)
     });
   } catch (error) {
     next(error);
   }
 });
 
-documentsRouter.post("/index-sample", async (_request, response, next) => {
+documentsRouter.post("/index-sample", async (request, response, next) => {
   try {
     const sampleFiles = await getCompanySampleFiles();
-    const status = await indexFiles(sampleFiles, {
+    await indexFiles(sampleFiles, {
       displayName: `Company X Knowledge Base (${sampleFiles.length} PDFs)`,
       mode: "replace",
-      sourceType: "sample"
+      sourceType: "sample",
+      ownerId: request.user.id,
+      accessLevel: "private"
     });
 
-    response.json(status);
+    response.json(getIndexStatus(request.user));
   } catch (error) {
     next(error);
   }
@@ -171,13 +175,15 @@ documentsRouter.post("/upload", upload.single("file"), async (request, response,
       throw error;
     }
 
-    const status = await indexFile(request.file.path, {
+    await indexFile(request.file.path, {
       displayName: request.file.originalname,
       mode: "append",
-      sourceType: "upload"
+      sourceType: "upload",
+      ownerId: request.user.id,
+      accessLevel: String(request.body?.accessLevel || "private")
     });
 
-    response.json(status);
+    response.json(getIndexStatus(request.user));
   } catch (error) {
     next(error);
   }
@@ -193,12 +199,13 @@ documentsRouter.post("/chat", async (request, response, next) => {
     }
 
     const conversationId = String(request.body?.conversationId || "").trim();
-    const storedConversation = conversationId ? await getConversation(conversationId) : null;
+    const storedConversation = conversationId ? await getConversation(conversationId, request.user.id) : null;
     const requestHistory = sanitizeHistory(request.body?.history);
     const history = requestHistory.length ? requestHistory : sanitizeHistory(storedConversation?.messages);
-    const result = await askQuestion(question, history);
+    const result = await askQuestion(question, history, request.user);
     const conversation = await appendConversationTurn({
       conversationId: conversationId || null,
+      ownerId: request.user.id,
       question,
       answer: result.answer,
       sources: result.sources,

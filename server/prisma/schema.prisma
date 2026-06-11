@@ -6,11 +6,28 @@ datasource db {
   provider = "postgresql"
 }
 
+model User {
+  id           String         @id
+  email        String         @unique
+  name         String
+  passwordHash String         @map("password_hash")
+  role         String         @default("user")
+  createdAt    DateTime       @default(now()) @map("created_at")
+  updatedAt    DateTime       @updatedAt @map("updated_at")
+  documents    RagDocument[]
+  conversations Conversation[]
+
+  @@map("users")
+}
+
 model RagDocument {
   id          String     @id
+  ownerId     String?    @map("owner_id")
+  owner       User?      @relation(fields: [ownerId], references: [id], onDelete: Cascade)
   fileName    String     @map("file_name")
   displayName String     @map("display_name")
   sourceType  String     @map("source_type")
+  accessLevel String     @default("private") @map("access_level")
   status      String     @default("indexed")
   chunkCount  Int        @default(0) @map("chunk_count")
   indexedAt   DateTime   @default(now()) @map("indexed_at")
@@ -18,6 +35,8 @@ model RagDocument {
   updatedAt   DateTime   @updatedAt @map("updated_at")
   chunks      RagChunk[]
 
+  @@index([ownerId])
+  @@index([accessLevel])
   @@map("rag_documents")
 }
 
@@ -40,11 +59,14 @@ model RagChunk {
 
 model Conversation {
   id        String    @id
+  ownerId   String?   @map("owner_id")
+  owner     User?     @relation(fields: [ownerId], references: [id], onDelete: Cascade)
   title     String
   createdAt DateTime  @default(now()) @map("created_at")
   updatedAt DateTime  @updatedAt @map("updated_at")
   messages  Message[]
 
+  @@index([ownerId])
   @@map("conversations")
 }
 

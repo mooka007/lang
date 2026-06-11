@@ -7,6 +7,7 @@ import {
   Files,
   FileText,
   LoaderCircle,
+  LogOut,
   MessageSquare,
   Plus,
   RefreshCw,
@@ -70,6 +71,17 @@ function buildHistory(messages) {
 }
 
 export function DocumentChat() {
+  const [auth, setAuth] = useState({
+    ready: false,
+    token: null,
+    user: null
+  });
+  const [authMode, setAuthMode] = useState("login");
+  const [authForm, setAuthForm] = useState({
+    name: "",
+    email: "",
+    password: ""
+  });
   const [status, setStatus] = useState({
     ready: false,
     documentName: null,
@@ -98,17 +110,77 @@ export function DocumentChat() {
     return `${status.chunkCount} chunks`;
   }, [status]);
 
+  function clearSession() {
+    localStorage.removeItem("documentQaAuth");
+    setAuth({
+      ready: true,
+      token: null,
+      user: null
+    });
+    setMessages([]);
+    setConversations([]);
+    setActiveConversationId(null);
+  }
+
+  function authHeaders(extraHeaders = {}) {
+    return {
+      ...extraHeaders,
+      ...(auth.token
+        ? {
+            Authorization: `Bearer ${auth.token}`
+          }
+        : {})
+    };
+  }
+
+  async function apiFetch(path, options = {}) {
+    return fetch(`${apiBase}${path}`, {
+      ...options,
+      headers: authHeaders(options.headers || {})
+    });
+  }
+
   async function readJson(response) {
     const payload = await response.json().catch(() => ({}));
     if (!response.ok) {
+      if (response.status === 401) {
+        clearSession();
+      }
       throw new Error(payload.error || "Request failed");
     }
     return payload;
   }
 
+  function saveSession(payload) {
+    localStorage.setItem("documentQaAuth", JSON.stringify(payload));
+    setAuth({
+      ready: true,
+      token: payload.token,
+      user: payload.user
+    });
+  }
+
+  async function submitAuth(event) {
+    event.preventDefault();
+    setError("");
+
+    try {
+      const response = await fetch(`${apiBase}/auth/${authMode}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(authForm)
+      });
+      saveSession(await readJson(response));
+    } catch (authError) {
+      setError(authError.message);
+    }
+  }
+
   async function refreshStatus() {
     try {
-      const response = await fetch(`${apiBase}/status`);
+      const response = await apiFetch("/status");
       const payload = await readJson(response);
       setStatus(payload);
     } catch (statusError) {
@@ -118,7 +190,7 @@ export function DocumentChat() {
 
   async function refreshConversations() {
     try {
-      const response = await fetch(`${apiBase}/conversations`);
+      const response = await apiFetch("/conversations");
       const payload = await readJson(response);
       setConversations(payload.conversations || []);
     } catch (conversationError) {
@@ -135,7 +207,7 @@ export function DocumentChat() {
     setIsIndexing(true);
 
     try {
-      const response = await fetch(`${apiBase}/index-sample`, {
+      const response = await apiFetch("/index-sample", {
         method: "POST"
       });
       const payload = await readJson(response);
@@ -163,7 +235,7 @@ export function DocumentChat() {
     formData.append("file", file);
 
     try {
-      const response = await fetch(`${apiBase}/upload`, {
+      const response = await apiFetch("/upload", {
         method: "POST",
         body: formData
       });
@@ -190,7 +262,7 @@ export function DocumentChat() {
     setError("");
 
     try {
-      const response = await fetch(`${apiBase}/documents/${documentId}`, {
+      const response = await apiFetch(`/documents/${documentId}`, {
         method: "DELETE"
       });
       const payload = await readJson(response);
@@ -204,7 +276,7 @@ export function DocumentChat() {
     setError("");
 
     try {
-      const response = await fetch(`${apiBase}/conversations/${conversationId}`);
+      const response = await apiFetch(`/conversations/${conversationId}`);
       const payload = await readJson(response);
       setActiveConversationId(payload.conversation.id);
       setMessages(payload.conversation.messages || []);
@@ -218,7 +290,7 @@ export function DocumentChat() {
     setError("");
 
     try {
-      const response = await fetch(`${apiBase}/conversations/${conversationId}`, {
+      const response = await apiFetch(`/conversations/${conversationId}`, {
         method: "DELETE"
       });
       const payload = await readJson(response);
@@ -251,7 +323,7 @@ export function DocumentChat() {
     ]);
 
     try {
-      const response = await fetch(`${apiBase}/chat`, {
+      const response = await apiFetch("/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -296,12 +368,128 @@ export function DocumentChat() {
   }
 
   useEffect(() => {
-    refreshWorkspace();
+    async function restoreSession() {
+      const saved = localStorage.getItem("documentQaAuth");
+      if (!saved) {
+        setAuth((current) => ({
+          ...current,
+          ready: true
+        }));
+        return;
+      }
+
+      try {
+        const parsed = JSON.parse(saved);
+        const response = await fetch(`${apiBase}/auth/me`, {
+          headers: {
+            Authorization: `Bearer ${parsed.token}`
+          }
+        });
+        const payload = await readJson(response);
+        setAuth({
+          ready: true,
+          token: parsed.token,
+          user: payload.user
+        });
+      } catch {
+        clearSession();
+      }
+    }
+
+    restoreSession();
   }, []);
+
+  useEffect(() => {
+    if (auth.ready && auth.token) {
+      refreshWorkspace();
+    }
+  }, [auth.ready, auth.token]);
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isAsking]);
+
+  if (!auth.ready) {
+    return (
+      <main className="auth-shell">
+        <LoaderCircle className="spin" size={28} aria-hidden="true" />
+      </main>
+    );
+  }
+
+  if (!auth.token) {
+    return (
+      <main className="auth-shell">
+        <form className="auth-card" onSubmit={submitAuth}>
+          <div className="brand-lockup">
+            <div className="brand-mark">
+              <FileText size={24} aria-hidden="true" />
+            </div>
+            <div>
+              <p className="eyebrow">Private RAG</p>
+              <h1>{authMode === "login" ? "Welcome back" : "Create account"}</h1>
+            </div>
+          </div>
+
+          {authMode === "register" ? (
+            <label className="field-label">
+              <span>Name</span>
+              <input
+                value={authForm.name}
+                onChange={(event) => setAuthForm((current) => ({ ...current, name: event.target.value }))}
+                placeholder="Your name"
+                autoComplete="name"
+              />
+            </label>
+          ) : null}
+
+          <label className="field-label">
+            <span>Email</span>
+            <input
+              value={authForm.email}
+              onChange={(event) => setAuthForm((current) => ({ ...current, email: event.target.value }))}
+              placeholder="you@example.com"
+              type="email"
+              autoComplete="email"
+            />
+          </label>
+
+          <label className="field-label">
+            <span>Password</span>
+            <input
+              value={authForm.password}
+              onChange={(event) => setAuthForm((current) => ({ ...current, password: event.target.value }))}
+              placeholder="Minimum 8 characters"
+              type="password"
+              autoComplete={authMode === "login" ? "current-password" : "new-password"}
+            />
+          </label>
+
+          {error ? (
+            <div className="error-banner" role="alert">
+              <AlertCircle size={18} aria-hidden="true" />
+              <span>{error}</span>
+            </div>
+          ) : null}
+
+          <button type="submit" className="primary-button">
+            {authMode === "login" ? "Login" : "Register"}
+          </button>
+
+          <button
+            type="button"
+            className="text-button"
+            onClick={() => {
+              setError("");
+              setAuthMode(authMode === "login" ? "register" : "login");
+            }}
+          >
+            {authMode === "login" ? "Create a new account" : "Use an existing account"}
+          </button>
+        </form>
+      </main>
+    );
+  }
 
   return (
     <main className="app-shell">
@@ -314,6 +502,16 @@ export function DocumentChat() {
             <p className="eyebrow">LangChain.js</p>
             <h1>Document Q&A</h1>
           </div>
+        </div>
+
+        <div className="user-panel">
+          <div>
+            <strong>{auth.user?.name}</strong>
+            <span>{auth.user?.email}</span>
+          </div>
+          <button type="button" className="small-icon-button" onClick={clearSession} aria-label="Log out">
+            <LogOut size={15} />
+          </button>
         </div>
 
         <section className="status-panel" aria-label="Index status">

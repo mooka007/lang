@@ -61,6 +61,8 @@ export const env = {
   samplePdfPath: path.join(serverDir, "pdfs", "company-x-employee-knowledge-base.pdf"),
   storageProvider: normalizeStorageProvider(process.env.STORAGE_PROVIDER),
   databaseUrl: process.env.DATABASE_URL || "",
+  jwtSecret: process.env.JWT_SECRET || "development-jwt-secret-change-me",
+  jwtExpiresInSeconds: optionalNumber(process.env.JWT_EXPIRES_IN_SECONDS, 60 * 60 * 24 * 7),
   llmProvider,
   embeddingProvider,
   embeddingBatchSize: optionalNumber(process.env.EMBEDDING_BATCH_SIZE, 32),

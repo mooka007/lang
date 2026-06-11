@@ -1,0 +1,298 @@
+import { prisma } from "../config/prisma.js";
+import { randomUUID } from "node:crypto";
+
+function createId(prefix) {
+  return `${prefix}_${randomUUID()}`;
+}
+
+function toIso(value) {
+  return value instanceof Date ? value.toISOString() : value;
+}
+
+function summarizeDocumentName(documents) {
+  if (!documents.length) {
+    return null;
+  }
+
+  if (documents.length === 1) {
+    return documents[0].displayName;
+  }
+
+  return `${documents.length} indexed documents`;
+}
+
+function vectorToSqlValue(embedding) {
+  const safeValues = embedding.map((value) => {
+    const number = Number(value);
+    return Number.isFinite(number) ? number : 0;
+  });
+
+  return `[${safeValues.join(",")}]`;
+}
+
+function parseVector(value) {
+  if (Array.isArray(value)) {
+    return value.map(Number);
+  }
+
+  return String(value || "")
+    .replace(/^\[/, "")
+    .replace(/\]$/, "")
+    .split(",")
+    .map((item) => Number(item.trim()))
+    .filter((item) => Number.isFinite(item));
+}
+
+function mapDocument(document) {
+  return {
+    id: document.id,
+    fileName: document.fileName,
+    displayName: document.displayName,
+    sourceType: document.sourceType,
+    status: document.status,
+    chunkCount: document.chunkCount,
+    indexedAt: toIso(document.indexedAt)
+  };
+}
+
+function mapMessage(message) {
+  return {
+    id: message.id,
+    role: message.role,
+    content: message.content,
+    sources: message.sources || [],
+    usage: message.usage || null,
+    createdAt: toIso(message.createdAt)
+  };
+}
+
+export async function loadIndexSnapshot() {
+  const documents = await prisma.ragDocument.findMany({
+    orderBy: {
+      indexedAt: "asc"
+    }
+  });
+  const chunks = await prisma.$queryRaw`
+    SELECT
+      id,
+      document_id AS "documentId",
+      text,
+      metadata,
+      embedding::text AS embedding,
+      chunk_index AS "chunkIndex",
+      page,
+      source
+    FROM rag_chunks
+    ORDER BY chunk_index ASC
+  `;
+  const mappedDocuments = documents.map(mapDocument);
+  const mappedChunks = chunks.map((chunk) => ({
+    id: chunk.id,
+    documentId: chunk.documentId,
+    text: chunk.text,
+    metadata: chunk.metadata,
+    embedding: parseVector(chunk.embedding)
+  }));
+
+  return {
+    version: 1,
+    documentName: summarizeDocumentName(mappedDocuments),
+    indexedAt: mappedDocuments.at(-1)?.indexedAt || null,
+    documents: mappedDocuments,
+    chunks: mappedChunks
+  };
+}
+
+export async function saveIndexSnapshot(snapshot) {
+  await prisma.$transaction(async (tx) => {
+    await tx.ragChunk.deleteMany();
+    await tx.ragDocument.deleteMany();
+
+    for (const document of snapshot.documents || []) {
+      await tx.ragDocument.create({
+        data: {
+          id: document.id,
+          fileName: document.fileName || document.displayName,
+          displayName: document.displayName,
+          sourceType: document.sourceType || "upload",
+          status: document.status || "indexed",
+          chunkCount: document.chunkCount || 0,
+          indexedAt: document.indexedAt ? new Date(document.indexedAt) : new Date()
+        }
+      });
+    }
+
+    for (const chunk of snapshot.chunks || []) {
+      const metadataJson = JSON.stringify(chunk.metadata || {});
+      const vector = vectorToSqlValue(chunk.embedding || []);
+      const page = Number.isFinite(Number(chunk.metadata?.page)) ? Number(chunk.metadata.page) : null;
+      const source = chunk.metadata?.source ? String(chunk.metadata.source) : null;
+      const chunkIndex = Number.isFinite(Number(chunk.metadata?.chunkIndex)) ? Number(chunk.metadata.chunkIndex) : 0;
+
+      await tx.$executeRaw`
+        INSERT INTO rag_chunks (
+          id,
+          document_id,
+          text,
+          metadata,
+          embedding,
+          chunk_index,
+          page,
+          source
+        )
+        VALUES (
+          ${chunk.id},
+          ${chunk.documentId},
+          ${chunk.text},
+          ${metadataJson}::jsonb,
+          ${vector}::vector,
+          ${chunkIndex},
+          ${page},
+          ${source}
+        )
+      `;
+    }
+  });
+}
+
+export async function searchVectorChunks(queryEmbedding, limit = 8) {
+  const vector = vectorToSqlValue(queryEmbedding || []);
+  const rows = await prisma.$queryRaw`
+    SELECT
+      id,
+      document_id AS "documentId",
+      text,
+      metadata,
+      1 - (embedding <=> ${vector}::vector) AS score
+    FROM rag_chunks
+    ORDER BY embedding <=> ${vector}::vector
+    LIMIT ${limit}
+  `;
+
+  return rows.map((chunk) => ({
+    id: chunk.id,
+    documentId: chunk.documentId,
+    text: chunk.text,
+    metadata: chunk.metadata,
+    score: Number(chunk.score || 0)
+  }));
+}
+
+export async function listConversations() {
+  const conversations = await prisma.conversation.findMany({
+    orderBy: {
+      updatedAt: "desc"
+    },
+    include: {
+      _count: {
+        select: {
+          messages: true
+        }
+      }
+    }
+  });
+
+  return conversations.map((conversation) => ({
+    id: conversation.id,
+    title: conversation.title,
+    createdAt: toIso(conversation.createdAt),
+    updatedAt: toIso(conversation.updatedAt),
+    messageCount: conversation._count.messages
+  }));
+}
+
+export async function getConversation(conversationId) {
+  const conversation = await prisma.conversation.findUnique({
+    where: {
+      id: conversationId
+    },
+    include: {
+      messages: {
+        orderBy: {
+          createdAt: "asc"
+        }
+      }
+    }
+  });
+
+  if (!conversation) {
+    return null;
+  }
+
+  return {
+    id: conversation.id,
+    title: conversation.title,
+    createdAt: toIso(conversation.createdAt),
+    updatedAt: toIso(conversation.updatedAt),
+    messages: conversation.messages.map(mapMessage)
+  };
+}
+
+export async function appendConversationTurn({ conversationId, question, answer, sources, usage }) {
+  const now = new Date();
+  let conversation = conversationId
+    ? await prisma.conversation.findUnique({
+        where: {
+          id: conversationId
+        }
+      })
+    : null;
+
+  if (!conversation) {
+    conversation = await prisma.conversation.create({
+      data: {
+        id: createId("conv"),
+        title: question.slice(0, 80)
+      }
+    });
+  }
+
+  await prisma.$transaction([
+    prisma.conversation.update({
+      where: {
+        id: conversation.id
+      },
+      data: {
+        updatedAt: now
+      }
+    }),
+    prisma.message.create({
+      data: {
+        id: createId("msg"),
+        conversationId: conversation.id,
+        role: "user",
+        content: question,
+        createdAt: now
+      }
+    }),
+    prisma.message.create({
+      data: {
+        id: createId("msg"),
+        conversationId: conversation.id,
+        role: "assistant",
+        content: answer,
+        sources: sources || [],
+        usage: usage || null,
+        createdAt: now
+      }
+    })
+  ]);
+
+  return getConversation(conversation.id);
+}
+
+export async function deleteConversation(conversationId) {
+  try {
+    await prisma.conversation.delete({
+      where: {
+        id: conversationId
+      }
+    });
+    return true;
+  } catch (error) {
+    if (error.code === "P2025") {
+      return false;
+    }
+    throw error;
+  }
+}

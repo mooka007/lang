@@ -13,6 +13,10 @@
     "dev:front": "npm run dev --workspace front",
     "build": "npm run build --workspace front",
     "check": "npm run check --workspace server && npm run check --workspace front",
+    "db:generate": "npm run prisma:generate --workspace server",
+    "db:migrate": "npm run prisma:migrate --workspace server",
+    "db:migrate:dev": "npm run prisma:migrate:dev --workspace server",
+    "db:studio": "npm run prisma:studio --workspace server",
     "sample:pdf": "node scripts/make-company-pdf.js",
     "sample:js-pdf": "node scripts/make-sample-pdf.js"
   },

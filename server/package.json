@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
-    "check": "node --check src/index.js && node --check src/config/env.js && node --check src/routes/documents.routes.js && node --check src/services/model.service.js && node --check src/services/rag.service.js && node --check src/utils/storage.js"
+    "check": "node --check src/index.js && node --check src/config/env.js && node --check src/config/prisma.js && node --check src/routes/documents.routes.js && node --check src/services/model.service.js && node --check src/services/persistence.service.js && node --check src/services/postgres-persistence.service.js && node --check src/services/rag.service.js && node --check src/utils/storage.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy",
+    "prisma:migrate:dev": "prisma migrate dev",
+    "prisma:studio": "prisma studio"
   },
   "dependencies": {
     "@langchain/classic": "latest",
@@ -14,6 +18,7 @@
     "@langchain/core": "latest",
     "@langchain/openai": "latest",
     "@langchain/textsplitters": "latest",
+    "@prisma/client": "^7.8.0",
     "cors": "latest",
     "dotenv": "latest",
     "express": "latest",
@@ -22,6 +27,7 @@
     "pdf-parse": "latest"
   },
   "devDependencies": {
-    "nodemon": "latest"
+    "nodemon": "latest",
+    "prisma": "^7.8.0"
   }
 }

@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: lang-rag-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: lang_rag
+    ports:
+      - "5544:5432"
+    volumes:
+      - lang-rag-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d lang_rag"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  lang-rag-postgres-data:

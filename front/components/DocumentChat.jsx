@@ -4,10 +4,14 @@ import {
   AlertCircle,
   Bot,
   Database,
+  Files,
   FileText,
   LoaderCircle,
+  MessageSquare,
+  Plus,
   RefreshCw,
   Send,
+  Trash2,
   Upload,
   User
 } from "lucide-react";
@@ -38,6 +42,23 @@ function formatTokens(value) {
   return new Intl.NumberFormat().format(value || 0);
 }
 
+function formatShortDate(value) {
+  if (!value) {
+    return "";
+  }
+
+  return new Intl.DateTimeFormat(undefined, {
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"
+  }).format(new Date(value));
+}
+
+function documentSourceLabel(sourceType) {
+  return sourceType === "upload" ? "Upload" : "Sample";
+}
+
 function buildHistory(messages) {
   return messages
     .filter((message) => !message.isError)
@@ -56,6 +77,8 @@ export function DocumentChat() {
     indexedAt: null
   });
   const [messages, setMessages] = useState([]);
+  const [conversations, setConversations] = useState([]);
+  const [activeConversationId, setActiveConversationId] = useState(null);
   const [question, setQuestion] = useState("");
   const [error, setError] = useState("");
   const [isIndexing, setIsIndexing] = useState(false);
@@ -66,6 +89,7 @@ export function DocumentChat() {
 
   const busy = isIndexing || isUploading || isAsking;
   const totalTokens = status.tokenUsage?.total?.totalTokens || 0;
+  const documents = status.documents || [];
   const statusText = useMemo(() => {
     if (!status.ready) {
       return "No document indexed";
@@ -92,6 +116,20 @@ export function DocumentChat() {
     }
   }
 
+  async function refreshConversations() {
+    try {
+      const response = await fetch(`${apiBase}/conversations`);
+      const payload = await readJson(response);
+      setConversations(payload.conversations || []);
+    } catch (conversationError) {
+      setError(conversationError.message);
+    }
+  }
+
+  async function refreshWorkspace() {
+    await Promise.all([refreshStatus(), refreshConversations()]);
+  }
+
   async function indexSample() {
     setError("");
     setIsIndexing(true);
@@ -103,6 +141,8 @@ export function DocumentChat() {
       const payload = await readJson(response);
       setStatus(payload);
       setMessages([]);
+      setActiveConversationId(null);
+      await refreshConversations();
     } catch (indexError) {
       setError(indexError.message);
     } finally {
@@ -130,11 +170,64 @@ export function DocumentChat() {
       const payload = await readJson(response);
       setStatus(payload);
       setMessages([]);
+      setActiveConversationId(null);
+      await refreshConversations();
     } catch (uploadError) {
       setError(uploadError.message);
     } finally {
       setIsUploading(false);
       event.target.value = "";
+    }
+  }
+
+  function startNewChat() {
+    setMessages([]);
+    setActiveConversationId(null);
+    setError("");
+  }
+
+  async function deleteDocument(documentId) {
+    setError("");
+
+    try {
+      const response = await fetch(`${apiBase}/documents/${documentId}`, {
+        method: "DELETE"
+      });
+      const payload = await readJson(response);
+      setStatus(payload);
+    } catch (deleteError) {
+      setError(deleteError.message);
+    }
+  }
+
+  async function loadConversation(conversationId) {
+    setError("");
+
+    try {
+      const response = await fetch(`${apiBase}/conversations/${conversationId}`);
+      const payload = await readJson(response);
+      setActiveConversationId(payload.conversation.id);
+      setMessages(payload.conversation.messages || []);
+    } catch (conversationError) {
+      setError(conversationError.message);
+    }
+  }
+
+  async function removeConversation(event, conversationId) {
+    event.stopPropagation();
+    setError("");
+
+    try {
+      const response = await fetch(`${apiBase}/conversations/${conversationId}`, {
+        method: "DELETE"
+      });
+      const payload = await readJson(response);
+      setConversations(payload.conversations || []);
+      if (activeConversationId === conversationId) {
+        startNewChat();
+      }
+    } catch (conversationError) {
+      setError(conversationError.message);
     }
   }
 
@@ -165,10 +258,12 @@ export function DocumentChat() {
         },
         body: JSON.stringify({
           question: nextQuestion,
+          conversationId: activeConversationId,
           history: buildHistory(messages)
         })
       });
       const payload = await readJson(response);
+      setActiveConversationId(payload.conversationId || activeConversationId);
       setMessages((current) => [
         ...current,
         {
@@ -184,6 +279,7 @@ export function DocumentChat() {
           tokenUsage: payload.tokenUsage
         }));
       }
+      await refreshConversations();
     } catch (askError) {
       setError(askError.message);
       setMessages((current) => [
@@ -200,7 +296,7 @@ export function DocumentChat() {
   }
 
   useEffect(() => {
-    refreshStatus();
+    refreshWorkspace();
   }, []);
 
   useEffect(() => {
@@ -268,6 +364,84 @@ export function DocumentChat() {
             <span>{error}</span>
           </div>
         ) : null}
+
+        <section className="library-section" aria-label="Indexed documents">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Library</p>
+              <h2>{documents.length} document{documents.length === 1 ? "" : "s"}</h2>
+            </div>
+            <Files size={18} aria-hidden="true" />
+          </div>
+
+          <div className="item-list">
+            {documents.length ? (
+              documents.map((document) => (
+                <div className="library-item" key={document.id}>
+                  <div>
+                    <strong>{document.displayName}</strong>
+                    <span>
+                      {documentSourceLabel(document.sourceType)} - {document.chunkCount} chunks
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    className="small-icon-button"
+                    onClick={() => deleteDocument(document.id)}
+                    disabled={busy}
+                    aria-label={`Delete ${document.displayName}`}
+                  >
+                    <Trash2 size={15} />
+                  </button>
+                </div>
+              ))
+            ) : (
+              <p className="muted-copy">No saved documents yet.</p>
+            )}
+          </div>
+        </section>
+
+        <section className="library-section" aria-label="Saved conversations">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Chats</p>
+              <h2>{conversations.length} saved</h2>
+            </div>
+            <button type="button" className="small-icon-button" onClick={startNewChat} disabled={busy} aria-label="Start new chat">
+              <Plus size={15} />
+            </button>
+          </div>
+
+          <div className="item-list">
+            {conversations.length ? (
+              conversations.map((conversation) => (
+                <div
+                  className={`conversation-item ${activeConversationId === conversation.id ? "active" : ""}`}
+                  key={conversation.id}
+                >
+                  <button type="button" onClick={() => loadConversation(conversation.id)} disabled={busy}>
+                    <MessageSquare size={16} aria-hidden="true" />
+                    <span>
+                      <strong>{conversation.title}</strong>
+                      <small>{formatShortDate(conversation.updatedAt)}</small>
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    className="small-icon-button"
+                    onClick={(event) => removeConversation(event, conversation.id)}
+                    disabled={busy}
+                    aria-label={`Delete ${conversation.title}`}
+                  >
+                    <Trash2 size={15} />
+                  </button>
+                </div>
+              ))
+            ) : (
+              <p className="muted-copy">No saved chats yet.</p>
+            )}
+          </div>
+        </section>
       </aside>
 
       <section className="chat-panel" aria-label="Document chat">

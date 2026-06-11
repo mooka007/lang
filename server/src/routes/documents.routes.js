@@ -3,7 +3,20 @@ import fs from "node:fs/promises";
 import multer from "multer";
 import path from "node:path";
 import { env } from "../config/env.js";
-import { askQuestion, getIndexStatus, indexFile, indexFiles } from "../services/rag.service.js";
+import {
+  askQuestion,
+  deleteIndexedDocument,
+  getIndexStatus,
+  indexFile,
+  indexFiles,
+  listIndexedDocuments
+} from "../services/rag.service.js";
+import {
+  appendConversationTurn,
+  deleteConversation,
+  getConversation,
+  listConversations
+} from "../services/persistence.service.js";
 
 const supportedExtensions = new Set([".pdf", ".txt", ".md"]);
 
@@ -70,11 +83,78 @@ documentsRouter.get("/status", (_request, response) => {
   response.json(getIndexStatus());
 });
 
+documentsRouter.get("/documents", (_request, response) => {
+  response.json({
+    documents: listIndexedDocuments()
+  });
+});
+
+documentsRouter.delete("/documents/:documentId", async (request, response, next) => {
+  try {
+    const deleted = await deleteIndexedDocument(request.params.documentId);
+    if (!deleted) {
+      const error = new Error("Document not found.");
+      error.status = 404;
+      throw error;
+    }
+
+    response.json(getIndexStatus());
+  } catch (error) {
+    next(error);
+  }
+});
+
+documentsRouter.get("/conversations", async (_request, response, next) => {
+  try {
+    response.json({
+      conversations: await listConversations()
+    });
+  } catch (error) {
+    next(error);
+  }
+});
+
+documentsRouter.get("/conversations/:conversationId", async (request, response, next) => {
+  try {
+    const conversation = await getConversation(request.params.conversationId);
+    if (!conversation) {
+      const error = new Error("Conversation not found.");
+      error.status = 404;
+      throw error;
+    }
+
+    response.json({
+      conversation
+    });
+  } catch (error) {
+    next(error);
+  }
+});
+
+documentsRouter.delete("/conversations/:conversationId", async (request, response, next) => {
+  try {
+    const deleted = await deleteConversation(request.params.conversationId);
+    if (!deleted) {
+      const error = new Error("Conversation not found.");
+      error.status = 404;
+      throw error;
+    }
+
+    response.json({
+      conversations: await listConversations()
+    });
+  } catch (error) {
+    next(error);
+  }
+});
+
 documentsRouter.post("/index-sample", async (_request, response, next) => {
   try {
     const sampleFiles = await getCompanySampleFiles();
     const status = await indexFiles(sampleFiles, {
-      displayName: `Company X Knowledge Base (${sampleFiles.length} PDFs)`
+      displayName: `Company X Knowledge Base (${sampleFiles.length} PDFs)`,
+      mode: "replace",
+      sourceType: "sample"
     });
 
     response.json(status);
@@ -92,7 +172,9 @@ documentsRouter.post("/upload", upload.single("file"), async (request, response,
     }
 
     const status = await indexFile(request.file.path, {
-      displayName: request.file.originalname
+      displayName: request.file.originalname,
+      mode: "append",
+      sourceType: "upload"
     });
 
     response.json(status);
@@ -110,8 +192,24 @@ documentsRouter.post("/chat", async (request, response, next) => {
       throw error;
     }
 
-    const result = await askQuestion(question, sanitizeHistory(request.body?.history));
-    response.json(result);
+    const conversationId = String(request.body?.conversationId || "").trim();
+    const storedConversation = conversationId ? await getConversation(conversationId) : null;
+    const requestHistory = sanitizeHistory(request.body?.history);
+    const history = requestHistory.length ? requestHistory : sanitizeHistory(storedConversation?.messages);
+    const result = await askQuestion(question, history);
+    const conversation = await appendConversationTurn({
+      conversationId: conversationId || null,
+      question,
+      answer: result.answer,
+      sources: result.sources,
+      usage: result.usage
+    });
+
+    response.json({
+      ...result,
+      conversationId: conversation.id,
+      conversation
+    });
   } catch (error) {
     next(error);
   }

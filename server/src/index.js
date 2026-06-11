@@ -2,9 +2,11 @@ import cors from "cors";
 import express from "express";
 import { env } from "./config/env.js";
 import { documentsRouter } from "./routes/documents.routes.js";
+import { loadPersistedRagIndex } from "./services/rag.service.js";
 import { ensureStorageFolders } from "./utils/storage.js";
 
 await ensureStorageFolders();
+await loadPersistedRagIndex();
 
 const app = express();
 

@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model RagDocument {
+  id          String     @id
+  fileName    String     @map("file_name")
+  displayName String     @map("display_name")
+  sourceType  String     @map("source_type")
+  status      String     @default("indexed")
+  chunkCount  Int        @default(0) @map("chunk_count")
+  indexedAt   DateTime   @default(now()) @map("indexed_at")
+  createdAt   DateTime   @default(now()) @map("created_at")
+  updatedAt   DateTime   @updatedAt @map("updated_at")
+  chunks      RagChunk[]
+
+  @@map("rag_documents")
+}
+
+model RagChunk {
+  id         String              @id
+  documentId String              @map("document_id")
+  document   RagDocument         @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  text       String
+  metadata   Json
+  embedding  Unsupported("vector")
+  chunkIndex Int                 @map("chunk_index")
+  page       Int?
+  source     String?
+  createdAt  DateTime            @default(now()) @map("created_at")
+
+  @@index([documentId])
+  @@index([chunkIndex])
+  @@map("rag_chunks")
+}
+
+model Conversation {
+  id        String    @id
+  title     String
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  messages  Message[]
+
+  @@map("conversations")
+}
+
+model Message {
+  id             String       @id
+  conversationId String       @map("conversation_id")
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  role           String
+  content        String
+  sources        Json?
+  usage          Json?
+  createdAt      DateTime     @default(now()) @map("created_at")
+
+  @@index([conversationId])
+  @@index([createdAt])
+  @@map("messages")
+}

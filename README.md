@@ -10,6 +10,10 @@ Chat with PDF, text, or Markdown documents using a Node.js API, LangChain.js ret
 - Token usage tracking for indexing embeddings and chat answers.
 - Multi-PDF Company X knowledge base with headquarters and branch documents.
 - Rich fictional employee records with salary, shift, manager, role, project manager, tasks, skills, languages, and access level.
+- Local persistent index saved in `server/data/rag-index.json`.
+- PostgreSQL + Prisma storage mode with `pgvector` for production-style persistence.
+- Document library API for listing and deleting indexed documents.
+- Saved chat conversations in `server/data/conversations.json`.
 
 ## Project Structure
 
@@ -76,6 +80,21 @@ Copy-Item .env.example .env
 
 ## Run The App
 
+For the Phase 3 PostgreSQL setup, start the database first:
+
+```bash
+docker compose up -d
+npm run db:generate
+npm run db:migrate
+```
+
+Set this in `.env`:
+
+```text
+STORAGE_PROVIDER=postgres
+DATABASE_URL=postgresql://postgres:postgres@localhost:5544/lang_rag?schema=public
+```
+
 Start the API and frontend together:
 
 ```bash
@@ -110,6 +129,11 @@ Default URLs:
 - `POST /api/index-sample`
 - `POST /api/upload`
 - `POST /api/chat`
+- `GET /api/documents`
+- `DELETE /api/documents/:documentId`
+- `GET /api/conversations`
+- `GET /api/conversations/:conversationId`
+- `DELETE /api/conversations/:conversationId`
 
 Example chat request:
 
@@ -135,7 +159,6 @@ npm run sample:pdf
 
 ## Next Steps
 
-- Add persistent vector storage with Chroma, Pinecone, or pgvector.
-- Add multi-document collections.
+- Add authentication and document permissions on top of the PostgreSQL document tables.
 - Stream answers from the backend to the frontend.
-- Add authentication before allowing public uploads.
+- Add richer document versioning and re-index controls.

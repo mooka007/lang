@@ -1,15 +1,16 @@
 import { Document } from "@langchain/core/documents";
 import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
-import { MemoryVectorStore } from "@langchain/classic/vectorstores/memory";
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { env, requireModelConfig } from "../config/env.js";
 import { answerFromContext, createEmbeddings, getTokenUsage, resetTokenUsage } from "./model.service.js";
+import { createId, loadIndexSnapshot, saveIndexSnapshot, searchVectorChunks } from "./persistence.service.js";
 
 let activeIndex = {
-  vectorStore: null,
+  documents: [],
   chunks: [],
+  vectorRecords: [],
   documentName: null,
   chunkCount: 0,
   indexedAt: null
@@ -35,6 +36,79 @@ const branchTerms = [
   "australia",
   "sydney"
 ];
+
+function documentFromRecord(record) {
+  return new Document({
+    pageContent: record.text,
+    metadata: record.metadata || {}
+  });
+}
+
+function hydrateIndex(snapshot) {
+  const records = snapshot.chunks || [];
+
+  activeIndex = {
+    documents: snapshot.documents || [],
+    chunks: records.map(documentFromRecord),
+    vectorRecords: records.map((record) => ({
+      ...record,
+      document: documentFromRecord(record)
+    })),
+    documentName: snapshot.documentName || null,
+    chunkCount: records.length,
+    indexedAt: snapshot.indexedAt || null
+  };
+}
+
+function createSnapshot() {
+  return {
+    documentName: activeIndex.documentName,
+    indexedAt: activeIndex.indexedAt,
+    documents: activeIndex.documents,
+    chunks: activeIndex.vectorRecords.map((record) => ({
+      id: record.id,
+      documentId: record.documentId,
+      text: record.text,
+      metadata: record.metadata,
+      embedding: record.embedding
+    }))
+  };
+}
+
+function cosineSimilarity(left, right) {
+  if (!Array.isArray(left) || !Array.isArray(right) || left.length !== right.length) {
+    return 0;
+  }
+
+  let dot = 0;
+  let leftNorm = 0;
+  let rightNorm = 0;
+
+  for (let index = 0; index < left.length; index += 1) {
+    dot += left[index] * right[index];
+    leftNorm += left[index] * left[index];
+    rightNorm += right[index] * right[index];
+  }
+
+  const denominator = Math.sqrt(leftNorm) * Math.sqrt(rightNorm);
+  return denominator ? dot / denominator : 0;
+}
+
+function summarizeDocumentName(documents) {
+  if (!documents.length) {
+    return null;
+  }
+
+  if (documents.length === 1) {
+    return documents[0].displayName;
+  }
+
+  return `${documents.length} indexed documents`;
+}
+
+async function persistActiveIndex() {
+  await saveIndexSnapshot(createSnapshot());
+}
 
 function pageFromMetadata(metadata) {
   return metadata?.loc?.pageNumber || metadata?.pdf?.pageNumber || metadata?.page || null;
@@ -67,7 +141,7 @@ async function loadFile(filePath, displayName) {
   throw error;
 }
 
-function normalizeDocuments(documents, displayName) {
+function normalizeDocuments(documents, displayName, documentId) {
   return documents.map((document, index) => {
     const page = pageFromMetadata(document.metadata);
 
@@ -75,6 +149,7 @@ function normalizeDocuments(documents, displayName) {
       pageContent: document.pageContent,
       metadata: {
         ...document.metadata,
+        documentId,
         source: displayName,
         page: page || index + 1
       }
@@ -291,12 +366,61 @@ function buildRetrievalQuery(question, history) {
   return [...recentUserQuestions, question].join("\n");
 }
 
+export async function loadPersistedRagIndex() {
+  hydrateIndex(await loadIndexSnapshot());
+  return getIndexStatus();
+}
+
+export function listIndexedDocuments() {
+  return activeIndex.documents;
+}
+
+export async function deleteIndexedDocument(documentId) {
+  const documentExists = activeIndex.documents.some((document) => document.id === documentId);
+
+  if (!documentExists) {
+    return false;
+  }
+
+  const nextDocuments = activeIndex.documents.filter((document) => document.id !== documentId);
+  const nextRecords = activeIndex.vectorRecords
+    .filter((record) => record.documentId !== documentId)
+    .map((record, index) => {
+      const metadata = {
+        ...record.metadata,
+        chunkIndex: index
+      };
+
+      return {
+        ...record,
+        metadata,
+        document: new Document({
+          pageContent: record.text,
+          metadata
+        })
+      };
+    });
+
+  activeIndex = {
+    documents: nextDocuments,
+    chunks: nextRecords.map((record) => record.document),
+    vectorRecords: nextRecords,
+    documentName: summarizeDocumentName(nextDocuments),
+    chunkCount: nextRecords.length,
+    indexedAt: nextRecords.length ? new Date().toISOString() : null
+  };
+
+  await persistActiveIndex();
+  return true;
+}
+
 export function getIndexStatus() {
   return {
-    ready: Boolean(activeIndex.vectorStore),
+    ready: activeIndex.vectorRecords.length > 0,
     documentName: activeIndex.documentName,
     chunkCount: activeIndex.chunkCount,
     indexedAt: activeIndex.indexedAt,
+    documents: activeIndex.documents,
     tokenUsage: getTokenUsage()
   };
 }
@@ -306,7 +430,8 @@ export async function indexFile(filePath, options = {}) {
     [
       {
         filePath,
-        displayName: options.displayName || path.basename(filePath)
+        displayName: options.displayName || path.basename(filePath),
+        sourceType: options.sourceType || "upload"
       }
     ],
     options
@@ -324,12 +449,25 @@ export async function indexFiles(files, options = {}) {
   }
 
   const loadedDocuments = [];
+  const documentRecords = [];
+  const mode = options.mode || "replace";
 
   for (const file of files) {
     const filePath = typeof file === "string" ? file : file.filePath;
     const displayName = typeof file === "string" ? path.basename(file) : file.displayName || path.basename(file.filePath);
+    const documentId = createId("doc");
+    const documentRecord = {
+      id: documentId,
+      fileName: path.basename(filePath),
+      displayName,
+      sourceType: typeof file === "string" ? options.sourceType || "sample" : file.sourceType || options.sourceType || "sample",
+      status: "indexed",
+      chunkCount: 0,
+      indexedAt: new Date().toISOString()
+    };
     const documents = await loadFile(filePath, displayName);
-    loadedDocuments.push(...normalizeDocuments(documents, displayName));
+    documentRecords.push(documentRecord);
+    loadedDocuments.push(...normalizeDocuments(documents, displayName, documentId));
   }
 
   const splitter = new RecursiveCharacterTextSplitter({
@@ -337,27 +475,70 @@ export async function indexFiles(files, options = {}) {
     chunkOverlap: 180
   });
   const chunks = await splitter.splitDocuments(loadedDocuments);
+  const baseChunkIndex = mode === "append" ? activeIndex.vectorRecords.length : 0;
   chunks.forEach((chunk, index) => {
-    chunk.metadata.chunkIndex = index;
+    chunk.metadata.chunkIndex = baseChunkIndex + index;
   });
   const embeddings = createEmbeddings();
-  const vectorStore = await MemoryVectorStore.fromDocuments(chunks, embeddings);
+  const vectors = await embeddings.embedDocuments(chunks.map((chunk) => chunk.pageContent));
+  const chunkRecords = chunks.map((chunk, index) => ({
+    id: createId("chunk"),
+    documentId: chunk.metadata.documentId,
+    text: chunk.pageContent,
+    metadata: chunk.metadata,
+    embedding: vectors[index],
+    document: chunk
+  }));
+
+  for (const documentRecord of documentRecords) {
+    documentRecord.chunkCount = chunkRecords.filter((chunk) => chunk.documentId === documentRecord.id).length;
+  }
+
+  const nextDocuments = mode === "append" ? [...activeIndex.documents, ...documentRecords] : documentRecords;
+  const nextRecords = mode === "append" ? [...activeIndex.vectorRecords, ...chunkRecords] : chunkRecords;
 
   activeIndex = {
-    vectorStore,
-    chunks,
-    documentName: options.displayName || `${files.length} indexed documents`,
-    chunkCount: chunks.length,
+    documents: nextDocuments,
+    chunks: nextRecords.map((record) => record.document),
+    vectorRecords: nextRecords,
+    documentName: summarizeDocumentName(nextDocuments),
+    chunkCount: nextRecords.length,
     indexedAt: new Date().toISOString()
   };
 
+  await persistActiveIndex();
   return getIndexStatus();
+}
+
+async function retrieveVectorMatches(query, limit = 8) {
+  if (!activeIndex.vectorRecords.length) {
+    return [];
+  }
+
+  const embeddings = createEmbeddings();
+  const queryVector = await embeddings.embedQuery(query);
+
+  if (env.storageProvider === "postgres") {
+    const rows = await searchVectorChunks(queryVector, limit);
+    if (rows) {
+      return rows.map((row) => documentFromRecord(row));
+    }
+  }
+
+  return activeIndex.vectorRecords
+    .map((record) => ({
+      score: cosineSimilarity(queryVector, record.embedding),
+      document: record.document
+    }))
+    .sort((left, right) => right.score - left.score)
+    .slice(0, limit)
+    .map((item) => item.document);
 }
 
 export async function askQuestion(question, history = []) {
   requireModelConfig();
 
-  if (!activeIndex.vectorStore) {
+  if (!activeIndex.vectorRecords.length) {
     const error = new Error("No document is indexed yet. Index the sample PDF or upload a document first.");
     error.status = 400;
     throw error;
@@ -370,7 +551,7 @@ export async function askQuestion(question, history = []) {
     ? []
     : mergeDocuments(
         [...branchOverviewDocuments, ...findExactMatches(retrievalQuery)],
-        await activeIndex.vectorStore.asRetriever(8).invoke(retrievalQuery),
+        await retrieveVectorMatches(retrievalQuery, 8),
         sourceLimit
       );
   const context = sourceDocuments

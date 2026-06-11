@@ -31,6 +31,11 @@ function normalizeGitHubModel(value, fallback) {
   return model.includes("/") ? model : `openai/${model}`;
 }
 
+function normalizeStorageProvider(value) {
+  const provider = String(value || "json").trim().toLowerCase();
+  return provider === "postgres" ? "postgres" : "json";
+}
+
 function optionalNumber(value, fallback) {
   if (value === undefined || value === "") {
     return fallback;
@@ -54,6 +59,8 @@ export const env = {
   uploadMaxFileSizeMb: optionalNumber(process.env.UPLOAD_MAX_MB, 100),
   samplePdfDir: path.join(serverDir, "pdfs"),
   samplePdfPath: path.join(serverDir, "pdfs", "company-x-employee-knowledge-base.pdf"),
+  storageProvider: normalizeStorageProvider(process.env.STORAGE_PROVIDER),
+  databaseUrl: process.env.DATABASE_URL || "",
   llmProvider,
   embeddingProvider,
   embeddingBatchSize: optionalNumber(process.env.EMBEDDING_BATCH_SIZE, 32),

@@ -47,6 +47,7 @@ function mapDocument(document) {
   return {
     id: document.id,
     ownerId: document.ownerId,
+    teamId: document.teamId,
     fileName: document.fileName,
     displayName: document.displayName,
     sourceType: document.sourceType,
@@ -76,21 +77,24 @@ export async function loadIndexSnapshot() {
   });
   const chunks = await prisma.$queryRaw`
     SELECT
-      id,
-      document_id AS "documentId",
-      text,
-      metadata,
-      embedding::text AS embedding,
-      chunk_index AS "chunkIndex",
-      page,
-      source
-    FROM rag_chunks
-    ORDER BY chunk_index ASC
+      c.id,
+      c.document_id AS "documentId",
+      d.team_id AS "teamId",
+      c.text,
+      c.metadata,
+      c.embedding::text AS embedding,
+      c.chunk_index AS "chunkIndex",
+      c.page,
+      c.source
+    FROM rag_chunks c
+    INNER JOIN rag_documents d ON d.id = c.document_id
+    ORDER BY c.chunk_index ASC
   `;
   const mappedDocuments = documents.map(mapDocument);
   const mappedChunks = chunks.map((chunk) => ({
     id: chunk.id,
     documentId: chunk.documentId,
+    teamId: chunk.teamId,
     text: chunk.text,
     metadata: chunk.metadata,
     embedding: parseVector(chunk.embedding)
@@ -115,6 +119,7 @@ export async function saveIndexSnapshot(snapshot) {
         data: {
           id: document.id,
           ownerId: document.ownerId || null,
+          teamId: document.teamId || null,
           fileName: document.fileName || document.displayName,
           displayName: document.displayName,
           sourceType: document.sourceType || "upload",
@@ -173,7 +178,21 @@ export async function searchVectorChunks(queryEmbedding, limit = 8, user = null)
     FROM rag_chunks
     c
     INNER JOIN rag_documents d ON d.id = c.document_id
-    WHERE (${isAdmin}::boolean OR d.owner_id = ${ownerId} OR d.access_level = 'public')
+    WHERE (
+      ${isAdmin}::boolean
+      OR d.owner_id = ${ownerId}
+      OR d.access_level = 'public'
+      OR (
+        d.access_level = 'team'
+        AND d.team_id IS NOT NULL
+        AND EXISTS (
+          SELECT 1
+          FROM team_members tm
+          WHERE tm.team_id = d.team_id
+          AND tm.user_id = ${ownerId}
+        )
+      )
+    )
     ORDER BY c.embedding <=> ${vector}::vector
     LIMIT ${limit}
   `;

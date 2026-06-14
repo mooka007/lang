@@ -16,14 +16,46 @@ model User {
   updatedAt    DateTime       @updatedAt @map("updated_at")
   documents    RagDocument[]
   conversations Conversation[]
+  ownedTeams    Team[]         @relation("TeamOwner")
+  teamMemberships TeamMember[]
 
   @@map("users")
+}
+
+model Team {
+  id          String       @id
+  ownerId     String       @map("owner_id")
+  owner       User         @relation("TeamOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+  name        String
+  createdAt   DateTime     @default(now()) @map("created_at")
+  updatedAt   DateTime     @updatedAt @map("updated_at")
+  members     TeamMember[]
+  documents   RagDocument[]
+
+  @@index([ownerId])
+  @@map("teams")
+}
+
+model TeamMember {
+  id        String   @id
+  teamId    String   @map("team_id")
+  team      Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  userId    String   @map("user_id")
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role      String   @default("member")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@unique([teamId, userId])
+  @@index([userId])
+  @@map("team_members")
 }
 
 model RagDocument {
   id          String     @id
   ownerId     String?    @map("owner_id")
   owner       User?      @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  teamId      String?    @map("team_id")
+  team        Team?      @relation(fields: [teamId], references: [id], onDelete: SetNull)
   fileName    String     @map("file_name")
   displayName String     @map("display_name")
   sourceType  String     @map("source_type")
@@ -36,6 +68,7 @@ model RagDocument {
   chunks      RagChunk[]
 
   @@index([ownerId])
+  @@index([teamId])
   @@index([accessLevel])
   @@map("rag_documents")
 }

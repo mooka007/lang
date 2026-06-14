@@ -10,7 +10,8 @@ import {
   getIndexStatus,
   indexFile,
   indexFiles,
-  listIndexedDocuments
+  listIndexedDocuments,
+  shareIndexedDocument
 } from "../services/rag.service.js";
 import {
   appendConversationTurn,
@@ -106,6 +107,23 @@ documentsRouter.delete("/documents/:documentId", async (request, response, next)
   }
 });
 
+documentsRouter.patch("/documents/:documentId/share", async (request, response, next) => {
+  try {
+    response.json(
+      await shareIndexedDocument(
+        request.params.documentId,
+        {
+          accessLevel: request.body?.accessLevel,
+          teamId: request.body?.teamId
+        },
+        request.user
+      )
+    );
+  } catch (error) {
+    next(error);
+  }
+});
+
 documentsRouter.get("/conversations", async (request, response, next) => {
   try {
     response.json({
@@ -180,7 +198,8 @@ documentsRouter.post("/upload", upload.single("file"), async (request, response,
       mode: "append",
       sourceType: "upload",
       ownerId: request.user.id,
-      accessLevel: String(request.body?.accessLevel || "private")
+      accessLevel: String(request.body?.accessLevel || "private"),
+      teamId: request.body?.teamId
     });
 
     response.json(getIndexStatus(request.user));

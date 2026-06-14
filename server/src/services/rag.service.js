@@ -6,6 +6,7 @@ import path from "node:path";
 import { env, requireModelConfig } from "../config/env.js";
 import { answerFromContext, createEmbeddings, getTokenUsage, resetTokenUsage } from "./model.service.js";
 import { createId, loadIndexSnapshot, saveIndexSnapshot, searchVectorChunks } from "./persistence.service.js";
+import { canUseTeam } from "./team.service.js";
 
 let activeIndex = {
   documents: [],
@@ -70,6 +71,7 @@ function createSnapshot() {
       documentId: record.documentId,
       text: record.text,
       metadata: record.metadata,
+      teamId: record.teamId,
       embedding: record.embedding
     }))
   };
@@ -111,7 +113,10 @@ function canAccessDocument(document, user) {
     return false;
   }
 
-  return user.role === "admin" || document.ownerId === user.id || document.accessLevel === "public";
+  return user.role === "admin"
+    || document.ownerId === user.id
+    || document.accessLevel === "public"
+    || (document.accessLevel === "team" && document.teamId && user.teamIds?.includes(document.teamId));
 }
 
 function canManageDocument(document, user) {
@@ -165,7 +170,7 @@ async function loadFile(filePath, displayName) {
   throw error;
 }
 
-function normalizeDocuments(documents, displayName, documentId, ownerId, accessLevel) {
+function normalizeDocuments(documents, displayName, documentId, ownerId, accessLevel, teamId) {
   return documents.map((document, index) => {
     const page = pageFromMetadata(document.metadata);
 
@@ -176,6 +181,7 @@ function normalizeDocuments(documents, displayName, documentId, ownerId, accessL
         documentId,
         ownerId,
         accessLevel,
+        teamId,
         source: displayName,
         page: page || index + 1
       }
@@ -442,6 +448,60 @@ export async function deleteIndexedDocument(documentId, user) {
   return true;
 }
 
+export async function shareIndexedDocument(documentId, { accessLevel, teamId }, user) {
+  const document = activeIndex.documents.find((item) => item.id === documentId);
+  if (!document || !canManageDocument(document, user)) {
+    const error = new Error("Document not found.");
+    error.status = 404;
+    throw error;
+  }
+
+  const nextAccessLevel = ["private", "team", "public"].includes(accessLevel) ? accessLevel : "private";
+  const nextTeamId = nextAccessLevel === "team" ? String(teamId || "").trim() : null;
+
+  if (nextAccessLevel === "team" && !(await canUseTeam(nextTeamId, user))) {
+    const error = new Error("Choose a team you belong to before sharing this document.");
+    error.status = 403;
+    throw error;
+  }
+
+  activeIndex.documents = activeIndex.documents.map((item) => (
+    item.id === documentId
+      ? {
+          ...item,
+          accessLevel: nextAccessLevel,
+          teamId: nextTeamId
+        }
+      : item
+  ));
+
+  activeIndex.vectorRecords = activeIndex.vectorRecords.map((record) => {
+    if (record.documentId !== documentId) {
+      return record;
+    }
+
+    const metadata = {
+      ...record.metadata,
+      accessLevel: nextAccessLevel,
+      teamId: nextTeamId
+    };
+
+    return {
+      ...record,
+      teamId: nextTeamId,
+      metadata,
+      document: new Document({
+        pageContent: record.text,
+        metadata
+      })
+    };
+  });
+  activeIndex.chunks = activeIndex.vectorRecords.map((record) => record.document);
+
+  await persistActiveIndex();
+  return getIndexStatus(user);
+}
+
 export function getIndexStatus(user) {
   const documents = accessibleDocuments(user);
   const documentIds = new Set(documents.map((document) => document.id));
@@ -485,6 +545,7 @@ export async function indexFiles(files, options = {}) {
   const mode = options.mode || "replace";
   const ownerId = options.ownerId || null;
   const accessLevel = ["private", "public", "team"].includes(options.accessLevel) ? options.accessLevel : "private";
+  const teamId = accessLevel === "team" ? options.teamId || null : null;
 
   for (const file of files) {
     const filePath = typeof file === "string" ? file : file.filePath;
@@ -496,6 +557,7 @@ export async function indexFiles(files, options = {}) {
       displayName,
       sourceType: typeof file === "string" ? options.sourceType || "sample" : file.sourceType || options.sourceType || "sample",
       ownerId,
+      teamId,
       accessLevel,
       status: "indexed",
       chunkCount: 0,
@@ -503,7 +565,7 @@ export async function indexFiles(files, options = {}) {
     };
     const documents = await loadFile(filePath, displayName);
     documentRecords.push(documentRecord);
-    loadedDocuments.push(...normalizeDocuments(documents, displayName, documentId, ownerId, accessLevel));
+    loadedDocuments.push(...normalizeDocuments(documents, displayName, documentId, ownerId, accessLevel, teamId));
   }
 
   const splitter = new RecursiveCharacterTextSplitter({

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
-    "check": "node --check src/index.js && node --check src/config/env.js && node --check src/config/prisma.js && node --check src/middleware/auth.middleware.js && node --check src/routes/auth.routes.js && node --check src/routes/documents.routes.js && node --check src/services/auth.service.js && node --check src/services/model.service.js && node --check src/services/persistence.service.js && node --check src/services/postgres-persistence.service.js && node --check src/services/rag.service.js && node --check src/utils/storage.js",
+    "check": "node --check src/index.js && node --check src/config/env.js && node --check src/config/prisma.js && node --check src/middleware/auth.middleware.js && node --check src/routes/auth.routes.js && node --check src/routes/documents.routes.js && node --check src/routes/teams.routes.js && node --check src/services/auth.service.js && node --check src/services/model.service.js && node --check src/services/persistence.service.js && node --check src/services/postgres-persistence.service.js && node --check src/services/rag.service.js && node --check src/services/team.service.js && node --check src/utils/storage.js",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate deploy",
     "prisma:migrate:dev": "prisma migrate dev",

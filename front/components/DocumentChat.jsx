@@ -14,7 +14,8 @@ import {
   Send,
   Trash2,
   Upload,
-  User
+  User,
+  Users
 } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
@@ -60,6 +61,18 @@ function documentSourceLabel(sourceType) {
   return sourceType === "upload" ? "Upload" : "Sample";
 }
 
+function documentAccessLabel(document) {
+  if (document.accessLevel === "public") {
+    return "Public";
+  }
+
+  if (document.accessLevel === "team") {
+    return "Team";
+  }
+
+  return "Private";
+}
+
 function buildHistory(messages) {
   return messages
     .filter((message) => !message.isError)
@@ -90,6 +103,10 @@ export function DocumentChat() {
   });
   const [messages, setMessages] = useState([]);
   const [conversations, setConversations] = useState([]);
+  const [teams, setTeams] = useState([]);
+  const [teamName, setTeamName] = useState("");
+  const [memberEmail, setMemberEmail] = useState("");
+  const [activeTeamId, setActiveTeamId] = useState("");
   const [activeConversationId, setActiveConversationId] = useState(null);
   const [question, setQuestion] = useState("");
   const [error, setError] = useState("");
@@ -119,6 +136,7 @@ export function DocumentChat() {
     });
     setMessages([]);
     setConversations([]);
+    setTeams([]);
     setActiveConversationId(null);
   }
 
@@ -198,8 +216,75 @@ export function DocumentChat() {
     }
   }
 
+  async function refreshTeams() {
+    try {
+      const response = await apiFetch("/teams");
+      const payload = await readJson(response);
+      setTeams(payload.teams || []);
+      setActiveTeamId((current) => current || payload.teams?.[0]?.id || "");
+    } catch (teamError) {
+      setError(teamError.message);
+    }
+  }
+
   async function refreshWorkspace() {
-    await Promise.all([refreshStatus(), refreshConversations()]);
+    await Promise.all([refreshStatus(), refreshConversations(), refreshTeams()]);
+  }
+
+  async function createTeam(event) {
+    event.preventDefault();
+    const nextName = teamName.trim();
+    if (!nextName) {
+      return;
+    }
+
+    setError("");
+
+    try {
+      const response = await apiFetch("/teams", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: nextName
+        })
+      });
+      const payload = await readJson(response);
+      setTeamName("");
+      setActiveTeamId(payload.team.id);
+      await refreshTeams();
+    } catch (teamError) {
+      setError(teamError.message);
+    }
+  }
+
+  async function addTeamMember(event) {
+    event.preventDefault();
+    if (!activeTeamId || !memberEmail.trim()) {
+      return;
+    }
+
+    setError("");
+
+    try {
+      await readJson(
+        await apiFetch(`/teams/${activeTeamId}/members`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            email: memberEmail,
+            role: "member"
+          })
+        })
+      );
+      setMemberEmail("");
+      await refreshTeams();
+    } catch (teamError) {
+      setError(teamError.message);
+    }
   }
 
   async function indexSample() {
@@ -269,6 +354,31 @@ export function DocumentChat() {
       setStatus(payload);
     } catch (deleteError) {
       setError(deleteError.message);
+    }
+  }
+
+  async function shareDocument(documentId, value) {
+    const isTeamShare = value.startsWith("team:");
+    const accessLevel = isTeamShare ? "team" : value;
+    const teamId = isTeamShare ? value.replace("team:", "") : null;
+
+    setError("");
+
+    try {
+      const response = await apiFetch(`/documents/${documentId}/share`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          accessLevel,
+          teamId
+        })
+      });
+      const payload = await readJson(response);
+      setStatus(payload);
+    } catch (shareError) {
+      setError(shareError.message);
     }
   }
 
@@ -563,6 +673,62 @@ export function DocumentChat() {
           </div>
         ) : null}
 
+        <section className="library-section" aria-label="Teams">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Teams</p>
+              <h2>{teams.length} team{teams.length === 1 ? "" : "s"}</h2>
+            </div>
+            <Users size={18} aria-hidden="true" />
+          </div>
+
+          <form className="compact-form" onSubmit={createTeam}>
+            <input
+              value={teamName}
+              onChange={(event) => setTeamName(event.target.value)}
+              placeholder="New team name"
+            />
+            <button type="submit" className="secondary-button" disabled={busy || !teamName.trim()}>
+              Create
+            </button>
+          </form>
+
+          {teams.length ? (
+            <>
+              <select className="inline-select" value={activeTeamId} onChange={(event) => setActiveTeamId(event.target.value)}>
+                {teams.map((team) => (
+                  <option value={team.id} key={team.id}>
+                    {team.name}
+                  </option>
+                ))}
+              </select>
+
+              <form className="compact-form" onSubmit={addTeamMember}>
+                <input
+                  value={memberEmail}
+                  onChange={(event) => setMemberEmail(event.target.value)}
+                  placeholder="Member email"
+                  type="email"
+                />
+                <button type="submit" className="secondary-button" disabled={busy || !activeTeamId || !memberEmail.trim()}>
+                  Add
+                </button>
+              </form>
+
+              <div className="item-list">
+                {teams.map((team) => (
+                  <div className={`team-item ${activeTeamId === team.id ? "active" : ""}`} key={team.id}>
+                    <strong>{team.name}</strong>
+                    <span>{team.members.length} member{team.members.length === 1 ? "" : "s"}</span>
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : (
+            <p className="muted-copy">Create a team to share documents.</p>
+          )}
+        </section>
+
         <section className="library-section" aria-label="Indexed documents">
           <div className="section-heading">
             <div>
@@ -574,25 +740,48 @@ export function DocumentChat() {
 
           <div className="item-list">
             {documents.length ? (
-              documents.map((document) => (
-                <div className="library-item" key={document.id}>
-                  <div>
-                    <strong>{document.displayName}</strong>
-                    <span>
-                      {documentSourceLabel(document.sourceType)} - {document.chunkCount} chunks
-                    </span>
+              documents.map((document) => {
+                const canManage = document.ownerId === auth.user?.id || auth.user?.role === "admin";
+                const shareValue = document.accessLevel === "team" ? `team:${document.teamId || ""}` : document.accessLevel || "private";
+
+                return (
+                  <div className="library-item" key={document.id}>
+                    <div>
+                      <strong>{document.displayName}</strong>
+                      <span>
+                        {documentSourceLabel(document.sourceType)} - {document.chunkCount} chunks - {documentAccessLabel(document)}
+                      </span>
+                      {canManage ? (
+                        <select
+                          className="inline-select compact-select"
+                          value={shareValue}
+                          onChange={(event) => shareDocument(document.id, event.target.value)}
+                          disabled={busy}
+                        >
+                          <option value="private">Private</option>
+                          <option value="public">Public</option>
+                          {teams.map((team) => (
+                            <option value={`team:${team.id}`} key={team.id}>
+                              Team: {team.name}
+                            </option>
+                          ))}
+                        </select>
+                      ) : null}
+                    </div>
+                    {canManage ? (
+                      <button
+                        type="button"
+                        className="small-icon-button"
+                        onClick={() => deleteDocument(document.id)}
+                        disabled={busy}
+                        aria-label={`Delete ${document.displayName}`}
+                      >
+                        <Trash2 size={15} />
+                      </button>
+                    ) : null}
                   </div>
-                  <button
-                    type="button"
-                    className="small-icon-button"
-                    onClick={() => deleteDocument(document.id)}
-                    disabled={busy}
-                    aria-label={`Delete ${document.displayName}`}
-                  >
-                    <Trash2 size={15} />
-                  </button>
-                </div>
-              ))
+                );
+              })
             ) : (
               <p className="muted-copy">No saved documents yet.</p>
             )}

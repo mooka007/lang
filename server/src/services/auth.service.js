@@ -30,7 +30,8 @@ function publicUser(user) {
     id: user.id,
     email: user.email,
     name: user.name,
-    role: user.role
+    role: user.role,
+    teamIds: user.teamMemberships?.map((membership) => membership.teamId) || []
   };
 }
 
@@ -150,6 +151,9 @@ export async function registerUser({ name, email, password }) {
       email: normalizedEmail,
       passwordHash: await hashPassword(password),
       role: "user"
+    },
+    include: {
+      teamMemberships: true
     }
   });
 
@@ -163,6 +167,9 @@ export async function loginUser({ email, password }) {
   const user = await prisma.user.findUnique({
     where: {
       email: normalizeEmail(email)
+    },
+    include: {
+      teamMemberships: true
     }
   });
   const isValid = user ? await verifyPassword(String(password || ""), user.passwordHash) : false;
@@ -183,6 +190,9 @@ export async function getUserById(userId) {
   const user = await prisma.user.findUnique({
     where: {
       id: userId
+    },
+    include: {
+      teamMemberships: true
     }
   });
   return user ? publicUser(user) : null;

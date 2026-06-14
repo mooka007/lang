@@ -14,6 +14,7 @@ Chat with PDF, text, or Markdown documents using a Node.js API, LangChain.js ret
 - PostgreSQL + Prisma storage mode with `pgvector` for production-style persistence.
 - Email/password authentication with JWT-protected document and chat APIs.
 - Per-user document and conversation ownership.
+- Team workspaces with members and team-shared document access.
 - Document library API for listing and deleting indexed documents.
 - Saved chat conversations in `server/data/conversations.json`.
 
@@ -130,12 +131,16 @@ Default URLs:
 - `POST /api/auth/register`
 - `POST /api/auth/login`
 - `GET /api/auth/me`
+- `GET /api/teams`
+- `POST /api/teams`
+- `POST /api/teams/:teamId/members`
 - `GET /api/status`
 - `POST /api/index-sample`
 - `POST /api/upload`
 - `POST /api/chat`
 - `GET /api/documents`
 - `DELETE /api/documents/:documentId`
+- `PATCH /api/documents/:documentId/share`
 - `GET /api/conversations`
 - `GET /api/conversations/:conversationId`
 - `DELETE /api/conversations/:conversationId`
@@ -170,6 +175,8 @@ The app now requires login before indexing, uploading, chatting, or reading save
 - Documents are owned by the logged-in user.
 - Conversations are owned by the logged-in user.
 - Retrieval only searches documents the user can access.
+- Users can create teams and add existing users by email.
+- Document owners can share documents as private, public, or team-only.
 - Admin users can access all documents.
 - Public document access is supported in the storage layer for future sharing.
 
@@ -177,4 +184,4 @@ The app now requires login before indexing, uploading, chatting, or reading save
 
 - Stream answers from the backend to the frontend.
 - Add richer document versioning and re-index controls.
-- Add teams and shared document collections.
+- Add pending email invitations for users who do not have an account yet.

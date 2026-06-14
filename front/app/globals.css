@@ -34,7 +34,8 @@ body {
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
 }
 
@@ -43,7 +44,8 @@ button {
 }
 
 button:disabled,
-input:disabled {
+input:disabled,
+select:disabled {
   cursor: not-allowed;
   opacity: 0.6;
 }
@@ -342,6 +344,90 @@ h2 {
   min-height: 34px;
   margin-top: 8px;
   font-size: 0.8rem;
+}
+
+.invite-list,
+.member-list,
+.document-actions {
+  display: grid;
+  gap: 8px;
+}
+
+.document-actions .compact-select {
+  margin-top: 0;
+}
+
+.invite-item,
+.member-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  padding: 9px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfb;
+}
+
+.member-row.pending {
+  background: rgba(183, 121, 31, 0.08);
+}
+
+.invite-item strong,
+.member-row strong,
+.team-item strong {
+  display: block;
+  overflow: hidden;
+  color: var(--text);
+  font-size: 0.86rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.invite-item small,
+.member-row small,
+.team-item span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.small-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 34px;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 10px;
+  background: #e8efec;
+  color: var(--green-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.rename-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+.rename-row input {
+  width: 100%;
+  min-height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 10px;
+  background: #fbfcfb;
+  color: var(--text);
+  outline: none;
+}
+
+.rename-row input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(31, 143, 109, 0.14);
 }
 
 .library-item,

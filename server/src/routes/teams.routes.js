@@ -1,6 +1,13 @@
 import express from "express";
 import { requireAuth } from "../middleware/auth.middleware.js";
-import { addTeamMember, createTeam, listTeams } from "../services/team.service.js";
+import {
+  acceptTeamInvite,
+  addTeamMember,
+  createTeam,
+  listPendingInvites,
+  listTeams,
+  removeTeamMember
+} from "../services/team.service.js";
 
 export const teamsRouter = express.Router();
 teamsRouter.use(requireAuth);
@@ -29,6 +36,31 @@ teamsRouter.post("/", async (request, response, next) => {
   }
 });
 
+teamsRouter.get("/invitations", async (request, response, next) => {
+  try {
+    response.json({
+      invitations: await listPendingInvites(request.user)
+    });
+  } catch (error) {
+    next(error);
+  }
+});
+
+teamsRouter.post("/invitations/:inviteId/accept", async (request, response, next) => {
+  try {
+    const team = await acceptTeamInvite({
+      inviteId: request.params.inviteId,
+      user: request.user
+    });
+
+    response.json({
+      team
+    });
+  } catch (error) {
+    next(error);
+  }
+});
+
 teamsRouter.post("/:teamId/members", async (request, response, next) => {
   try {
     const team = await addTeamMember({
@@ -37,6 +69,22 @@ teamsRouter.post("/:teamId/members", async (request, response, next) => {
       role: request.body?.role,
       user: request.user
     });
+    response.json({
+      team
+    });
+  } catch (error) {
+    next(error);
+  }
+});
+
+teamsRouter.delete("/:teamId/members/:userId", async (request, response, next) => {
+  try {
+    const team = await removeTeamMember({
+      teamId: request.params.teamId,
+      userId: request.params.userId,
+      user: request.user
+    });
+
     response.json({
       team
     });

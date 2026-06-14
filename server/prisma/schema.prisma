@@ -30,6 +30,7 @@ model Team {
   createdAt   DateTime     @default(now()) @map("created_at")
   updatedAt   DateTime     @updatedAt @map("updated_at")
   members     TeamMember[]
+  invites     TeamInvite[]
   documents   RagDocument[]
 
   @@index([ownerId])
@@ -50,6 +51,24 @@ model TeamMember {
   @@map("team_members")
 }
 
+model TeamInvite {
+  id          String    @id
+  teamId      String    @map("team_id")
+  team        Team      @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  email       String
+  role        String    @default("member")
+  status      String    @default("pending")
+  invitedById String?   @map("invited_by_id")
+  acceptedAt  DateTime? @map("accepted_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@unique([teamId, email])
+  @@index([email])
+  @@index([teamId])
+  @@map("team_invites")
+}
+
 model RagDocument {
   id          String     @id
   ownerId     String?    @map("owner_id")
@@ -58,11 +77,15 @@ model RagDocument {
   team        Team?      @relation(fields: [teamId], references: [id], onDelete: SetNull)
   fileName    String     @map("file_name")
   displayName String     @map("display_name")
+  originalName String?    @map("original_name")
+  storedPath  String?    @map("stored_path")
   sourceType  String     @map("source_type")
   accessLevel String     @default("private") @map("access_level")
   status      String     @default("indexed")
+  version     Int        @default(1)
   chunkCount  Int        @default(0) @map("chunk_count")
   indexedAt   DateTime   @default(now()) @map("indexed_at")
+  renamedAt   DateTime?  @map("renamed_at")
   createdAt   DateTime   @default(now()) @map("created_at")
   updatedAt   DateTime   @updatedAt @map("updated_at")
   chunks      RagChunk[]

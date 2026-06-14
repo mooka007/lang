@@ -50,11 +50,15 @@ function mapDocument(document) {
     teamId: document.teamId,
     fileName: document.fileName,
     displayName: document.displayName,
+    originalName: document.originalName,
+    storedPath: document.storedPath,
     sourceType: document.sourceType,
     accessLevel: document.accessLevel,
     status: document.status,
+    version: document.version,
     chunkCount: document.chunkCount,
-    indexedAt: toIso(document.indexedAt)
+    indexedAt: toIso(document.indexedAt),
+    renamedAt: toIso(document.renamedAt)
   };
 }
 
@@ -122,11 +126,15 @@ export async function saveIndexSnapshot(snapshot) {
           teamId: document.teamId || null,
           fileName: document.fileName || document.displayName,
           displayName: document.displayName,
+          originalName: document.originalName || document.displayName,
+          storedPath: document.storedPath || null,
           sourceType: document.sourceType || "upload",
           accessLevel: document.accessLevel || "private",
           status: document.status || "indexed",
+          version: document.version || 1,
           chunkCount: document.chunkCount || 0,
-          indexedAt: document.indexedAt ? new Date(document.indexedAt) : new Date()
+          indexedAt: document.indexedAt ? new Date(document.indexedAt) : new Date(),
+          renamedAt: document.renamedAt ? new Date(document.renamedAt) : null
         }
       });
     }

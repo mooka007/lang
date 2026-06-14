@@ -3,6 +3,7 @@
 import {
   AlertCircle,
   Bot,
+  Check,
   Database,
   Files,
   FileText,
@@ -15,6 +16,7 @@ import {
   Trash2,
   Upload,
   User,
+  UserMinus,
   Users
 } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -104,21 +106,38 @@ export function DocumentChat() {
   const [messages, setMessages] = useState([]);
   const [conversations, setConversations] = useState([]);
   const [teams, setTeams] = useState([]);
+  const [pendingInvites, setPendingInvites] = useState([]);
   const [teamName, setTeamName] = useState("");
   const [memberEmail, setMemberEmail] = useState("");
   const [activeTeamId, setActiveTeamId] = useState("");
+  const [renameValues, setRenameValues] = useState({});
   const [activeConversationId, setActiveConversationId] = useState(null);
   const [question, setQuestion] = useState("");
   const [error, setError] = useState("");
   const [isIndexing, setIsIndexing] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [isAsking, setIsAsking] = useState(false);
+  const [documentActionId, setDocumentActionId] = useState("");
   const fileInputRef = useRef(null);
   const chatEndRef = useRef(null);
 
-  const busy = isIndexing || isUploading || isAsking;
+  const busy = isIndexing || isUploading || isAsking || Boolean(documentActionId);
   const totalTokens = status.tokenUsage?.total?.totalTokens || 0;
   const documents = status.documents || [];
+  const activeTeam = teams.find((team) => team.id === activeTeamId) || null;
+  const teamNamesById = useMemo(
+    () => new Map(teams.map((team) => [team.id, team.name])),
+    [teams]
+  );
+  const canManageActiveTeam = Boolean(
+    activeTeam
+      && (
+        auth.user?.role === "admin"
+        || activeTeam.members?.some(
+          (member) => member.userId === auth.user?.id && ["owner", "admin"].includes(member.role)
+        )
+      )
+  );
   const statusText = useMemo(() => {
     if (!status.ready) {
       return "No document indexed";
@@ -137,6 +156,8 @@ export function DocumentChat() {
     setMessages([]);
     setConversations([]);
     setTeams([]);
+    setPendingInvites([]);
+    setRenameValues({});
     setActiveConversationId(null);
   }
 
@@ -221,14 +242,28 @@ export function DocumentChat() {
       const response = await apiFetch("/teams");
       const payload = await readJson(response);
       setTeams(payload.teams || []);
-      setActiveTeamId((current) => current || payload.teams?.[0]?.id || "");
+      setActiveTeamId((current) => (
+        payload.teams?.some((team) => team.id === current)
+          ? current
+          : payload.teams?.[0]?.id || ""
+      ));
     } catch (teamError) {
       setError(teamError.message);
     }
   }
 
+  async function refreshInvites() {
+    try {
+      const response = await apiFetch("/teams/invitations");
+      const payload = await readJson(response);
+      setPendingInvites(payload.invitations || []);
+    } catch (inviteError) {
+      setError(inviteError.message);
+    }
+  }
+
   async function refreshWorkspace() {
-    await Promise.all([refreshStatus(), refreshConversations(), refreshTeams()]);
+    await Promise.all([refreshStatus(), refreshConversations(), refreshTeams(), refreshInvites()]);
   }
 
   async function createTeam(event) {
@@ -282,6 +317,36 @@ export function DocumentChat() {
       );
       setMemberEmail("");
       await refreshTeams();
+    } catch (teamError) {
+      setError(teamError.message);
+    }
+  }
+
+  async function acceptInvitation(inviteId) {
+    setError("");
+
+    try {
+      await readJson(
+        await apiFetch(`/teams/invitations/${inviteId}/accept`, {
+          method: "POST"
+        })
+      );
+      await Promise.all([refreshTeams(), refreshInvites(), refreshStatus()]);
+    } catch (inviteError) {
+      setError(inviteError.message);
+    }
+  }
+
+  async function removeTeamMember(teamId, userId) {
+    setError("");
+
+    try {
+      await readJson(
+        await apiFetch(`/teams/${teamId}/members/${userId}`, {
+          method: "DELETE"
+        })
+      );
+      await Promise.all([refreshTeams(), refreshStatus()]);
     } catch (teamError) {
       setError(teamError.message);
     }
@@ -379,6 +444,55 @@ export function DocumentChat() {
       setStatus(payload);
     } catch (shareError) {
       setError(shareError.message);
+    }
+  }
+
+  async function renameDocument(document) {
+    const displayName = (renameValues[document.id] || "").trim();
+    if (!displayName || displayName === document.displayName) {
+      return;
+    }
+
+    setError("");
+    setDocumentActionId(document.id);
+
+    try {
+      const response = await apiFetch(`/documents/${document.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          displayName
+        })
+      });
+      const payload = await readJson(response);
+      setStatus(payload);
+      setRenameValues((current) => ({
+        ...current,
+        [document.id]: ""
+      }));
+    } catch (renameError) {
+      setError(renameError.message);
+    } finally {
+      setDocumentActionId("");
+    }
+  }
+
+  async function reindexDocument(documentId) {
+    setError("");
+    setDocumentActionId(documentId);
+
+    try {
+      const response = await apiFetch(`/documents/${documentId}/reindex`, {
+        method: "POST"
+      });
+      const payload = await readJson(response);
+      setStatus(payload);
+    } catch (reindexError) {
+      setError(reindexError.message);
+    } finally {
+      setDocumentActionId("");
     }
   }
 
@@ -682,6 +796,28 @@ export function DocumentChat() {
             <Users size={18} aria-hidden="true" />
           </div>
 
+          {pendingInvites.length ? (
+            <div className="invite-list" aria-label="Pending invitations">
+              {pendingInvites.map((invite) => (
+                <div className="invite-item" key={invite.id}>
+                  <span>
+                    <strong>{invite.teamName}</strong>
+                    <small>{invite.role}</small>
+                  </span>
+                  <button
+                    type="button"
+                    className="small-action-button"
+                    onClick={() => acceptInvitation(invite.id)}
+                    disabled={busy}
+                  >
+                    <Check size={14} aria-hidden="true" />
+                    Accept
+                  </button>
+                </div>
+              ))}
+            </div>
+          ) : null}
+
           <form className="compact-form" onSubmit={createTeam}>
             <input
               value={teamName}
@@ -719,13 +855,48 @@ export function DocumentChat() {
                 {teams.map((team) => (
                   <div className={`team-item ${activeTeamId === team.id ? "active" : ""}`} key={team.id}>
                     <strong>{team.name}</strong>
-                    <span>{team.members.length} member{team.members.length === 1 ? "" : "s"}</span>
+                    <span>
+                      {team.members.length} member{team.members.length === 1 ? "" : "s"}
+                      {team.invites?.length ? ` - ${team.invites.length} pending` : ""}
+                    </span>
                   </div>
                 ))}
               </div>
+
+              {activeTeam ? (
+                <div className="member-list" aria-label={`${activeTeam.name} members`}>
+                  {activeTeam.members.map((member) => (
+                    <div className="member-row" key={member.id}>
+                      <span>
+                        <strong>{member.name || member.email}</strong>
+                        <small>{member.email} - {member.role}</small>
+                      </span>
+                      {canManageActiveTeam && member.role !== "owner" ? (
+                        <button
+                          type="button"
+                          className="small-icon-button"
+                          onClick={() => removeTeamMember(activeTeam.id, member.userId)}
+                          disabled={busy}
+                          aria-label={`Remove ${member.email}`}
+                        >
+                          <UserMinus size={15} />
+                        </button>
+                      ) : null}
+                    </div>
+                  ))}
+                  {activeTeam.invites?.map((invite) => (
+                    <div className="member-row pending" key={invite.id}>
+                      <span>
+                        <strong>{invite.email}</strong>
+                        <small>Pending invitation</small>
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              ) : null}
             </>
           ) : (
-            <p className="muted-copy">Create a team to share documents.</p>
+            <p className="muted-copy">Create a team or accept an invitation to share documents.</p>
           )}
         </section>
 
@@ -743,29 +914,66 @@ export function DocumentChat() {
               documents.map((document) => {
                 const canManage = document.ownerId === auth.user?.id || auth.user?.role === "admin";
                 const shareValue = document.accessLevel === "team" ? `team:${document.teamId || ""}` : document.accessLevel || "private";
+                const sharedTeamName = document.teamId ? teamNamesById.get(document.teamId) : "";
+                const isDocumentBusy = documentActionId === document.id;
 
                 return (
                   <div className="library-item" key={document.id}>
                     <div>
                       <strong>{document.displayName}</strong>
                       <span>
-                        {documentSourceLabel(document.sourceType)} - {document.chunkCount} chunks - {documentAccessLabel(document)}
+                        {documentSourceLabel(document.sourceType)} - v{document.version || 1} - {document.chunkCount} chunks -{" "}
+                        {documentAccessLabel(document)}
+                        {sharedTeamName ? ` (${sharedTeamName})` : ""}
                       </span>
                       {canManage ? (
-                        <select
-                          className="inline-select compact-select"
-                          value={shareValue}
-                          onChange={(event) => shareDocument(document.id, event.target.value)}
-                          disabled={busy}
-                        >
-                          <option value="private">Private</option>
-                          <option value="public">Public</option>
-                          {teams.map((team) => (
-                            <option value={`team:${team.id}`} key={team.id}>
-                              Team: {team.name}
-                            </option>
-                          ))}
-                        </select>
+                        <div className="document-actions">
+                          <select
+                            className="inline-select compact-select"
+                            value={shareValue}
+                            onChange={(event) => shareDocument(document.id, event.target.value)}
+                            disabled={busy}
+                          >
+                            <option value="private">Private</option>
+                            <option value="public">Public</option>
+                            {teams.map((team) => (
+                              <option value={`team:${team.id}`} key={team.id}>
+                                Team: {team.name}
+                              </option>
+                            ))}
+                          </select>
+
+                          <div className="rename-row">
+                            <input
+                              value={renameValues[document.id] || ""}
+                              onChange={(event) => setRenameValues((current) => ({
+                                ...current,
+                                [document.id]: event.target.value
+                              }))}
+                              placeholder="Rename document"
+                              disabled={busy}
+                            />
+                            <button
+                              type="button"
+                              className="small-action-button"
+                              onClick={() => renameDocument(document)}
+                              disabled={busy || !(renameValues[document.id] || "").trim()}
+                            >
+                              {isDocumentBusy ? <LoaderCircle className="spin" size={14} /> : <Check size={14} />}
+                              Save
+                            </button>
+                          </div>
+
+                          <button
+                            type="button"
+                            className="small-action-button"
+                            onClick={() => reindexDocument(document.id)}
+                            disabled={busy}
+                          >
+                            {isDocumentBusy ? <LoaderCircle className="spin" size={14} /> : <RefreshCw size={14} />}
+                            Re-index
+                          </button>
+                        </div>
                       ) : null}
                     </div>
                     {canManage ? (

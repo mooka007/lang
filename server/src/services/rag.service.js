@@ -135,6 +135,17 @@ function documentNameForUser(user) {
   return summarizeDocumentName(accessibleDocuments(user));
 }
 
+function getManageableDocument(documentId, user) {
+  const document = activeIndex.documents.find((item) => item.id === documentId);
+  if (!document || !canManageDocument(document, user)) {
+    const error = new Error("Document not found.");
+    error.status = 404;
+    throw error;
+  }
+
+  return document;
+}
+
 async function persistActiveIndex() {
   await saveIndexSnapshot(createSnapshot());
 }
@@ -449,12 +460,7 @@ export async function deleteIndexedDocument(documentId, user) {
 }
 
 export async function shareIndexedDocument(documentId, { accessLevel, teamId }, user) {
-  const document = activeIndex.documents.find((item) => item.id === documentId);
-  if (!document || !canManageDocument(document, user)) {
-    const error = new Error("Document not found.");
-    error.status = 404;
-    throw error;
-  }
+  getManageableDocument(documentId, user);
 
   const nextAccessLevel = ["private", "team", "public"].includes(accessLevel) ? accessLevel : "private";
   const nextTeamId = nextAccessLevel === "team" ? String(teamId || "").trim() : null;
@@ -497,6 +503,154 @@ export async function shareIndexedDocument(documentId, { accessLevel, teamId }, 
     };
   });
   activeIndex.chunks = activeIndex.vectorRecords.map((record) => record.document);
+
+  await persistActiveIndex();
+  return getIndexStatus(user);
+}
+
+export async function renameIndexedDocument(documentId, { displayName }, user) {
+  getManageableDocument(documentId, user);
+
+  const nextDisplayName = String(displayName || "").trim();
+  if (!nextDisplayName) {
+    const error = new Error("Document name is required.");
+    error.status = 400;
+    throw error;
+  }
+
+  const renamedAt = new Date().toISOString();
+  activeIndex.documents = activeIndex.documents.map((document) => (
+    document.id === documentId
+      ? {
+          ...document,
+          displayName: nextDisplayName,
+          renamedAt
+        }
+      : document
+  ));
+
+  activeIndex.vectorRecords = activeIndex.vectorRecords.map((record) => {
+    if (record.documentId !== documentId) {
+      return record;
+    }
+
+    const metadata = {
+      ...record.metadata,
+      source: nextDisplayName
+    };
+
+    return {
+      ...record,
+      metadata,
+      document: new Document({
+        pageContent: record.text,
+        metadata
+      })
+    };
+  });
+  activeIndex.chunks = activeIndex.vectorRecords.map((record) => record.document);
+  activeIndex.documentName = summarizeDocumentName(activeIndex.documents);
+
+  await persistActiveIndex();
+  return getIndexStatus(user);
+}
+
+export async function reindexIndexedDocument(documentId, user) {
+  requireModelConfig();
+  resetTokenUsage();
+
+  const document = getManageableDocument(documentId, user);
+  if (!document.storedPath) {
+    const error = new Error("This document cannot be re-indexed because its source file path was not saved.");
+    error.status = 400;
+    throw error;
+  }
+
+  try {
+    await fs.access(document.storedPath);
+  } catch {
+    const error = new Error("The original source file is no longer available for re-indexing.");
+    error.status = 400;
+    throw error;
+  }
+
+  const loadedDocuments = await loadFile(document.storedPath, document.displayName);
+  const normalizedDocuments = normalizeDocuments(
+    loadedDocuments,
+    document.displayName,
+    document.id,
+    document.ownerId,
+    document.accessLevel,
+    document.teamId
+  );
+  const splitter = new RecursiveCharacterTextSplitter({
+    chunkSize: 1000,
+    chunkOverlap: 180
+  });
+  const chunks = await splitter.splitDocuments(normalizedDocuments);
+  const embeddings = createEmbeddings();
+  const vectors = await embeddings.embedDocuments(chunks.map((chunk) => chunk.pageContent));
+  const indexedAt = new Date().toISOString();
+  const nextVersion = Number(document.version || 1) + 1;
+  const replacementRecords = chunks.map((chunk, index) => {
+    const metadata = {
+      ...chunk.metadata,
+      chunkIndex: index,
+      version: nextVersion
+    };
+
+    return {
+      id: createId("chunk"),
+      documentId: document.id,
+      text: chunk.pageContent,
+      metadata,
+      teamId: document.teamId,
+      embedding: vectors[index],
+      document: new Document({
+        pageContent: chunk.pageContent,
+        metadata
+      })
+    };
+  });
+
+  const nextDocuments = activeIndex.documents.map((item) => (
+    item.id === document.id
+      ? {
+          ...item,
+          version: nextVersion,
+          chunkCount: replacementRecords.length,
+          indexedAt,
+          status: "indexed"
+        }
+      : item
+  ));
+  const nextRecords = [
+    ...activeIndex.vectorRecords.filter((record) => record.documentId !== document.id),
+    ...replacementRecords
+  ].map((record, index) => {
+    const metadata = {
+      ...record.metadata,
+      chunkIndex: index
+    };
+
+    return {
+      ...record,
+      metadata,
+      document: new Document({
+        pageContent: record.text,
+        metadata
+      })
+    };
+  });
+
+  activeIndex = {
+    documents: nextDocuments,
+    chunks: nextRecords.map((record) => record.document),
+    vectorRecords: nextRecords,
+    documentName: summarizeDocumentName(nextDocuments),
+    chunkCount: nextRecords.length,
+    indexedAt
+  };
 
   await persistActiveIndex();
   return getIndexStatus(user);
@@ -555,11 +709,14 @@ export async function indexFiles(files, options = {}) {
       id: documentId,
       fileName: path.basename(filePath),
       displayName,
+      originalName: typeof file === "string" ? displayName : file.originalName || displayName,
+      storedPath: filePath,
       sourceType: typeof file === "string" ? options.sourceType || "sample" : file.sourceType || options.sourceType || "sample",
       ownerId,
       teamId,
       accessLevel,
       status: "indexed",
+      version: 1,
       chunkCount: 0,
       indexedAt: new Date().toISOString()
     };

@@ -11,6 +11,8 @@ import {
   indexFile,
   indexFiles,
   listIndexedDocuments,
+  reindexIndexedDocument,
+  renameIndexedDocument,
   shareIndexedDocument
 } from "../services/rag.service.js";
 import {
@@ -102,6 +104,30 @@ documentsRouter.delete("/documents/:documentId", async (request, response, next)
     }
 
     response.json(getIndexStatus(request.user));
+  } catch (error) {
+    next(error);
+  }
+});
+
+documentsRouter.patch("/documents/:documentId", async (request, response, next) => {
+  try {
+    response.json(
+      await renameIndexedDocument(
+        request.params.documentId,
+        {
+          displayName: request.body?.displayName
+        },
+        request.user
+      )
+    );
+  } catch (error) {
+    next(error);
+  }
+});
+
+documentsRouter.post("/documents/:documentId/reindex", async (request, response, next) => {
+  try {
+    response.json(await reindexIndexedDocument(request.params.documentId, request.user));
   } catch (error) {
     next(error);
   }

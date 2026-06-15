@@ -1,14 +1,54 @@
+# Dependencies
 node_modules/
+*/node_modules/
+
+# Build output and caches
 .next/
+*/.next/
 dist/
 build/
+coverage/
+.turbo/
+.vercel/
+.cache/
+
+# Environment and local secrets
 .env
-.env.local
+.env.*
+!.env.example
+server/.env
+server/.env.*
+front/.env
+front/.env.*
+
+# Logs
+*.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+front/*.log
+server/*.log
+
+# Local generated data and uploads
 server/data/
 server/uploads/*
 !server/uploads/.gitkeep
+scripts/
+server/prisma/migrations/
+
+# Keep generated public demo PDFs, ignore any extra local PDFs
 server/pdfs/*.pdf
 !server/pdfs/javascript-basics-for-rag.pdf
 !server/pdfs/company-x-employee-knowledge-base.pdf
 !server/pdfs/company-x-branch-*.pdf
+
+# Generated clients
+server/src/generated/
+server/src/generated/prisma/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

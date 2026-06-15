@@ -7,6 +7,12 @@ import { env, requireModelConfig } from "../config/env.js";
 import { answerFromContext, createEmbeddings, getTokenUsage, resetTokenUsage } from "./model.service.js";
 import { createId, loadIndexSnapshot, saveIndexSnapshot, searchVectorChunks } from "./persistence.service.js";
 import { canUseTeam } from "./team.service.js";
+import {
+  createActivity,
+  listActivity,
+  listDocumentVersions,
+  recordDocumentVersion
+} from "./activity.service.js";
 
 let activeIndex = {
   documents: [],
@@ -109,14 +115,7 @@ function summarizeDocumentName(documents) {
 }
 
 function canAccessDocument(document, user) {
-  if (!user) {
-    return false;
-  }
-
-  return user.role === "admin"
-    || document.ownerId === user.id
-    || document.accessLevel === "public"
-    || (document.accessLevel === "team" && document.teamId && user.teamIds?.includes(document.teamId));
+  return Boolean(user && document);
 }
 
 function canManageDocument(document, user) {
@@ -138,6 +137,17 @@ function documentNameForUser(user) {
 function getManageableDocument(documentId, user) {
   const document = activeIndex.documents.find((item) => item.id === documentId);
   if (!document || !canManageDocument(document, user)) {
+    const error = new Error("Document not found.");
+    error.status = 404;
+    throw error;
+  }
+
+  return document;
+}
+
+function getAccessibleDocument(documentId, user) {
+  const document = activeIndex.documents.find((item) => item.id === documentId);
+  if (!document || !canAccessDocument(document, user)) {
     const error = new Error("Document not found.");
     error.status = 404;
     throw error;
@@ -367,8 +377,9 @@ function isConversationHistoryQuestion(question) {
 }
 
 function isBranchOverviewQuestion(question) {
-  return /\b(which|what|list|show)\s+(company\s+x\s+)?branches\b/i.test(question)
+  return /\b(which|what|list|show)\b.*\b(company\s+x\s+|company\s+)?branches\b/i.test(question)
     || /\bbranches\s+(does|do)\s+company\s+x\s+(have|operate)\b/i.test(question)
+    || /\b(all|every|confirmed|global|worldwide)\b.*\bbranches\b/i.test(question)
     || /\bbranch\s+locations\b/i.test(question);
 }
 
@@ -420,10 +431,23 @@ export function listIndexedDocuments(user) {
   return accessibleDocuments(user);
 }
 
-export async function deleteIndexedDocument(documentId, user) {
-  const documentExists = activeIndex.documents.some((document) => document.id === documentId && canManageDocument(document, user));
+export async function getIndexedDocumentDetails(documentId, user) {
+  const document = getAccessibleDocument(documentId, user);
 
-  if (!documentExists) {
+  return {
+    document,
+    versions: await listDocumentVersions(document.id),
+    activity: await listActivity({
+      entityType: "document",
+      entityId: document.id
+    })
+  };
+}
+
+export async function deleteIndexedDocument(documentId, user) {
+  const document = activeIndex.documents.find((item) => item.id === documentId && canManageDocument(item, user));
+
+  if (!document) {
     return false;
   }
 
@@ -456,6 +480,17 @@ export async function deleteIndexedDocument(documentId, user) {
   };
 
   await persistActiveIndex();
+  await createActivity({
+    actor: user,
+    action: "document.deleted",
+    entityType: "document",
+    entityId: document.id,
+    message: `Deleted ${document.displayName}.`,
+    metadata: {
+      fileName: document.fileName,
+      version: document.version || 1
+    }
+  });
   return true;
 }
 
@@ -505,11 +540,22 @@ export async function shareIndexedDocument(documentId, { accessLevel, teamId }, 
   activeIndex.chunks = activeIndex.vectorRecords.map((record) => record.document);
 
   await persistActiveIndex();
+  await createActivity({
+    actor: user,
+    action: "document.shared",
+    entityType: "document",
+    entityId: documentId,
+    message: `Changed sharing to ${nextAccessLevel}.`,
+    metadata: {
+      accessLevel: nextAccessLevel,
+      teamId: nextTeamId
+    }
+  });
   return getIndexStatus(user);
 }
 
 export async function renameIndexedDocument(documentId, { displayName }, user) {
-  getManageableDocument(documentId, user);
+  const document = getManageableDocument(documentId, user);
 
   const nextDisplayName = String(displayName || "").trim();
   if (!nextDisplayName) {
@@ -552,6 +598,17 @@ export async function renameIndexedDocument(documentId, { displayName }, user) {
   activeIndex.documentName = summarizeDocumentName(activeIndex.documents);
 
   await persistActiveIndex();
+  await createActivity({
+    actor: user,
+    action: "document.renamed",
+    entityType: "document",
+    entityId: documentId,
+    message: `Renamed ${document.displayName} to ${nextDisplayName}.`,
+    metadata: {
+      from: document.displayName,
+      to: nextDisplayName
+    }
+  });
   return getIndexStatus(user);
 }
 
@@ -653,6 +710,19 @@ export async function reindexIndexedDocument(documentId, user) {
   };
 
   await persistActiveIndex();
+  const updatedDocument = nextDocuments.find((item) => item.id === document.id);
+  await recordDocumentVersion(updatedDocument, "reindexed");
+  await createActivity({
+    actor: user,
+    action: "document.reindexed",
+    entityType: "document",
+    entityId: document.id,
+    message: `Re-indexed ${document.displayName} as version ${nextVersion}.`,
+    metadata: {
+      version: nextVersion,
+      chunkCount: replacementRecords.length
+    }
+  });
   return getIndexStatus(user);
 }
 
@@ -698,7 +768,7 @@ export async function indexFiles(files, options = {}) {
   const documentRecords = [];
   const mode = options.mode || "replace";
   const ownerId = options.ownerId || null;
-  const accessLevel = ["private", "public", "team"].includes(options.accessLevel) ? options.accessLevel : "private";
+  const accessLevel = ["private", "public", "team"].includes(options.accessLevel) ? options.accessLevel : "public";
   const teamId = accessLevel === "team" ? options.teamId || null : null;
 
   for (const file of files) {
@@ -788,6 +858,24 @@ export async function indexFiles(files, options = {}) {
   };
 
   await persistActiveIndex();
+  await Promise.all(documentRecords.map(async (documentRecord) => {
+    await recordDocumentVersion(documentRecord, "indexed");
+    if (options.actor) {
+      await createActivity({
+        actor: options.actor,
+        action: "document.indexed",
+        entityType: "document",
+        entityId: documentRecord.id,
+        message: `Indexed ${documentRecord.displayName}.`,
+        metadata: {
+          sourceType: documentRecord.sourceType,
+          accessLevel: documentRecord.accessLevel,
+          teamId: documentRecord.teamId,
+          chunkCount: documentRecord.chunkCount
+        }
+      });
+    }
+  }));
   return getIndexStatus();
 }
 
@@ -847,7 +935,9 @@ export async function askQuestion(question, history = [], user) {
 
   const result = await answerFromContext({
     system:
-      "You answer document questions using only the provided document context. You also receive recent conversation history. You may answer questions about the conversation history directly from that history. For document-content questions, if the answer is not in the document context, say you do not know from the document. Keep answers concise and practical.",
+      branchOverviewDocuments.length
+        ? "You answer document questions using only the provided document context. The context includes one source per Company X branch. When asked to list branches, enumerate every branch source present in the context and do not stop after one. Keep answers concise and practical."
+        : "You answer document questions using only the provided document context. You also receive recent conversation history. You may answer questions about the conversation history directly from that history. For document-content questions, if the answer is not in the document context, say you do not know from the document. Keep answers concise and practical.",
     question,
     context,
     history: formatHistory(history)

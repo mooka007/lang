@@ -12,8 +12,13 @@ Simple database structure:
 
 ```text
 users
-documents
-chunks
+teams
+team_members
+team_invites
+rag_documents
+rag_chunks
+document_versions
+activity_logs
 conversations
 messages
 usage_logs
@@ -45,10 +50,65 @@ Example:
 {
   id: "doc_001",
   ownerId: "user_001",
+  teamId: "team_001",
   fileName: "company-x-branch-morocco.pdf",
-  mimeType: "application/pdf",
+  displayName: "Morocco branch policy",
+  accessLevel: "team",
   status: "indexed",
-  chunkCount: 135
+  version: 2,
+  chunkCount: 135,
+  storedPath: "uploads/..."
+}
+```
+
+## Teams
+
+Stores shared workspaces for users.
+
+Example:
+
+```js
+{
+  id: "team_001",
+  ownerId: "user_001",
+  name: "HR Knowledge Team"
+}
+```
+
+## Team Members
+
+Stores team access and team role.
+
+Example:
+
+```js
+{
+  teamId: "team_001",
+  userId: "user_002",
+  role: "member"
+}
+```
+
+Supported roles:
+
+```text
+owner
+admin
+member
+```
+
+## Team Invitations
+
+Stores pending invitations for emails that may not have accounts yet.
+
+Example:
+
+```js
+{
+  teamId: "team_001",
+  email: "new.member@example.com",
+  role: "member",
+  status: "pending"
 }
 ```
 
@@ -117,9 +177,38 @@ Example:
 }
 ```
 
+## Document Versions
+
+Stores each indexed or re-indexed version.
+
+Example:
+
+```js
+{
+  documentId: "doc_001",
+  version: 2,
+  action: "reindexed",
+  chunkCount: 140
+}
+```
+
+## Activity Logs
+
+Stores important actions for documents and teams.
+
+Example:
+
+```js
+{
+  action: "document.renamed",
+  entityType: "document",
+  entityId: "doc_001",
+  message: "Renamed old name to new name."
+}
+```
+
 ## Simple Presentation Version
 
 ```text
-Database design organizes the app into users, documents, chunks, conversations, messages, and usage logs. This makes the app easier to manage and scale.
+Database design organizes users, teams, invites, documents, chunks, versions, activity logs, conversations, and messages. This makes the app easier to manage, audit, and scale.
 ```
-

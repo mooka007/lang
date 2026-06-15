@@ -4,9 +4,12 @@ import {
   AlertCircle,
   Bot,
   Check,
+  ChevronDown,
+  Clock,
   Database,
   Files,
   FileText,
+  Info,
   LoaderCircle,
   LogOut,
   MessageSquare,
@@ -17,7 +20,8 @@ import {
   Upload,
   User,
   UserMinus,
-  Users
+  Users,
+  X
 } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
@@ -32,14 +36,6 @@ function formatDate(value) {
     dateStyle: "medium",
     timeStyle: "short"
   }).format(new Date(value));
-}
-
-function sourceLabel(source) {
-  if (!source.page) {
-    return source.source;
-  }
-
-  return `${source.source}, page ${source.page}`;
 }
 
 function formatTokens(value) {
@@ -106,25 +102,61 @@ export function DocumentChat() {
   const [messages, setMessages] = useState([]);
   const [conversations, setConversations] = useState([]);
   const [teams, setTeams] = useState([]);
+  const [teamActivity, setTeamActivity] = useState([]);
   const [pendingInvites, setPendingInvites] = useState([]);
+  const [openSidebarSections, setOpenSidebarSections] = useState({
+    chats: true,
+    library: false,
+    teams: false
+  });
   const [teamName, setTeamName] = useState("");
   const [memberEmail, setMemberEmail] = useState("");
   const [activeTeamId, setActiveTeamId] = useState("");
   const [renameValues, setRenameValues] = useState({});
+  const [documentAccessFilter, setDocumentAccessFilter] = useState("all");
+  const [activeDocumentId, setActiveDocumentId] = useState("");
+  const [documentDetails, setDocumentDetails] = useState(null);
   const [activeConversationId, setActiveConversationId] = useState(null);
   const [question, setQuestion] = useState("");
   const [error, setError] = useState("");
   const [isIndexing, setIsIndexing] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [isAsking, setIsAsking] = useState(false);
+  const [isLoadingTeamActivity, setIsLoadingTeamActivity] = useState(false);
+  const [isLoadingDocumentDetails, setIsLoadingDocumentDetails] = useState(false);
   const [documentActionId, setDocumentActionId] = useState("");
   const fileInputRef = useRef(null);
   const chatEndRef = useRef(null);
 
-  const busy = isIndexing || isUploading || isAsking || Boolean(documentActionId);
+  const busy = isIndexing || isUploading || isAsking || isLoadingTeamActivity || isLoadingDocumentDetails || Boolean(documentActionId);
   const totalTokens = status.tokenUsage?.total?.totalTokens || 0;
   const documents = status.documents || [];
+  const filteredDocuments = useMemo(
+    () => (
+      documentAccessFilter === "all"
+        ? documents
+        : documents.filter((document) => document.accessLevel === documentAccessFilter)
+    ),
+    [documents, documentAccessFilter]
+  );
+  const documentFilterCounts = useMemo(
+    () => documents.reduce(
+      (counts, document) => ({
+        ...counts,
+        [document.accessLevel || "private"]: (counts[document.accessLevel || "private"] || 0) + 1
+      }),
+      {
+        all: documents.length,
+        private: 0,
+        team: 0,
+        public: 0
+      }
+    ),
+    [documents]
+  );
   const activeTeam = teams.find((team) => team.id === activeTeamId) || null;
+  const activeTeamMembership = activeTeam?.members?.find((member) => member.userId === auth.user?.id) || null;
+  const activeTeamRole = auth.user?.role === "admin" ? "admin" : activeTeamMembership?.role || "";
   const teamNamesById = useMemo(
     () => new Map(teams.map((team) => [team.id, team.name])),
     [teams]
@@ -156,9 +188,20 @@ export function DocumentChat() {
     setMessages([]);
     setConversations([]);
     setTeams([]);
+    setTeamActivity([]);
     setPendingInvites([]);
     setRenameValues({});
+    setDocumentAccessFilter("all");
+    setActiveDocumentId("");
+    setDocumentDetails(null);
     setActiveConversationId(null);
+  }
+
+  function toggleSidebarSection(section) {
+    setOpenSidebarSections((current) => ({
+      ...current,
+      [section]: !current[section]
+    }));
   }
 
   function authHeaders(extraHeaders = {}) {
@@ -262,6 +305,26 @@ export function DocumentChat() {
     }
   }
 
+  async function loadTeamActivity(teamId) {
+    if (!teamId) {
+      setTeamActivity([]);
+      return;
+    }
+
+    setIsLoadingTeamActivity(true);
+
+    try {
+      const response = await apiFetch(`/teams/${teamId}/activity`);
+      const payload = await readJson(response);
+      setTeamActivity(payload.activity || []);
+    } catch (activityError) {
+      setTeamActivity([]);
+      setError(activityError.message);
+    } finally {
+      setIsLoadingTeamActivity(false);
+    }
+  }
+
   async function refreshWorkspace() {
     await Promise.all([refreshStatus(), refreshConversations(), refreshTeams(), refreshInvites()]);
   }
@@ -289,6 +352,7 @@ export function DocumentChat() {
       setTeamName("");
       setActiveTeamId(payload.team.id);
       await refreshTeams();
+      await loadTeamActivity(payload.team.id);
     } catch (teamError) {
       setError(teamError.message);
     }
@@ -317,6 +381,7 @@ export function DocumentChat() {
       );
       setMemberEmail("");
       await refreshTeams();
+      await loadTeamActivity(activeTeamId);
     } catch (teamError) {
       setError(teamError.message);
     }
@@ -332,6 +397,23 @@ export function DocumentChat() {
         })
       );
       await Promise.all([refreshTeams(), refreshInvites(), refreshStatus()]);
+      await loadTeamActivity(activeTeamId);
+    } catch (inviteError) {
+      setError(inviteError.message);
+    }
+  }
+
+  async function cancelTeamInvite(teamId, inviteId) {
+    setError("");
+
+    try {
+      await readJson(
+        await apiFetch(`/teams/${teamId}/invitations/${inviteId}`, {
+          method: "DELETE"
+        })
+      );
+      await Promise.all([refreshTeams(), refreshInvites()]);
+      await loadTeamActivity(teamId);
     } catch (inviteError) {
       setError(inviteError.message);
     }
@@ -347,6 +429,7 @@ export function DocumentChat() {
         })
       );
       await Promise.all([refreshTeams(), refreshStatus()]);
+      await loadTeamActivity(teamId);
     } catch (teamError) {
       setError(teamError.message);
     }
@@ -417,8 +500,29 @@ export function DocumentChat() {
       });
       const payload = await readJson(response);
       setStatus(payload);
+      if (activeDocumentId === documentId) {
+        setActiveDocumentId("");
+        setDocumentDetails(null);
+      }
     } catch (deleteError) {
       setError(deleteError.message);
+    }
+  }
+
+  async function loadDocumentDetails(documentId) {
+    setError("");
+    setActiveDocumentId(documentId);
+    setIsLoadingDocumentDetails(true);
+
+    try {
+      const response = await apiFetch(`/documents/${documentId}`);
+      const payload = await readJson(response);
+      setDocumentDetails(payload);
+    } catch (detailsError) {
+      setDocumentDetails(null);
+      setError(detailsError.message);
+    } finally {
+      setIsLoadingDocumentDetails(false);
     }
   }
 
@@ -442,6 +546,9 @@ export function DocumentChat() {
       });
       const payload = await readJson(response);
       setStatus(payload);
+      if (activeDocumentId === documentId) {
+        await loadDocumentDetails(documentId);
+      }
     } catch (shareError) {
       setError(shareError.message);
     }
@@ -472,6 +579,9 @@ export function DocumentChat() {
         ...current,
         [document.id]: ""
       }));
+      if (activeDocumentId === document.id) {
+        await loadDocumentDetails(document.id);
+      }
     } catch (renameError) {
       setError(renameError.message);
     } finally {
@@ -489,6 +599,9 @@ export function DocumentChat() {
       });
       const payload = await readJson(response);
       setStatus(payload);
+      if (activeDocumentId === documentId) {
+        await loadDocumentDetails(documentId);
+      }
     } catch (reindexError) {
       setError(reindexError.message);
     } finally {
@@ -630,6 +743,15 @@ export function DocumentChat() {
   }, [auth.ready, auth.token]);
 
   useEffect(() => {
+    if (auth.ready && auth.token && activeTeamId) {
+      loadTeamActivity(activeTeamId);
+      return;
+    }
+
+    setTeamActivity([]);
+  }, [auth.ready, auth.token, activeTeamId]);
+
+  useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isAsking]);
 
@@ -738,23 +860,10 @@ export function DocumentChat() {
           </button>
         </div>
 
-        <section className="status-panel" aria-label="Index status">
-          <div className="status-row">
-            <span className={status.ready ? "status-dot ready" : "status-dot"} />
-            <span>{statusText}</span>
-          </div>
-          <h2>{status.documentName || "Waiting for a document"}</h2>
-          <p>{formatDate(status.indexedAt)}</p>
-          <div className="usage-summary">
-            <span>Total tokens</span>
-            <strong>{formatTokens(totalTokens)}</strong>
-          </div>
-        </section>
-
         <div className="control-grid">
           <button type="button" className="primary-button" onClick={indexSample} disabled={busy}>
             {isIndexing ? <LoaderCircle className="spin" size={18} /> : <Database size={18} />}
-            <span>Load company PDFs</span>
+            <span>Load company</span>
           </button>
 
           <button
@@ -767,8 +876,9 @@ export function DocumentChat() {
             <span>Upload</span>
           </button>
 
-          <button type="button" className="icon-button" onClick={refreshStatus} disabled={busy} aria-label="Refresh status">
+          <button type="button" className="icon-button" onClick={refreshWorkspace} disabled={busy} aria-label="Reload workspace">
             <RefreshCw size={18} />
+            <span>Reload</span>
           </button>
         </div>
 
@@ -787,15 +897,27 @@ export function DocumentChat() {
           </div>
         ) : null}
 
-        <section className="library-section" aria-label="Teams">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">Teams</p>
-              <h2>{teams.length} team{teams.length === 1 ? "" : "s"}</h2>
-            </div>
-            <Users size={18} aria-hidden="true" />
+        <section className="library-section teams-section" aria-label="Teams">
+          <div className="section-heading dropdown-heading">
+            <button
+              type="button"
+              className="section-toggle"
+              onClick={() => toggleSidebarSection("teams")}
+              aria-expanded={openSidebarSections.teams}
+            >
+              <span>
+                <p className="eyebrow">Teams</p>
+                <h2>{teams.length} team{teams.length === 1 ? "" : "s"}</h2>
+              </span>
+              <span className="section-toggle-icons">
+                <Users size={18} aria-hidden="true" />
+                <ChevronDown className={openSidebarSections.teams ? "chevron open" : "chevron"} size={17} aria-hidden="true" />
+              </span>
+            </button>
           </div>
 
+          {openSidebarSections.teams ? (
+            <div className="section-body">
           {pendingInvites.length ? (
             <div className="invite-list" aria-label="Pending invitations">
               {pendingInvites.map((invite) => (
@@ -839,17 +961,32 @@ export function DocumentChat() {
                 ))}
               </select>
 
+              {activeTeam ? (
+                <div className="permission-card">
+                  <span>
+                    <strong>{activeTeam.name}</strong>
+                    <small>{canManageActiveTeam ? "You can invite, remove, and manage sharing." : "You can view shared team documents."}</small>
+                  </span>
+                  <span className={`role-badge ${activeTeamRole || "member"}`}>{activeTeamRole || "member"}</span>
+                </div>
+              ) : null}
+
               <form className="compact-form" onSubmit={addTeamMember}>
                 <input
                   value={memberEmail}
                   onChange={(event) => setMemberEmail(event.target.value)}
                   placeholder="Member email"
                   type="email"
+                  disabled={!canManageActiveTeam || busy}
                 />
-                <button type="submit" className="secondary-button" disabled={busy || !activeTeamId || !memberEmail.trim()}>
+                <button type="submit" className="secondary-button" disabled={busy || !canManageActiveTeam || !activeTeamId || !memberEmail.trim()}>
                   Add
                 </button>
               </form>
+
+              {!canManageActiveTeam ? (
+                <p className="muted-copy">Only team owners and admins can invite or remove members.</p>
+              ) : null}
 
               <div className="item-list">
                 {teams.map((team) => (
@@ -864,54 +1001,124 @@ export function DocumentChat() {
               </div>
 
               {activeTeam ? (
-                <div className="member-list" aria-label={`${activeTeam.name} members`}>
-                  {activeTeam.members.map((member) => (
-                    <div className="member-row" key={member.id}>
-                      <span>
-                        <strong>{member.name || member.email}</strong>
-                        <small>{member.email} - {member.role}</small>
-                      </span>
-                      {canManageActiveTeam && member.role !== "owner" ? (
-                        <button
-                          type="button"
-                          className="small-icon-button"
-                          onClick={() => removeTeamMember(activeTeam.id, member.userId)}
-                          disabled={busy}
-                          aria-label={`Remove ${member.email}`}
-                        >
-                          <UserMinus size={15} />
-                        </button>
-                      ) : null}
+                <>
+                  <div className="member-list" aria-label={`${activeTeam.name} members`}>
+                    {activeTeam.members.map((member) => (
+                      <div className="member-row" key={member.id}>
+                        <span>
+                          <strong>{member.name || member.email}</strong>
+                          <small>{member.email} - {member.role}</small>
+                        </span>
+                        {canManageActiveTeam && member.role !== "owner" ? (
+                          <button
+                            type="button"
+                            className="small-icon-button"
+                            onClick={() => removeTeamMember(activeTeam.id, member.userId)}
+                            disabled={busy}
+                            aria-label={`Remove ${member.email}`}
+                          >
+                            <UserMinus size={15} />
+                          </button>
+                        ) : null}
+                      </div>
+                    ))}
+                    {activeTeam.invites?.map((invite) => (
+                      <div className="member-row pending" key={invite.id}>
+                        <span>
+                          <strong>{invite.email}</strong>
+                          <small>Pending invitation</small>
+                        </span>
+                        {canManageActiveTeam ? (
+                          <button
+                            type="button"
+                            className="small-icon-button"
+                            onClick={() => cancelTeamInvite(activeTeam.id, invite.id)}
+                            disabled={busy}
+                            aria-label={`Cancel invitation for ${invite.email}`}
+                          >
+                            <X size={15} />
+                          </button>
+                        ) : null}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="team-activity-panel" aria-label={`${activeTeam.name} activity`}>
+                    <div className="mini-heading">
+                      <Clock size={15} aria-hidden="true" />
+                      <strong>Team activity</strong>
+                      {isLoadingTeamActivity ? <LoaderCircle className="spin" size={14} /> : null}
                     </div>
-                  ))}
-                  {activeTeam.invites?.map((invite) => (
-                    <div className="member-row pending" key={invite.id}>
-                      <span>
-                        <strong>{invite.email}</strong>
-                        <small>Pending invitation</small>
-                      </span>
+                    <div className="timeline-list">
+                      {teamActivity.length ? (
+                        teamActivity.map((activity) => (
+                          <div className="timeline-item" key={activity.id}>
+                            <span>
+                              <strong>{activity.message}</strong>
+                              <small>
+                                {activity.actorName || activity.actorEmail || "System"} - {formatShortDate(activity.createdAt)}
+                              </small>
+                            </span>
+                          </div>
+                        ))
+                      ) : (
+                        <p className="muted-copy">No team activity yet.</p>
+                      )}
                     </div>
-                  ))}
-                </div>
+                  </div>
+                </>
               ) : null}
             </>
           ) : (
             <p className="muted-copy">Create a team or accept an invitation to share documents.</p>
           )}
+            </div>
+          ) : null}
         </section>
 
-        <section className="library-section" aria-label="Indexed documents">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">Library</p>
-              <h2>{documents.length} document{documents.length === 1 ? "" : "s"}</h2>
-            </div>
-            <Files size={18} aria-hidden="true" />
+        <section className="library-section documents-section" aria-label="Indexed documents">
+          <div className="section-heading dropdown-heading">
+            <button
+              type="button"
+              className="section-toggle"
+              onClick={() => toggleSidebarSection("library")}
+              aria-expanded={openSidebarSections.library}
+            >
+              <span>
+                <p className="eyebrow">Library</p>
+                <h2>{filteredDocuments.length} document{filteredDocuments.length === 1 ? "" : "s"}</h2>
+              </span>
+              <span className="section-toggle-icons">
+                <Files size={18} aria-hidden="true" />
+                <ChevronDown className={openSidebarSections.library ? "chevron open" : "chevron"} size={17} aria-hidden="true" />
+              </span>
+            </button>
+          </div>
+
+          {openSidebarSections.library ? (
+            <div className="section-body">
+          <div className="filter-tabs" role="tablist" aria-label="Document access filter">
+            {[
+              ["all", "All"],
+              ["private", "Private"],
+              ["team", "Team"],
+              ["public", "Public"]
+            ].map(([value, label]) => (
+              <button
+                type="button"
+                className={`filter-button ${documentAccessFilter === value ? "active" : ""}`}
+                onClick={() => setDocumentAccessFilter(value)}
+                key={value}
+              >
+                <span>{label}</span>
+                <strong>{documentFilterCounts[value] || 0}</strong>
+              </button>
+            ))}
           </div>
 
           <div className="item-list">
-            {documents.length ? (
-              documents.map((document) => {
+            {filteredDocuments.length ? (
+              filteredDocuments.map((document) => {
                 const canManage = document.ownerId === auth.user?.id || auth.user?.role === "admin";
                 const shareValue = document.accessLevel === "team" ? `team:${document.teamId || ""}` : document.accessLevel || "private";
                 const sharedTeamName = document.teamId ? teamNamesById.get(document.teamId) : "";
@@ -976,7 +1183,21 @@ export function DocumentChat() {
                         </div>
                       ) : null}
                     </div>
-                    {canManage ? (
+                    <div className="library-item-actions">
+                      <button
+                        type="button"
+                        className={`small-icon-button ${activeDocumentId === document.id ? "active" : ""}`}
+                        onClick={() => loadDocumentDetails(document.id)}
+                        disabled={busy}
+                        aria-label={`Show details for ${document.displayName}`}
+                      >
+                        {isLoadingDocumentDetails && activeDocumentId === document.id ? (
+                          <LoaderCircle className="spin" size={15} />
+                        ) : (
+                          <Info size={15} />
+                        )}
+                      </button>
+                      {canManage ? (
                       <button
                         type="button"
                         className="small-icon-button"
@@ -986,27 +1207,127 @@ export function DocumentChat() {
                       >
                         <Trash2 size={15} />
                       </button>
-                    ) : null}
+                      ) : null}
+                    </div>
                   </div>
                 );
               })
             ) : (
-              <p className="muted-copy">No saved documents yet.</p>
+              <p className="muted-copy">No documents match this filter.</p>
             )}
           </div>
+
+          {documentDetails ? (
+            <div className="document-detail-panel" aria-label="Document details">
+              <div className="detail-heading">
+                <div>
+                  <p className="eyebrow">Details</p>
+                  <h3>{documentDetails.document.displayName}</h3>
+                </div>
+                <button
+                  type="button"
+                  className="small-action-button"
+                  onClick={() => {
+                    setActiveDocumentId("");
+                    setDocumentDetails(null);
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+
+              <div className="detail-grid">
+                <div>
+                  <span>Version</span>
+                  <strong>v{documentDetails.document.version || 1}</strong>
+                </div>
+                <div>
+                  <span>Access</span>
+                  <strong>{documentAccessLabel(documentDetails.document)}</strong>
+                </div>
+                <div>
+                  <span>Chunks</span>
+                  <strong>{documentDetails.document.chunkCount}</strong>
+                </div>
+                <div>
+                  <span>Source</span>
+                  <strong>{documentSourceLabel(documentDetails.document.sourceType)}</strong>
+                </div>
+              </div>
+
+              <div className="timeline-block">
+                <div className="mini-heading">
+                  <Clock size={15} aria-hidden="true" />
+                  <strong>Versions</strong>
+                </div>
+                <div className="timeline-list">
+                  {documentDetails.versions?.length ? (
+                    documentDetails.versions.map((version) => (
+                      <div className="timeline-item" key={version.id}>
+                        <span>
+                          <strong>v{version.version} - {version.action}</strong>
+                          <small>{version.chunkCount} chunks - {formatShortDate(version.indexedAt)}</small>
+                        </span>
+                      </div>
+                    ))
+                  ) : (
+                    <p className="muted-copy">No version history yet.</p>
+                  )}
+                </div>
+              </div>
+
+              <div className="timeline-block">
+                <div className="mini-heading">
+                  <Clock size={15} aria-hidden="true" />
+                  <strong>Activity</strong>
+                </div>
+                <div className="timeline-list">
+                  {documentDetails.activity?.length ? (
+                    documentDetails.activity.map((activity) => (
+                      <div className="timeline-item" key={activity.id}>
+                        <span>
+                          <strong>{activity.message}</strong>
+                          <small>
+                            {activity.actorName || activity.actorEmail || "System"} - {formatShortDate(activity.createdAt)}
+                          </small>
+                        </span>
+                      </div>
+                    ))
+                  ) : (
+                    <p className="muted-copy">No activity yet.</p>
+                  )}
+                </div>
+              </div>
+            </div>
+          ) : null}
+            </div>
+          ) : null}
         </section>
 
-        <section className="library-section" aria-label="Saved conversations">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">Chats</p>
-              <h2>{conversations.length} saved</h2>
-            </div>
+        <section className="library-section chats-section" aria-label="Saved conversations">
+          <div className="section-heading dropdown-heading">
+            <button
+              type="button"
+              className="section-toggle"
+              onClick={() => toggleSidebarSection("chats")}
+              aria-expanded={openSidebarSections.chats}
+            >
+              <span>
+                <p className="eyebrow">Chats</p>
+                <h2>{conversations.length} saved</h2>
+              </span>
+              <span className="section-toggle-icons">
+                <MessageSquare size={18} aria-hidden="true" />
+                <ChevronDown className={openSidebarSections.chats ? "chevron open" : "chevron"} size={17} aria-hidden="true" />
+              </span>
+            </button>
             <button type="button" className="small-icon-button" onClick={startNewChat} disabled={busy} aria-label="Start new chat">
               <Plus size={15} />
             </button>
           </div>
 
+          {openSidebarSections.chats ? (
+            <div className="section-body">
           <div className="item-list">
             {conversations.length ? (
               conversations.map((conversation) => (
@@ -1036,6 +1357,8 @@ export function DocumentChat() {
               <p className="muted-copy">No saved chats yet.</p>
             )}
           </div>
+            </div>
+          ) : null}
         </section>
       </aside>
 
@@ -1045,14 +1368,74 @@ export function DocumentChat() {
             <p className="eyebrow">Chat</p>
             <h2>{status.ready ? status.documentName : "No active document"}</h2>
           </div>
-          <span className={status.ready ? "pill ready" : "pill"}>{status.ready ? "Ready" : "Idle"}</span>
+          <div className="chat-header-actions">
+            <button type="button" className="header-action" onClick={refreshWorkspace} disabled={busy}>
+              <RefreshCw size={15} aria-hidden="true" />
+              Sync
+            </button>
+            <button type="button" className="header-action" onClick={startNewChat} disabled={busy}>
+              <Plus size={15} aria-hidden="true" />
+              New Chat
+            </button>
+            <span className={status.ready ? "pill ready" : "pill"}>{status.ready ? "Ready" : "Idle"}</span>
+          </div>
         </div>
 
         <div className="message-list">
           {messages.length === 0 ? (
             <div className="empty-state">
-              <Bot size={28} aria-hidden="true" />
-              <p>Ask about branches, employees, salaries, departments, projects, daily tasks, or company policies.</p>
+              <div className="orbita-orb" aria-hidden="true" />
+              <div className="empty-copy">
+                <h2>Hi, there</h2>
+                <p>Tell me what you need, and I will search the company knowledge base.</p>
+              </div>
+              <div className="starter-grid">
+                <button
+                  type="button"
+                  className="starter-card featured"
+                  onClick={() => setQuestion("List all Company X branches worldwide.")}
+                >
+                  <span className="starter-avatar">AI</span>
+                  <span>
+                    <strong>Branch overview</strong>
+                    <small>Find every confirmed location.</small>
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  className="starter-card"
+                  onClick={() => setQuestion("What are the key employee policies in the knowledge base?")}
+                >
+                  <span>
+                    <strong>Employee policies</strong>
+                    <small>Summarize the useful rules.</small>
+                  </span>
+                  <span className="card-menu">...</span>
+                </button>
+                <button
+                  type="button"
+                  className="starter-card"
+                  onClick={() => setQuestion("Which projects are assigned to the Morocco branch?")}
+                >
+                  <span>
+                    <strong>Team projects</strong>
+                    <small>Check branch assignments.</small>
+                  </span>
+                  <span className="card-menu">...</span>
+                </button>
+              </div>
+              <div className="quick-actions" aria-label="Suggested prompts">
+                {[
+                  "Compare branches",
+                  "Find departments",
+                  "Check salaries",
+                  "Review daily tasks"
+                ].map((prompt) => (
+                  <button type="button" key={prompt} onClick={() => setQuestion(prompt)}>
+                    {prompt}
+                  </button>
+                ))}
+              </div>
             </div>
           ) : null}
 
@@ -1063,20 +1446,6 @@ export function DocumentChat() {
               </div>
               <div className="message-body">
                 <p>{message.content}</p>
-                {message.sources?.length ? (
-                  <div className="sources" aria-label="Sources">
-                    {message.sources.map((source) => (
-                      <span key={`${source.id}-${source.page}-${source.preview}`}>{sourceLabel(source)}</span>
-                    ))}
-                  </div>
-                ) : null}
-                {message.usage ? (
-                  <div className="token-meter" aria-label="Token usage">
-                    <span>Prompt {formatTokens(message.usage.promptTokens)}</span>
-                    <span>Answer {formatTokens(message.usage.completionTokens)}</span>
-                    <span>Total {formatTokens(message.usage.totalTokens)}</span>
-                  </div>
-                ) : null}
               </div>
             </article>
           ))}
@@ -1097,15 +1466,30 @@ export function DocumentChat() {
         </div>
 
         <form className="composer" onSubmit={askQuestion}>
-          <input
-            value={question}
-            onChange={(event) => setQuestion(event.target.value)}
-            placeholder="Ask about the indexed document"
-            disabled={isAsking}
-          />
-          <button type="submit" className="send-button" disabled={!question.trim() || isAsking} aria-label="Send question">
-            {isAsking ? <LoaderCircle className="spin" size={20} /> : <Send size={20} />}
-          </button>
+          <div className="composer-field">
+            <input
+              value={question}
+              onChange={(event) => setQuestion(event.target.value)}
+              placeholder="Ask me anything..."
+              disabled={isAsking}
+            />
+            <div className="composer-tools">
+              <button type="button" className="tool-chip" onClick={() => toggleSidebarSection("library")}>
+                Select Source
+              </button>
+              <span className="composer-spacer" />
+              <button type="button" className="tool-chip" onClick={() => fileInputRef.current?.click()} disabled={busy}>
+                Attach
+              </button>
+              <button type="button" className="tool-chip" disabled>
+                Voice
+              </button>
+              <button type="submit" className="send-button" disabled={!question.trim() || isAsking} aria-label="Send question">
+                {isAsking ? <LoaderCircle className="spin" size={16} /> : <Send size={16} />}
+                Send
+              </button>
+            </div>
+          </div>
         </form>
       </section>
     </main>

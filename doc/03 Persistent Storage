@@ -2,17 +2,18 @@
 
 Persistent storage means saving important data so it does not disappear when the server restarts.
 
-Right now our project uses `MemoryVectorStore`.
+The project now uses PostgreSQL with Prisma and pgvector for persistent RAG storage.
 
-That is good for learning, but it lives only in memory.
+This replaced the early in-memory approach.
 
 If the backend restarts:
 
 ```text
-Indexed chunks disappear.
-Vector store disappears.
-Chat history disappears.
-The user must index the PDFs again.
+Indexed chunks stay saved.
+Embeddings stay saved.
+Chat history stays saved.
+Users, teams, invites, and activity stay saved.
+The user does not need to re-index everything after a restart.
 ```
 
 Persistent storage fixes this.
@@ -29,8 +30,41 @@ chunks
 embeddings
 conversations
 messages
+teams
+team invitations
+document versions
+activity logs
 token usage
 indexing status
+```
+
+## Current Implementation
+
+The backend stores:
+
+```text
+users
+teams
+team_members
+team_invites
+rag_documents
+rag_chunks with pgvector embeddings
+document_versions
+activity_logs
+conversations
+messages
+```
+
+Documents can now keep:
+
+```text
+ownerId
+teamId
+accessLevel: private, team, public
+storedPath
+originalName
+version
+renamedAt
 ```
 
 ## Simple Example
@@ -78,12 +112,15 @@ Chat history
 User accounts
 Document deletion
 Document re-indexing
+Document rename
+Document sharing
+Team invitations
+Activity history
 Production deployment
 ```
 
 ## Simple Presentation Version
 
 ```text
-Persistent storage saves documents, chunks, embeddings, and conversations permanently, so the app does not lose everything when the server restarts.
+Persistent storage saves users, teams, documents, chunks, embeddings, conversations, versions, invites, and activity logs permanently, so the app keeps its state after restart.
 ```
-

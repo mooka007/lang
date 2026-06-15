@@ -96,6 +96,39 @@ model RagDocument {
   @@map("rag_documents")
 }
 
+model DocumentVersion {
+  id          String   @id
+  documentId  String   @map("document_id")
+  version     Int
+  displayName String   @map("display_name")
+  chunkCount  Int      @default(0) @map("chunk_count")
+  action      String   @default("indexed")
+  indexedAt   DateTime @map("indexed_at")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@unique([documentId, version])
+  @@index([documentId])
+  @@map("document_versions")
+}
+
+model ActivityLog {
+  id         String   @id
+  actorId    String?  @map("actor_id")
+  actorName  String?  @map("actor_name")
+  actorEmail String?  @map("actor_email")
+  action     String
+  entityType String   @map("entity_type")
+  entityId   String   @map("entity_id")
+  message    String
+  metadata   Json?
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@index([actorId])
+  @@index([entityType, entityId])
+  @@index([createdAt])
+  @@map("activity_logs")
+}
+
 model RagChunk {
   id         String              @id
   documentId String              @map("document_id")

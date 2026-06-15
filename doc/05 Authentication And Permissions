@@ -24,6 +24,17 @@ JWT token
 Session cookie
 ```
 
+## Current Authentication
+
+The current backend uses:
+
+```text
+email and password registration
+email and password login
+JWT token authentication
+protected API routes
+```
+
 Simple login result:
 
 ```js
@@ -97,9 +108,55 @@ Rule:
 employee cannot access hr_only documents
 ```
 
+## Current Permission Model
+
+The project now uses:
+
+```text
+admin role
+normal user role
+team owner role
+team admin role
+team member role
+```
+
+Document access levels:
+
+```text
+private: only owner/admin can access
+team: document owner/admin and members of the selected team can access
+public: any logged-in user can access
+```
+
+Team rules:
+
+```text
+owner/admin can invite members
+owner/admin can cancel pending invites
+owner/admin can remove members
+member can view shared team documents
+```
+
+Invitations:
+
+```text
+Users can invite an email before that person has an account.
+The invited user sees the invitation after register/login.
+The invited user can accept the invitation.
+The team owner/admin can cancel pending invitations.
+```
+
+The frontend now shows:
+
+```text
+current team role badge
+permission card
+disabled invite controls for members
+document access filters: All, Private, Team, Public
+```
+
 ## Simple Presentation Version
 
 ```text
-Authentication identifies the user. Permissions decide which documents that user can search. In production RAG, retrieval must respect permissions.
+Authentication identifies the user. Permissions decide which private, team, or public documents that user can search. Retrieval, sharing, invites, and team actions all respect these permissions.
 ```
-

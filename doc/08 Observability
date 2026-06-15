@@ -62,6 +62,21 @@ empty answers
 common questions
 ```
 
+Track product activity:
+
+```text
+team created
+team invite created
+team invite accepted
+team invite canceled
+team member removed
+document indexed
+document renamed
+document shared
+document re-indexed
+document deleted
+```
+
 ## Simple Log Example
 
 ```js
@@ -87,11 +102,37 @@ Was retrieval bad?
 Was the LLM slow?
 Did token usage increase?
 Which document caused an error?
+Who changed document sharing?
+Who canceled an invite?
+Which version was re-indexed?
+```
+
+## Current Implementation
+
+The project now has an `activity_logs` table.
+
+It stores:
+
+```text
+actor
+action
+entity type
+entity ID
+message
+metadata
+created date
+```
+
+The frontend shows:
+
+```text
+document activity timeline
+team activity timeline
+document version history
 ```
 
 ## Simple Presentation Version
 
 ```text
-Observability means tracking logs, errors, token usage, latency, retrieval sources, and indexing status so we can understand and improve the RAG app.
+Observability means tracking logs, errors, token usage, retrieval sources, indexing status, document versions, and team/document activity so we can understand and improve the RAG app.
 ```
-

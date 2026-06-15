@@ -3,8 +3,10 @@ import { requireAuth } from "../middleware/auth.middleware.js";
 import {
   acceptTeamInvite,
   addTeamMember,
+  cancelTeamInvite,
   createTeam,
   listPendingInvites,
+  listTeamActivity,
   listTeams,
   removeTeamMember
 } from "../services/team.service.js";
@@ -49,6 +51,35 @@ teamsRouter.get("/invitations", async (request, response, next) => {
 teamsRouter.post("/invitations/:inviteId/accept", async (request, response, next) => {
   try {
     const team = await acceptTeamInvite({
+      inviteId: request.params.inviteId,
+      user: request.user
+    });
+
+    response.json({
+      team
+    });
+  } catch (error) {
+    next(error);
+  }
+});
+
+teamsRouter.get("/:teamId/activity", async (request, response, next) => {
+  try {
+    response.json({
+      activity: await listTeamActivity({
+        teamId: request.params.teamId,
+        user: request.user
+      })
+    });
+  } catch (error) {
+    next(error);
+  }
+});
+
+teamsRouter.delete("/:teamId/invitations/:inviteId", async (request, response, next) => {
+  try {
+    const team = await cancelTeamInvite({
+      teamId: request.params.teamId,
       inviteId: request.params.inviteId,
       user: request.user
     });

@@ -2,15 +2,15 @@
 
 A real vector database stores embeddings permanently and searches them efficiently.
 
-Our current project uses:
+The project now uses:
 
 ```text
-MemoryVectorStore
+PostgreSQL
+Prisma
+pgvector
 ```
 
-This is good for learning.
-
-But it is not enough for production because the index disappears when the server restarts.
+This stores embeddings permanently and allows retrieval to continue after backend restart.
 
 ## What A Vector Database Stores
 
@@ -23,6 +23,8 @@ document ID
 metadata
 page number
 user or organization ID
+team ID
+access level
 ```
 
 Example:
@@ -82,6 +84,8 @@ Example:
 Search only Morocco branch documents.
 Search only documents owned by user_001.
 Search only HR policies.
+Search only team documents the user can access.
+Search only public documents.
 ```
 
 Example filter:
@@ -89,8 +93,21 @@ Example filter:
 ```js
 {
   branch: "Morocco",
-  accessLevel: "employee"
+  ownerId: "user_001",
+  teamId: "team_001",
+  accessLevel: "team"
 }
+```
+
+## Current Retrieval Permissions
+
+The backend filters retrieval by:
+
+```text
+admin access
+document owner
+public documents
+team documents where the user is a team member
 ```
 
 ## Why It Matters
@@ -108,6 +125,5 @@ Better production scaling
 ## Simple Presentation Version
 
 ```text
-A real vector database stores embeddings permanently and lets the app search large document collections with filters and better performance.
+A real vector database stores embeddings permanently and lets the app search large document collections with owner, team, and access-level filters.
 ```
-

@@ -7,6 +7,7 @@ import { requireAuth } from "../middleware/auth.middleware.js";
 import {
   askQuestion,
   deleteIndexedDocument,
+  getIndexedDocumentDetails,
   getIndexStatus,
   indexFile,
   indexFiles,
@@ -92,6 +93,14 @@ documentsRouter.get("/documents", (request, response) => {
   response.json({
     documents: listIndexedDocuments(request.user)
   });
+});
+
+documentsRouter.get("/documents/:documentId", async (request, response, next) => {
+  try {
+    response.json(await getIndexedDocumentDetails(request.params.documentId, request.user));
+  } catch (error) {
+    next(error);
+  }
 });
 
 documentsRouter.delete("/documents/:documentId", async (request, response, next) => {
@@ -202,7 +211,8 @@ documentsRouter.post("/index-sample", async (request, response, next) => {
       mode: "replace",
       sourceType: "sample",
       ownerId: request.user.id,
-      accessLevel: "private"
+      accessLevel: "public",
+      actor: request.user
     });
 
     response.json(getIndexStatus(request.user));
@@ -224,8 +234,9 @@ documentsRouter.post("/upload", upload.single("file"), async (request, response,
       mode: "append",
       sourceType: "upload",
       ownerId: request.user.id,
-      accessLevel: String(request.body?.accessLevel || "private"),
-      teamId: request.body?.teamId
+      accessLevel: String(request.body?.accessLevel || "public"),
+      teamId: request.body?.teamId,
+      actor: request.user
     });
 
     response.json(getIndexStatus(request.user));

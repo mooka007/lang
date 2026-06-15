@@ -64,6 +64,32 @@ Manager should only retrieve branch documents they can access.
 Admin can retrieve all documents.
 ```
 
+Current document access levels:
+
+```text
+private
+team
+public
+```
+
+Current team roles:
+
+```text
+owner
+admin
+member
+```
+
+Rules:
+
+```text
+Only owner/admin can invite users.
+Only owner/admin can cancel pending invites.
+Only owner/admin can remove members.
+Only document owner/admin can rename, share, re-index, or delete a document.
+Team members can search documents shared with their team.
+```
+
 ## Rate Limits
 
 Rate limits prevent abuse and high token costs.
@@ -115,9 +141,29 @@ Good log:
 chat request failed for user_001
 ```
 
+## Activity Log Safety
+
+Activity logs are useful for audits, but should not store secrets.
+
+Good activity examples:
+
+```text
+document shared with team_001
+invitation canceled for user@example.com
+document re-indexed as version 2
+```
+
+Avoid storing:
+
+```text
+JWT tokens
+API keys
+full private document content
+passwords
+```
+
 ## Simple Presentation Version
 
 ```text
-Security protects documents, users, API keys, and model access. A production RAG app needs safe uploads, authentication, permissions, rate limits, secret management, validation, and careful logging.
+Security protects documents, users, teams, API keys, and model access. A production RAG app needs safe uploads, authentication, role-based permissions, invite controls, rate limits, secret management, validation, and careful logging.
 ```
-

@@ -1,5 +1,6 @@
 import { randomUUID } from "node:crypto";
 import { prisma } from "../config/prisma.js";
+import { createActivity, listActivity } from "./activity.service.js";
 
 function createId(prefix) {
   return `${prefix}_${randomUUID()}`;
@@ -152,6 +153,14 @@ export async function createTeam({ name, user }) {
     }
   });
 
+  await createActivity({
+    actor: user,
+    action: "team.created",
+    entityType: "team",
+    entityId: team.id,
+    message: `Created team ${team.name}.`
+  });
+
   return mapTeam(team);
 }
 
@@ -219,6 +228,18 @@ export async function addTeamMember({ teamId, email, role = "member", user }) {
       }
     });
 
+    await createActivity({
+      actor: user,
+      action: "team.invite.created",
+      entityType: "team",
+      entityId: teamId,
+      message: `Invited ${normalizedEmail}.`,
+      metadata: {
+        email: normalizedEmail,
+        role: normalizeRole(role)
+      }
+    });
+
     return mapTeam(await getTeamForResponse(teamId));
   }
 
@@ -252,6 +273,19 @@ export async function addTeamMember({ teamId, email, role = "member", user }) {
     })
   ]);
 
+  await createActivity({
+    actor: user,
+    action: "team.member.added",
+    entityType: "team",
+    entityId: teamId,
+    message: `Added ${targetUser.email} to the team.`,
+    metadata: {
+      userId: targetUser.id,
+      email: targetUser.email,
+      role: normalizeRole(role)
+    }
+  });
+
   return mapTeam(await getTeamForResponse(teamId));
 }
 
@@ -270,6 +304,65 @@ export async function listPendingInvites(user) {
   });
 
   return invites.map(mapInvite);
+}
+
+export async function listTeamActivity({ teamId, user }) {
+  if (!(await canUseTeam(teamId, user))) {
+    const error = new Error("You do not have permission to view this team.");
+    error.status = 403;
+    throw error;
+  }
+
+  return listActivity({
+    entityType: "team",
+    entityId: teamId,
+    limit: 30
+  });
+}
+
+export async function cancelTeamInvite({ teamId, inviteId, user }) {
+  if (!(await canManageTeam(teamId, user))) {
+    const error = new Error("You do not have permission to manage this team.");
+    error.status = 403;
+    throw error;
+  }
+
+  const invite = await prisma.teamInvite.findFirst({
+    where: {
+      id: inviteId,
+      teamId,
+      status: "pending"
+    }
+  });
+
+  if (!invite) {
+    const error = new Error("Pending invitation not found.");
+    error.status = 404;
+    throw error;
+  }
+
+  await prisma.teamInvite.update({
+    where: {
+      id: invite.id
+    },
+    data: {
+      status: "canceled"
+    }
+  });
+
+  await createActivity({
+    actor: user,
+    action: "team.invite.canceled",
+    entityType: "team",
+    entityId: teamId,
+    message: `Canceled invitation for ${invite.email}.`,
+    metadata: {
+      inviteId: invite.id,
+      email: invite.email
+    }
+  });
+
+  return mapTeam(await getTeamForResponse(teamId));
 }
 
 export async function acceptTeamInvite({ inviteId, user }) {
@@ -314,6 +407,19 @@ export async function acceptTeamInvite({ inviteId, user }) {
     })
   ]);
 
+  await createActivity({
+    actor: user,
+    action: "team.invite.accepted",
+    entityType: "team",
+    entityId: invite.teamId,
+    message: `${user.email} accepted the invitation.`,
+    metadata: {
+      inviteId: invite.id,
+      email: user.email,
+      role: normalizeRole(invite.role)
+    }
+  });
+
   return mapTeam(await getTeamForResponse(invite.teamId));
 }
 
@@ -351,6 +457,17 @@ export async function removeTeamMember({ teamId, userId, user }) {
         teamId,
         userId
       }
+    }
+  });
+
+  await createActivity({
+    actor: user,
+    action: "team.member.removed",
+    entityType: "team",
+    entityId: teamId,
+    message: "Removed a member from the team.",
+    metadata: {
+      userId
     }
   });
 

@@ -22,6 +22,15 @@ Database -> MongoDB Atlas, Postgres, or another hosted database
 Vector DB -> Pinecone, Qdrant, Chroma, MongoDB Atlas Vector Search, or pgvector
 ```
 
+Current project choice:
+
+```text
+Database and vector search -> PostgreSQL with pgvector
+ORM -> Prisma
+Frontend -> Next.js
+Backend -> Express.js
+```
+
 ## Environment Variables
 
 Production needs environment variables.
@@ -35,6 +44,9 @@ CLIENT_URL=https://your-frontend.com
 CORS_ORIGINS=https://your-frontend.com
 LLM_PROVIDER=github
 GITHUB_TOKEN=your_secret_token
+DATABASE_URL=postgresql://...
+JWT_SECRET=your_jwt_secret
+STORAGE_PROVIDER=postgres
 ```
 
 Secrets should not be written in code.
@@ -69,10 +81,16 @@ upload limits
 Frontend builds successfully
 Backend starts successfully
 Environment variables are set
+Prisma migrations are applied
+Prisma Client is generated
 CORS allows the frontend domain
 Uploads work
 Indexing works
 Chat works
+Login/register works
+Team invites work
+Document sharing works
+Activity logs work
 Logs are visible
 Secrets are not exposed
 ```
@@ -80,6 +98,5 @@ Secrets are not exposed
 ## Simple Presentation Version
 
 ```text
-Deployment puts the frontend, backend, database, and vector database online. It also requires correct environment variables, CORS settings, and secret management.
+Deployment puts the frontend, backend, PostgreSQL/pgvector database, and model provider online. It also requires migrations, correct environment variables, CORS settings, and secret management.
 ```
-

@@ -17,6 +17,9 @@ It should manage documents from beginning to end.
 6. Re-index
 7. Delete
 8. Version
+9. Rename
+10. Share
+11. View details and activity
 ```
 
 ## 1. Upload
@@ -49,6 +52,8 @@ Example:
 {
   id: "doc_001",
   fileName: "company-x-branch-morocco.pdf",
+  originalName: "company-x-branch-morocco.pdf",
+  storedPath: "uploads/...",
   status: "uploaded"
 }
 ```
@@ -121,9 +126,59 @@ This helps answer:
 Which document version was used?
 ```
 
+## 9. Rename
+
+The owner/admin can rename a document.
+
+The app updates:
+
+```text
+document display name
+source label used in answers
+renamedAt timestamp
+activity log
+```
+
+## 10. Share
+
+The owner/admin can share a document as:
+
+```text
+private
+team
+public
+```
+
+Team sharing requires selecting a team the user belongs to.
+
+## 11. Details And Activity
+
+The frontend now has a document details panel.
+
+It shows:
+
+```text
+display name
+version
+access level
+chunk count
+source type
+version history
+document activity timeline
+```
+
+Activity examples:
+
+```text
+document indexed
+document renamed
+document shared
+document re-indexed
+document deleted
+```
+
 ## Simple Presentation Version
 
 ```text
-Document lifecycle manages files from upload to indexing, re-indexing, deletion, and versioning. This makes the RAG app easier to control and trust.
+Document lifecycle manages files from upload to indexing, sharing, renaming, re-indexing, deletion, versioning, and activity history. This makes the RAG app easier to control and trust.
 ```
-

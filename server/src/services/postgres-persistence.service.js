@@ -1,6 +1,11 @@
 import { prisma } from "../config/prisma.js";
 import { randomUUID } from "node:crypto";
 
+const indexSnapshotTransactionOptions = {
+  maxWait: 10000,
+  timeout: 120000
+};
+
 function createId(prefix) {
   return `${prefix}_${randomUUID()}`;
 }
@@ -114,68 +119,78 @@ export async function loadIndexSnapshot() {
 }
 
 export async function saveIndexSnapshot(snapshot) {
-  await prisma.$transaction(async (tx) => {
-    await tx.ragChunk.deleteMany();
-    await tx.ragDocument.deleteMany();
+  const uniqueDocuments = Array.from(
+    new Map((snapshot.documents || []).map((document) => [document.id, document])).values()
+  );
+  const documentIds = new Set(uniqueDocuments.map((document) => document.id));
+  const uniqueChunks = Array.from(
+    new Map((snapshot.chunks || []).map((chunk) => [chunk.id, chunk])).values()
+  ).filter((chunk) => documentIds.has(chunk.documentId));
 
-    for (const document of snapshot.documents || []) {
-      await tx.ragDocument.create({
-        data: {
-          id: document.id,
-          ownerId: document.ownerId || null,
-          teamId: document.teamId || null,
-          fileName: document.fileName || document.displayName,
-          displayName: document.displayName,
-          originalName: document.originalName || document.displayName,
-          storedPath: document.storedPath || null,
-          sourceType: document.sourceType || "upload",
-          accessLevel: document.accessLevel || "private",
-          status: document.status || "indexed",
-          version: document.version || 1,
-          chunkCount: document.chunkCount || 0,
-          indexedAt: document.indexedAt ? new Date(document.indexedAt) : new Date(),
-          renamedAt: document.renamedAt ? new Date(document.renamedAt) : null
-        }
-      });
-    }
+  await prisma.$transaction(
+    async (tx) => {
+      await tx.ragChunk.deleteMany();
+      await tx.ragDocument.deleteMany();
 
-    for (const chunk of snapshot.chunks || []) {
-      const metadataJson = JSON.stringify(chunk.metadata || {});
-      const vector = vectorToSqlValue(chunk.embedding || []);
-      const page = Number.isFinite(Number(chunk.metadata?.page)) ? Number(chunk.metadata.page) : null;
-      const source = chunk.metadata?.source ? String(chunk.metadata.source) : null;
-      const chunkIndex = Number.isFinite(Number(chunk.metadata?.chunkIndex)) ? Number(chunk.metadata.chunkIndex) : 0;
+      for (const document of uniqueDocuments) {
+        await tx.ragDocument.create({
+          data: {
+            id: document.id,
+            ownerId: document.ownerId || null,
+            teamId: document.teamId || null,
+            fileName: document.fileName || document.displayName,
+            displayName: document.displayName,
+            originalName: document.originalName || document.displayName,
+            storedPath: document.storedPath || null,
+            sourceType: document.sourceType || "upload",
+            accessLevel: document.accessLevel || "private",
+            status: document.status || "indexed",
+            version: document.version || 1,
+            chunkCount: document.chunkCount || 0,
+            indexedAt: document.indexedAt ? new Date(document.indexedAt) : new Date(),
+            renamedAt: document.renamedAt ? new Date(document.renamedAt) : null
+          }
+        });
+      }
 
-      await tx.$executeRaw`
-        INSERT INTO rag_chunks (
-          id,
-          document_id,
-          text,
-          metadata,
-          embedding,
-          chunk_index,
-          page,
-          source
-        )
-        VALUES (
-          ${chunk.id},
-          ${chunk.documentId},
-          ${chunk.text},
-          ${metadataJson}::jsonb,
-          ${vector}::vector,
-          ${chunkIndex},
-          ${page},
-          ${source}
-        )
-      `;
-    }
-  });
+      for (const chunk of uniqueChunks) {
+        const metadataJson = JSON.stringify(chunk.metadata || {});
+        const vector = vectorToSqlValue(chunk.embedding || []);
+        const page = Number.isFinite(Number(chunk.metadata?.page)) ? Number(chunk.metadata.page) : null;
+        const source = chunk.metadata?.source ? String(chunk.metadata.source) : null;
+        const chunkIndex = Number.isFinite(Number(chunk.metadata?.chunkIndex)) ? Number(chunk.metadata.chunkIndex) : 0;
+
+        await tx.$executeRaw`
+          INSERT INTO rag_chunks (
+            id,
+            document_id,
+            text,
+            metadata,
+            embedding,
+            chunk_index,
+            page,
+            source
+          )
+          VALUES (
+            ${chunk.id},
+            ${chunk.documentId},
+            ${chunk.text},
+            ${metadataJson}::jsonb,
+            ${vector}::vector,
+            ${chunkIndex},
+            ${page},
+            ${source}
+          )
+        `;
+      }
+    },
+    indexSnapshotTransactionOptions
+  );
 }
 
 export async function searchVectorChunks(queryEmbedding, limit = 8, user = null) {
   const vector = vectorToSqlValue(queryEmbedding || []);
-  const ownerId = user?.id || "";
-  const isAdmin = user?.role === "admin";
+  const hasUser = Boolean(user);
   const rows = await prisma.$queryRaw`
     SELECT
       c.id,
@@ -186,21 +201,7 @@ export async function searchVectorChunks(queryEmbedding, limit = 8, user = null)
     FROM rag_chunks
     c
     INNER JOIN rag_documents d ON d.id = c.document_id
-    WHERE (
-      ${isAdmin}::boolean
-      OR d.owner_id = ${ownerId}
-      OR d.access_level = 'public'
-      OR (
-        d.access_level = 'team'
-        AND d.team_id IS NOT NULL
-        AND EXISTS (
-          SELECT 1
-          FROM team_members tm
-          WHERE tm.team_id = d.team_id
-          AND tm.user_id = ${ownerId}
-        )
-      )
-    )
+    WHERE ${hasUser}::boolean
     ORDER BY c.embedding <=> ${vector}::vector
     LIMIT ${limit}
   `;

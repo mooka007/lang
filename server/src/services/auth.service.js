@@ -26,11 +26,55 @@ function createSignature(input) {
 }
 
 function publicUser(user) {
+  const employeeProfile = user.employeeProfile
+    ? {
+        id: user.employeeProfile.employeeId,
+        name: user.employeeProfile.name,
+        source: user.employeeProfile.sourceFile || user.employeeSource || "",
+        email: user.employeeProfile.email,
+        branch: user.employeeProfile.branch?.name || user.employeeProfile.location || "",
+        department: user.employeeProfile.department || "",
+        post: user.employeeProfile.post || "",
+        salary: user.employeeProfile.salary || "",
+        manager: user.employeeProfile.manager || "",
+        phone: user.employeeProfile.phone || "",
+        dateOfBirth: user.employeeProfile.dateOfBirth,
+        startDate: user.employeeProfile.startDate,
+        employmentType: user.employeeProfile.employmentType || "",
+        workMode: user.employeeProfile.workMode || "",
+        shift: user.employeeProfile.shift || "",
+        responsibilityArea: user.employeeProfile.responsibilityArea || "",
+        branchProject: user.employeeProfile.branchProject || "",
+        localWorkstream: user.employeeProfile.localWorkstream || "",
+        projectManager: user.employeeProfile.projectManager || "",
+        projectStatus: user.employeeProfile.projectStatus || "",
+        projectBudget: user.employeeProfile.projectBudget || "",
+        projectDeadline: user.employeeProfile.projectDeadline || "",
+        projectKpi: user.employeeProfile.projectKpi || "",
+        projectRisk: user.employeeProfile.projectRisk || "",
+        skills: user.employeeProfile.skills || [],
+        languages: user.employeeProfile.languages || [],
+        systems: user.employeeProfile.systems || [],
+        performanceBand: user.employeeProfile.performanceBand || "",
+        accessLevel: user.employeeProfile.accessLevel || "",
+        ptoBalance: user.employeeProfile.ptoBalance || "",
+        weeklyDeliverables: user.employeeProfile.weeklyDeliverables || [],
+        dailyTasks: user.employeeProfile.dailyTasks || []
+      }
+    : user.employeeId
+      ? {
+          id: user.employeeId,
+          name: user.employeeName || "",
+          source: user.employeeSource || ""
+        }
+      : null;
+
   return {
     id: user.id,
     email: user.email,
     name: user.name,
     role: user.role,
+    employeeProfile,
     teamIds: user.teamMemberships?.map((membership) => membership.teamId) || []
   };
 }
@@ -153,7 +197,12 @@ export async function registerUser({ name, email, password }) {
       role: "user"
     },
     include: {
-      teamMemberships: true
+      teamMemberships: true,
+      employeeProfile: {
+        include: {
+          branch: true
+        }
+      }
     }
   });
 
@@ -169,7 +218,12 @@ export async function loginUser({ email, password }) {
       email: normalizeEmail(email)
     },
     include: {
-      teamMemberships: true
+      teamMemberships: true,
+      employeeProfile: {
+        include: {
+          branch: true
+        }
+      }
     }
   });
   const isValid = user ? await verifyPassword(String(password || ""), user.passwordHash) : false;
@@ -192,8 +246,38 @@ export async function getUserById(userId) {
       id: userId
     },
     include: {
-      teamMemberships: true
+      teamMemberships: true,
+      employeeProfile: {
+        include: {
+          branch: true
+        }
+      }
     }
   });
   return user ? publicUser(user) : null;
+}
+
+export async function updateUserEmployeeProfile(userId, { employeeId, employeeName, employeeSource }) {
+  const nextEmployeeId = String(employeeId || "").trim().toUpperCase();
+  if (!nextEmployeeId || !/^CX-(?:[A-Z]{2}-)?\d{3}$/.test(nextEmployeeId)) {
+    const error = new Error("Choose a valid employee ID, for example CX-001 or CX-MA-001.");
+    error.status = 400;
+    throw error;
+  }
+
+  const user = await prisma.user.update({
+    where: {
+      id: userId
+    },
+    data: {
+      employeeId: nextEmployeeId,
+      employeeName: String(employeeName || "").trim() || null,
+      employeeSource: String(employeeSource || "").trim() || null
+    },
+    include: {
+      teamMemberships: true
+    }
+  });
+
+  return publicUser(user);
 }

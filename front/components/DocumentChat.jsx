@@ -111,6 +111,9 @@ export function DocumentChat() {
   });
   const [teamName, setTeamName] = useState("");
   const [memberEmail, setMemberEmail] = useState("");
+  const [employeeProfileForm, setEmployeeProfileForm] = useState({
+    employeeId: ""
+  });
   const [activeTeamId, setActiveTeamId] = useState("");
   const [renameValues, setRenameValues] = useState({});
   const [documentAccessFilter, setDocumentAccessFilter] = useState("all");
@@ -257,6 +260,41 @@ export function DocumentChat() {
       saveSession(await readJson(response));
     } catch (authError) {
       setError(authError.message);
+    }
+  }
+
+  async function linkEmployeeProfile(event) {
+    event.preventDefault();
+    const employeeId = employeeProfileForm.employeeId.trim();
+    if (!employeeId) {
+      return;
+    }
+
+    setError("");
+
+    try {
+      const response = await apiFetch("/auth/me/employee-profile", {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ employeeId })
+      });
+      const payload = await readJson(response);
+      const nextSession = {
+        token: auth.token,
+        user: payload.user
+      };
+      localStorage.setItem("documentQaAuth", JSON.stringify(nextSession));
+      setAuth((current) => ({
+        ...current,
+        user: payload.user
+      }));
+      setEmployeeProfileForm({
+        employeeId: payload.user?.employeeProfile?.id || ""
+      });
+    } catch (profileError) {
+      setError(profileError.message);
     }
   }
 
@@ -743,6 +781,12 @@ export function DocumentChat() {
   }, [auth.ready, auth.token]);
 
   useEffect(() => {
+    setEmployeeProfileForm({
+      employeeId: auth.user?.employeeProfile?.id || ""
+    });
+  }, [auth.user?.employeeProfile?.id]);
+
+  useEffect(() => {
     if (auth.ready && auth.token && activeTeamId) {
       loadTeamActivity(activeTeamId);
       return;
@@ -854,11 +898,25 @@ export function DocumentChat() {
           <div>
             <strong>{auth.user?.name}</strong>
             <span>{auth.user?.email}</span>
+            {auth.user?.employeeProfile ? (
+              <span>Employee {auth.user.employeeProfile.id}</span>
+            ) : null}
           </div>
           <button type="button" className="small-icon-button" onClick={clearSession} aria-label="Log out">
             <LogOut size={15} />
           </button>
         </div>
+
+        <form className="compact-form employee-profile-form" onSubmit={linkEmployeeProfile}>
+          <input
+            value={employeeProfileForm.employeeId}
+            onChange={(event) => setEmployeeProfileForm({ employeeId: event.target.value })}
+            placeholder="Employee ID, e.g. CX-AU-002"
+          />
+          <button type="submit" className="secondary-button" disabled={busy || !employeeProfileForm.employeeId.trim()}>
+            Link
+          </button>
+        </form>
 
         <div className="control-grid">
           <button type="button" className="primary-button" onClick={indexSample} disabled={busy}>

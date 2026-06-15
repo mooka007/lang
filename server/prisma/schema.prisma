@@ -12,6 +12,9 @@ model User {
   name         String
   passwordHash String         @map("password_hash")
   role         String         @default("user")
+  employeeId   String?        @map("employee_id")
+  employeeName String?        @map("employee_name")
+  employeeSource String?      @map("employee_source")
   createdAt    DateTime       @default(now()) @map("created_at")
   updatedAt    DateTime       @updatedAt @map("updated_at")
   documents    RagDocument[]
@@ -19,7 +22,109 @@ model User {
   ownedTeams    Team[]         @relation("TeamOwner")
   teamMemberships TeamMember[]
 
+  employeeProfile CompanyEmployee?
+
   @@map("users")
+}
+
+model CompanyBranch {
+  id                  String            @id
+  code                String            @unique
+  city                String
+  country             String
+  name                String
+  overview            String?
+  officeAddress       String?           @map("office_address")
+  timezone            String?
+  standardHours       String?           @map("standard_hours")
+  employeeCount       Int               @default(0) @map("employee_count")
+  director            String?
+  operationsManager   String?           @map("operations_manager")
+  engineeringManager  String?           @map("engineering_manager")
+  customerSuccessManager String?        @map("customer_success_manager")
+  regionalSalesManager String?          @map("regional_sales_manager")
+  dataLead            String?           @map("data_lead")
+  securityCoordinator String?           @map("security_coordinator")
+  financeContact      String?           @map("finance_contact")
+  mainProject         String?           @map("main_project")
+  specialties         String[]          @default([])
+  sourceFile          String            @map("source_file")
+  createdAt           DateTime          @default(now()) @map("created_at")
+  updatedAt           DateTime          @updatedAt @map("updated_at")
+  employees           CompanyEmployee[]
+  projects            CompanyBranchProject[]
+
+  @@index([country])
+  @@index([city])
+  @@map("company_branches")
+}
+
+model CompanyBranchProject {
+  id          String        @id
+  branchId    String        @map("branch_id")
+  branch      CompanyBranch @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  code        String        @unique
+  name        String
+  manager     String?
+  deputy      String?
+  status      String?
+  employeeCount Int?        @map("employee_count")
+  budget      String?
+  deadline    String?
+  kpi         String?
+  risk        String?
+
+  @@index([branchId])
+  @@map("company_branch_projects")
+}
+
+model CompanyEmployee {
+  id             String         @id
+  employeeId     String         @unique @map("employee_id")
+  name           String
+  email          String         @unique
+  branchId       String?        @map("branch_id")
+  branch         CompanyBranch? @relation(fields: [branchId], references: [id], onDelete: SetNull)
+  userId         String?        @unique @map("user_id")
+  user           User?          @relation(fields: [userId], references: [id], onDelete: SetNull)
+  dateOfBirth    DateTime?      @map("date_of_birth")
+  startDate      DateTime?      @map("start_date")
+  department     String?
+  post           String?
+  salary         String?
+  shift          String?
+  manager        String?
+  location       String?
+  project        String?
+  projects       String[]       @default([])
+  projectManager String?        @map("project_manager")
+  phone          String?
+  employmentType String?        @map("employment_type")
+  workMode       String?        @map("work_mode")
+  responsibilityArea String?    @map("responsibility_area")
+  branchProject  String?        @map("branch_project")
+  localWorkstream String?       @map("local_workstream")
+  projectStatus  String?        @map("project_status")
+  projectBudget  String?        @map("project_budget")
+  projectDeadline String?       @map("project_deadline")
+  projectKpi     String?        @map("project_kpi")
+  projectRisk    String?        @map("project_risk")
+  skills         String[]       @default([])
+  languages      String[]       @default([])
+  systems        String[]       @default([])
+  performanceBand String?       @map("performance_band")
+  accessLevel    String?        @map("access_level")
+  ptoBalance     String?        @map("pto_balance")
+  weeklyDeliverables String[]   @default([]) @map("weekly_deliverables")
+  dailyTasks     String[]       @default([]) @map("daily_tasks")
+  sourceFile     String         @map("source_file")
+  createdAt      DateTime       @default(now()) @map("created_at")
+  updatedAt      DateTime       @updatedAt @map("updated_at")
+
+  @@index([branchId])
+  @@index([department])
+  @@index([post])
+  @@map("company_employees")
 }
 
 model Team {

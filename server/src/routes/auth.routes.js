@@ -1,6 +1,6 @@
 import express from "express";
 import { requireAuth } from "../middleware/auth.middleware.js";
-import { loginUser, registerUser } from "../services/auth.service.js";
+import { loginUser, registerUser, updateUserEmployeeProfile } from "../services/auth.service.js";
 
 export const authRouter = express.Router();
 
@@ -34,4 +34,20 @@ authRouter.get("/me", requireAuth, (request, response) => {
   response.json({
     user: request.user
   });
+});
+
+authRouter.patch("/me/employee-profile", requireAuth, async (request, response, next) => {
+  try {
+    const user = await updateUserEmployeeProfile(request.user.id, {
+      employeeId: request.body?.employeeId,
+      employeeName: request.body?.employeeName,
+      employeeSource: request.body?.employeeSource
+    });
+
+    response.json({
+      user
+    });
+  } catch (error) {
+    next(error);
+  }
 });

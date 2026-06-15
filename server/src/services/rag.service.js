@@ -383,6 +383,930 @@ function isBranchOverviewQuestion(question) {
     || /\bbranch\s+locations\b/i.test(question);
 }
 
+function isDocumentInventoryQuestion(question) {
+  return /\b(list|show|what|which)\b.*\b(documents|sources|files|data(?:base)?|datasets)\b/i.test(question)
+    || /\bhow many\b.*\b(documents|sources|files|datasets)\b/i.test(question);
+}
+
+function sourceDocumentsFromRecords(records) {
+  return records.map((record, index) => ({
+    id: index + 1,
+    source: record.source,
+    page: record.page || null,
+    preview: record.preview || ""
+  }));
+}
+
+function firstPageTextForDocument(documentId) {
+  return activeIndex.chunks
+    .filter((chunk) => chunk.metadata.documentId === documentId && pageFromMetadata(chunk.metadata) === 1)
+    .sort((left, right) => Number(left.metadata.chunkIndex || 0) - Number(right.metadata.chunkIndex || 0))
+    .map((chunk) => chunk.pageContent)
+    .join("\n");
+}
+
+function extractLineValue(text, label) {
+  const escapedLabel = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const match = text.match(new RegExp(`^[- ]*${escapedLabel}:\\s*(.+)$`, "im"));
+  return match?.[1]?.trim() || "";
+}
+
+function extractBranchSpecialties(text) {
+  const match = text.match(/Branch Specialties\s+([\s\S]*?)(?:Branch Department Capacity|Employee Directory|$)/i);
+  if (!match) {
+    return [];
+  }
+
+  return match[1]
+    .split(/\r?\n/)
+    .map((line) => line.replace(/^[-*]\s*/, "").trim())
+    .filter(Boolean)
+    .slice(0, 5);
+}
+
+function branchRecords(user) {
+  const allowedDocumentIds = accessibleDocumentIds(user);
+
+  return activeIndex.documents
+    .filter((document) => allowedDocumentIds.has(document.id) && /company x branch/i.test(document.displayName))
+    .map((document) => {
+      const text = firstPageTextForDocument(document.id);
+      const branch = extractLineValue(text, "Branch") || document.displayName.replace(/^company x branch\s+/i, "");
+      const employeeCount = extractLineValue(text, "Employee count");
+      const officeAddress = extractLineValue(text, "Office address");
+      const timezone = extractLineValue(text, "Timezone");
+      const director = extractLineValue(text, "Branch director");
+      const operationsManager = extractLineValue(text, "Branch operations manager");
+      const engineeringManager = extractLineValue(text, "Branch engineering manager");
+      const mainProject = extractLineValue(text, "Main branch project");
+      const specialties = extractBranchSpecialties(text);
+
+      return {
+        document,
+        branch,
+        employeeCount,
+        officeAddress,
+        timezone,
+        director,
+        operationsManager,
+        engineeringManager,
+        mainProject,
+        specialties,
+        source: document.displayName,
+        page: 1,
+        preview: text.slice(0, 240)
+      };
+    })
+    .sort((left, right) => left.branch.localeCompare(right.branch));
+}
+
+function findRequestedBranch(question, records) {
+  const normalizedQuestion = question.toLowerCase();
+
+  return records.find((record) => {
+    const branch = record.branch.toLowerCase();
+    const displayName = record.document.displayName.toLowerCase();
+    const [city, country] = branch.split(",").map((part) => part.trim());
+
+    return normalizedQuestion.includes(branch)
+      || normalizedQuestion.includes(displayName)
+      || (city && normalizedQuestion.includes(city))
+      || (country && normalizedQuestion.includes(country));
+  }) || null;
+}
+
+function findRequestedBranches(question, records) {
+  const normalizedQuestion = question.toLowerCase();
+  const seen = new Set();
+  const matches = [];
+
+  for (const record of records) {
+    const branch = record.branch.toLowerCase();
+    const displayName = record.document.displayName.toLowerCase();
+    const [city, country] = branch.split(",").map((part) => part.trim());
+    const isMatch = normalizedQuestion.includes(branch)
+      || normalizedQuestion.includes(displayName)
+      || (city && normalizedQuestion.includes(city))
+      || (country && normalizedQuestion.includes(country));
+
+    if (isMatch && !seen.has(record.document.id)) {
+      seen.add(record.document.id);
+      matches.push(record);
+    }
+  }
+
+  return matches;
+}
+
+function buildBranchListFastAnswer(records) {
+  const answerLines = records.map((record, index) => {
+    const details = [
+      record.employeeCount ? `${record.employeeCount} employees` : "",
+      record.mainProject ? `main project: ${record.mainProject}` : ""
+    ].filter(Boolean).join(" - ");
+
+    return `${index + 1}. ${record.branch}${details ? ` (${details})` : ""}`;
+  });
+
+  return {
+    answer: `Company X has ${records.length} indexed branches:\n\n${answerLines.join("\n")}`,
+    usage: {
+      promptTokens: 0,
+      completionTokens: 0,
+      totalTokens: 0
+    },
+    tokenUsage: getTokenUsage(),
+    sources: sourceDocumentsFromRecords(records)
+  };
+}
+
+function buildBranchDetailFastAnswer(record) {
+  const lines = [
+    `${record.branch}`,
+    record.employeeCount ? `Employees: ${record.employeeCount}` : "",
+    record.officeAddress ? `Office address: ${record.officeAddress}` : "",
+    record.timezone ? `Timezone: ${record.timezone}` : "",
+    record.director ? `Branch director: ${record.director}` : "",
+    record.operationsManager ? `Operations manager: ${record.operationsManager}` : "",
+    record.engineeringManager ? `Engineering manager: ${record.engineeringManager}` : "",
+    record.mainProject ? `Main project: ${record.mainProject}` : "",
+    record.specialties.length ? `Specialties: ${record.specialties.join(", ")}` : ""
+  ].filter(Boolean);
+
+  return {
+    answer: lines.join("\n"),
+    usage: {
+      promptTokens: 0,
+      completionTokens: 0,
+      totalTokens: 0
+    },
+    tokenUsage: getTokenUsage(),
+    sources: sourceDocumentsFromRecords([record])
+  };
+}
+
+function buildBranchComparisonFastAnswer(records) {
+  const lines = records.map((record) => [
+    `${record.branch}`,
+    `Employees: ${record.employeeCount || "not listed"}`,
+    `Timezone: ${record.timezone || "not listed"}`,
+    `Director: ${record.director || "not listed"}`,
+    `Operations manager: ${record.operationsManager || "not listed"}`,
+    `Engineering manager: ${record.engineeringManager || "not listed"}`,
+    `Main project: ${record.mainProject || "not listed"}`,
+    `Specialties: ${record.specialties.length ? record.specialties.join(", ") : "not listed"}`
+  ].join("\n")).join("\n\n");
+
+  return fastResult(
+    `Branch comparison:\n\n${lines}`,
+    sourceDocumentsFromRecords(records)
+  );
+}
+
+function buildBranchDepartmentsFastAnswer(record) {
+  const text = textForDocument(record.document.id, 2);
+  const departments = parseDepartmentRows(text);
+  if (!departments.length) {
+    return null;
+  }
+
+  const total = departments.reduce((sum, row) => sum + Number(row.employees || 0), 0);
+  const lines = departments.map((row, index) => (
+    `${index + 1}. ${row.department}: ${row.employees} employees (${row.posts})`
+  ));
+
+  return fastResult(
+    `${record.branch} has ${total} employees across these departments:\n\n${lines.join("\n")}`,
+    sourceDocumentsFromRecords([record])
+  );
+}
+
+function parseBranchProjectRows(text) {
+  const rows = [];
+  const seen = new Set();
+  const pattern = /^\|\s*([A-Z]{2}-[A-Z0-9-]+)\s*\|\s*([^|\n]+?)\s*\|\s*([^|\n]+?)\s*\|\s*([^|\n]+?)\s*\|\s*([^|\n]+?)\s*\|\s*(\d+)\s*\|\s*([^|\n]+?)\s*\|\s*([^|\n]+?)\s*\|\s*([^|\n]+?)\s*\|\s*([^|\n]+?)\s*\|/gm;
+  let match;
+
+  while ((match = pattern.exec(text))) {
+    const code = match[1].trim();
+    if (seen.has(code)) {
+      continue;
+    }
+
+    seen.add(code);
+    rows.push({
+      code,
+      name: match[2].trim(),
+      manager: match[3].trim(),
+      deputy: match[4].trim(),
+      status: match[5].trim(),
+      employees: match[6].trim(),
+      budget: match[7].trim(),
+      deadline: match[8].trim(),
+      kpi: match[9].trim(),
+      risk: match[10].trim()
+    });
+  }
+
+  return rows;
+}
+
+function branchProjectCodeFromQuestion(question) {
+  return question.match(/\b[A-Z]{2}-[A-Z0-9-]+\b/i)?.[0]?.toUpperCase() || "";
+}
+
+function buildBranchProjectsFastAnswer(record, question) {
+  const text = textForDocument(record.document.id, 4);
+  const projects = parseBranchProjectRows(text);
+  const requestedCode = branchProjectCodeFromQuestion(question);
+  const filteredProjects = requestedCode
+    ? projects.filter((project) => project.code === requestedCode)
+    : /\bactive\b/i.test(question)
+      ? projects.filter((project) => /active/i.test(project.status))
+      : projects;
+
+  if (!filteredProjects.length) {
+    return null;
+  }
+
+  const lines = filteredProjects.map((project, index) => (
+    `${index + 1}. ${project.code} - ${project.name}: ${project.status}, manager ${project.manager}, deputy ${project.deputy}, ${project.employees} employees, ${project.budget}, deadline ${project.deadline}, risk: ${project.risk}`
+  ));
+
+  return fastResult(
+    `${record.branch} branch projects:\n\n${lines.join("\n")}`,
+    sourceDocumentsFromRecords([record])
+  );
+}
+
+function buildBranchLocationsFastAnswer(records) {
+  const lines = records.map((record, index) => (
+    `${index + 1}. ${record.branch}: ${record.officeAddress || "address not listed"}${record.timezone ? ` (${record.timezone})` : ""}`
+  ));
+
+  return fastResult(
+    `Company X branch locations:\n\n${lines.join("\n")}`,
+    sourceDocumentsFromRecords(records)
+  );
+}
+
+function buildBranchEmployeeTotalFastAnswer(records) {
+  const total = records.reduce((sum, record) => sum + Number(record.employeeCount || 0), 0);
+  const lines = records.map((record) => `${record.branch}: ${record.employeeCount || 0}`);
+
+  return fastResult(
+    `Company X has ${total} employees across indexed branch documents:\n\n${lines.join("\n")}`,
+    sourceDocumentsFromRecords(records)
+  );
+}
+
+function parseBranchEmployeeRows(text) {
+  const rows = [];
+  const seen = new Set();
+  const pattern = /^\|\s*(CX-[A-Z]{2}-\d{3})\s*\|\s*([^|\n]+?)\s*\|/gm;
+  let match;
+
+  while ((match = pattern.exec(text))) {
+    const id = match[1].trim().toUpperCase();
+    const name = match[2].trim();
+    const key = id;
+
+    if (seen.has(key) || /^-+$|employee name/i.test(name)) {
+      continue;
+    }
+
+    seen.add(key);
+    rows.push({ id, name });
+  }
+
+  return rows;
+}
+
+function isBranchEmployeeDirectoryQuestion(question) {
+  return /\b(employee|employees|staff|people|directory|names?)\b/i.test(question)
+    && /\b(list|show|all|who|name|names|employee|employees|staff|people|directory)\b/i.test(question);
+}
+
+function buildBranchEmployeesFastAnswer(record, question) {
+  if (!isBranchEmployeeDirectoryQuestion(question)) {
+    return null;
+  }
+
+  const text = textForDocument(record.document.id, 8);
+  const employees = parseBranchEmployeeRows(text);
+  if (!employees.length) {
+    return null;
+  }
+
+  const lines = employees.map((employee, index) => `${index + 1}. ${employee.name} (${employee.id})`);
+  const expectedCount = Number(record.employeeCount || 0);
+  const countText = expectedCount && expectedCount !== employees.length
+    ? `${employees.length} named employees found in the directory; branch total is ${expectedCount}.`
+    : `${record.branch} has ${employees.length} named employees.`;
+
+  return fastResult(
+    `${countText}\n\n${lines.join("\n")}`,
+    sourceDocumentsFromRecords([record])
+  );
+}
+
+function buildBranchEmployeeBriefFastAnswer(records, question) {
+  const employeeId = employeeIdFromQuestion(question);
+  if (!employeeId) {
+    return null;
+  }
+
+  for (const record of records) {
+    const text = textForDocument(record.document.id, 40);
+    const escapedId = employeeId.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const match = text.match(new RegExp(`(${escapedId}\\s+-\\s+[\\s\\S]*?)(?=\\nCX-[A-Z]{2}-\\d{3}\\s+-\\s+|$)`, "i"));
+
+    if (!match) {
+      continue;
+    }
+
+    const seenLines = new Set();
+    const block = match[1]
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter((line) => {
+        if (!line || seenLines.has(line)) {
+          return false;
+        }
+
+        seenLines.add(line);
+        return true;
+      });
+    const wantsTasks = /\b(task|tasks|daily|work|brief)\b/i.test(question);
+    const relevantLines = wantsTasks
+      ? block.filter((line) => /daily tasks|review|prepare|approve|meet|coordinate|update|monitor|support|write|check|plan/i.test(line)).slice(0, 12)
+      : block.slice(0, 22);
+
+    return fastResult(
+      relevantLines.join("\n"),
+      sourceDocumentsFromRecords([record])
+    );
+  }
+
+  return null;
+}
+
+function buildLinkedEmployeeProfileFastAnswer(user, records) {
+  const employeeId = employeeIdForUser(user);
+  if (!employeeId) {
+    return fastResult(
+      "I do not know which employee profile belongs to you yet. Link your app account to an employee ID first, then I can answer personal questions from the indexed database.",
+      []
+    );
+  }
+
+  if (user.employeeProfile?.email) {
+    const profile = user.employeeProfile;
+    const formatProfileDate = (value) => {
+      if (!value) {
+        return "";
+      }
+
+      const date = value instanceof Date ? value : new Date(value);
+      return Number.isNaN(date.getTime()) ? String(value).slice(0, 10) : date.toISOString().slice(0, 10);
+    };
+    const lines = [
+      `Linked employee: ${profile.name} (${profile.id})`,
+      `Branch: ${profile.branch || "not listed"}`,
+      `Department: ${profile.department || "not listed"}`,
+      `Post: ${profile.post || "not listed"}`,
+      `Email: ${profile.email}`,
+      profile.phone ? `Phone: ${profile.phone}` : "",
+      profile.dateOfBirth ? `Date of birth: ${formatProfileDate(profile.dateOfBirth)}` : "",
+      profile.startDate ? `Start date: ${formatProfileDate(profile.startDate)}` : "",
+      profile.salary ? `Salary: ${profile.salary}` : "",
+      profile.manager ? `Manager: ${profile.manager}` : "",
+      profile.employmentType ? `Employment type: ${profile.employmentType}` : "",
+      profile.workMode ? `Work mode: ${profile.workMode}` : "",
+      profile.shift ? `Shift: ${profile.shift}` : "",
+      profile.responsibilityArea ? `Responsibility area: ${profile.responsibilityArea}` : "",
+      profile.branchProject ? `Branch project: ${profile.branchProject}` : "",
+      profile.localWorkstream ? `Local workstream: ${profile.localWorkstream}` : "",
+      profile.projectManager ? `Project manager: ${profile.projectManager}` : "",
+      profile.projectStatus ? `Project status: ${profile.projectStatus}` : "",
+      profile.projectBudget ? `Project budget: ${profile.projectBudget}` : "",
+      profile.projectDeadline ? `Project deadline: ${profile.projectDeadline}` : "",
+      profile.projectKpi ? `Project KPI: ${profile.projectKpi}` : "",
+      profile.projectRisk ? `Current project risk: ${profile.projectRisk}` : "",
+      profile.skills?.length ? `Skills: ${profile.skills.join(", ")}` : "",
+      profile.languages?.length ? `Languages: ${profile.languages.join(", ")}` : "",
+      profile.systems?.length ? `Main systems used: ${profile.systems.join(", ")}` : "",
+      profile.performanceBand ? `Performance band: ${profile.performanceBand}` : "",
+      profile.accessLevel ? `Access level: ${profile.accessLevel}` : "",
+      profile.ptoBalance ? `PTO balance: ${profile.ptoBalance}` : "",
+      profile.weeklyDeliverables?.length ? `Weekly deliverables: ${profile.weeklyDeliverables.join("; ")}` : "",
+      profile.dailyTasks?.length ? `Daily tasks: ${profile.dailyTasks.join("; ")}` : ""
+    ].filter(Boolean);
+
+    return fastResult(lines.join("\n"), [{
+      id: 1,
+      source: profile.source || "Company X structured employee database",
+      page: null,
+      preview: `${profile.id} ${profile.name}`
+    }]);
+  }
+
+  const question = `tell me all information about ${employeeId}`;
+  const branchAnswer = buildBranchEmployeeBriefFastAnswer(records, question);
+  if (branchAnswer) {
+    const linkedName = user.employeeProfile?.name ? `Linked employee: ${user.employeeProfile.name} (${employeeId})\n` : "";
+    return {
+      ...branchAnswer,
+      answer: `${linkedName}${branchAnswer.answer}`
+    };
+  }
+
+  const document = employeeKnowledgeDocument(user);
+  if (document) {
+    const employeeAnswer = buildEmployeeBriefFastAnswer(document, question);
+    if (employeeAnswer) {
+      const linkedName = user.employeeProfile?.name ? `Linked employee: ${user.employeeProfile.name} (${employeeId})\n` : "";
+      return {
+        ...employeeAnswer,
+        answer: `${linkedName}${employeeAnswer.answer}`
+      };
+    }
+  }
+
+  return fastResult(
+    `Your account is linked to ${employeeId}, but I could not find that employee profile in the indexed database.`,
+    []
+  );
+}
+
+function buildDocumentInventoryFastAnswer(user) {
+  const documents = accessibleDocuments(user)
+    .slice()
+    .sort((left, right) => left.displayName.localeCompare(right.displayName));
+  const answerLines = documents.map((document, index) => (
+    `${index + 1}. ${document.displayName} (${document.chunkCount} chunks, ${document.accessLevel || "public"})`
+  ));
+
+  return {
+    answer: `There are ${documents.length} indexed documents:\n\n${answerLines.join("\n")}`,
+    usage: {
+      promptTokens: 0,
+      completionTokens: 0,
+      totalTokens: 0
+    },
+    tokenUsage: getTokenUsage(),
+    sources: documents.map((document, index) => ({
+      id: index + 1,
+      source: document.displayName,
+      page: null,
+      preview: `${document.chunkCount} chunks`
+    }))
+  };
+}
+
+function buildDatabaseAccessFastAnswer(user) {
+  const documents = accessibleDocuments(user);
+  const documentIds = new Set(documents.map((document) => document.id));
+  const chunkCount = activeIndex.vectorRecords.filter((record) => documentIds.has(record.documentId)).length;
+
+  return fastResult(
+    `Yes. I can access the app's indexed database for your account: ${documents.length} documents and ${chunkCount} searchable chunks. I use that database to answer questions about employees, branches, projects, policies, and uploaded sources.`,
+    documents.slice(0, 8).map((document, index) => ({
+      id: index + 1,
+      source: document.displayName,
+      page: null,
+      preview: `${document.chunkCount} chunks`
+    }))
+  );
+}
+
+function employeeKnowledgeDocument(user) {
+  const allowedDocumentIds = accessibleDocumentIds(user);
+
+  return activeIndex.documents.find((document) => (
+    allowedDocumentIds.has(document.id)
+    && /employee knowledge base/i.test(document.displayName)
+  )) || null;
+}
+
+function textForDocument(documentId, maxPages = 8) {
+  return activeIndex.chunks
+    .filter((chunk) => chunk.metadata.documentId === documentId && Number(pageFromMetadata(chunk.metadata) || 0) <= maxPages)
+    .sort((left, right) => Number(left.metadata.chunkIndex || 0) - Number(right.metadata.chunkIndex || 0))
+    .map((chunk) => chunk.pageContent)
+    .join("\n");
+}
+
+function fastUsage() {
+  return {
+    promptTokens: 0,
+    completionTokens: 0,
+    totalTokens: 0
+  };
+}
+
+function fastResult(answer, sources = []) {
+  return {
+    answer,
+    usage: fastUsage(),
+    tokenUsage: getTokenUsage(),
+    sources
+  };
+}
+
+function sourceForDocument(document, preview = "") {
+  return [{
+    id: 1,
+    source: document.displayName,
+    page: null,
+    preview
+  }];
+}
+
+function parseDepartmentRows(text) {
+  const rows = [];
+  const seen = new Set();
+  const pattern = /^\|\s*([^|\n]+?)\s*\|\s*(\d+)\s*\|\s*([^|\n]+?)\s*\|/gm;
+  let match;
+
+  while ((match = pattern.exec(text))) {
+    const department = match[1].trim();
+    const key = department.toLowerCase();
+    if (/^-+$|department/i.test(department) || seen.has(key)) {
+      continue;
+    }
+
+    seen.add(key);
+    rows.push({
+      department,
+      employees: match[2].trim(),
+      posts: match[3].trim()
+    });
+  }
+
+  return rows;
+}
+
+function parseProjectRows(text) {
+  const rows = [];
+  const seen = new Set();
+  const pattern = /^\|\s*(PX-[^|\n]+?)\s*\|\s*([^|\n]+?)\s*\|\s*([^|\n]+?)\s*\|\s*([^|\n]+?)\s*\|\s*([^|\n]+?)\s*\|\s*([^|\n]+?)\s*\|\s*([^|\n]+?)\s*\|\s*([^|\n]+?)\s*\|/gm;
+  let match;
+
+  while ((match = pattern.exec(text))) {
+    const code = match[1].trim();
+    const key = code.toUpperCase();
+    if (seen.has(key)) {
+      continue;
+    }
+
+    seen.add(key);
+    rows.push({
+      code,
+      name: match[2].trim(),
+      owner: match[3].trim(),
+      manager: match[4].trim(),
+      status: match[5].trim(),
+      budget: match[6].trim(),
+      deadline: match[7].trim(),
+      goal: match[8].trim()
+    });
+  }
+
+  return rows;
+}
+
+function projectCodeFromQuestion(question) {
+  return question.match(/\bPX-[a-z0-9-]+\b/i)?.[0]?.toUpperCase() || "";
+}
+
+function employeeIdFromQuestion(question) {
+  return question.match(/\bCX-(?:[A-Z]{2}-)?\d{3}\b/i)?.[0]?.toUpperCase() || "";
+}
+
+function employeeIdForUser(user) {
+  return user?.employeeProfile?.id || user?.employeeId || "";
+}
+
+function isCurrentUserProfileQuestion(question) {
+  return /\bwho\s+am\s+i\b/i.test(question)
+    || /\bwhat\s+is\s+my\s+(name|profile|employee\s+id|employee|role|job|department|branch|salary|manager|tasks?)\b/i.test(question)
+    || (/\b(me|my|myself)\b/i.test(question)
+      && /\b(profile|information|info|details|employee|about|baout|salary|manager|tasks|role|job|department|branch|identity)\b/i.test(question));
+}
+
+function buildCompanyOverviewFastAnswer(document, text) {
+  const overview = text.match(/Company Overview\s+([\s\S]*?)(?:Department Summary|$)/i)?.[1]
+    ?.replace(/\s+/g, " ")
+    .trim();
+
+  if (!overview) {
+    return null;
+  }
+
+  return fastResult(overview, sourceForDocument(document, overview.slice(0, 240)));
+}
+
+function buildDepartmentFastAnswer(document, text) {
+  const departments = parseDepartmentRows(text);
+  if (!departments.length) {
+    return null;
+  }
+
+  const total = departments.reduce((sum, row) => sum + Number(row.employees || 0), 0);
+  const lines = departments.map((row, index) => (
+    `${index + 1}. ${row.department}: ${row.employees} employees (${row.posts})`
+  ));
+
+  return fastResult(
+    `Company X has ${total} employees across these departments:\n\n${lines.join("\n")}`,
+    sourceForDocument(document, "Department Summary")
+  );
+}
+
+function buildProjectListFastAnswer(document, projects, onlyActive = false) {
+  const filteredProjects = onlyActive
+    ? projects.filter((project) => /active/i.test(project.status))
+    : projects;
+
+  if (!filteredProjects.length) {
+    return null;
+  }
+
+  const lines = filteredProjects.map((project, index) => (
+    `${index + 1}. ${project.code} - ${project.name}: ${project.status}, manager ${project.manager}, ${project.budget}, deadline ${project.deadline}`
+  ));
+
+  return fastResult(
+    `${onlyActive ? "Active projects" : "Projects"}:\n\n${lines.join("\n")}`,
+    sourceForDocument(document, "Project Portfolio")
+  );
+}
+
+function buildProjectDetailFastAnswer(document, projects, code) {
+  const project = projects.find((item) => item.code.toUpperCase() === code);
+  if (!project) {
+    return null;
+  }
+
+  return fastResult(
+    [
+      `${project.code} - ${project.name}`,
+      `Owner: ${project.owner}`,
+      `Manager: ${project.manager}`,
+      `Status: ${project.status}`,
+      `Budget: ${project.budget}`,
+      `Deadline: ${project.deadline}`,
+      `Goal: ${project.goal}`
+    ].join("\n"),
+    sourceForDocument(document, `${project.code} ${project.name}`)
+  );
+}
+
+function buildProjectFieldFastAnswer(document, projects, question) {
+  const lowerQuestion = question.toLowerCase();
+  const project = projects.find((item) => lowerQuestion.includes(item.name.toLowerCase())) || null;
+
+  if (!project) {
+    return null;
+  }
+
+  if (/\b(who|manager|manage|manages|managed)\b/i.test(question)) {
+    return fastResult(`${project.name} is managed by ${project.manager}.`, sourceForDocument(document, project.code));
+  }
+
+  if (/\b(status)\b/i.test(question)) {
+    return fastResult(`${project.name} status: ${project.status}.`, sourceForDocument(document, project.code));
+  }
+
+  if (/\b(budget|cost)\b/i.test(question)) {
+    return fastResult(`${project.name} budget: ${project.budget}.`, sourceForDocument(document, project.code));
+  }
+
+  if (/\b(deadline|due|when)\b/i.test(question)) {
+    return fastResult(`${project.name} deadline: ${project.deadline}.`, sourceForDocument(document, project.code));
+  }
+
+  return buildProjectDetailFastAnswer(document, projects, project.code);
+}
+
+function buildProjectCountFastAnswer(document, projects) {
+  const statusCounts = projects.reduce((counts, project) => ({
+    ...counts,
+    [project.status]: (counts[project.status] || 0) + 1
+  }), {});
+  const statusText = Object.entries(statusCounts)
+    .map(([status, count]) => `${status}: ${count}`)
+    .join(", ");
+
+  return fastResult(
+    `Company X has ${projects.length} listed projects. Status breakdown: ${statusText}.`,
+    sourceForDocument(document, "Project Portfolio")
+  );
+}
+
+function buildExactSnippetFastAnswer(question, user) {
+  const isExactFastQuestion = /\b(policy|policies|daily tasks|daily task|salary|salaries|finance|security|CX-\d{3}|CX-[A-Z]{2}-\d{3})\b/i.test(question);
+  if (!isExactFastQuestion) {
+    return null;
+  }
+
+  const matches = findExactMatches(question, user, 4);
+  if (!matches.length) {
+    return null;
+  }
+
+  const answer = matches.map((document, index) => {
+    const page = pageFromMetadata(document.metadata);
+    const label = page ? `${document.metadata.source}, page ${page}` : document.metadata.source;
+    const snippet = document.pageContent
+      .replace(/\s+/g, " ")
+      .trim()
+      .slice(0, 650);
+
+    return `${index + 1}. ${label}\n${snippet}`;
+  }).join("\n\n");
+
+  return fastResult(
+    answer,
+    matches.map((document, index) => ({
+      id: index + 1,
+      source: document.metadata.source,
+      page: pageFromMetadata(document.metadata),
+      preview: document.pageContent.slice(0, 240)
+    }))
+  );
+}
+
+function buildEmployeeBriefFastAnswer(document, question) {
+  const employeeId = employeeIdFromQuestion(question);
+  if (!employeeId) {
+    return null;
+  }
+
+  const text = textForDocument(document.id, 40);
+  const escapedId = employeeId.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const match = text.match(new RegExp(`(${escapedId}\\s+-\\s+[\\s\\S]*?)(?=\\nCX-(?:[A-Z]{2}-)?\\d{3}\\s+-\\s+|$)`, "i"));
+  if (!match) {
+    return null;
+  }
+
+  const seenLines = new Set();
+  const block = match[1]
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => {
+      if (!line || seenLines.has(line)) {
+        return false;
+      }
+
+      seenLines.add(line);
+      return true;
+    });
+  const wantsTasks = /\b(task|tasks|daily|work)\b/i.test(question);
+  const relevantLines = wantsTasks
+    ? block.filter((line) => /daily tasks|review|prepare|approve|meet|coordinate|update|monitor|support|write|check|plan/i.test(line)).slice(0, 12)
+    : block.slice(0, 22);
+
+  return fastResult(
+    relevantLines.join("\n"),
+    sourceForDocument(document, `${employeeId} employee brief`)
+  );
+}
+
+function tryEmployeeKnowledgeFastAnswer(question, user) {
+  const document = employeeKnowledgeDocument(user);
+  if (!document) {
+    return null;
+  }
+
+  const text = textForDocument(document.id, 5);
+  const normalizedQuestion = question.toLowerCase();
+  const projects = parseProjectRows(text);
+  const projectCode = projectCodeFromQuestion(question);
+  const employeeBrief = buildEmployeeBriefFastAnswer(document, question);
+
+  if (employeeBrief) {
+    return employeeBrief;
+  }
+
+  if (/\bwhat\s+is\s+company\s+x\b/i.test(question) || /\bcompany overview\b/i.test(question)) {
+    return buildCompanyOverviewFastAnswer(document, text);
+  }
+
+  if (/\bsummarize\b.*\b(employee knowledge base|company x)\b/i.test(question)) {
+    const overview = buildCompanyOverviewFastAnswer(document, text);
+    const departmentCount = parseDepartmentRows(text).length;
+    const summary = [
+      overview?.answer,
+      departmentCount ? `It also includes ${departmentCount} departments and ${projects.length} major projects.` : "",
+      "It covers company structure, project portfolio, policies, employee details, and operational knowledge for testing the chat."
+    ].filter(Boolean).join("\n");
+
+    return fastResult(summary, sourceForDocument(document, "Company overview and project portfolio"));
+  }
+
+  if (/\bdepartments?\b/i.test(question) && /\b(employee|count|list|summary|department)/i.test(question)) {
+    return buildDepartmentFastAnswer(document, text);
+  }
+
+  if (projectCode) {
+    return buildProjectDetailFastAnswer(document, projects, projectCode);
+  }
+
+  const projectFieldAnswer = buildProjectFieldFastAnswer(document, projects, question);
+  if (projectFieldAnswer) {
+    return projectFieldAnswer;
+  }
+
+  if (/\bprojects?\b/i.test(question)) {
+    if (/\bhow many\b/i.test(question)) {
+      return buildProjectCountFastAnswer(document, projects);
+    }
+
+    return buildProjectListFastAnswer(document, projects, /\bactive\b/i.test(normalizedQuestion));
+  }
+
+  if (/\bgoals?\b/i.test(question) && /\b(company|year|business)\b/i.test(question)) {
+    const overview = buildCompanyOverviewFastAnswer(document, text);
+    const goalSentence = overview?.answer.match(/The main business goals this year are ([^.]+)\./i)?.[1];
+    if (goalSentence) {
+      return fastResult(`The main business goals this year are ${goalSentence}.`, sourceForDocument(document, goalSentence));
+    }
+  }
+
+  return buildExactSnippetFastAnswer(question, user);
+}
+
+function tryFastDatabaseAnswer(question, user) {
+  if (/\b(you|u)\b.*\b(access|connect|connected)\b.*\b(database|db)\b/i.test(question)
+    || /\b(database|db)\b.*\b(access|connect|connected)\b/i.test(question)) {
+    return buildDatabaseAccessFastAnswer(user);
+  }
+
+  if (isDocumentInventoryQuestion(question)) {
+    return buildDocumentInventoryFastAnswer(user);
+  }
+
+  const records = branchRecords(user);
+  if (isCurrentUserProfileQuestion(question)) {
+    return buildLinkedEmployeeProfileFastAnswer(user, records);
+  }
+
+  if (records.length && (isBranchOverviewQuestion(question) || /\bhow many\b.*\bbranches\b/i.test(question))) {
+    return buildBranchListFastAnswer(records);
+  }
+
+  if (records.length && /\b(branch\s+)?(location|locations|office|offices|address|addresses|timezone|timezones)\b/i.test(question) && !findRequestedBranch(question, records)) {
+    return buildBranchLocationsFastAnswer(records);
+  }
+
+  if (records.length && /\bhow many\b.*\bemployees\b.*\b(branch|branches)\b/i.test(question)) {
+    return buildBranchEmployeeTotalFastAnswer(records);
+  }
+
+  const branchEmployeeBrief = buildBranchEmployeeBriefFastAnswer(records, question);
+  if (branchEmployeeBrief) {
+    return branchEmployeeBrief;
+  }
+
+  const requestedBranches = records.length ? findRequestedBranches(question, records) : [];
+  if (requestedBranches.length >= 2 && /\b(compare|comparison|difference|differences|versus|vs|between)\b/i.test(question)) {
+    return buildBranchComparisonFastAnswer(requestedBranches);
+  }
+
+  const requestedBranch = records.length ? findRequestedBranch(question, records) : null;
+  if (requestedBranch) {
+    const branchEmployees = buildBranchEmployeesFastAnswer(requestedBranch, question);
+    if (branchEmployees) {
+      return branchEmployees;
+    }
+  }
+
+  if (requestedBranch && /\b(department|departments|capacity|team structure)\b/i.test(question)) {
+    return buildBranchDepartmentsFastAnswer(requestedBranch);
+  }
+
+  if (requestedBranch && /\b(project|projects|portfolio|staffing|budget|deadline|risk|kpi|manager|deputy)\b/i.test(question)) {
+    const branchProjectAnswer = buildBranchProjectsFastAnswer(requestedBranch, question);
+    if (branchProjectAnswer) {
+      return branchProjectAnswer;
+    }
+  }
+
+  const asksBranchDetails = /\b(branch|office|timezone|director|manager|project|specialt(?:y|ies)|employee count|employees)\b/i.test(question);
+  if (requestedBranch && asksBranchDetails) {
+    return buildBranchDetailFastAnswer(requestedBranch);
+  }
+
+  const employeeAnswer = tryEmployeeKnowledgeFastAnswer(question, user);
+  if (employeeAnswer) {
+    return employeeAnswer;
+  }
+
+  return null;
+}
+
 function findBranchOverviewMatches(user) {
   const seenSources = new Set();
   const matches = [];
@@ -907,22 +1831,27 @@ async function retrieveVectorMatches(query, limit = 8, user) {
 }
 
 export async function askQuestion(question, history = [], user) {
-  requireModelConfig();
-
   if (!accessibleDocuments(user).length) {
     const error = new Error("No document is indexed yet. Index the sample PDF or upload a document first.");
     error.status = 400;
     throw error;
   }
 
+  const fastAnswer = tryFastDatabaseAnswer(question, user);
+  if (fastAnswer) {
+    return fastAnswer;
+  }
+
+  requireModelConfig();
+
   const retrievalQuery = buildRetrievalQuery(question, history);
   const branchOverviewDocuments = isBranchOverviewQuestion(question) ? findBranchOverviewMatches(user) : [];
-  const sourceLimit = branchOverviewDocuments.length ? 18 : 12;
+  const sourceLimit = branchOverviewDocuments.length ? 18 : 6;
   const sourceDocuments = isConversationHistoryQuestion(question)
     ? []
     : mergeDocuments(
         [...branchOverviewDocuments, ...findExactMatches(retrievalQuery, user)],
-        await retrieveVectorMatches(retrievalQuery, 8, user),
+        await retrieveVectorMatches(retrievalQuery, 4, user),
         sourceLimit
       );
   const context = sourceDocuments
@@ -936,8 +1865,8 @@ export async function askQuestion(question, history = [], user) {
   const result = await answerFromContext({
     system:
       branchOverviewDocuments.length
-        ? "You answer document questions using only the provided document context. The context includes one source per Company X branch. When asked to list branches, enumerate every branch source present in the context and do not stop after one. Keep answers concise and practical."
-        : "You answer document questions using only the provided document context. You also receive recent conversation history. You may answer questions about the conversation history directly from that history. For document-content questions, if the answer is not in the document context, say you do not know from the document. Keep answers concise and practical.",
+        ? "You answer questions using the app's indexed database context. The context includes one source per Company X branch. When asked whether you have database access, say yes: you can access the indexed database available to this app and user. When asked to list branches, enumerate every branch source present in the context and do not stop after one. Keep answers concise and practical."
+        : "You answer questions using the app's indexed database context. You also receive recent conversation history. You may answer questions about the conversation history directly from that history. When asked whether you have database access, say yes: you can access the indexed database available to this app and user. For company-data questions, if the answer is not in the indexed context, say you do not know from the database. Keep answers concise and practical.",
     question,
     context,
     history: formatHistory(history)

@@ -3,6 +3,7 @@ import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 import fs from "node:fs/promises";
 import path from "node:path";
+import { prisma } from "../config/prisma.js";
 import { env, requireModelConfig } from "../config/env.js";
 import { answerFromContext, createEmbeddings, getTokenUsage, resetTokenUsage } from "./model.service.js";
 import { createId, loadIndexSnapshot, saveIndexSnapshot, searchVectorChunks } from "./persistence.service.js";
@@ -639,6 +640,68 @@ function buildBranchProjectsFastAnswer(record, question) {
   );
 }
 
+function isBranchProgressQuestion(question) {
+  return /\b(branch|branches)\b/i.test(question)
+    && /\b(progress|perform|performance|doing\s+well|good|best|healthy|strong|risk|risks|status)\b/i.test(question);
+}
+
+async function buildBranchProgressFastAnswer() {
+  const branches = await prisma.companyBranch.findMany({
+    include: {
+      projects: true
+    },
+    orderBy: {
+      country: "asc"
+    }
+  });
+
+  if (!branches.length) {
+    return null;
+  }
+
+  const statusScore = {
+    Active: 4,
+    Beta: 3,
+    "In build": 2,
+    Discovery: 1,
+    Planning: 1,
+    Maintenance: 1
+  };
+  const goodRiskPattern = /\b(delay|gap|dependency|risk|security evidence|vendor|adoption)\b/i;
+  const scored = branches.map((branch) => {
+    const score = branch.projects.reduce((total, project) => {
+      const base = statusScore[project.status] || 0;
+      const riskPenalty = goodRiskPattern.test(project.risk || "") ? 0.5 : 0;
+      return total + base - riskPenalty;
+    }, 0);
+    const activeCount = branch.projects.filter((project) => /active|beta/i.test(project.status || "")).length;
+
+    return {
+      branch,
+      score,
+      activeCount,
+      projectSummary: branch.projects
+        .map((project) => `${project.code}: ${project.status}${project.risk ? `, risk: ${project.risk}` : ""}`)
+        .join("; ")
+    };
+  }).sort((left, right) => right.score - left.score || right.activeCount - left.activeCount);
+
+  const top = scored.slice(0, 3);
+  const lines = top.map((item, index) => (
+    `${index + 1}. ${item.branch.name} - strongest progress signal: ${item.activeCount} active/beta projects, score ${item.score.toFixed(1)}.\n   ${item.projectSummary}`
+  ));
+
+  return fastResult(
+    `The branches showing the best progress are:\n\n${lines.join("\n\n")}`,
+    top.map((item, index) => ({
+      id: index + 1,
+      source: item.branch.sourceFile,
+      page: null,
+      preview: `${item.branch.name} branch progress`
+    }))
+  );
+}
+
 function buildBranchLocationsFastAnswer(records) {
   const lines = records.map((record, index) => (
     `${index + 1}. ${record.branch}: ${record.officeAddress || "address not listed"}${record.timezone ? ` (${record.timezone})` : ""}`
@@ -923,6 +986,112 @@ function sourceForDocument(document, preview = "") {
   }];
 }
 
+function formatProfileDate(value) {
+  if (!value) {
+    return "";
+  }
+
+  const date = value instanceof Date ? value : new Date(value);
+  return Number.isNaN(date.getTime()) ? String(value).slice(0, 10) : date.toISOString().slice(0, 10);
+}
+
+function requestedEmployeeFields(question) {
+  const fields = [];
+  const normalized = question.toLowerCase();
+  const add = (field) => {
+    if (!fields.includes(field)) {
+      fields.push(field);
+    }
+  };
+
+  if (/\bsalary|pay|compensation\b/i.test(normalized)) add("salary");
+  if (/\bmanager|reports?\s+to\b/i.test(normalized)) add("manager");
+  if (/\bprojects?|workstream|working\s+on\b/i.test(normalized)) add("project");
+  if (/\bdaily\s+tasks?|tasks?|work\b/i.test(normalized)) add("dailyTasks");
+  if (/\bbranch|country|location\b/i.test(normalized)) add("branch");
+  if (/\bdepartment|team\b/i.test(normalized)) add("department");
+  if (/\brole|job|post|title\b/i.test(normalized)) add("post");
+  if (/\bemail|mail\b/i.test(normalized)) add("email");
+  if (/\bphone|number\b/i.test(normalized)) add("phone");
+  if (/\bshift|hours?\b/i.test(normalized)) add("shift");
+  if (/\bpto|vacation|leave\b/i.test(normalized)) add("ptoBalance");
+  if (/\bskills?\b/i.test(normalized)) add("skills");
+  if (/\blanguages?\b/i.test(normalized)) add("languages");
+  if (/\bsystems?|tools?\b/i.test(normalized)) add("systems");
+  if (/\baccess\b/i.test(normalized)) add("accessLevel");
+
+  return fields;
+}
+
+function employeeFieldLines(employee, fields) {
+  const fieldLine = {
+    salary: () => employee.salary ? `Salary: ${employee.salary}` : "",
+    manager: () => employee.manager ? `Manager: ${employee.manager}` : "",
+    project: () => [
+      employee.project ? `Project: ${employee.project}` : "",
+      employee.branchProject ? `Branch project: ${employee.branchProject}` : "",
+      employee.localWorkstream ? `Local workstream: ${employee.localWorkstream}` : "",
+      employee.projectManager ? `Project manager: ${employee.projectManager}` : "",
+      employee.projectStatus ? `Project status: ${employee.projectStatus}` : "",
+      employee.projectBudget ? `Project budget: ${employee.projectBudget}` : "",
+      employee.projectDeadline ? `Project deadline: ${employee.projectDeadline}` : "",
+      employee.projectKpi ? `Project KPI: ${employee.projectKpi}` : "",
+      employee.projectRisk ? `Current project risk: ${employee.projectRisk}` : ""
+    ].filter(Boolean).join("\n"),
+    dailyTasks: () => employee.dailyTasks?.length ? `Daily tasks:\n${employee.dailyTasks.map((task) => `- ${task}`).join("\n")}` : "",
+    branch: () => `Branch: ${employee.branch?.name || employee.location || "not listed"}`,
+    department: () => employee.department ? `Department: ${employee.department}` : "",
+    post: () => employee.post ? `Post: ${employee.post}` : "",
+    email: () => employee.email ? `Email: ${employee.email}` : "",
+    phone: () => employee.phone ? `Phone: ${employee.phone}` : "",
+    shift: () => employee.shift ? `Shift: ${employee.shift}` : "",
+    ptoBalance: () => employee.ptoBalance ? `PTO balance: ${employee.ptoBalance}` : "",
+    skills: () => employee.skills?.length ? `Skills: ${employee.skills.join(", ")}` : "",
+    languages: () => employee.languages?.length ? `Languages: ${employee.languages.join(", ")}` : "",
+    systems: () => employee.systems?.length ? `Main systems used: ${employee.systems.join(", ")}` : "",
+    accessLevel: () => employee.accessLevel ? `Access level: ${employee.accessLevel}` : ""
+  };
+
+  return fields
+    .map((field) => fieldLine[field]?.() || "")
+    .filter(Boolean);
+}
+
+function fullEmployeeLines(employee) {
+  return [
+    `${employee.employeeId} - ${employee.name}`,
+    `Branch: ${employee.branch?.name || employee.location || "not listed"}`,
+    employee.department ? `Department: ${employee.department}` : "",
+    employee.post ? `Post: ${employee.post}` : "",
+    employee.email ? `Email: ${employee.email}` : "",
+    employee.phone ? `Phone: ${employee.phone}` : "",
+    employee.dateOfBirth ? `Date of birth: ${formatProfileDate(employee.dateOfBirth)}` : "",
+    employee.startDate ? `Start date: ${formatProfileDate(employee.startDate)}` : "",
+    employee.salary ? `Salary: ${employee.salary}` : "",
+    employee.manager ? `Manager: ${employee.manager}` : "",
+    employee.employmentType ? `Employment type: ${employee.employmentType}` : "",
+    employee.workMode ? `Work mode: ${employee.workMode}` : "",
+    employee.shift ? `Shift: ${employee.shift}` : "",
+    employee.responsibilityArea ? `Responsibility area: ${employee.responsibilityArea}` : "",
+    employee.branchProject ? `Branch project: ${employee.branchProject}` : "",
+    employee.localWorkstream ? `Local workstream: ${employee.localWorkstream}` : "",
+    employee.projectManager ? `Project manager: ${employee.projectManager}` : "",
+    employee.projectStatus ? `Project status: ${employee.projectStatus}` : "",
+    employee.projectBudget ? `Project budget: ${employee.projectBudget}` : "",
+    employee.projectDeadline ? `Project deadline: ${employee.projectDeadline}` : "",
+    employee.projectKpi ? `Project KPI: ${employee.projectKpi}` : "",
+    employee.projectRisk ? `Current project risk: ${employee.projectRisk}` : "",
+    employee.skills?.length ? `Skills: ${employee.skills.join(", ")}` : "",
+    employee.languages?.length ? `Languages: ${employee.languages.join(", ")}` : "",
+    employee.systems?.length ? `Main systems used: ${employee.systems.join(", ")}` : "",
+    employee.performanceBand ? `Performance band: ${employee.performanceBand}` : "",
+    employee.accessLevel ? `Access level: ${employee.accessLevel}` : "",
+    employee.ptoBalance ? `PTO balance: ${employee.ptoBalance}` : "",
+    employee.weeklyDeliverables?.length ? `Weekly deliverables: ${employee.weeklyDeliverables.join("; ")}` : "",
+    employee.dailyTasks?.length ? `Daily tasks:\n${employee.dailyTasks.map((task) => `- ${task}`).join("\n")}` : ""
+  ].filter(Boolean);
+}
+
 function parseDepartmentRows(text) {
   const rows = [];
   const seen = new Set();
@@ -993,6 +1162,41 @@ function isCurrentUserProfileQuestion(question) {
     || /\bwhat\s+is\s+my\s+(name|profile|employee\s+id|employee|role|job|department|branch|salary|manager|tasks?)\b/i.test(question)
     || (/\b(me|my|myself)\b/i.test(question)
       && /\b(profile|information|info|details|employee|about|baout|salary|manager|tasks|role|job|department|branch|identity)\b/i.test(question));
+}
+
+async function buildStructuredEmployeeFastAnswer(question) {
+  const employeeId = employeeIdFromQuestion(question);
+  if (!employeeId) {
+    return null;
+  }
+
+  const employee = await prisma.companyEmployee.findUnique({
+    where: {
+      employeeId
+    },
+    include: {
+      branch: true
+    }
+  });
+
+  if (!employee) {
+    return null;
+  }
+
+  const fields = requestedEmployeeFields(question);
+  const lines = fields.length
+    ? [
+        `${employee.employeeId} - ${employee.name}`,
+        ...employeeFieldLines(employee, fields)
+      ]
+    : fullEmployeeLines(employee);
+
+  return fastResult(lines.join("\n"), [{
+    id: 1,
+    source: employee.sourceFile || "Company X structured employee database",
+    page: null,
+    preview: `${employee.employeeId} ${employee.name}`
+  }]);
 }
 
 function buildCompanyOverviewFastAnswer(document, text) {
@@ -1238,7 +1442,7 @@ function tryEmployeeKnowledgeFastAnswer(question, user) {
   return buildExactSnippetFastAnswer(question, user);
 }
 
-function tryFastDatabaseAnswer(question, user) {
+async function tryFastDatabaseAnswer(question, user) {
   if (/\b(you|u)\b.*\b(access|connect|connected)\b.*\b(database|db)\b/i.test(question)
     || /\b(database|db)\b.*\b(access|connect|connected)\b/i.test(question)) {
     return buildDatabaseAccessFastAnswer(user);
@@ -1248,9 +1452,21 @@ function tryFastDatabaseAnswer(question, user) {
     return buildDocumentInventoryFastAnswer(user);
   }
 
+  const structuredEmployeeAnswer = await buildStructuredEmployeeFastAnswer(question);
+  if (structuredEmployeeAnswer) {
+    return structuredEmployeeAnswer;
+  }
+
   const records = branchRecords(user);
   if (isCurrentUserProfileQuestion(question)) {
     return buildLinkedEmployeeProfileFastAnswer(user, records);
+  }
+
+  if (isBranchProgressQuestion(question)) {
+    const branchProgressAnswer = await buildBranchProgressFastAnswer();
+    if (branchProgressAnswer) {
+      return branchProgressAnswer;
+    }
   }
 
   if (records.length && (isBranchOverviewQuestion(question) || /\bhow many\b.*\bbranches\b/i.test(question))) {
@@ -1837,7 +2053,7 @@ export async function askQuestion(question, history = [], user) {
     throw error;
   }
 
-  const fastAnswer = tryFastDatabaseAnswer(question, user);
+  const fastAnswer = await tryFastDatabaseAnswer(question, user);
   if (fastAnswer) {
     return fastAnswer;
   }
